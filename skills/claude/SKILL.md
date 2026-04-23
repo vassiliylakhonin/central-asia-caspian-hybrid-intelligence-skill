@@ -1,7 +1,7 @@
 ---
 name: central_asia_caspian_hybrid_intelligence_claude
 description: Decision-grade analysis for Central Asia and the Caspian across cross-border risk, compliance exposure, political economy, and strategic system dynamics.
-------
+---
 
 # Central Asia + Caspian Hybrid Intelligence
 

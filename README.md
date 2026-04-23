@@ -1,9 +1,10 @@
 # Central Asia + Caspian Hybrid Intelligence Skills
 
-Decision-grade analysis skills for **Codex** and **Claude** focused on Central Asia + Caspian cross-border risk, compliance exposure, political economy, and strategic system dynamics.
+Decision-grade analysis skills for **OpenClaw**, **Codex**, and **Claude** focused on Central Asia + Caspian cross-border risk, compliance exposure, political economy, and strategic system dynamics.
 
 ## What's inside
 
+- `skills/openclaw/SKILL.md` — OpenClaw skill (mirrors the published ClawHub skill)
 - `skills/codex/SKILL.md` — Codex-oriented skill prompt
 - `skills/claude/SKILL.md` — Claude-oriented skill prompt
 
@@ -17,7 +18,8 @@ Decision-grade analysis skills for **Codex** and **Claude** focused on Central A
 
 ## Usage
 
-Copy the relevant `SKILL.md` into your agent setup and use it as the operating instruction for analysis tasks.
+- OpenClaw: install from ClawHub: `https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1`
+- Codex / Claude: copy the relevant `SKILL.md` into your agent setup and use it as the operating instruction for analysis tasks.
 
 ## Scope
 

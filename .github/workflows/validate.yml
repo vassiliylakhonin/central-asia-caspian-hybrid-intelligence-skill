@@ -13,5 +13,6 @@ jobs:
       - name: Check required files
         run: |
           test -f README.md
+          test -f skills/openclaw/SKILL.md
           test -f skills/codex/SKILL.md
           test -f skills/claude/SKILL.md

@@ -1,36 +1,57 @@
 # Central Asia + Caspian Hybrid Intelligence Skills
 
-Decision-grade analysis skills for **OpenClaw**, **Codex**, and **Claude** focused on Central Asia + Caspian cross-border risk, compliance exposure, political economy, and strategic system dynamics.
+<p align="left">
+  <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/stargazers"><img src="https://img.shields.io/github/stars/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="GitHub stars"></a>
+  <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/network/members"><img src="https://img.shields.io/github/forks/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="GitHub forks"></a>
+  <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/blob/main/LICENSE"><img src="https://img.shields.io/github/license/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/validate.yml?branch=main&style=for-the-badge" alt="Validate"></a>
+  <a href="https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1"><img src="https://img.shields.io/badge/ClawHub-OpenClaw%20Skill-111827?style=for-the-badge" alt="ClawHub"></a>
+</p>
 
-## What's inside
+**Decision-grade geopolitical and risk analysis framework for Central Asia + Caspian** — packaged for **OpenClaw**, **Codex**, and **Claude**.
 
-- `skills/openclaw/SKILL.md` — OpenClaw skill (mirrors the published ClawHub skill)
-- `skills/codex/SKILL.md` — Codex-oriented skill prompt
-- `skills/claude/SKILL.md` — Claude-oriented skill prompt
+> Built for teams that need clear causal analysis, practical implications, and decision-ready structure — not generic geopolitics filler.
 
-## Core capabilities
+## Why this repo
 
-- Risk / Compliance mode
-- Strategic / Think Tank mode
-- Hybrid mode (default)
-- Clear uncertainty labeling (`Verified`, `Plausible`, `Judgment`, `Unknown`)
-- Decision implications + trigger points + confidence footer
+- Produces structured outputs in three modes: **Risk / Compliance**, **Strategic / Think Tank**, **Hybrid**
+- Enforces uncertainty discipline: `Verified`, `Plausible`, `Judgment`, `Unknown`
+- Focuses on mechanisms: flows, chokepoints, transmission channels, value capture
+- Ends with action relevance: trigger points, implications, confidence footer
 
-## Usage
+## Quick start
 
-- OpenClaw: install from ClawHub: `https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1`
-- Codex / Claude: copy the relevant `SKILL.md` into your agent setup and use it as the operating instruction for analysis tasks.
+### OpenClaw
+Install from ClawHub:
 
-## Scope
+`https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1`
 
-Best for:
+### Codex / Claude
+Use the corresponding `SKILL.md` file as operating instruction in your agent setup.
+
+## What’s inside
+
+- `skills/openclaw/SKILL.md` — canonical OpenClaw skill
+- `skills/codex/SKILL.md` — Codex variant (same core framework)
+- `skills/claude/SKILL.md` — Claude variant (same core framework)
+
+## Best use cases
+
 - cross-border risk, sanctions, AML, banking, routing, ownership
-- political economy and strategic competition
-- investment/logistics/energy/infrastructure decisions with regional exposure
+- political economy, system dynamics, corridors, strategic competition
+- investment, logistics, energy, infrastructure, AI, state capacity
+- questions requiring both explanation and decision implications
 
-Not for:
-- legal advice or formal compliance determinations
-- purely local questions with no cross-border relevance
+## Not intended for
+
+- formal legal advice or compliance determinations
+- purely local issues without cross-border relevance
+- generic summaries without analytical mechanism
+- highly technical specialist-only domains
+
+## If this helps your work
+
+⭐ Star the repo — it helps others discover serious analytical skills faster.
 
 ## Disclaimer
 

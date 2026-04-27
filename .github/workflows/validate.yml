@@ -16,3 +16,9 @@ jobs:
           test -f skills/openclaw/SKILL.md
           test -f skills/codex/SKILL.md
           test -f skills/claude/SKILL.md
+          grep -q "## Installation" skills/openclaw/SKILL.md
+          grep -q "## Example Prompt" skills/openclaw/SKILL.md
+          grep -q "## Installation" skills/claude/SKILL.md
+          grep -q "## Example Prompt" skills/claude/SKILL.md
+          grep -q "## Installation" skills/codex/SKILL.md
+          grep -q "## Example Prompt" skills/codex/SKILL.md

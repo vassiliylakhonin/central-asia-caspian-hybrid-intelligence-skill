@@ -56,3 +56,26 @@ Use the corresponding `SKILL.md` file as operating instruction in your agent set
 ## Disclaimer
 
 This repository provides analytical guidance only and does not constitute legal, regulatory, tax, audit, or investment advice.
+
+## Installation
+
+```bash
+openclaw skills install vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
+```
+
+## Example Prompts
+
+**Risk mode:**
+```
+Analyze sanctions exposure for a bank operating in Kazakhstan.
+```
+
+**Strategic mode:**
+```
+Explain the impact of Middle Corridor developments on regional power dynamics.
+```
+
+**Hybrid mode:**
+```
+Assess investment risks in Uzbekistan's energy sector over the next 12 months.
+```

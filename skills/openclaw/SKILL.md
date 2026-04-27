@@ -5,6 +5,8 @@ description: Decision-grade analysis for Central Asia and the Caspian across cro
 
 # Central Asia + Caspian Hybrid Intelligence
 
+This skill provides structured, decision‑grade analysis focused on Central Asia and the Caspian region across risk, compliance, and strategic dimensions. It supports three modes: Risk/Compliance, Strategic, and Hybrid.
+
 Provide structured, decision-grade analysis by selecting the most relevant mode:
 
 - Risk / Compliance
@@ -278,3 +280,26 @@ Disclaimer: This analysis is for informational and analytical purposes only and 
 
 If risk-related:
 Compliance note: This is a risk-oriented analytical view, not a legal determination. Author Vassiliy Lakhonin
+
+## Installation
+
+```bash
+openclaw skills install vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
+```
+
+## Example Prompt
+
+**Risk mode:**
+```
+Analyze sanctions exposure for a bank operating in Kazakhstan.
+```
+
+**Strategic mode:**
+```
+Explain the impact of Middle Corridor developments on regional power dynamics.
+```
+
+**Hybrid mode:**
+```
+Assess investment risks in Uzbekistan's energy sector over the next 12 months.
+```

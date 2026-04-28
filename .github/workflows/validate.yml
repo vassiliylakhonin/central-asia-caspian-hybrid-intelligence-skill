@@ -6,19 +6,19 @@ on:
   pull_request:
 
 jobs:
-  basic-check:
+  skill-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Check required files
         run: |
           test -f README.md
+          test -f LICENSE
+          test -f CONTRIBUTING.md
+          test -f SECURITY.md
           test -f skills/openclaw/SKILL.md
           test -f skills/codex/SKILL.md
           test -f skills/claude/SKILL.md
-          grep -q "## Installation" skills/openclaw/SKILL.md
-          grep -q "## Example Prompt" skills/openclaw/SKILL.md
-          grep -q "## Installation" skills/claude/SKILL.md
-          grep -q "## Example Prompt" skills/claude/SKILL.md
-          grep -q "## Installation" skills/codex/SKILL.md
-          grep -q "## Example Prompt" skills/codex/SKILL.md
+          test -f scripts/validate_skills.py
+      - name: Validate skill metadata and safety gates
+        run: python3 scripts/validate_skills.py

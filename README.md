@@ -24,7 +24,11 @@
 ### OpenClaw
 Install from ClawHub:
 
-`https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1`
+```bash
+clawhub install central-asia-caspian-hybrid-intelligence-v3-1
+```
+
+ClawHub page: `https://clawhub.ai/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-v3-1`
 
 ### Codex / Claude
 Use the corresponding `SKILL.md` file as operating instruction in your agent setup.
@@ -32,8 +36,9 @@ Use the corresponding `SKILL.md` file as operating instruction in your agent set
 ## What’s inside
 
 - `skills/openclaw/SKILL.md` — canonical OpenClaw skill
-- `skills/codex/SKILL.md` — Codex variant (same core framework)
-- `skills/claude/SKILL.md` — Claude variant (same core framework)
+- `skills/codex/SKILL.md` — Codex variant with expanded trigger description
+- `skills/claude/SKILL.md` — Claude variant with valid YAML frontmatter
+- `scripts/validate_skills.py` — dependency-free validation for skill metadata and safety gates
 
 ## Best use cases
 
@@ -57,10 +62,10 @@ Use the corresponding `SKILL.md` file as operating instruction in your agent set
 
 This repository provides analytical guidance only and does not constitute legal, regulatory, tax, audit, or investment advice.
 
-## Installation
+## Validation
 
 ```bash
-openclaw skills install vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
+python3 scripts/validate_skills.py
 ```
 
 ## Example Prompts

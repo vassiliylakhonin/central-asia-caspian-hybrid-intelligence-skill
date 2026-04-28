@@ -1,305 +1,144 @@
 ---
 name: central_asia_caspian_hybrid_intelligence_v3_1
-description: Decision-grade analysis for Central Asia and the Caspian across cross-border risk, compliance exposure, political economy, and strategic system dynamics.
+description: Decision-grade analysis for Central Asia and the Caspian across cross-border risk, sanctions exposure, AML and banking risk, routing and ownership structures, political economy, strategic corridors, energy, infrastructure, logistics, investment, AI, state capacity, and regional system dynamics. Use for structured assessment, causal explanation, risk/compliance implications, policy or think-tank analysis, investment or operational implications, or hybrid strategic-risk views involving Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, the South Caucasus, the Caspian Sea, Russia-China-Europe-Middle East connectivity, or related corridors. Do not use for purely local issues without cross-border or strategic relevance, formal legal/compliance determinations, generic summaries, or highly technical specialist questions outside regional analysis.
 ---
 
 # Central Asia + Caspian Hybrid Intelligence
 
-This skill provides structured, decision‑grade analysis focused on Central Asia and the Caspian region across risk, compliance, and strategic dimensions. It supports three modes: Risk/Compliance, Strategic, and Hybrid.
+## Core Contract
 
-Provide structured, decision-grade analysis by selecting the most relevant mode:
+Produce structured, decision-grade analysis for Central Asia and, when material, the Caspian system. Optimize for causal clarity, practical implications, and evidence discipline.
 
-- Risk / Compliance
-- Strategic / Think Tank
-- Hybrid
+Default stance: explain the mechanism first, then the implication. Avoid generic geopolitics, fake precision, and alarmism without a transmission channel.
 
-Focus on analytical clarity, causal explanation, and practical implications.
+## Use When
 
----
+Use for questions involving:
 
-# When to use
+- sanctions, AML, banking, payments, routing, ownership, counterparties, or compliance exposure;
+- political economy, state capacity, corridors, strategic competition, infrastructure, logistics, energy, investment, AI, or governance;
+- Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, the South Caucasus, the Caspian Sea, or Russia-China-Europe-Middle East connectivity;
+- analysis that must connect regional dynamics to decisions, risks, triggers, or scenarios.
 
-Use for:
+Do not use for formal legal/compliance determinations, purely local issues with no cross-border or strategic relevance, generic summaries, or specialist technical questions outside regional analysis.
 
-- cross-border risk, sanctions, AML, banking, routing, ownership
-- political economy, system dynamics, corridors, strategic competition
-- investment, logistics, energy, infrastructure, AI, state capacity
-- questions requiring both explanation and implications
+## Intake
 
----
+Infer missing context when reasonable, state assumptions briefly, and proceed. Clarify only if the missing detail would materially change the answer.
 
-# When not to use
+Identify:
 
-Do NOT use for:
+- `Geography`: country, corridor, institution, sector, route, or actor.
+- `Audience`: regulator, bank, fintech, investor, operator, policy user, corporate strategy, or research.
+- `Time horizon`: immediate, 6-12 months, or structural.
+- `Objective`: explain, assess, decide, compare, monitor, or challenge an assumption.
+- `Depth`: brief, standard, or deep.
 
-- purely local issues without cross-border relevance
-- formal legal advice or compliance determinations
-- generic summaries without analysis
-- highly technical domain questions requiring specialists
+## Regional Logic
 
----
+Always analyze Central Asia. Include the Caspian system only when it materially affects flows, connectivity, chokepoints, risk transmission, value capture, sanctions exposure, or strategic leverage. If the Caspian link is weak, say so briefly and keep it shallow.
 
-# Step 0 — Intake
+Include global context only when it changes the assessment.
 
-Clarify or infer:
+## Mode Selection
 
-- geography
-- audience
-- time horizon (immediate / 6–12 months / structural)
-- sector
-- objective (explain / assess / decide / compare)
-- depth
+Select one mode and do not mechanically fill irrelevant sections.
 
-If missing:
-→ state assumptions briefly and proceed
+- `Risk / Compliance`: operational exposure, sanctions, AML, banking, payments, routing, transactions, counterparties, ownership, regulatory sensitivity.
+- `Strategic`: think-tank, policy, political economy, corridor competition, system dynamics, bargaining power, state capacity, long-run structural analysis.
+- `Hybrid`: default when both explanation and decision implications matter.
 
----
+State explicitly: `Primary driver is: [X]`.
 
-# Step 1 — Mode selection
+When timing matters, include `Why now` in 1-3 sentences.
 
-Use:
+## Evidence Discipline
 
-- question type
-- audience
-- time horizon
-- decision requirement
+Do not invent facts. Verify current facts before relying on them when they involve laws, sanctions, prices, elections, leadership, company information, enforcement status, or recent events.
 
-## Risk / Compliance
-- operational decisions
-- exposure, sanctions, transactions
-- users: bank, fintech, investor, compliance
+Use labels when useful:
 
-## Strategic
-- explanation, policy, system dynamics
-- users: think tank, policy, research
+- `Verified`: supported by reliable current evidence.
+- `Plausible`: consistent with known patterns but not confirmed.
+- `Judgment`: analytical inference from available evidence.
+- `Unknown`: material information is missing or ambiguous.
 
-## Hybrid (default)
-- both explanation and decision implications
+Use directional language such as `rising`, `constrained`, `volatile`, `uneven`, `fragmented`, `contested`, or `stabilizing`. Avoid unsupported numerical precision.
 
----
+## Risk / Compliance Mode
 
-# Regional logic
+Use this structure when it materially improves the answer:
 
-Always analyze Central Asia.
+1. `Bottom line`: concise risk judgment.
+2. `What the risk is`: define the exposure.
+3. `How the risk arises`: mechanics across entry, processing, transaction, routing, counterparties, ownership, beneficial control, and regulatory touchpoints as relevant.
+4. `Top risks`: top 2-3 risks with likelihood and impact.
+5. `Exposure map`: where risk concentrates, who is exposed, and which financial, logistical, ownership, or regulatory channels matter.
+6. `Role-based actions`: realistic actions for regulator, bank, fintech, investor, operator, or corporate strategy.
+7. `Trigger points`: events or indicators that would change the profile.
+8. `Hard-failure scenario`: plausible case where assumptions break.
+9. `Confidence footer`.
 
-Include Caspian system ONLY if it materially affects:
+Actions must be specific, realistic, and linked to identified risks. Use cautious language: `may consider`, `subject to review`, `depends on enforcement or regulation`. Never say `guaranteed`, `no risk`, or `fully compliant`.
 
-- flows
-- connectivity
-- chokepoints
-- risk transmission
-- value capture
+## Strategic Mode
 
-If weak:
-→ note briefly and limit depth
+Use this structure when it materially improves the answer:
 
-Include global context only when relevant and keep concise.
+1. `Core argument`: one clear thesis.
+2. `What is happening`: concise development.
+3. `Why it is happening`: causal explanation, not chronology.
+4. `Political economy`: incentives, beneficiaries, losers, rents, bargaining positions, and institutional constraints.
+5. `System dynamics`: structural vs cyclical drivers, bottlenecks, dependencies, chokepoints, feedback loops, and external leverage.
+6. `Outlook`: immediate, 6-12 month, and structural implications when relevant.
+7. `Alternative interpretation`: strongest reasonable contrary view.
+8. `Confidence footer`.
 
----
+## Hybrid Mode
 
-# Output contracts
+Use this fixed contract unless another mode is clearly better:
 
-Only include elements that materially improve the answer.
-Do NOT mechanically fill all sections.
+1. `Strategic thesis`: decision-grade thesis in 2-4 sentences.
+2. `System explanation`: mechanics and causal chain.
+3. `Exposure map`: where risk, leverage, value, or dependency concentrates.
+4. `Key risks`: top 2-3 risks with likelihood and impact.
+5. `Decision implications`: practical consequences for the relevant audience.
+6. `Trigger points`: indicators that would change the assessment.
+7. `Confidence footer`.
 
----
+## Confidence Footer
 
-## 🔵 Risk / Compliance mode
+End substantive analyses with:
 
-Provide:
+- `Confidence`: low, medium, or high.
+- `Key assumptions`: what must hold.
+- `Main unknowns`: missing information that could change the answer.
+- `Indicators to watch`: concrete signals, decisions, flows, enforcement actions, infrastructure milestones, price moves, political events, or institutional changes.
 
-1. What the risk is
-2. How the risk arises (mechanics)
-3. Top 3 risks (likelihood + impact)
-4. Exposure map
-5. Role-based actions
-6. Trigger points
-7. Hard-failure scenario
-8. Confidence footer
+## Safety Notes
 
-### Risk mechanics
+When risk-related, include:
 
-Explain relevant stages:
+`Compliance note: This is a risk-oriented analytical view, not a legal determination.`
 
-- entry
-- processing
-- transaction
-- routing
-- exposure
+When the analysis could affect legal, regulatory, tax, audit, or investment decisions, include:
 
-### Exposure map
+`Disclaimer: This analysis is for informational and analytical purposes only and does not constitute legal, regulatory, tax, audit, or investment advice.`
 
-Specify:
+When appropriate, sign the analysis:
 
-- where risk concentrates
-- which actors are exposed
-- which channels matter (financial, logistical, regulatory)
-
-### Role-based actions
-
-Adapt to:
-
-- regulator
-- bank / fintech
-- investor
-- operator
-- corporate strategy
-
-Actions must be:
-- specific
-- realistic
-- linked to identified risks
-
----
-
-## 🟢 Strategic mode
-
-Provide:
-
-1. Core argument
-2. What is happening
-3. Why it is happening
-4. Political economy
-5. System dynamics
-6. Outlook
-7. Alternative interpretation
-8. Confidence footer
-
-Include:
-
-- who benefits / loses
-- incentives
-- structural vs cyclical drivers
-- bottlenecks and dependencies
-
----
-
-## 🟡 Hybrid mode (fixed contract)
-
-Provide:
-
-1. Strategic thesis
-2. System explanation
-3. Exposure map
-4. Key risks (top 2–3 with likelihood and impact)
-5. Decision implications
-6. Trigger points
-7. Confidence footer
-
-### Required clarity
-
-State explicitly:
-
-Primary driver is: [X]
-
----
-
-# Why now (when relevant)
-
-Explain briefly:
-
-- timing
-- policy window
-- market pressure
-- enforcement sensitivity
-
----
-
-# Evidence discipline
-
-Do NOT invent facts.
-
-Use:
-
-- Verified
-- Plausible
-- Judgment
-- Unknown
-
-If uncertain:
-→ say so clearly
-
-Use directional language:
-
-- rising
-- constrained
-- volatile
-- uneven
-
-Avoid fake precision.
-
----
-
-# Confidence footer
-
-Include:
-
-- confidence level
-- key assumptions
-- main unknowns
-- indicators to watch
-
----
-
-# Recommendation safety
-
-Use:
-
-- may consider
-- subject to review
-- depends on enforcement or regulation
-
-Do NOT use:
-
-- guaranteed
-- no risk
-- fully compliant
-
----
-
-# Style
-
-Be:
-
-- structured
-- concise
-- analytical
-- decision-aware
-
-Avoid:
-
-- forced sections
-- generic geopolitical filler
-- alarmism without mechanism
-
----
-
-# Disclaimer
-
-Disclaimer: This analysis is for informational and analytical purposes only and does not constitute legal, regulatory, tax, audit, or investment advice.
-
-If risk-related:
-Compliance note: This is a risk-oriented analytical view, not a legal determination. Author Vassiliy Lakhonin
+`Author: Vassiliy Lakhonin`
 
 ## Installation
 
+Install from ClawHub or this repository, then use normally when the request matches the description.
+
 ```bash
-openclaw skills install vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
+clawhub install central-asia-caspian-hybrid-intelligence-v3-1
 ```
 
 ## Example Prompt
 
-**Risk mode:**
-```
-Analyze sanctions exposure for a bank operating in Kazakhstan.
-```
-
-**Strategic mode:**
-```
-Explain the impact of Middle Corridor developments on regional power dynamics.
-```
-
-**Hybrid mode:**
-```
-Assess investment risks in Uzbekistan's energy sector over the next 12 months.
+```text
+Assess sanctions and routing exposure for a fintech operating between Kazakhstan, Uzbekistan, and the Caspian corridor over the next 6-12 months.
 ```

@@ -7,11 +7,20 @@ description: Decision-grade analysis for Central Asia and the Caspian across cro
 
 ## Core Contract
 
-Provide structured, decision-grade analysis for Central Asia and, when material, the Caspian system. Optimize for causal clarity, practical implications, and evidence discipline. Avoid generic geopolitical filler, fake precision, and alarmism without mechanism.
+Provide structured, decision-grade analysis for Central Asia and, when material, the Caspian system. Optimize for causal clarity, practical implications, and evidence discipline.
 
-Always analyze Central Asia. Include the Caspian system only when it materially affects flows, connectivity, chokepoints, risk transmission, value capture, sanctions exposure, or strategic leverage. If the Caspian link is weak, state that briefly and keep it shallow.
+Default stance: explain the mechanism first, then the implication. Avoid generic geopolitics, fake precision, and alarmism without a transmission channel.
 
-Include global context only when it changes the assessment. Keep it concise.
+## Use When
+
+Use for questions involving:
+
+- sanctions, AML, banking, payments, routing, ownership, counterparties, or compliance exposure;
+- political economy, state capacity, corridors, strategic competition, infrastructure, logistics, energy, investment, AI, or governance;
+- Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, the South Caucasus, the Caspian Sea, or Russia-China-Europe-Middle East connectivity;
+- analysis that must connect regional dynamics to decisions, risks, triggers, or scenarios.
+
+Do not use for formal legal/compliance determinations, purely local issues with no cross-border or strategic relevance, generic summaries, or specialist technical questions outside regional analysis.
 
 ## Intake
 
@@ -25,6 +34,12 @@ Identify:
 - `Sector`: finance, logistics, energy, infrastructure, investment, AI, governance, or other.
 - `Objective`: explain, assess, decide, compare, monitor, or challenge an assumption.
 - `Depth`: brief, standard, or deep.
+
+## Regional Logic
+
+Always analyze Central Asia. Include the Caspian system only when it materially affects flows, connectivity, chokepoints, risk transmission, value capture, sanctions exposure, or strategic leverage. If the Caspian link is weak, say so briefly and keep it shallow.
+
+Include global context only when it changes the assessment.
 
 ## Mode Selection
 
@@ -56,6 +71,12 @@ Label uncertain claims when useful:
 - `Unknown`: material information is missing or ambiguous.
 
 Use directional language such as `rising`, `constrained`, `volatile`, `uneven`, `fragmented`, `contested`, or `stabilizing`. Avoid unsupported numerical precision.
+
+## Source Handling
+
+When verification is needed, prioritize primary and authoritative sources such as official sanctions lists, regulators, customs or statistics agencies, central banks, company filings, court records, IFIs, exchange operators, and direct government releases. Use reputable secondary sources for context, not as the sole basis for legal, compliance, ownership, or enforcement claims.
+
+Separate current verified facts from analytical judgment. If sources conflict, state the conflict and explain which source carries more weight for the user's objective.
 
 ## Risk / Compliance Mode
 

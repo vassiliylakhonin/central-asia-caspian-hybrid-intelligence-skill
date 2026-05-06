@@ -31,6 +31,7 @@ Identify:
 - `Geography`: country, corridor, institution, sector, route, or actor.
 - `Audience`: regulator, bank, fintech, investor, operator, policy user, corporate strategy, or research.
 - `Time horizon`: immediate, 6-12 months, or structural.
+- `Sector`: finance, logistics, energy, infrastructure, investment, AI, governance, or other.
 - `Objective`: explain, assess, decide, compare, monitor, or challenge an assumption.
 - `Depth`: brief, standard, or deep.
 
@@ -64,6 +65,12 @@ Use labels when useful:
 - `Unknown`: material information is missing or ambiguous.
 
 Use directional language such as `rising`, `constrained`, `volatile`, `uneven`, `fragmented`, `contested`, or `stabilizing`. Avoid unsupported numerical precision.
+
+## Source Handling
+
+When verification is needed, prioritize primary and authoritative sources such as official sanctions lists, regulators, customs or statistics agencies, central banks, company filings, court records, IFIs, exchange operators, and direct government releases. Use reputable secondary sources for context, not as the sole basis for legal, compliance, ownership, or enforcement claims.
+
+Separate current verified facts from analytical judgment. If sources conflict, state the conflict and explain which source carries more weight for the user's objective.
 
 ## Risk / Compliance Mode
 

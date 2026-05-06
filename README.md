@@ -16,6 +16,7 @@
 
 - Produces structured outputs in three modes: **Risk / Compliance**, **Strategic / Think Tank**, **Hybrid**
 - Enforces uncertainty discipline: `Verified`, `Plausible`, `Judgment`, `Unknown`
+- Separates current verified facts from analytical judgment and prioritizes primary sources
 - Focuses on mechanisms: flows, chokepoints, transmission channels, value capture
 - Ends with action relevance: trigger points, implications, confidence footer
 
@@ -67,6 +68,8 @@ This repository provides analytical guidance only and does not constitute legal,
 ```bash
 python3 scripts/validate_skills.py
 ```
+
+The validator checks frontmatter, required analytical sections, source-handling discipline, safety disclaimers, unsafe determinative language, and fenced-code balance across all skill variants.
 
 ## Example Prompts
 

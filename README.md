@@ -104,8 +104,9 @@ The validator checks structure, required phrases, forbidden determinative claims
 - [examples/energy-infrastructure-corridor-risk.md](examples/energy-infrastructure-corridor-risk.md) — Caspian and Central Asia energy / infrastructure corridor risk for buyers, producers and investors.
 - [examples/beneficial-ownership-opacity.md](examples/beneficial-ownership-opacity.md) — BO opacity and adjacency risk for EDD analysts onboarding cross-border trading groups.
 - [examples/trade-finance-dual-use-routing.md](examples/trade-finance-dual-use-routing.md) — trade finance and dual-use goods routing risk for SME-focused trade-finance providers.
+- [examples/illustrative-source-packet-fintech.md](examples/illustrative-source-packet-fintech.md) — worked example of `illustrative source packet` mode, demonstrating how a memo grounds claims in a labeled (constructed) packet.
 
-Every example states its **evidence mode** and ends with a limitation note. All current examples are `reasoning-only` and do not verify live sanctions, licensing or legal status.
+Every example states its **evidence mode** and ends with a limitation note. Six examples use `reasoning-only`; one uses `illustrative source packet` to demonstrate the grounding pattern.
 
 ## 9. Skill files
 
@@ -162,6 +163,8 @@ Use them as patterns to structure reasoning, not as factual claims about any spe
 
 [evals/starter-rubric.md](evals/starter-rubric.md) — starter rubric for scoring memos against the analytical contract. Honest label: starter rubric, not a validated benchmark.
 
+[evals/scoring-example.md](evals/scoring-example.md) — worked scoring example applying the rubric to one of the flagship memos.
+
 [evals/failure-modes.md](evals/failure-modes.md) — common failure modes (generic essay, alarmism without channel, fake sanctions certainty, fake citations, over-expanded geography, missing limitation note, etc.).
 
 ### Evidence mode vocabulary
@@ -187,9 +190,9 @@ Every example and every memo produced with this skill should state one of four c
 
 Indicative direction, not a commitment:
 
-- additional `live-source-backed` and `user-provided sources` examples (current examples are `reasoning-only`)
-- expansion of `docs/risk-archetypes.md` with more concrete indicator examples and watch-next signals
-- starter rubric refinement with more dimensions and worked scoring examples
+- additional `live-source-backed` and `user-provided sources` examples (current examples are `reasoning-only` and `illustrative source packet`; live retrieval and real user packets require external tooling)
+- continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves
+- additional worked scoring examples covering memos in different evidence modes
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

@@ -117,3 +117,71 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 ---
 
 Use these archetypes as a *starting structure*. A real memo should select the relevant subset, explain the specific mechanism for the question at hand, and label evidence accordingly.
+
+---
+
+## Concrete indicator and watch-next examples
+
+The lists below extend each archetype with more specific (but still **generic**) indicators and watch-next signals. They are reference patterns, not claims about any specific entity, jurisdiction, list, route, HS code or transaction. Apply them only against source-backed data.
+
+### 1. Re-export / transshipment exposure
+
+- *Indicators*: HS-code-level import growth that exceeds plausible domestic absorption; persistent mirror-data divergence with the origin country across consecutive periods; clustering of new trading entities at a small number of registered addresses; concentration of declared trade in a narrow basket of sensitive HS codes; inland-port or free-zone activity inconsistent with local industrial footprint.
+- *Watch-next*: updated common high-priority items lists; designations of forwarders; harmonization of customs data between origin and transit jurisdictions; enforcement actions referencing transshipment patterns.
+
+### 2. Dual-use goods routing
+
+- *Indicators*: end-use declarations that do not match plausible operational use; HS-code mismatch with weight, volume or unit value; end-buyer with no operational record in the relevant industry; re-routing inconsistent with logistical economics; export licences absent or inconsistent across legs.
+- *Watch-next*: dual-use list updates; catch-all clause invocations; coordinated enforcement statements; new licensing or end-user verification regimes.
+
+### 3. Correspondent banking de-risking
+
+- *Indicators*: rising message-level rejection rates; longer settlement times; correspondent requests for sample-file reviews; narrower acceptable-respondent list; pricing changes specific to a corridor or merchant category; sudden documentation requests on previously routine flows.
+- *Watch-next*: tier-1 enforcement actions on respondents; published correspondent EDD criteria; regional bank exits; appearance of corridor-specific carve-outs.
+
+### 4. Beneficial ownership opacity
+
+- *Indicators*: nominee directors permitted by jurisdiction; address sharing across many unrelated entities; reused phone numbers and registered agents; rapid post-event incorporation cycles; ownership transfers immediately preceding onboarding; layered offshore vehicles; missing or stale BO filings.
+- *Watch-next*: BO register reforms; leaks affecting regional structures; FATF or peer-review findings; designations referencing layered structures.
+
+### 5. Sanctioned-party adjacency
+
+- *Indicators*: shared addresses, directors or contact details with a designated entity; immediate post-designation incorporation of successor entities; transactional patterns continuing without interruption after a designation; intermediate buyers with no plausible commercial purpose.
+- *Watch-next*: regulator guidance on control and ownership tests; enforcement on adjacency cases; updates to 50%-rule equivalents.
+
+### 6. Energy / logistics chokepoint risk
+
+- *Indicators*: traffic concentration at a single port, ferry, pipeline or border crossing; absence of viable redundant route; capacity utilization near design limit; rising dwell times or queue lengths; insurance / freight rate changes localized to one node.
+- *Watch-next*: capacity expansion announcements; incident reports; tariff or transit-rule changes; major project-finance approvals or withdrawals.
+
+### 7. Customs / statistics anomaly
+
+- *Indicators*: persistent mirror-data gap on a specific HS basket; sudden HS-code reclassifications clustered around sensitive items; statistical revisions limited to a sensitive sector; divergence between trade and shipping data.
+- *Watch-next*: continued widening of mirror gaps; investigative reporting; harmonization initiatives; new statistical methodology disclosures.
+
+### 8. State-capacity enforcement gap
+
+- *Indicators*: low conviction or fine rates relative to public regulator activity; reversal of enforcement actions; unfilled supervisory positions; FATF or peer-review identifying capacity gaps; mismatch between law on the books and enforcement on the ground.
+- *Watch-next*: FATF grey-listing or removal; regulator leadership change; visible enforcement push; budget allocations to supervisory bodies.
+
+### 9. China / Russia / EU leverage competition
+
+- *Indicators*: financing terms favoring one external power; technology-stack choices in critical sectors; regulatory alignment moves; visible diplomatic shifts; concentration of FDI by source.
+- *Watch-next*: project-financing announcements; standards adoption decisions; visible re-balancing of trade by partner; sovereign or SOE-level deals.
+
+### 10. Caspian corridor disruption
+
+- *Indicators*: rising dwell times at Caspian ports; ferry capacity constraints; rail bottlenecks at South Caucasus border crossings; freight rate rises specific to the route; insurance pricing changes on the corridor.
+- *Watch-next*: ferry and rail capacity announcements; multi-modal investment decisions; geopolitical events on the route; weather or seasonal disruption.
+
+### 11. Regulatory arbitrage
+
+- *Indicators*: clustering of entities in a narrow set of SEZs or free zones; structural mismatch between declared activity and licensing; rapid migration of corporate structures across jurisdictions; cross-border tax or licensing differentials being actively used.
+- *Watch-next*: harmonization moves between regional regulators; enforcement on free-zone abuses; tax-information-exchange developments.
+
+### 12. Payment-rail exposure
+
+- *Indicators*: revenue concentration on a single rail; absence of fallback rails; rail-specific term changes; scheme-membership reviews; settlement-time variability concentrated on one rail.
+- *Watch-next*: scheme exits; regulator decisions on local rails; correspondent or scheme-participant changes; rapid CNY-rail or local-IPS adoption shifts.
+
+These extensions remain generic by design. Substituting in specific HS codes, jurisdictions or counterparties requires source-backed retrieval and qualified compliance / legal review.

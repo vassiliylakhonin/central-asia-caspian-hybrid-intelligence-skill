@@ -84,6 +84,31 @@ The skill does not verify facts by itself. These sources are recommended for sou
 
 Use Tier 2 for context, hypothesis generation and triangulation. Do not use Tier 2 alone for legal, compliance, ownership or enforcement claims.
 
+## Source freshness horizons
+
+Sources decay at different rates. Use the horizons below as the default re-verification practice for `live-source-backed` and `user-provided sources` memos. A source older than its horizon is **stale by default** until re-verified or explicitly re-labeled.
+
+| Claim type | Default horizon | Notes |
+|---|---|---|
+| Sanctions designations / list status (OFAC SDN, EU consolidated, OFSI, UN, BIS Entity List) | **30 days**, and always at the point of operational decision | Lists change continuously. For any operational decision, re-verify same-day against the relevant primary list, regardless of horizon. |
+| Export-controls scope (BIS, EU dual-use, common high-priority items list) | **90 days** | Re-verify on any new joint statement or coordinated action. |
+| AML / FATF / EAG mutual-evaluation findings | **12 months** for the report itself, **3 months** for follow-ups and re-ratings | The MER framework is structural; follow-ups change ratings. |
+| Regulator and central-bank guidance | **6 months** | Sooner if a known reform cycle is in progress. |
+| Customs and statistics (HS-code volumes, mirror data) | **3 months** | Quarterly cycles dominate. |
+| Port / rail / corridor capacity and throughput | **3 months** | Operational metrics shift quickly. |
+| IFI corridor and country studies (World Bank, EBRD, ADB, IMF) | **24 months** for structural findings, **6 months** for prescriptive figures | Investment-needed and capacity targets re-baselined regularly. |
+| Court records and enforcement actions | **3 months** for active matters, **24 months** for closed ones | Status changes via appeals, settlements and follow-ups. |
+| Company registry / BO data | **3 months** | Filing cycles and ownership changes. |
+| Tier 2 reporting (media, think-tanks) | Take freshness from the underlying primary source it is reporting on | Tier 2 inherits the horizon of the primary it cites. |
+
+**Stale-source handling:**
+
+- A claim grounded in a source past its horizon should be labeled `Plausible` or `Unknown` (not `Verified`) until re-verification.
+- For sanctions, AML, export-controls and licensing claims, do not rely on a stale source for an operational decision under any circumstances; re-verify against the current primary list at the point of use.
+- When refreshing a memo, update the retrieval date and either confirm the prior conclusions hold or revise them. Do not silently re-date a memo without re-checking.
+
+These horizons are working defaults, not legal or regulatory standards. Adjust upward (more conservative) for higher-stakes work.
+
 ## Source-handling rules
 
 - Prefer primary over secondary for any factual claim with operational or compliance consequences.

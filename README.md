@@ -97,9 +97,13 @@ The validator checks structure, required phrases, forbidden determinative claims
 ## 8. Flagship examples
 
 - [examples/fintech-sanctions-routing.md](examples/fintech-sanctions-routing.md) — fintech sanctions and routing exposure across Kazakhstan, Uzbekistan and Caspian-connected trade routes.
+- [examples/bank-correspondent-counterparty-exposure.md](examples/bank-correspondent-counterparty-exposure.md) — regional bank correspondent and counterparty exposure under tier-1 EDD pressure.
 - [examples/caspian-corridor-chokepoint.md](examples/caspian-corridor-chokepoint.md) — Middle Corridor / Caspian logistics chokepoint risk for shippers, operators and energy buyers.
+- [examples/energy-infrastructure-corridor-risk.md](examples/energy-infrastructure-corridor-risk.md) — Caspian and Central Asia energy / infrastructure corridor risk for buyers, producers and investors.
+- [examples/beneficial-ownership-opacity.md](examples/beneficial-ownership-opacity.md) — BO opacity and adjacency risk for EDD analysts onboarding cross-border trading groups.
+- [examples/trade-finance-dual-use-routing.md](examples/trade-finance-dual-use-routing.md) — trade finance and dual-use goods routing risk for SME-focused trade-finance providers.
 
-Every example states its **evidence mode** and ends with a limitation note. The current examples are `reasoning-only` / `illustrative source packet` and do not verify live sanctions, licensing or legal status.
+Every example states its **evidence mode** and ends with a limitation note. All current examples are `reasoning-only` and do not verify live sanctions, licensing or legal status.
 
 ## 9. Skill files
 
@@ -181,7 +185,7 @@ Every example and every memo produced with this skill should state one of four c
 
 Indicative direction, not a commitment:
 
-- additional flagship examples from the AGENTS.md preferred list (bank correspondent / counterparty exposure, energy / infrastructure corridor risk, beneficial ownership opacity, trade finance / dual-use goods routing)
+- additional `live-source-backed` and `user-provided sources` examples (current examples are `reasoning-only`)
 - expansion of `docs/risk-archetypes.md` with more concrete indicator examples and watch-next signals
 - starter rubric refinement with more dimensions and worked scoring examples
 - companion patterns showing how outputs can be validated against Agenda Intelligence MD when that tooling is available

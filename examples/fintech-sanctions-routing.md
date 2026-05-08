@@ -1,6 +1,6 @@
 # Flagship example — Fintech sanctions and routing exposure (Kazakhstan / Uzbekistan / Caspian)
 
-> **Evidence mode: illustrative / reasoning-only.** This example does not verify live sanctions, licensing or legal status of any jurisdiction, list, route, bank or counterparty. It is a worked memo to demonstrate skill output structure. Operational use requires source-backed verification through official sanctions lists, regulators, customs and statistics agencies, and qualified professional review.
+> **Evidence mode: `reasoning-only`.** This example does not verify live sanctions, licensing or legal status of any jurisdiction, list, route, bank or counterparty. It is a worked memo to demonstrate skill output structure. Operational use requires source-backed verification through official sanctions lists, regulators, customs and statistics agencies, and qualified professional review.
 
 ## User question
 

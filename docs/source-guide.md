@@ -2,6 +2,17 @@
 
 This guide lists **classes of sources** to prefer for source-backed Central Asia / Caspian risk analysis. The skill itself does **not** retrieve these sources. Use them with external retrieval, user-provided source packets, or companion tooling.
 
+## Evidence mode vocabulary
+
+Every example and every memo produced with this skill must state one of four canonical evidence modes:
+
+- **`live-source-backed`** — facts retrieved from current authoritative sources at the time of writing. Cite the source class behind each non-trivial factual claim.
+- **`user-provided sources`** — facts grounded in a source packet supplied by the user. Treat the packet as the boundary of factual authority; do not extrapolate beyond it without labeling.
+- **`illustrative source packet`** — facts grounded in a constructed, illustrative source packet for demonstration purposes. Must be marked as illustrative; do not present as real-world fact.
+- **`reasoning-only`** — no sources retrieved; structural reasoning only. Do not assert factual conclusions about specific entities, designations or enforcement actions.
+
+State the evidence mode at the top of any memo. Mixing modes within a memo is allowed only if each section is labeled.
+
 ## Disclaimer
 
 The skill does not verify facts by itself. These sources are recommended for source-backed workflows using external retrieval, user-provided source packets, or companion tooling. Listing a source class here is not an endorsement and is not a guarantee of accuracy, completeness or timeliness for any specific question.

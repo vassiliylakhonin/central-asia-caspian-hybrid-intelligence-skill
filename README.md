@@ -55,6 +55,8 @@ This skill is one of three repos in a wider portfolio. Each has a distinct role;
 
 This repo does **not** itself perform Agenda Intelligence MD validation, schema enforcement on outputs, or live source retrieval.
 
+[docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside Agenda Intelligence MD (validation / evidence audit / scoring) and Global Think Tank Analyst (broader strategic-risk memo workflow). The patterns are illustrative; for current interfaces, schemas and tooling, consult those repos directly.
+
 ## 6. Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
@@ -188,8 +190,6 @@ Indicative direction, not a commitment:
 - additional `live-source-backed` and `user-provided sources` examples (current examples are `reasoning-only`)
 - expansion of `docs/risk-archetypes.md` with more concrete indicator examples and watch-next signals
 - starter rubric refinement with more dimensions and worked scoring examples
-- companion patterns showing how outputs can be validated against Agenda Intelligence MD when that tooling is available
-- companion patterns showing how this specialist skill can be invoked from a Global Think Tank Analyst memo workflow
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

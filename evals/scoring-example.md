@@ -153,7 +153,7 @@ E: **6 / 6**.
 |---|---|---|
 | F1 | 2 | Retrieval date 2026-05-08 stated at top of memo. |
 | F2 | 2 | Every non-trivial claim tagged [S1]–[S6] with a working URL. |
-| F3 | 2 | World Bank and EBRD-derived claims for capacity; OFAC/BIS-derived claims for sanctions; FATF/EAG public index for AML baseline. Tier 2 (Astana Times, Caliber.az, Asia House) used as accessible reporting on primary studies, not as the basis for legal claims. |
+| F3 | 2 | Compliance-side claims are anchored to primary OFAC `recent-actions/20240823` and Treasury press release jy2700, and to the EAG / FATF mutual-evaluation index and Kazakhstan MER PDF. Capacity-side claims are anchored to the World Bank report PDF. Tier 2 reporting (Miller&Chevalier, Astana Times, Caliber.az, Asia House) is used explicitly as interpretive, not as the basis for legal claims. |
 | F4 | 2 | Multiple explicit instructions to re-verify against current lists and current capacity data. |
 
 F: **8 / 8**. No hard fails.
@@ -170,4 +170,4 @@ F: **8 / 8**. No hard fails.
 
 The memo holds up at the top of the rubric because it (a) cites every quantitative claim back to a retrievable source, (b) labels its evidence mode and retrieval date prominently, (c) does not extrapolate beyond what the cited sources support, and (d) flags time-sensitivity in a way that makes safe operational re-use plausible.
 
-The main caveat for a real-world reviewer is **source tier**: for legal-grade sanctions or AML claims, a memo should ultimately cite OFAC / BIS / EU / OFSI / UN primary list entries and FATF / EAG MER PDFs directly, rather than secondary reporting. The current memo uses Tier 2 reporting as the accessible link layer; in production this should be paired with the primary-list URLs and PDFs once retrieved. This is a content-strengthening step, not a rubric failure — the structure and discipline are intact.
+The memo also splits its Sources section into **Tier 1 (primary)** and **Tier 2 (secondary reporting)** explicitly, so a reader can see which claims are anchored to OFAC / Treasury / FATF-EAG / World Bank primary URLs and which lean on accessible interpretive reporting. For an operational decision, re-verification against current OFAC SDN, BIS Entity List, EU consolidated, OFSI consolidated and UN lists at the point of use is still required.

@@ -187,6 +187,7 @@ Every example and every memo produced with this skill should state one of four c
 - It is not production-grade risk control infrastructure.
 - Outputs require source-backed verification and qualified professional review before any operational, compliance or commercial use.
 - No production-usage, adoption or benchmark numbers are claimed.
+- See [STATUS.md](STATUS.md) for an honest status against the Definition of Done in `AGENTS.md`. The repo currently clears the "early but credible" bar; it does **not** clear the "externally validated specialist resource" bar.
 
 ## 14. Roadmap
 

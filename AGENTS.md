@@ -183,4 +183,45 @@ Do not introduce heavy dependencies unless necessary.
 
 ## Definition of done
 
-A senior AI or agent engineering reviewer should understand that this repo is not a generic regional prompt. It should read as an early but credible vertical specialist skill for Central Asia + Caspian strategic-risk agents, with evidence discipline, mechanism-first reasoning, examples, source guidance and clear limitations.
+The repo aims to clear two bars in sequence. Bar 1 is the threshold for being a credible artifact. Bar 2 is the threshold for being an externally validated specialist resource. The repo's `STATUS.md` (or this section if `STATUS.md` does not yet exist) must always state honestly which bar has been cleared and which has not. **Do not pretend a bar is cleared if it is not.**
+
+### Bar 1 — Early but credible (the minimum bar)
+
+A senior AI or agent engineering reviewer should understand that this repo is not a generic regional prompt. It should read as an early but credible vertical specialist skill for Central Asia + Caspian strategic-risk agents, with evidence discipline, mechanism-first reasoning, examples, source guidance and clear limitations. Specifically:
+
+- **B1.1** README follows the 14-section structure in "README priorities".
+- **B1.2** All four canonical evidence modes are demonstrated by at least one example each.
+- **B1.3** All preferred examples in "Examples" exist or are explicitly deferred with a reason.
+- **B1.4** `evals/` has a review checklist, a starter rubric and a failure-modes file with honest labels (no benchmark claim).
+- **B1.5** Validation script passes on every commit to `main`.
+- **B1.6** Honesty constraints in "Safety and limitation rules" are observed everywhere.
+
+### Bar 2 — Externally validated specialist resource (the harder bar)
+
+The criteria below close the weaknesses that Bar 1 alone cannot close (single-author scoring, structural-reasoning-heavy examples, no external review, undifferentiated skill files, no real-use evidence). Each criterion is binary: either met with verifiable evidence, or not.
+
+- **B2.1 — Source-anchored majority.** At least half of the flagship examples in `examples/` are `live-source-backed` or `user-provided sources` (not `reasoning-only` or `illustrative source packet`). Source-backed examples must cite primary URLs (regulators, IFIs, FATF/EAG, central banks, court records) for legal-grade claims, with secondary reporting clearly tiered.
+- **B2.2 — External review.** At least one reviewer outside the author has reviewed at least one example and one application of the starter rubric, and either (a) their findings have been incorporated, or (b) the response is explicitly addressed and recorded. The reviewer must be identifiable (name, role or verifiable public attribution); anonymous or fabricated reviewers do not count.
+- **B2.3 — Validated cases (not a benchmark).** At least three memos produced with the skill have been reviewed by a domain practitioner (compliance, AML, sanctions, banking, corridor logistics, energy, or regional risk) and labeled as either "useful in their workflow" or "useful with the specified revisions". Stored in a `validated-cases/` directory with practitioner attribution where they consent, anonymized otherwise. **This is not a benchmark and must not be called one.** No aggregated scores; no claims of "X% accuracy".
+- **B2.4 — Platform differentiation or consolidation.** Each variant in `skills/{codex,claude,openclaw}/SKILL.md` either (a) has at least one platform-specific feature that meaningfully changes output (e.g. Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw-specific contract), or (b) is consolidated. Three near-identical files presented as three skills do not meet this criterion.
+- **B2.5 — Honest real-use evidence.** Either (a) the repo links to at least one public, attributable real-use record (a memo, a workflow, a published reference, with permission), or (b) the README and `STATUS.md` explicitly state that no real-use evidence exists yet. No implicit suggestion of adoption that has not occurred.
+- **B2.6 — Source freshness discipline.** `live-source-backed` examples carry a retrieval date, and the repo has a documented practice (in `docs/source-guide.md` or a `STATUS.md` note) for re-verifying or marking stale any source older than a stated horizon. Examples beyond the horizon are either refreshed or labeled stale.
+- **B2.7 — Independent rubric application.** At least one application of `evals/starter-rubric.md` to a memo has been performed by someone other than the author, with their scorecard added to `evals/scoring-example.md` (or a sibling file) under their attribution.
+
+### Anti-criteria (things that do **not** count as progress toward done)
+
+- Adding more `reasoning-only` examples once Bar 1 is cleared. Source-anchored ratio is the binding constraint.
+- Adding worked scorecards by the same author to imply external validation.
+- Renaming a starter rubric a "benchmark", "scoring framework" or "evaluation suite" without the underlying validated cases.
+- Adding adoption-style language ("used by", "trusted by", "production-grade") without B2.5 evidence.
+- Adding more topics, badges or boilerplate without a corresponding substance change.
+- Moving repo metadata (description, topics, homepage) in ways that imply a status the repo has not earned.
+
+### Honest current status
+
+At the time of writing this Definition of Done:
+
+- **Bar 1 — cleared.** All B1.1–B1.6 criteria observable in the current tree.
+- **Bar 2 — not cleared.** B2.1 partially (2 of 9 flagship examples are source-anchored — short of half). B2.2, B2.3, B2.5 and B2.7 are entirely open (single-author state). B2.4 is not yet decided (current variants are near-identical). B2.6 is partially in place (retrieval dates exist; no documented re-verification horizon).
+
+Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.

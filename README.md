@@ -105,8 +105,10 @@ The validator checks structure, required phrases, forbidden determinative claims
 - [examples/beneficial-ownership-opacity.md](examples/beneficial-ownership-opacity.md) — BO opacity and adjacency risk for EDD analysts onboarding cross-border trading groups.
 - [examples/trade-finance-dual-use-routing.md](examples/trade-finance-dual-use-routing.md) — trade finance and dual-use goods routing risk for SME-focused trade-finance providers.
 - [examples/illustrative-source-packet-fintech.md](examples/illustrative-source-packet-fintech.md) — worked example of `illustrative source packet` mode, demonstrating how a memo grounds claims in a labeled (constructed) packet.
+- [examples/live-source-backed-circumvention-and-corridor.md](examples/live-source-backed-circumvention-and-corridor.md) — `live-source-backed` memo on Russia-circumvention exposure (KZ / KG) and Middle Corridor capacity, grounded in publicly retrievable OFAC/BIS, World Bank, EBRD, EAG and reputable secondary reporting.
+- [examples/user-provided-sources-middle-corridor.md](examples/user-provided-sources-middle-corridor.md) — `user-provided sources` memo for an EU shipper, scoped strictly to a four-item public packet on Middle Corridor capacity.
 
-Every example states its **evidence mode** and ends with a limitation note. Six examples use `reasoning-only`; one uses `illustrative source packet` to demonstrate the grounding pattern.
+Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, one is `live-source-backed`, and one is `user-provided sources`.
 
 ## 9. Skill files
 
@@ -163,7 +165,7 @@ Use them as patterns to structure reasoning, not as factual claims about any spe
 
 [evals/starter-rubric.md](evals/starter-rubric.md) — starter rubric for scoring memos against the analytical contract. Honest label: starter rubric, not a validated benchmark.
 
-[evals/scoring-example.md](evals/scoring-example.md) — worked scoring example applying the rubric to one of the flagship memos.
+[evals/scoring-example.md](evals/scoring-example.md) — worked scoring examples applying the rubric to a `reasoning-only` memo and to the `live-source-backed` memo. The rubric includes evidence-mode-specific dimensions for each of the four canonical modes.
 
 [evals/failure-modes.md](evals/failure-modes.md) — common failure modes (generic essay, alarmism without channel, fake sanctions certainty, fake citations, over-expanded geography, missing limitation note, etc.).
 
@@ -190,9 +192,9 @@ Every example and every memo produced with this skill should state one of four c
 
 Indicative direction, not a commitment:
 
-- additional `live-source-backed` and `user-provided sources` examples (current examples are `reasoning-only` and `illustrative source packet`; live retrieval and real user packets require external tooling)
 - continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves
-- additional worked scoring examples covering memos in different evidence modes
+- additional worked memos in each evidence mode as new use cases arise
+- pairing of `live-source-backed` memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) once retrieved at point of use, layered on top of the current secondary-reporting links
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

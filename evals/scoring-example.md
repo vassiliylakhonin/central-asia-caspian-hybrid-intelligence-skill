@@ -84,3 +84,90 @@ A higher-stakes operational memo would need a different evidence mode (`user-pro
 - The thresholds in `starter-rubric.md` are working defaults, not validated cutoffs.
 - The rubric does not test factual correctness, only structure and evidence discipline.
 - A single worked example is not a benchmark.
+
+---
+
+## Second worked example — `live-source-backed` memo
+
+[`examples/live-source-backed-circumvention-and-corridor.md`](../examples/live-source-backed-circumvention-and-corridor.md) — Russia-circumvention exposure and Middle Corridor capacity. Evidence mode: `live-source-backed`.
+
+### Section A. Scope and framing
+
+| # | Score | Note |
+|---|---|---|
+| 1 | 2 | KZ / KG core; Caspian and Middle Corridor included only via routing; external powers only via specific transmission channel. |
+| 2 | 2 | Two concrete questions framed (compliance pressure on SME flows; corridor capacity for shippers/producers). |
+| 3 | 2 | "6–12 months" stated. |
+| 4 | 2 | Multiple roles addressed (analyst, bank, fintech, importer, shipper, investor, regulator). |
+
+A: **8 / 8**.
+
+### Section B. Reasoning quality
+
+| # | Score | Note |
+|---|---|---|
+| 5 | 2 | `Primary driver is:` clearly stated. |
+| 6 | 2 | Compliance and physical-side mechanisms each step-by-step, then implications. |
+| 7 | 2 | Explicit table mapping channels to packet items. |
+| 8 | 2 | Leverage shifts addressed. |
+| 9 | 2 | Trigger points concrete and source-linked. |
+| 10 | 2 | Bank/fintech, importer, shipper, producer, investor, regulator/IFI all addressed. |
+
+B: **12 / 12**.
+
+### Section C. Evidence discipline ⚠
+
+| # | Score | Note |
+|---|---|---|
+| 11 | 2 | `Evidence mode: live-source-backed` and retrieval date stated. |
+| 12 | 2 | `Judgment`, `Plausible`, `Unknown` labels used; quantitative claims attributed. |
+| 13 | 2 | All numeric claims tied to a cited source (no fabricated dates, prices, IDs). |
+| 14 | 2 | Time-sensitivity warning prominent at top and in limitation note. |
+
+C: **8 / 8**. No hard fails.
+
+### Section D. Tone and safety ⚠
+
+| # | Score | Note |
+|---|---|---|
+| 15 | 2 | "Subject to internal policy and regulatory review"; no determinative compliance claims. |
+| 16 | 2 | Explicit disclaimer that this is not legal/sanctions/AML advice. |
+| 17 | 2 | Limitation note present. |
+| 18 | 2 | Explicit "does not screen any specific counterparty against any list". |
+
+D: **8 / 8**. No hard fails.
+
+### Section E. Decision usefulness
+
+| # | Score | Note |
+|---|---|---|
+| 19 | 2 | "What would change the judgment" with five concrete conditions. |
+| 20 | 2 | Confidence footer with assumptions, unknowns, indicators. |
+| 21 | 2 | Usable as a starting point; bounded honestly. |
+
+E: **6 / 6**.
+
+### Section F. `live-source-backed` dimensions ⚠
+
+| # | Score | Note |
+|---|---|---|
+| F1 | 2 | Retrieval date 2026-05-08 stated at top of memo. |
+| F2 | 2 | Every non-trivial claim tagged [S1]–[S6] with a working URL. |
+| F3 | 2 | World Bank and EBRD-derived claims for capacity; OFAC/BIS-derived claims for sanctions; FATF/EAG public index for AML baseline. Tier 2 (Astana Times, Caliber.az, Asia House) used as accessible reporting on primary studies, not as the basis for legal claims. |
+| F4 | 2 | Multiple explicit instructions to re-verify against current lists and current capacity data. |
+
+F: **8 / 8**. No hard fails.
+
+### Aggregate
+
+- Base (A–E): **42 / 42**.
+- F (`live-source-backed`): **8 / 8**.
+- **Total: 50 / 50.**
+- No hard fails in C, D, or F.
+- Above the working "≥ 40 with no hard fails" threshold for `live-source-backed` mode.
+
+### Reviewer commentary
+
+The memo holds up at the top of the rubric because it (a) cites every quantitative claim back to a retrievable source, (b) labels its evidence mode and retrieval date prominently, (c) does not extrapolate beyond what the cited sources support, and (d) flags time-sensitivity in a way that makes safe operational re-use plausible.
+
+The main caveat for a real-world reviewer is **source tier**: for legal-grade sanctions or AML claims, a memo should ultimately cite OFAC / BIS / EU / OFSI / UN primary list entries and FATF / EAG MER PDFs directly, rather than secondary reporting. The current memo uses Tier 2 reporting as the accessible link layer; in production this should be paired with the primary-list URLs and PDFs once retrieved. This is a content-strengthening step, not a rubric failure — the structure and discipline are intact.

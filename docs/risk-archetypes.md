@@ -185,3 +185,26 @@ The lists below extend each archetype with more specific (but still **generic**)
 - *Watch-next*: scheme exits; regulator decisions on local rails; correspondent or scheme-participant changes; rapid CNY-rail or local-IPS adoption shifts.
 
 These extensions remain generic by design. Substituting in specific HS codes, jurisdictions or counterparties requires source-backed retrieval and qualified compliance / legal review.
+
+---
+
+## Source-class mapping (what evidence supports each archetype)
+
+For each archetype, this table maps the typical evidence classes (per `docs/source-guide.md`) that operational use should draw on. It is **not** a list of specific sources to cite; it is a hint to where source-backed work should look.
+
+| Archetype | Primary evidence classes |
+|---|---|
+| 1. Re-export / transshipment exposure | Customs / statistics agencies (origin and destination); company registries; transport documents; sanctions / circumvention guidance |
+| 2. Dual-use goods routing | Export-control regimes (US BIS, EU dual-use); customs HS-code data; export-licence records; common high-priority items lists |
+| 3. Correspondent banking de-risking | Tier-1 correspondent communications (where shareable); national regulators / central banks; respondent communications; FATF reports |
+| 4. Beneficial ownership opacity | National BO registers; company registries; court records; FATF / EAG MERs; investigative reporting (Tier 2) |
+| 5. Sanctioned-party adjacency | Sanctions lists (OFAC, EU, OFSI, UN, national); BO registers; court records; regulator guidance on control / 50% rules |
+| 6. Energy / logistics chokepoint risk | Port and rail operator disclosures; pipeline operator publications; IFI corridor studies (e.g. World Bank, EBRD); customs throughput |
+| 7. Customs / statistics anomaly | National customs data; UN Comtrade and mirror data; trade-policy reviews |
+| 8. State-capacity enforcement gap | FATF / EAG mutual-evaluation reports and follow-ups; regulator publications; court records; IFI governance reports |
+| 9. China / Russia / EU leverage competition | Project-finance disclosures; SOE filings; ministry communiqués; IFI reports; reputable policy-institute work (Tier 2) |
+| 10. Caspian corridor disruption | Port authority statistics; rail operator disclosures; IFI corridor studies; freight indices |
+| 11. Regulatory arbitrage | Licensing data; SEZ / free-zone authority disclosures; FATF / EAG follow-ups; harmonization agreements |
+| 12. Payment-rail exposure | Central-bank publications; scheme-participant disclosures; correspondent-bank communications; regulator decisions |
+
+For source-backed memos, name the *specific* source within these classes and cite it. For `reasoning-only` memos, this table is a guide to what an evidence-backed version would look like.

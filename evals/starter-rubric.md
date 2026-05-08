@@ -70,6 +70,58 @@ A memo with any **0** on a hard-fail dimension (marked ⚠ below) should be revi
 
 These thresholds are working defaults, not validated cutoffs.
 
+## Evidence-mode-specific dimensions
+
+The four canonical evidence modes (`live-source-backed` / `user-provided sources` / `illustrative source packet` / `reasoning-only`) impose different obligations. Score these only when applicable to the memo under review.
+
+### F. `live-source-backed` (additional dimensions)
+
+Score 0/1/2 for each:
+
+- F1. **Retrieval date stated explicitly** at the top of the memo.
+- F2. **Each non-trivial factual claim is traceable to a cited source** (URL or full reference). No bare assertions.
+- F3. **Sources are appropriate for the claim type** — primary / authoritative for legal, sanctions, ownership and enforcement claims; Tier 2 only for context and triangulation.
+- F4. **Time-sensitivity is acknowledged** — explicit instruction to re-verify designations, prices, dates and capacity figures before operational use.
+
+Section F: out of **8**. Any **0** in F1–F4 is a hard fail for `live-source-backed` mode.
+
+### G. `user-provided sources` (additional dimensions)
+
+- G1. **Packet is enumerated explicitly** at the top of the memo (each item identifiable, dated, linkable).
+- G2. **Every factual claim is grounded in a packet item** or labeled `Plausible` / `Judgment` / `Unknown`.
+- G3. **Packet boundaries are respected** — the memo does not assert facts that go beyond what the packet supports.
+- G4. **Unknowns from the packet are stated explicitly** (what would require additional source supply to resolve).
+
+Section G: out of **8**. Any **0** in G1–G4 is a hard fail for `user-provided sources` mode.
+
+### H. `illustrative source packet` (additional dimensions)
+
+- H1. **Packet is clearly marked as constructed / illustrative** at the top of the memo.
+- H2. **No real-world entity, person, designation, statistic or enforcement action is asserted as factual** outside the labeled illustrative packet.
+- H3. **Memo treats the packet as the boundary of factual authority** in the same way as `user-provided sources` mode.
+- H4. **Limitation note explicitly warns the reader** that conclusions are not real-world claims.
+
+Section H: out of **8**. Any **0** in H1–H4 is a hard fail for `illustrative source packet` mode.
+
+### I. `reasoning-only` (additional dimensions)
+
+- I1. **Memo refrains from asserting specific real-world facts** (specific designations, dates, prices, capacity figures, statutes) that have not been retrieved.
+- I2. **Specific entities, persons or routes are not asserted as having any real-world status** beyond being reasoning targets.
+- I3. **Memo's conclusions are explicitly bounded** as structural reasoning, not factual claims.
+
+Section I: out of **6**. Any **0** in I1–I3 is a hard fail for `reasoning-only` mode.
+
+### Aggregate with evidence-mode dimensions
+
+Total = base rubric (sections A–E, 42 points) + applicable evidence-mode section (F: 8, G: 8, H: 8, or I: 6).
+
+- `live-source-backed`: out of **50**. Threshold for working draft: ≥ 40 with no hard fails in C, D or F.
+- `user-provided sources`: out of **50**. Threshold: ≥ 40 with no hard fails in C, D or G.
+- `illustrative source packet`: out of **50**. Threshold: ≥ 40 with no hard fails in C, D or H.
+- `reasoning-only`: out of **48**. Threshold: ≥ 38 with no hard fails in C, D or I.
+
+Thresholds are working defaults, not validated cutoffs.
+
 ## Limitations of the rubric
 
 - The rubric scores **structure and discipline**, not factual correctness.

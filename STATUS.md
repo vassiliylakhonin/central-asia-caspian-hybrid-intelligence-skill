@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-08.
+**Last updated:** 2026-05-08 (Wave 3 close).
 
 ## Bar 1 — Early but credible
 
@@ -21,7 +21,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 | Criterion | Status | What is missing |
 |---|---|---|
-| B2.1 Source-anchored majority (≥50% of flagship examples) | ❌ not met | Currently 2 of 9 flagship examples are source-anchored (`live-source-backed`, `user-provided sources`). Need at least 5 to clear. |
+| B2.1 Source-anchored majority (≥50% of flagship examples) | ⚠ partial | Currently 5 of 12 flagship examples are source-anchored (4 `live-source-backed`, 1 `user-provided sources`) — 42%. Need at least 6 of 12 (50%) to clear. Three more `live-source-backed` examples added in Wave 3 closed half the gap. |
 | B2.2 At least one external reviewer of an example and a rubric application, with findings incorporated or addressed | ❌ not met | All current scorecards are reviewer judgments by the author. No external reviewer recorded. |
 | B2.3 At least three validated cases by domain practitioners, stored under `validated-cases/` | ❌ not met | Directory does not exist. No practitioner-attributed reviews. |
 | B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ❌ not decided | Current variants are near-identical wrappers. Either differentiate per platform or consolidate. |

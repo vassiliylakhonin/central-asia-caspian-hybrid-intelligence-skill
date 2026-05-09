@@ -105,10 +105,13 @@ The validator checks structure, required phrases, forbidden determinative claims
 - [examples/beneficial-ownership-opacity.md](examples/beneficial-ownership-opacity.md) — BO opacity and adjacency risk for EDD analysts onboarding cross-border trading groups.
 - [examples/trade-finance-dual-use-routing.md](examples/trade-finance-dual-use-routing.md) — trade finance and dual-use goods routing risk for SME-focused trade-finance providers.
 - [examples/illustrative-source-packet-fintech.md](examples/illustrative-source-packet-fintech.md) — worked example of `illustrative source packet` mode, demonstrating how a memo grounds claims in a labeled (constructed) packet.
-- [examples/live-source-backed-circumvention-and-corridor.md](examples/live-source-backed-circumvention-and-corridor.md) — `live-source-backed` memo on Russia-circumvention exposure (KZ / KG) and Middle Corridor capacity, grounded in publicly retrievable OFAC/BIS, World Bank, EBRD, EAG and reputable secondary reporting.
+- [examples/live-source-backed-circumvention-and-corridor.md](examples/live-source-backed-circumvention-and-corridor.md) — `live-source-backed` memo on Russia-circumvention exposure (KZ / KG) and Middle Corridor capacity, grounded in publicly retrievable OFAC/BIS, Treasury, World Bank, EBRD, EAG and reputable secondary reporting.
+- [examples/live-source-backed-bank-correspondent.md](examples/live-source-backed-bank-correspondent.md) — `live-source-backed` memo on Kazakhstani correspondent and counterparty exposure under EO 14114, UK CHPL guidance and EU enforcement on Central Asian banks.
+- [examples/live-source-backed-bo-opacity.md](examples/live-source-backed-bo-opacity.md) — `live-source-backed` memo on beneficial ownership opacity in cross-border KZ/UZ/KG structures under FATF R24/R25 and the EU 2024 AML package.
+- [examples/live-source-backed-energy-corridor.md](examples/live-source-backed-energy-corridor.md) — `live-source-backed` memo on Caspian and Central Asia energy corridor risk grounded in EIA primary, World Bank and EBRD/EC primary reports.
 - [examples/user-provided-sources-middle-corridor.md](examples/user-provided-sources-middle-corridor.md) — `user-provided sources` memo for an EU shipper, scoped strictly to a four-item public packet on Middle Corridor capacity.
 
-Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, one is `live-source-backed`, and one is `user-provided sources`.
+Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, four are `live-source-backed`, and one is `user-provided sources`.
 
 ## 9. Skill files
 

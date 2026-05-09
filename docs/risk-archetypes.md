@@ -108,11 +108,47 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 ## 12. Payment-rail exposure
 
 - **Mechanism**: dependency on a specific payment rail (USD correspondent, SWIFT, card scheme, CNY rail, instant-payment system) creates concentrated risk if access changes.
-- **Typical indicators**: single-rail dominance in revenue, lack of fallback, rail-specific terms changing.
+- **Typical indicators**: revenue concentration on a single rail; absence of fallback rails; rail-specific term changes; settlement-time variability concentrated on one rail.
 - **Evidence needed**: rail-mix data, scheme communications, regulator decisions.
 - **False positives**: short-term scheme outages.
 - **Watch-next triggers**: scheme exits, regulator decisions on local rails, changes in card-scheme participation.
 - **Mitigation questions**: fintech — rail diversification; bank — scheme-membership risk; merchant — acceptance-rail mix.
+
+## 13. Crypto / VASP rails exposure
+
+- **Mechanism**: cross-border value transfer routes through licensed and unlicensed VASPs (exchanges, OTC desks, P2P operators), stablecoin corridors, and crypto-fiat off-ramps; some flows substitute for restricted USD/EUR rails.
+- **Typical indicators**: rapid growth of unlicensed VASPs in jurisdictions with limited supervision; high stablecoin (USDT) settlement on regional OTC desks; mismatch between declared business activity and on-chain footprint; concentration of P2P off-ramps in particular merchant categories.
+- **Evidence needed**: VASP registries and licensing data; FATF Travel Rule implementation status; on-chain analytics; regulator notices and enforcement.
+- **False positives**: legitimate cross-border remittance demand; SME use of stablecoins for FX hedging in volatile local-currency environments.
+- **Watch-next triggers**: new VASP licensing regimes; FATF re-rating on Travel Rule and crypto AML; designations of specific VASPs; major enforcement against P2P operators.
+- **Mitigation questions**: bank — onboarding rules for VASP-adjacent counterparties; fintech — exposure to crypto-fiat off-ramps; investor — regulatory tenor in target jurisdiction; regulator — Travel Rule and supervisory capacity.
+
+## 14. Parallel financial-system rails (SPFS / Mir / NSPK / regional substitutes)
+
+- **Mechanism**: when USD/EUR correspondent rails tighten, SME and merchant flows migrate onto Russian (SPFS messaging, Mir card scheme, NSPK), Chinese (CIPS, UnionPay) or regional alternative rails. Each carries its own sanctions, scheme-membership and operational risks.
+- **Typical indicators**: regional banks announcing or quietly extending Mir / UnionPay acceptance; SPFS connectivity disclosures; CNY rail growth disproportionate to underlying CNY trade share; sudden changes in scheme-participation rules.
+- **Evidence needed**: scheme operator publications; central-bank announcements; regulator decisions on participation; Western sanctions guidance on parallel-rail participation.
+- **False positives**: legitimate diversification away from single-rail risk; routine CNY trade growth.
+- **Watch-next triggers**: Western designations targeting parallel-rail operators or participants; scheme-rule changes; regional CB swap-line activity; regulatory positioning on Mir / SPFS / CIPS in third-country regulators.
+- **Mitigation questions**: bank — Mir / SPFS / CIPS participation policy and sanctions exposure; fintech — multi-rail strategy; regulator — supervisory expectations on parallel-rail flows.
+
+## 15. Kleptocracy proceeds and real-estate flows
+
+- **Mechanism**: politically connected proceeds — from procurement, resource rents, customs leakage, or SOE diversion — are layered through cross-border structures and parked in real estate, luxury assets or private investment vehicles.
+- **Typical indicators**: real-estate price disconnects from local-income fundamentals; high-value purchases via offshore vehicles in regional and OECD-jurisdiction markets; political exposure via family / business associates not captured in standard PEP lists.
+- **Evidence needed**: company and BO registers; real-estate transaction records; court records; FATF / EAG findings; investigative reporting (Tier 2 with cross-checking); UNCAC and OECD anti-bribery enforcement records.
+- **False positives**: legitimate diaspora wealth; legal entrepreneurial fortunes in opaque-by-default jurisdictions.
+- **Watch-next triggers**: BO register reforms; AMLA-style supranational supervision developments; high-profile asset-recovery actions; OFAC GLOMAG / EU Global Human Rights regime designations.
+- **Mitigation questions**: bank — PEP scope including extended associates; real-estate counsel — source-of-funds standards; investor — political-risk on rapid restructurings post-leadership change.
+
+## 16. Drug-trafficking transit and AML predicate flows
+
+- **Mechanism**: Central Asia (especially KG, TJ) sits on Afghanistan-to-Russia/EU drug-trafficking routes; resulting illicit proceeds intersect with formal financial systems via cash-intensive businesses, trade-based laundering, and informal value transfer (hawala-equivalent).
+- **Typical indicators**: cash-intensive merchant categories with revenue inconsistent with footprint; cross-border cash flows above declaration thresholds; rapid turnover in cash-handling licenses; trade-based laundering patterns (over-/under-invoicing) on commodity HS codes.
+- **Evidence needed**: UNODC drug-trafficking reports; FATF / EAG mutual-evaluation findings on predicate offences; FIU typology publications; enforcement records.
+- **False positives**: legitimate cash-intensive business in low-banking-penetration regions.
+- **Watch-next triggers**: UNODC route updates; FIU advisories; cross-border cash-declaration enforcement; major enforcement actions against IVTS / hawala operators.
+- **Mitigation questions**: bank — AML predicate scope beyond sanctions; fintech — cash-out and cash-in monitoring; regulator — typology coverage in supervisory guidance.
 
 ---
 
@@ -184,6 +220,26 @@ The lists below extend each archetype with more specific (but still **generic**)
 - *Indicators*: revenue concentration on a single rail; absence of fallback rails; rail-specific term changes; scheme-membership reviews; settlement-time variability concentrated on one rail.
 - *Watch-next*: scheme exits; regulator decisions on local rails; correspondent or scheme-participant changes; rapid CNY-rail or local-IPS adoption shifts.
 
+### 13. Crypto / VASP rails exposure
+
+- *Indicators*: stablecoin (USDT especially) settlement volume on regional OTC desks; unlicensed VASPs operating without supervision; mismatch between declared business and on-chain footprint; concentration of P2P off-ramps in particular merchant categories; absent or weak Travel Rule implementation.
+- *Watch-next*: VASP licensing regimes; FATF Travel Rule re-ratings; designations of specific VASPs by OFAC/EU/OFSI; enforcement against P2P operators; on-chain analytics flagging regional address clusters.
+
+### 14. Parallel financial-system rails (SPFS / Mir / NSPK / regional substitutes)
+
+- *Indicators*: regional bank Mir / UnionPay acceptance announcements; SPFS connectivity disclosures; CNY rail growth disproportionate to underlying CNY trade share; sudden scheme-participation rule changes; regional CB swap-line activations.
+- *Watch-next*: Western designations targeting parallel-rail operators or third-country participants; scheme-rule changes; regulator positioning on Mir / SPFS / CIPS in third-country regulators; policy moves on parallel-rail use in specific sectors.
+
+### 15. Kleptocracy proceeds and real-estate flows
+
+- *Indicators*: real-estate price disconnects from local-income fundamentals; offshore vehicles concentrated in regional and OECD-jurisdiction luxury markets; PEP exposure via family / business associates not captured in standard lists; rapid restructurings post-leadership change.
+- *Watch-next*: BO register reforms; AMLA-style supranational supervision developments; high-profile asset-recovery actions; OFAC GLOMAG / EU Global Human Rights regime designations; investigative-reporting clusters affecting the region.
+
+### 16. Drug-trafficking transit and AML predicate flows
+
+- *Indicators*: cash-intensive merchant categories with revenue inconsistent with footprint; cross-border cash flows above declaration thresholds; rapid turnover in cash-handling licenses; trade-based laundering patterns (over-/under-invoicing) on commodity HS codes; informal value transfer (hawala-equivalent) hubs.
+- *Watch-next*: UNODC drug-route updates; FIU advisories; cross-border cash-declaration enforcement; major enforcement actions against IVTS / hawala operators; FATF / EAG predicate-offence findings.
+
 These extensions remain generic by design. Substituting in specific HS codes, jurisdictions or counterparties requires source-backed retrieval and qualified compliance / legal review.
 
 ---
@@ -206,5 +262,9 @@ For each archetype, this table maps the typical evidence classes (per `docs/sour
 | 10. Caspian corridor disruption | Port authority statistics; rail operator disclosures; IFI corridor studies; freight indices |
 | 11. Regulatory arbitrage | Licensing data; SEZ / free-zone authority disclosures; FATF / EAG follow-ups; harmonization agreements |
 | 12. Payment-rail exposure | Central-bank publications; scheme-participant disclosures; correspondent-bank communications; regulator decisions |
+| 13. Crypto / VASP rails exposure | VASP registries; FATF Travel Rule status; on-chain analytics; central-bank / regulator notices on VASPs; designation lists |
+| 14. Parallel financial-system rails | Scheme operator publications (SPFS, Mir, NSPK, CIPS, UnionPay); central-bank announcements; correspondent-bank communications; Western sanctions guidance on parallel-rail participation |
+| 15. Kleptocracy proceeds and real-estate flows | BO and corporate registers; real-estate transaction records; court records; FATF / EAG findings; UNCAC / OECD anti-bribery enforcement; OFAC GLOMAG / EU Global Human Rights designations |
+| 16. Drug-trafficking transit and AML predicate flows | UNODC drug-trafficking reports; FATF / EAG MERs on predicate offences; FIU typology publications; enforcement records; cross-border cash-declaration data |
 
 For source-backed memos, name the *specific* source within these classes and cite it. For `reasoning-only` memos, this table is a guide to what an evidence-backed version would look like.

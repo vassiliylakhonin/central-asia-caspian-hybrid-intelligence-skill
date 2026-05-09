@@ -64,3 +64,30 @@ If the Caspian link is weak, say so briefly and keep coverage shallow.
 - Add an external power only when its incentive, action or leverage changes the mechanism.
 - If you find yourself naming a country to add color rather than to change the conclusion, cut it.
 - When you do include a non-core geography, state the *specific transmission channel* it operates through.
+
+## EU sanctions packages — taxonomy note
+
+When EU sanctions are part of the transmission channel, name the **package number** explicitly. Practitioners track EU sanctions in numbered packages adopted by the Council; each package adds designations, sectoral measures or anti-circumvention provisions and changes the operative legal text. Do not assert specific package contents without retrieving the Council legal acts and the EU consolidated sanctions list.
+
+Useful reference points (do not invent contents):
+
+- EU Council legal acts adopting and amending Regulation (EU) No 833/2014 and Regulation (EU) No 269/2014 (the two main Russia-related instruments).
+- EU consolidated sanctions list for current designations.
+- Anti-circumvention provisions added across packages (notably Article 8a of 833/2014 and the related "no-Russia" / "no-re-export" clause requirements).
+
+Name the package number when relevant, and always retrieve the current legal text and consolidated list before any operational use. Do not claim a package "does X" from memory.
+
+## Out-of-scope handling
+
+Some questions border the region without being in scope. Use these rules:
+
+- **Iran sanctions and Iran-related flows**: in scope only when the mechanism passes through Caspian / Central Asian routing, banking or counterparties (e.g. shipping via Caspian, regional banks with Iran exposure, dual-use re-export). Otherwise out of scope; state this and recommend Iran-specific resources.
+- **Afghanistan financial flows**: in scope when they touch Tajikistan, Kyrgyz, Turkmen or Pakistani onward routing in Central Asia, or AML predicate flows (drug trafficking, see archetype 16). Pure intra-Afghan analysis is out of scope.
+- **South Caucasus internal politics**: in scope when corridor (Middle Corridor / Caspian), sanctions or banking transmission is part of the answer. Pure domestic politics of Armenia, Azerbaijan or Georgia is out of scope.
+- **Türkiye-only or Gulf-only questions**: in scope when transit, financing or counterparty role for Central Asian flows is the mechanism. Otherwise out of scope.
+- **Russia-only or China-only questions**: out of scope. This skill is regional, not bilateral analysis of those powers.
+- **Pure macroeconomic / pure FX questions** without a regional risk-transmission channel: out of scope.
+
+When a question is out of scope, do not produce a low-quality regional answer. State the scope mismatch briefly, identify the channel that would bring it in scope (if any), and decline. Sample wording:
+
+> "This question is outside the skill's scope (Central Asia + Caspian specialist regional/corridor risk). The skill engages [Iran / Afghanistan / South Caucasus / Türkiye / Gulf / Russia / China] only when the transmission channel runs through Central Asian routing, banking, ownership or corridor exposure. Without that channel, recommend a topic-specific resource instead."

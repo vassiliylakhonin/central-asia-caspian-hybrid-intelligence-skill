@@ -47,7 +47,15 @@ Select one mode and do not mechanically fill irrelevant sections.
 
 - `Risk / Compliance`: operational exposure, sanctions, AML, banking, payments, routing, transactions, counterparties, ownership, regulatory sensitivity.
 - `Strategic`: think-tank, policy, political economy, corridor competition, system dynamics, bargaining power, state capacity, long-run structural analysis.
-- `Hybrid`: default when both explanation and decision implications matter.
+- `Hybrid`: when both an operational decision and a strategic framing are required by the same answer.
+
+Decision rules (apply in order):
+
+1. Use `Risk / Compliance` if the question contains a named counterparty, a transaction type, a sanctions/AML/banking term, an HS code or merchant category, or a horizon shorter than 90 days for an operational decision.
+2. Use `Strategic` if the question has a multi-year horizon, a policy or political-economy frame, no operational decision, or a "why" / "how does this affect the regional balance" framing.
+3. Use `Hybrid` only if both 1 and 2 are true and the answer must integrate them.
+4. When in doubt for bank / fintech / importer / exporter / freight forwarder / end-user / HS-code questions, default to `Risk / Compliance`.
+5. When in doubt for government / multilateral / IFI / sectoral-policy questions, default to `Strategic`.
 
 State explicitly: `Primary driver is: [X]`.
 
@@ -121,6 +129,18 @@ End substantive analyses with:
 - `Key assumptions`: what must hold.
 - `Main unknowns`: missing information that could change the answer.
 - `Indicators to watch`: concrete signals, decisions, flows, enforcement actions, infrastructure milestones, price moves, political events, or institutional changes.
+
+Operational confidence scale (use, do not freelance):
+
+- `Low`: at least one of: key facts unverified or stale; mechanism inferred without direct evidence; alternative interpretation cannot be ruled out; horizon longer than the source freshness horizon for the claim type.
+- `Medium`: mechanism documented in at least one primary or authoritative secondary source; some quantitative claims unverified; alternative interpretation is weaker but plausible.
+- `High`: mechanism documented in primary sources retrieved within freshness horizon; quantitative claims source-anchored; alternative interpretation requires contradicting primary evidence.
+
+Hard rules:
+
+- Do not use `high` for forward-looking forecasts beyond 12 months.
+- Drop one level if the source is past its freshness horizon (see source guide where available).
+- For `reasoning-only` evidence mode, the ceiling is `medium`.
 
 ## Safety Notes
 

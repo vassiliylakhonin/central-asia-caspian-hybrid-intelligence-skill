@@ -45,9 +45,10 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 ## 5. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
 
-This skill is one of three repos in a wider portfolio. Each has a distinct role; do not blur them.
+This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
 - **Central Asia + Caspian Hybrid Intelligence Skill** *(this repo)* — specialist regional/corridor-risk reasoning, domain-specific risk-transmission logic, sanctions / AML / banking / logistics / energy / corridor analysis patterns.
+- **Gulf + Middle East Hybrid Intelligence Skill** — sibling vertical specialist; reference it when a flow crosses both regions (Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs). See [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
 - **Global Think Tank Analyst** — broader strategic-risk memo workflow, general policy-risk analysis, scenario and red-team memo modes.
 - **Agenda Intelligence MD** — schemas, validation, evidence audit, scoring, CLI / MCP / CI tooling where implemented.
 
@@ -115,12 +116,12 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 ## 9. Skill files
 
-- `skills/codex/SKILL.md` — Codex variant with expanded trigger description.
-- `skills/claude/SKILL.md` — Claude variant with valid YAML frontmatter.
-- `skills/openclaw/SKILL.md` — canonical OpenClaw skill.
+- `skills/claude/SKILL.md` — Claude variant. YAML frontmatter for Claude Projects; platform-specific section covering Projects setup, web search for `live-source-backed` mode, and extended-context `user-provided sources` workflows.
+- `skills/codex/SKILL.md` — Codex variant. Platform-specific section covering agentic-loop output discipline, AGENTS.md as repo-context companion, and structured JSON output for downstream steps.
+- `skills/openclaw/SKILL.md` — OpenClaw variant. Underscore-convention name for ClawHub; platform-specific section covering invocation, skill-composition handoffs, and scope boundary.
 - `scripts/validate_skills.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
 
-All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes.
+All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds a platform-specific integration section with instructions that change how the skill is set up and used on that platform.
 
 ## 10. Source guide
 
@@ -196,9 +197,10 @@ Every example and every memo produced with this skill should state one of four c
 
 Indicative direction, not a commitment:
 
-- continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves
+- continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves — crypto/VASP archetype (#13) added 2026-05-12
 - additional worked memos in each evidence mode as new use cases arise
 - pairing of `live-source-backed` memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) once retrieved at point of use, layered on top of the current secondary-reporting links
+- platform differentiation across `skills/` variants — integration sections added 2026-05-12; full B2.4 closure requires real-use evidence
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

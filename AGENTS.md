@@ -24,6 +24,11 @@ Global Think Tank Analyst:
 - general policy-risk analysis
 - scenario and red-team memo modes
 
+Gulf + Middle East Hybrid Intelligence Skill:
+- sibling vertical specialist
+- reference when a flow crosses both regions: Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs
+- do not duplicate its Iran sanctions, GCC banking, or maritime-chokepoint content here
+
 Central Asia + Caspian Hybrid Intelligence Skill:
 - specialist regional/corridor-risk reasoning
 - domain-specific risk transmission logic

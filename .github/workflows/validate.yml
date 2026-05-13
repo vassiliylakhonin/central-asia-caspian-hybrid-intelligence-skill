@@ -16,6 +16,7 @@ jobs:
           test -f LICENSE
           test -f CONTRIBUTING.md
           test -f SECURITY.md
+          test -f examples/README.md
           test -f skills/openclaw/SKILL.md
           test -f skills/codex/SKILL.md
           test -f skills/claude/SKILL.md

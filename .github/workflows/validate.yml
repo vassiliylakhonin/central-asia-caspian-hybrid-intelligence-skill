@@ -13,6 +13,8 @@ jobs:
       - name: Check required files
         run: |
           test -f README.md
+          test -f AGENTS.md
+          test -f STATUS.md
           test -f LICENSE
           test -f CONTRIBUTING.md
           test -f SECURITY.md

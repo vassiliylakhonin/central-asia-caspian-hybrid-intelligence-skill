@@ -136,7 +136,52 @@ def validate_root_docs() -> None:
         fail("STATUS.md: must explicitly state: **Bar 2 — not cleared.**")
 
 
+def example_evidence_mode(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"Evidence mode:\s*`?([^`.\n]+)`?", text, re.I)
+    if not match:
+        fail(f"{path}: missing explicit Evidence mode line")
+    return match.group(1).strip().lower()
+
+
+def validate_example_counts() -> None:
+    counts = {
+        "reasoning-only": 0,
+        "illustrative source packet": 0,
+        "live-source-backed": 0,
+        "user-provided sources": 0,
+    }
+
+    for path in sorted((ROOT / "examples").glob("*.md")):
+        if path.name == "README.md":
+            continue
+        mode = example_evidence_mode(path)
+        if mode not in counts:
+            fail(f"{path}: unknown evidence mode: {mode}")
+        counts[mode] += 1
+
+    total = sum(counts.values())
+    source_anchored = counts["live-source-backed"] + counts["user-provided sources"]
+    percent = round(source_anchored / total * 100) if total else 0
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8").lower()
+    status = (ROOT / "STATUS.md").read_text(encoding="utf-8").lower()
+
+    expected_readme = (
+        f"six examples use `reasoning-only`, one uses `illustrative source packet`, "
+        f"four are `live-source-backed`, and one is `user-provided sources`"
+    )
+    if expected_readme not in readme:
+        fail("README.md: evidence-mode count summary is missing or stale")
+
+    expected_status = f"{source_anchored} of {total} flagship examples are source-anchored"
+    expected_ratio = f"{percent}%"
+    if expected_status not in status or expected_ratio not in status:
+        fail("STATUS.md: source-anchored example count or ratio is stale")
+
+
 validate_root_docs()
+validate_example_counts()
 
 for path in REQUIRED:
     frontmatter, body = split_frontmatter(path)

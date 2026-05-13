@@ -11,6 +11,12 @@ REQUIRED = [
     ROOT / "skills/claude/SKILL.md",
 ]
 
+REQUIRED_ROOT_FILES = [
+    ROOT / "AGENTS.md",
+    ROOT / "README.md",
+    ROOT / "STATUS.md",
+]
+
 REQUIRED_SECTIONS = [
     "Core Contract",
     "Use When",
@@ -43,6 +49,15 @@ FORBIDDEN_CLAIMS = [
     "guaranteed compliant",
     "this is a legal determination",
     "constitutes legal advice",
+]
+
+README_FORBIDDEN_CLAIMS = [
+    "guarantees compliance",
+    "guarantees accuracy",
+    "detects sanctions evasion",
+    "fully autonomous",
+    "trusted by",
+    "used by",
 ]
 
 def fail(msg: str) -> None:
@@ -80,6 +95,37 @@ def split_frontmatter(path: Path) -> tuple[dict[str, str], str]:
 
 def section_titles(body: str) -> set[str]:
     return set(re.findall(r"^##\s+(.+?)\s*$", body, re.M))
+
+
+def validate_root_docs() -> None:
+    for path in REQUIRED_ROOT_FILES:
+        if not path.exists():
+            fail(f"{path}: required root file missing")
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8").lower()
+    status = (ROOT / "STATUS.md").read_text(encoding="utf-8").lower()
+
+    for claim in README_FORBIDDEN_CLAIMS:
+        if claim in readme:
+            fail(f"README.md: unsupported claim: {claim}")
+
+    if "no production-usage, adoption or benchmark numbers are claimed" not in readme:
+        fail("README.md: must disclose that no production-usage, adoption or benchmark numbers are claimed")
+
+    required_links = [
+        "github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill",
+        "github.com/vassiliylakhonin/global-think-tank-analyst",
+        "github.com/vassiliylakhonin/agenda-intelligence-md",
+    ]
+    for link in required_links:
+        if link not in readme:
+            fail(f"README.md: missing companion repo link: {link}")
+
+    if "**bar 2 — not cleared.**" not in status:
+        fail("STATUS.md: must explicitly state: **Bar 2 — not cleared.**")
+
+
+validate_root_docs()
 
 for path in REQUIRED:
     frontmatter, body = split_frontmatter(path)

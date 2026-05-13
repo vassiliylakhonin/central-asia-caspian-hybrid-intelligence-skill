@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-08 (Wave 3 close).
+**Last updated:** 2026-05-13 (README / STATUS platform-variant alignment).
 
 ## Bar 1 — Early but credible
 

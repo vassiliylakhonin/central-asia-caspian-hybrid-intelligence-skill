@@ -141,12 +141,12 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 ## 10. Skill files
 
-- `skills/claude/SKILL.md` — Claude variant. YAML frontmatter for Claude Projects; platform-specific section covering Projects setup, web search for `live-source-backed` mode, and extended-context `user-provided sources` workflows.
-- `skills/codex/SKILL.md` — Codex variant. Platform-specific section covering agentic-loop output discipline, AGENTS.md as repo-context companion, and structured JSON output for downstream steps.
-- `skills/openclaw/SKILL.md` — OpenClaw variant. Underscore-convention name for ClawHub; platform-specific section covering invocation, skill-composition handoffs, and scope boundary.
+- `skills/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
+- `skills/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
+- `skills/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
 - `scripts/validate_skills.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
 
-All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds a platform-specific integration section with instructions that change how the skill is set up and used on that platform.
+All variants currently share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. They are compatibility wrappers, not yet meaningfully differentiated runtime contracts. B2.4 remains open until the variants either gain real platform-specific behavior or are consolidated.
 
 ## 11. Source guide
 
@@ -225,7 +225,7 @@ Indicative direction, not a commitment:
 - continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves — crypto/VASP archetype (#13) added 2026-05-12
 - additional worked memos in each evidence mode as new use cases arise
 - pairing of `live-source-backed` memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) once retrieved at point of use, layered on top of the current secondary-reporting links
-- platform differentiation across `skills/` variants — integration sections added 2026-05-12; full B2.4 closure requires real-use evidence
+- platform differentiation or consolidation across `skills/` variants — B2.4 remains open; current variants are compatibility wrappers, not meaningfully differentiated runtime contracts
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

@@ -112,6 +112,17 @@ def validate_root_docs() -> None:
     if "no production-usage, adoption or benchmark numbers are claimed" not in readme:
         fail("README.md: must disclose that no production-usage, adoption or benchmark numbers are claimed")
 
+    overclaims = [
+        "platform-specific section covering",
+        "instructions that change how the skill is set up and used",
+    ]
+    for claim in overclaims:
+        if claim in readme:
+            fail(f"README.md: overstates platform differentiation: {claim}")
+
+    if "b2.4 remains open" not in readme or "compatibility wrappers" not in readme:
+        fail("README.md: must state that B2.4 remains open and variants are compatibility wrappers")
+
     required_links = [
         "github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill",
         "github.com/vassiliylakhonin/global-think-tank-analyst",

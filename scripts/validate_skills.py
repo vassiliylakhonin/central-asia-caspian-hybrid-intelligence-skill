@@ -158,6 +158,11 @@ def validate_example_counts() -> None:
         mode = example_evidence_mode(path)
         if mode not in counts:
             fail(f"{path}: unknown evidence mode: {mode}")
+        text = path.read_text(encoding="utf-8")
+        if mode == "live-source-backed" and not re.search(r"Retrieval date:\s*20\d{2}-\d{2}-\d{2}", text, re.I):
+            fail(f"{path}: live-source-backed example must include Retrieval date: YYYY-MM-DD")
+        if mode == "user-provided sources" and not re.search(r"Retrieval date.*20\d{2}-\d{2}-\d{2}", text, re.I):
+            fail(f"{path}: user-provided sources example must include source packet retrieval date")
         counts[mode] += 1
 
     total = sum(counts.values())

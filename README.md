@@ -17,7 +17,30 @@ Generic LLMs produce broad regional commentary on Central Asia and the Caspian: 
 
 That output is not decision-useful for analysts, banks, fintechs, investors, logistics operators or energy teams who actually have exposure to the region. They need mechanism-first reasoning, explicit evidence mode, and role-based implications — not regional essays.
 
-## 3. What it does
+## 3. Try this prompt
+
+Paste this into an AI agent using the Codex, Claude or OpenClaw skill file:
+
+```text
+Use the Central Asia + Caspian Hybrid Intelligence Skill.
+
+Question: A European fintech is onboarding SME exporters in Kazakhstan and Uzbekistan that trade through Caspian-connected routes. What sanctions, AML, payment-rail and routing risks matter over the next 6-12 months?
+Audience: fintech risk and compliance leadership.
+Time horizon: 6-12 months.
+Evidence mode: reasoning-only unless live source tools are available.
+Mode: risk / compliance.
+
+State the primary driver, mechanism, exposure map, role-based actions, trigger points, confidence, unknowns, and limitation note.
+```
+
+Expected shape of a good answer:
+- starts with `Primary driver is: ...`;
+- explains how the risk transmits through payment rails, counterparties, ownership, routing or corridors;
+- labels uncertainty using `Verified` / `Plausible` / `Judgment` / `Unknown` where useful;
+- gives role-based actions and trigger points, not vague "monitor closely" advice;
+- includes a clear limitation note and avoids legal or compliance determinations.
+
+## 4. What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis. It:
 
@@ -30,7 +53,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - produces trigger points and watch-next indicators
 - supports role-based implications for banks, fintechs, investors, logistics operators, energy teams and analysts
 
-## 4. What it is not
+## 5. What it is not
 
 - not legal advice
 - not compliance advice
@@ -43,7 +66,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - not a CLI, MCP server, or validation platform
 - not a replacement for human analyst or counsel review
 
-## 5. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
+## 6. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
@@ -58,7 +81,7 @@ This repo does **not** itself perform Agenda Intelligence MD validation, schema 
 
 [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside Agenda Intelligence MD (validation / evidence audit / scoring) and Global Think Tank Analyst (broader strategic-risk memo workflow). The patterns are illustrative; for current interfaces, schemas and tooling, consult those repos directly.
 
-## 6. Quick usage
+## 7. Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
 
@@ -77,7 +100,7 @@ python3 scripts/validate_skills.py
 
 The validator checks structure, required phrases, forbidden determinative claims and code-fence balance. It does **not** validate factuality of any output produced by the skill.
 
-## 7. Before / after
+## 8. Before / after
 
 **Before — generic LLM answer:**
 - broad regional commentary
@@ -97,7 +120,9 @@ The validator checks structure, required phrases, forbidden determinative claims
 - role-based implications (bank, fintech, investor, operator)
 - evidence mode stated explicitly
 
-## 8. Flagship examples
+## 9. Flagship examples
+
+For a guided route through the examples, start with [examples/README.md](examples/README.md).
 
 - [examples/fintech-sanctions-routing.md](examples/fintech-sanctions-routing.md) — fintech sanctions and routing exposure across Kazakhstan, Uzbekistan and Caspian-connected trade routes.
 - [examples/bank-correspondent-counterparty-exposure.md](examples/bank-correspondent-counterparty-exposure.md) — regional bank correspondent and counterparty exposure under tier-1 EDD pressure.
@@ -114,7 +139,7 @@ The validator checks structure, required phrases, forbidden determinative claims
 
 Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, four are `live-source-backed`, and one is `user-provided sources`.
 
-## 9. Skill files
+## 10. Skill files
 
 - `skills/claude/SKILL.md` — Claude variant. YAML frontmatter for Claude Projects; platform-specific section covering Projects setup, web search for `live-source-backed` mode, and extended-context `user-provided sources` workflows.
 - `skills/codex/SKILL.md` — Codex variant. Platform-specific section covering agentic-loop output discipline, AGENTS.md as repo-context companion, and structured JSON output for downstream steps.
@@ -123,7 +148,7 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds a platform-specific integration section with instructions that change how the skill is set up and used on that platform.
 
-## 10. Source guide
+## 11. Source guide
 
 A source-backed workflow uses external retrieval, user-provided source packets, or companion tooling. The skill itself does not retrieve sources.
 
@@ -142,7 +167,7 @@ A source-backed workflow uses external retrieval, user-provided source packets, 
 
 Listing a source class is not an endorsement and does not guarantee accuracy or timeliness for any specific question.
 
-## 11. Risk archetypes
+## 12. Risk archetypes
 
 [docs/risk-archetypes.md](docs/risk-archetypes.md) catalogues recurring archetypes for the region. For each: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based mitigation questions. Current archetypes:
 
@@ -163,7 +188,7 @@ Use them as patterns to structure reasoning, not as factual claims about any spe
 
 [docs/regional-logic.md](docs/regional-logic.md) explains when to include which geography. Core rule: do not expand geography for decoration; expand only when it changes the mechanism, risk exposure, leverage or decision.
 
-## 12. Review checklist
+## 13. Review checklist
 
 [evals/checklist.md](evals/checklist.md) — review checklist (not a benchmark) covering scope, reasoning quality, evidence discipline, tone/safety and decision usefulness.
 
@@ -182,7 +207,7 @@ Every example and every memo produced with this skill should state one of four c
 - **`illustrative source packet`** — facts grounded in a constructed, illustrative source packet for demonstration purposes.
 - **`reasoning-only`** — no sources retrieved; structural reasoning only. No factual claims about specific entities, designations or enforcement actions.
 
-## 13. Limitations
+## 14. Limitations
 
 - This skill helps **structure analysis**; it does not verify facts on its own.
 - It does not perform sanctions screening, AML transaction monitoring, or live source retrieval.
@@ -193,7 +218,7 @@ Every example and every memo produced with this skill should state one of four c
 - No production-usage, adoption or benchmark numbers are claimed.
 - See [STATUS.md](STATUS.md) for an honest status against the Definition of Done in `AGENTS.md`. The repo currently clears the "early but credible" bar; it does **not** clear the "externally validated specialist resource" bar.
 
-## 14. Roadmap
+## 15. Roadmap
 
 Indicative direction, not a commitment:
 

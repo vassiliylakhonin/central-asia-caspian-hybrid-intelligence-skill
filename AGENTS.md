@@ -143,18 +143,19 @@ README should make value clear in 30 seconds.
 Recommended structure:
 1. One-line positioning
 2. Problem
-3. What it does
-4. What it is not
-5. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
-6. Quick usage
-7. Before / after
-8. Flagship example
-9. Skill files
-10. Source guide
-11. Risk archetypes
-12. Review checklist
-13. Limitations
-14. Roadmap
+3. Try this prompt
+4. What it does
+5. What it is not
+6. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
+7. Quick usage
+8. Before / after
+9. Flagship examples and examples learning path
+10. Skill files
+11. Source guide
+12. Risk archetypes
+13. Review checklist
+14. Limitations
+15. Roadmap
 
 ## Examples
 
@@ -169,6 +170,8 @@ Preferred examples:
 - trade finance or dual-use goods routing
 
 Every example must include evidence mode and limitation note.
+
+Examples should be navigable as a learning path, not only as a flat file list. Keep `examples/README.md` aligned with the flagship examples section in `README.md`.
 
 ## Evaluation docs
 

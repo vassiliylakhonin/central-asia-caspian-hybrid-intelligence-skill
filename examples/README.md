@@ -12,6 +12,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 4. Read [`illustrative-source-packet-fintech.md`](illustrative-source-packet-fintech.md) to see how a labeled constructed packet constrains claims.
 5. Read [`live-source-backed-circumvention-and-corridor.md`](live-source-backed-circumvention-and-corridor.md) to see source-backed sanctions / corridor reasoning.
 6. Read [`user-provided-sources-middle-corridor.md`](user-provided-sources-middle-corridor.md) to see the mode where the user's source packet is the evidence base.
+7. Read [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) to see source-backed crypto/VASP rails and EU Travel Rule enforcement gap analysis for fintech compliance leadership (#13 archetype).
 
 ## Evidence modes
 
@@ -32,6 +33,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 | Energy / infrastructure | [`energy-infrastructure-corridor-risk.md`](energy-infrastructure-corridor-risk.md), [`live-source-backed-energy-corridor.md`](live-source-backed-energy-corridor.md) |
 | Beneficial ownership / adjacency | [`beneficial-ownership-opacity.md`](beneficial-ownership-opacity.md), [`live-source-backed-bo-opacity.md`](live-source-backed-bo-opacity.md) |
 | Trade finance / dual-use routing | [`trade-finance-dual-use-routing.md`](trade-finance-dual-use-routing.md) |
+| Crypto / VASP rails | [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) |
 
 ## How to judge an example
 

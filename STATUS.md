@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-14 (Wave 4: B2.4 closed; platform differentiation implemented).
+**Last updated:** 2026-05-14 (Wave 5: live-source-backed VASP/Travel Rule example added; source-anchored ratio now 6 of 13 = 46%).
 
 ## Bar 1 — Early but credible
 
@@ -21,7 +21,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 | Criterion | Status | What is missing |
 |---|---|---|
-| B2.1 Source-anchored majority (≥50% of flagship examples) | ⚠ partial | Currently 5 of 12 flagship examples are source-anchored (4 `live-source-backed`, 1 `user-provided sources`) — 42%. Need at least 6 of 12 (50%) to clear. Three more `live-source-backed` examples added in Wave 3 closed half the gap. |
+| B2.1 Source-anchored majority (≥50% of flagship examples) | ⚠ partial | 6 of 13 flagship examples are source-anchored (5 `live-source-backed`, 1 `user-provided sources`) — 46%. Wave 5 added one more `live-source-backed` example (VASP/Travel Rule), closing the gap; need 7 of 13 (or reduce total) to clear the 50% threshold. |
 | B2.2 At least one external reviewer of an example and a rubric application, with findings incorporated or addressed | ❌ not met | All current scorecards are reviewer judgments by the author. No external reviewer recorded. |
 | B2.3 At least three validated cases by domain practitioners, stored under `validated-cases/` | ❌ not met | Directory does not exist. No practitioner-attributed reviews. |
 | B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | Differentiation chosen. Claude variant adds `Claude Tool-Use Awareness` (retrieval → evidence mode shifting, prompt injection protection). Codex variant adds `Codex Agentic-Loop Awareness` (multi-step workflow, file output labeling, validation chaining). OpenClaw is the explicit canonical baseline with a section documenting the design choice. All three gained Profile Assumptions and Optional User Calibration. |
@@ -36,7 +36,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 What would need to happen, in honest order:
 
 1. ~~Decide on platform differentiation vs consolidation for `skills/` variants (closes B2.4).~~ Done — Wave 4.
-2. Add ≥3 source-anchored memos to push the ratio over half (closes B2.1).
+2. Add more source-anchored memos to push the ratio over half (closes B2.1). Wave 5 raised ratio to 46% (6 of 13); need 7 of 13 to clear.
 3. Recruit at least one external reviewer for one memo and one rubric application; record their attribution (closes B2.2 and B2.7).
 4. Run the skill against ≥3 real practitioner workflows; store outcomes in `validated-cases/` with practitioner attribution where consented (closes B2.3).
 5. If real use happens, record it publicly with permission (closes B2.5 positively); if not, leave the negative disclosure as it stands.

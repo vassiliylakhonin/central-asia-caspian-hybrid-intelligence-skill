@@ -281,6 +281,6 @@ The criteria below close the weaknesses that Bar 1 alone cannot close (single-au
 At the time of writing this Definition of Done:
 
 - **Bar 1 — cleared.** All B1.1–B1.6 criteria observable in the current tree.
-- **Bar 2 — not cleared.** B2.1 partially (2 of 9 flagship examples are source-anchored — short of half). B2.2, B2.3, B2.5 and B2.7 are entirely open (single-author state). B2.4 is not yet decided (current variants are near-identical). B2.6 is partially in place (retrieval dates exist; no documented re-verification horizon).
+- **Bar 2 — not cleared.** B2.1 partially (5 of 12 flagship examples are source-anchored — 42%, below the 50% threshold). B2.2, B2.3, B2.5 and B2.7 are entirely open (single-author state). B2.4 met (Wave 4: each variant has platform-specific behavior — Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw canonical baseline). B2.6 met (retrieval dates on live-source-backed examples; re-verification horizons in docs/source-guide.md).
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.

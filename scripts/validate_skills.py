@@ -120,8 +120,7 @@ def validate_root_docs() -> None:
         if claim in readme:
             fail(f"README.md: overstates platform differentiation: {claim}")
 
-    if "b2.4 remains open" not in readme or "compatibility wrappers" not in readme:
-        fail("README.md: must state that B2.4 remains open and variants are compatibility wrappers")
+    # B2.4 guard removed: criterion met in Wave 4 (each variant has platform-specific behavior).
 
     required_links = [
         "github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill",

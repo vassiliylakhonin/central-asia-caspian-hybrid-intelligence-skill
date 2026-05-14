@@ -13,6 +13,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 5. Read [`live-source-backed-circumvention-and-corridor.md`](live-source-backed-circumvention-and-corridor.md) to see source-backed sanctions / corridor reasoning.
 6. Read [`user-provided-sources-middle-corridor.md`](user-provided-sources-middle-corridor.md) to see the mode where the user's source packet is the evidence base.
 7. Read [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) to see source-backed crypto/VASP rails and EU Travel Rule enforcement gap analysis for fintech compliance leadership (#13 archetype).
+8. Read [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) to see source-backed customs / mirror-statistic anomaly analysis as a sanctions-circumvention indicator for a European trade finance bank with KZ counterparty exposure (#7 archetype).
 
 ## Evidence modes
 
@@ -33,6 +34,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 | Energy / infrastructure | [`energy-infrastructure-corridor-risk.md`](energy-infrastructure-corridor-risk.md), [`live-source-backed-energy-corridor.md`](live-source-backed-energy-corridor.md) |
 | Beneficial ownership / adjacency | [`beneficial-ownership-opacity.md`](beneficial-ownership-opacity.md), [`live-source-backed-bo-opacity.md`](live-source-backed-bo-opacity.md) |
 | Trade finance / dual-use routing | [`trade-finance-dual-use-routing.md`](trade-finance-dual-use-routing.md) |
+| Trade finance / sanctions circumvention detection | [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) |
 | Crypto / VASP rails | [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) |
 
 ## How to judge an example

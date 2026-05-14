@@ -137,8 +137,9 @@ For a guided route through the examples, start with [examples/README.md](example
 - [examples/live-source-backed-energy-corridor.md](examples/live-source-backed-energy-corridor.md) — `live-source-backed` memo on Caspian and Central Asia energy corridor risk grounded in EIA primary, World Bank and EBRD/EC primary reports.
 - [examples/user-provided-sources-middle-corridor.md](examples/user-provided-sources-middle-corridor.md) — `user-provided sources` memo for an EU shipper, scoped strictly to a four-item public packet on Middle Corridor capacity.
 - [examples/live-source-backed-vasp-travel-rule.md](examples/live-source-backed-vasp-travel-rule.md) — `live-source-backed` memo on VASP / Travel Rule enforcement gap in Kazakhstan and Uzbekistan for European fintech compliance leadership assessing EU TFR 2023/1113 alignment and de-risking exposure.
+- [examples/live-source-backed-customs-statistics-anomaly.md](examples/live-source-backed-customs-statistics-anomaly.md) — `live-source-backed` memo on customs / mirror-statistic anomaly as a sanctions-circumvention indicator for a European trade finance bank reviewing KZ counterparty exposure; grounded in UN Comtrade, KSE/CREA, OFAC/BIS, World Bank and Kazstat primary sources.
 
-Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, five are `live-source-backed`, and one is `user-provided sources`.
+Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, six are `live-source-backed`, and one is `user-provided sources`.
 
 ## 10. Skill files
 

@@ -61,7 +61,7 @@ The dominant near-term risk is **secondary-sanctions and export-control transmis
 
 ## Role-based actions
 
-- **Trade-finance underwriter**: integrate HS-code-level screening; require end-user evidence proportional to risk; document the rationale of the route; build red-flag rules for HS-code / weight / route mismatches; segment counterparties by HS-code exposure. *Subject to internal policy and regulatory review.*
+- **Trade-finance underwriter**: integrate HS-code-level screening; require end-user evidence proportional to risk; document the rationale of the route; build red-flag rules for HS-code / weight / route mismatches; segment counterparties by HS-code exposure.
 - **Compliance / sanctions team**: align screening across instrument, counterparty, end-user, vessel / aircraft and ports; implement post-shipment monitoring where feasible.
 - **Operations / document-checking**: train on dual-use-specific document patterns; use HS-code-aware checklists; flag inconsistencies for escalation.
 - **Importer / trader**: maintain documentation that withstands audit; align declarations with operational reality; avoid HS-code or end-user ambiguity.

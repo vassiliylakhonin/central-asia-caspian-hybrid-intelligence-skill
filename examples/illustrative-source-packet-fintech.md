@@ -68,7 +68,7 @@ All triggers are framed against the supplied packet. Real monitoring requires li
 
 ## Role-based actions
 
-- **Fintech (compliance)**: build HS-cluster-aware monitoring on X, Y, Z; tighten EDD documentation packets to anticipate correspondent T's review; segment merchant book by cluster exposure. *Subject to internal policy and regulatory review.*
+- **Fintech (compliance)**: build HS-cluster-aware monitoring on X, Y, Z; tighten EDD documentation packets to anticipate correspondent T's review; segment merchant book by cluster exposure.
 - **Fintech (commercial)**: stress-test rejection / delay risk on trade-finance instruments referencing the named clusters; price for documentation overhead; consider corridor diversification if port P routing is material.
 - **Fintech (onboarding)**: treat structures resembling group G's pattern [S5] as elevated EDD by default; do not treat them as restricted absent designation.
 - **Bank (correspondent)**: align respondent EDD expectations with [S1] / [S3] to avoid blanket de-risking.

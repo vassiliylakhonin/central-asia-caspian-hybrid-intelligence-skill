@@ -42,7 +42,7 @@ Each finding is severity-labeled: 🔴 likely-flagged-by-practitioner, 🟡 bord
 
 🟡 **B6. EU sanctions package iterations not surfaced.** EU Council adopts packages in numbered cycles; practitioners track them by number. The skill is silent on this taxonomy.
 
-🟢 **B7. Out-of-scope handling is implicit.** If a user asks about Iran sanctions or Afghanistan financial flows, neither the skill files nor `docs/regional-logic.md` give clear redirect language. Result: the skill may answer with low quality rather than declining.
+🟢 **B7. Out-of-scope handling is implicit.** ~~If a user asks about Iran sanctions or Afghanistan financial flows, neither the skill files nor `docs/regional-logic.md` give clear redirect language. Result: the skill may answer with low quality rather than declining.~~ *Addressed (2026-05-12): `## Out-of-scope redirect` section added to `docs/regional-logic.md` with explicit examples and decline language.*
 
 ### C. Scope and coverage gaps
 
@@ -52,9 +52,9 @@ Each finding is severity-labeled: 🔴 likely-flagged-by-practitioner, 🟡 bord
 
 🟡 **C3. Cross-border tax angle missing.** Tax residency of trading shells, treaty-shopping through CIS jurisdictions, transfer pricing on commodity chains — these intersect AML/sanctions and the skill is silent.
 
-🟡 **C4. Climate / energy transition exposure lightly addressed.** Methane, CBAM, and stranded-asset risk on Caspian fossil infrastructure are touched briefly in `examples/energy-infrastructure-corridor-risk.md` but not as a first-class archetype.
+🟡 **C4. Climate / energy transition exposure lightly addressed.** ~~Methane, CBAM, and stranded-asset risk on Caspian fossil infrastructure are touched briefly in `examples/energy-infrastructure-corridor-risk.md` but not as a first-class archetype.~~ *Addressed (2026-05-12): archetype #14 Climate and energy-transition exposure added to `docs/risk-archetypes.md`, covering CBAM mechanism, indicators, evidence classes and role-based mitigation.*
 
-🟢 **C5. Skill variants are near-identical.** This is already noted in DoD as B2.4 (open). Three platforms × the same content is a discoverability issue, not a quality issue, but a reviewer will mention it.
+🟢 **C5. Skill variants are near-identical.** ~~This is already noted in DoD as B2.4 (open).~~ *Partially addressed (2026-05-12): each variant now has a platform-specific `## [Platform] Integration` section (Claude: Projects + web search; Codex: agentic-loop output discipline; OpenClaw: ClawHub invocation and composition). Analytical contract remains shared. B2.4 is marked partial in STATUS.md pending real-use evidence that the sections change output in practice.*
 
 🟢 **C6. "Author: Vassiliy Lakhonin" is required everywhere.** Validation enforces this string, which awkwardly couples skill content to a single named human even when other contributors edit the files. A reviewer may flag the validation rule as overly personal.
 

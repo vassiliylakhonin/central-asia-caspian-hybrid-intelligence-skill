@@ -71,7 +71,7 @@ The packet does not include data on insurance / freight-rate trends or on specif
 
 ## Role-based actions
 
-- **EU shipper / 3PL (procurement)**: plan Middle-Corridor capacity at the *node-binding* level, not the headline-trajectory level; pre-book ferry slots aware of [U4]'s capacity-vs-bookings imbalance; reflect [U1]'s wind-day risk in transit-time SLAs; treat [U2]'s 10 steps as the implementation watchlist. *Subject to commercial review.*
+- **EU shipper / 3PL (procurement)**: plan Middle-Corridor capacity at the *node-binding* level, not the headline-trajectory level; pre-book ferry slots aware of [U4]'s capacity-vs-bookings imbalance; reflect [U1]'s wind-day risk in transit-time SLAs; treat [U2]'s 10 steps as the implementation watchlist.
 - **EU shipper (commercial)**: keep the Middle Corridor as a complement to the Northern alternative, not a replacement, given [U4]'s scale comparison.
 - **Operator / port / rail**: communicate node-level metrics (dwell time, wind-day downtime, throughput) transparently; align CapEx with the [U2] / [U3] sequence to avoid stranded investment.
 - **Investor / financier**: stress-test single-node revenue concentration at constrained nodes; price tenor against the 2022–2027 EBRD horizon [U3].

@@ -66,7 +66,7 @@ Mitigation is operational (route redundancy, dwell-time monitoring, contractual 
 
 ## Role-based actions
 
-- **Shipper / 3PL**: build a per-flow corridor playbook (Middle Corridor primary, alternatives by flow); contract ferry slots ahead of peak; monitor dwell time at the two binding ports; maintain a sanctions / HS-code red-flag list. *Subject to operational and compliance review.*
+- **Shipper / 3PL**: build a per-flow corridor playbook (Middle Corridor primary, alternatives by flow); contract ferry slots ahead of peak; monitor dwell time at the two binding ports; maintain a sanctions / HS-code red-flag list.
 - **Port / rail operator**: stress-test single-node failure scenarios; communicate dwell-time and capacity transparently; align customs and inspection staffing with peak-shift patterns.
 - **Energy / commodity buyer**: model basis-risk between Middle Corridor and alternative routes; reflect lumpy capacity in procurement contracts.
 - **Bank / financier**: review corridor and counterparty concentration; tighten EDD on forwarders and BO; price-in correspondent de-risking risk.

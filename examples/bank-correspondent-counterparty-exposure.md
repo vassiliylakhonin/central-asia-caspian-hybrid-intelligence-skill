@@ -61,7 +61,7 @@ The dominant near-term risk is **correspondent de-risking transmitted through ti
 
 ## Role-based actions
 
-- **Respondent bank (compliance / Ops)**: invest in BO data quality and primary-source verification; build an adjacency-detection framework (control tests, address / director clustering, post-designation continuity); pre-empt correspondent inquiries with structured EDD packets; segment counterparty book by risk and HS-code exposure; document corridor- and HS-code-level monitoring. *Subject to internal policy and regulatory review.*
+- **Respondent bank (compliance / Ops)**: invest in BO data quality and primary-source verification; build an adjacency-detection framework (control tests, address / director clustering, post-designation continuity); pre-empt correspondent inquiries with structured EDD packets; segment counterparty book by risk and HS-code exposure; document corridor- and HS-code-level monitoring.
 - **Respondent bank (commercial)**: diversify correspondent relationships across rails (USD / EUR / CNY where lawful); re-price or exit specific counterparty segments where EDD is structurally hard.
 - **Tier-1 correspondent**: scope respondent reviews to corridor- and HS-code-specific risks; communicate evidentiary expectations clearly; avoid blanket de-risking that transfers risk to less supervised channels.
 - **Local regulator**: prioritize BO disclosure, EDD enforcement and supervisory cooperation with peer regulators.

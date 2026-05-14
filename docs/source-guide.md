@@ -21,7 +21,7 @@ The skill does not verify facts by itself. These sources are recommended for sou
 
 ### Sanctions and export controls
 - US OFAC (SDN, sectoral, and related lists)
-- EU consolidated sanctions list and EU Council legal acts
+- EU consolidated sanctions list and EU Council legal acts — the EU adopts sanctions in numbered packages (e.g. 14th, 15th package); practitioners track by package number and Council decision date. Retrieve both the current consolidated list and the most recent package legal act; they are separate documents.
 - UK OFSI consolidated list and HM Treasury notices
 - UN Security Council consolidated list
 - National sanctions regimes where relevant (e.g. Switzerland, Canada, Japan, Australia)

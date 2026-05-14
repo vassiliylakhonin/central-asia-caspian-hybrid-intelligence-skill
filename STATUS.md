@@ -24,7 +24,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 | B2.1 Source-anchored majority (≥50% of flagship examples) | ⚠ partial | Currently 5 of 12 flagship examples are source-anchored (4 `live-source-backed`, 1 `user-provided sources`) — 42%. Need at least 6 of 12 (50%) to clear. Three more `live-source-backed` examples added in Wave 3 closed half the gap. |
 | B2.2 At least one external reviewer of an example and a rubric application, with findings incorporated or addressed | ❌ not met | All current scorecards are reviewer judgments by the author. No external reviewer recorded. |
 | B2.3 At least three validated cases by domain practitioners, stored under `validated-cases/` | ❌ not met | Directory does not exist. No practitioner-attributed reviews. |
-| B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | Differentiation chosen. Claude variant adds `Claude Tool-Use Awareness` (retrieval → evidence mode shifting, prompt injection protection). Codex variant adds `Codex Agentic-Loop Awareness` (multi-step workflow, file output labeling, validation chaining). OpenClaw is the explicit canonical baseline with a section documenting the design choice. |
+| B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | Differentiation chosen. Claude variant adds `Claude Tool-Use Awareness` (retrieval → evidence mode shifting, prompt injection protection). Codex variant adds `Codex Agentic-Loop Awareness` (multi-step workflow, file output labeling, validation chaining). OpenClaw is the explicit canonical baseline with a section documenting the design choice. All three gained Profile Assumptions and Optional User Calibration. |
 | B2.5 Honest real-use evidence or explicit "no real-use evidence" disclosure | ⚠ partial | AGENTS.md and README acknowledge no production usage; no positive real-use record exists yet. The honest disclosure is in place; the positive evidence is not. |
 | B2.6 Source freshness discipline | ✅ met | Retrieval dates stated on `live-source-backed` examples; documented re-verification horizons per claim type in [docs/source-guide.md](docs/source-guide.md), including stale-source handling rules. Same-day re-verification required for sanctions / AML / export-controls operational decisions regardless of horizon. |
 | B2.7 Independent rubric application by someone other than the author | ❌ not met | No external scorecard has been added. |
@@ -35,7 +35,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 What would need to happen, in honest order:
 
-1. Decide on platform differentiation vs consolidation for `skills/` variants (closes B2.4).
+1. ~~Decide on platform differentiation vs consolidation for `skills/` variants (closes B2.4).~~ Done — Wave 4.
 2. Add ≥3 source-anchored memos to push the ratio over half (closes B2.1).
 3. Recruit at least one external reviewer for one memo and one rubric application; record their attribution (closes B2.2 and B2.7).
 4. Run the skill against ≥3 real practitioner workflows; store outcomes in `validated-cases/` with practitioner attribution where consented (closes B2.3).

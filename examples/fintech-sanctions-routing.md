@@ -61,7 +61,7 @@ For an SME-facing cross-border fintech in KZ / UZ with Middle Corridor exposure,
 
 ## Role-based actions
 
-- **Bank (correspondent or local)**: review respondent and merchant book against current designations and HS-code red flags; tighten EDD on freight forwarders and trading shells; document BO with primary sources; pre-empt rather than react to correspondent inquiries. *Subject to internal policy and regulatory review.*
+- **Bank (correspondent or local)**: review respondent and merchant book against current designations and HS-code red flags; tighten EDD on freight forwarders and trading shells; document BO with primary sources; pre-empt rather than react to correspondent inquiries.
 - **Fintech**: diversify rails (multiple correspondents, CNY option where lawful); segment merchants by risk; institute corridor- and HS-code-level monitoring; build a sanctions/EDD program proportionate to SME volume; prepare a corridor-exit playbook.
 - **Investor**: stress-test the fintech's correspondent concentration, EDD program maturity, BO data quality and historical de-risking incidents; price in 6–12 month enforcement scenarios.
 - **Logistics operator**: align HS-code declarations, routing documentation and BO disclosures; avoid concentration in a single port or border crossing where regulatory attention is rising.

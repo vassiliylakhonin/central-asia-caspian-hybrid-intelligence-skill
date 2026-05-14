@@ -78,7 +78,7 @@ For a regional risk analyst, the practical synthesis is: **expect both complianc
 
 ## Role-based actions
 
-- **Bank / fintech (compliance)**: integrate the categories and jurisdictions named in [S1a, S1b, S7] into screening rules; tighten EDD on offshore-formation services and Russia-facing IT/fintech counterparties; re-verify against current OFAC, BIS, EU, OFSI, UN lists at the point of decision. *Subject to internal policy and regulatory review.*
+- **Bank / fintech (compliance)**: integrate the categories and jurisdictions named in [S1a, S1b, S7] into screening rules; tighten EDD on offshore-formation services and Russia-facing IT/fintech counterparties; re-verify against current OFAC, BIS, EU, OFSI, UN lists at the point of decision.
 - **Importer / trader**: maintain end-use evidence proportional to risk for HS clusters explicitly called out in [S1a, S1b, S7]; align declarations with operational reality; expect rejection or delay on trade-finance instruments referencing those clusters.
 - **Shipper / 3PL with Caspian exposure**: stress-test single-node failure at Aktau, the ferry leg, BTK and EU-side onward connections per [S2, S3]; pre-book ferry slots ahead of seasonal peaks; price dwell-time risk into procurement.
 - **Producer / energy buyer**: model basis-risk between the Middle Corridor and alternatives; recognize Northern-corridor substitutability is asymmetric [S6].

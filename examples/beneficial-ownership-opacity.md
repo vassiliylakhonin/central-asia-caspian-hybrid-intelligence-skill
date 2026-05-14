@@ -60,7 +60,7 @@ The dominant near-term risk is **misidentification of the natural-person benefic
 
 ## Role-based actions
 
-- **EDD analyst**: build the BO map from primary registry data in each jurisdiction; triangulate with addresses, directors, phone numbers, filing histories; apply control tests beyond name match; document the chain of evidence; flag inconsistencies for escalation. *Subject to internal policy and regulatory review.*
+- **EDD analyst**: build the BO map from primary registry data in each jurisdiction; triangulate with addresses, directors, phone numbers, filing histories; apply control tests beyond name match; document the chain of evidence; flag inconsistencies for escalation.
 - **Compliance officer**: define adjacency-detection thresholds; require periodic re-verification; implement BO-change monitoring during the relationship; align with sanctions and PEP screening processes.
 - **Bank / fintech (commercial)**: scope risk-based pricing or onboarding limits; align acceptance with EDD outcomes rather than declared BO alone.
 - **Investor**: in M&A diligence, treat BO documentation gaps as priced risk; require resolution before close.

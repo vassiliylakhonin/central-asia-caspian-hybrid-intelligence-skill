@@ -80,6 +80,27 @@ When verification is needed, prioritize primary and authoritative sources such a
 
 Separate current verified facts from analytical judgment. If sources conflict, state the conflict and explain which source carries more weight for the user's objective.
 
+## Profile assumptions
+
+When no calibration is provided, the skill assumes:
+- **Audience**: financial analyst, compliance officer, policy researcher, or operator with Central Asia / Caspian exposure.
+- **Evidence mode**: `reasoning-only` unless sources are provided or retrieval tools are available.
+- **Geography**: all of Central Asia; Caspian included when it changes the mechanism.
+- **Depth**: standard analysis.
+- **Domain**: general regional risk — not pre-scoped to a specific corridor, sector, or entity.
+
+## Optional user calibration
+
+Providing any of these at the start of a session improves output precision:
+- **Organization type**: bank, fintech, energy company, logistics operator, fund, policy team, NGO, corporate strategy.
+- **Jurisdiction focus**: which countries or corridors matter most.
+- **Exposure type**: sanctions, AML, correspondent banking, routing, beneficial ownership, energy, logistics, political economy.
+- **Audience for the output**: who will read it and what decision they face.
+- **Source packets**: regulatory filings, company documents, or reports to ground the analysis in.
+- **Evidence mode preference**: `reasoning-only`, `user-provided sources`, or `live-source-backed`.
+
+Calibration is optional. If not provided, the skill proceeds with the profile assumptions above and states them explicitly.
+
 ## Claude Tool-Use Awareness
 
 Claude may have access to search tools, web browsing, document readers, or MCP-connected sources depending on the setup. Use these to shift evidence modes deliberately.

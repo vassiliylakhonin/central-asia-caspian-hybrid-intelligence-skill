@@ -41,6 +41,20 @@ Run through these questions for any non-trivial Central Asia / Caspian memo:
 - Does it provide a confidence footer (confidence level, key assumptions, main unknowns, indicators to watch)?
 - Could a working analyst use it as a starting point for action without being misled?
 
+## Delegation and accountability
+
+- Is the output positioned as **analytical support for a human decision**, not as the decision itself?
+- Are recommendations framed as options or trade-offs, not directives?
+- Does the memo make clear that a practitioner (compliance, legal, banking, logistics) should verify before acting?
+- Is the boundary between analysis and advice explicit — i.e., does the output avoid crossing into sanctions screening, legal conclusions, or investment recommendations?
+
+## Freshness and trust surface
+
+- For time-sensitive claims (sanctions designations, enforcement posture, regulatory thresholds, corridor events): is a recency flag present (`[stale-risk: YYYY-MM]` or equivalent)?
+- If external tools (MCP, web search, live sources) were used: is the source noted per provenance tags?
+- If no live verification was performed: is this stated rather than implied?
+- Does the memo indicate what would trigger escalation to a primary source or specialist?
+
 ## Hard fails
 
 If any of these are true, the memo should be revised:

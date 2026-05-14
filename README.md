@@ -146,7 +146,7 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 - `skills/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
 - `scripts/validate_skills.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
 
-All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline. B2.4 closed in Wave 4.
+All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline.
 
 ## 11. Source guide
 
@@ -224,8 +224,7 @@ Indicative direction, not a commitment:
 
 - continued refinement of `docs/risk-archetypes.md` indicator catalogues as the field evolves — crypto/VASP archetype (#13) added 2026-05-12
 - additional worked memos in each evidence mode as new use cases arise
-- pairing of `live-source-backed` memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) once retrieved at point of use, layered on top of the current secondary-reporting links
-- further worked memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) as they are retrieved at point of use
+- pairing of `live-source-backed` memos with primary-list URLs (OFAC SDN, BIS Entity List, EU consolidated, FATF/EAG MER PDFs) once retrieved at point of use
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 

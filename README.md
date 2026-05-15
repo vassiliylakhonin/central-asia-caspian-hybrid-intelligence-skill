@@ -52,6 +52,8 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - identifies leverage shifts and actor incentives
 - produces trigger points and watch-next indicators
 - supports role-based implications for banks, fintechs, investors, logistics operators, energy teams and analysts
+- runs a cold-start interview ([`docs/cold-start-interview.md`](docs/cold-start-interview.md)) to capture role, geography, decision context, risk appetite and source access into a populated practice profile ([`templates/practice-profile.md`](templates/practice-profile.md)) before substantive memos
+- carries an active currency watch ([`docs/currency-watch.md`](docs/currency-watch.md)) listing fast-moving regional topics that source-backed memos should re-verify against current primary sources, with a 90-day staleness rule
 
 ## 5. What it is not
 
@@ -146,6 +148,9 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 - `skills/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
 - `skills/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
 - `skills/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
+- `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
+- `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
+- `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - `scripts/validate_skills.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
 
 All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline.

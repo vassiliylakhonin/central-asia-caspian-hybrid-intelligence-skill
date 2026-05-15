@@ -22,6 +22,14 @@ Use for questions involving:
 
 Do not use for formal legal/compliance determinations, purely local issues with no cross-border or strategic relevance, generic summaries, or specialist technical questions outside regional analysis.
 
+## Preflight
+
+Before producing memos in a workflow that expects user-specific calibration, check whether a populated practice profile exists for this project (typically [`templates/practice-profile.md`](../../templates/practice-profile.md) in the user's working directory, or as configured).
+
+- If the profile is missing or contains `[PLACEHOLDER]` markers, **stop and run the cold-start interview** defined in [`docs/cold-start-interview.md`](../../docs/cold-start-interview.md) before producing output. Populate the profile, confirm it back to the user in one paragraph, then proceed.
+- Skip the preflight when the user supplies role, geography, decision context, and time horizon inline; when a populated profile already covers the current question; or for explicit one-off `reasoning-only` runs with stated scope.
+- Treat the profile as the default `Decision / Audience / Geography / Time horizon` block of every memo in the session. If a specific question diverges from the profile, state the divergence in the memo header rather than overriding silently.
+
 ## Intake
 
 Infer missing context when reasonable, state assumptions briefly, and proceed. Clarify only if the missing detail would materially change the answer.
@@ -64,6 +72,8 @@ When timing matters, include `Why now` in 1-3 sentences.
 ## Evidence Discipline
 
 Do not invent facts. Verify current facts before relying on them when they involve laws, sanctions, prices, elections, leadership, company information, enforcement status, or recent events.
+
+Before relying on time-sensitive claims (sanctions designations, enforcement posture, FATF/EAG status, corridor capacity, central-bank rules), scan [`docs/currency-watch.md`](../../docs/currency-watch.md) for in-scope topics and re-verify against current primary sources. The currency watch is a "what to check now" list, not a database of current facts. If verification is not performed in the current session, label every derived claim with `[verify]` and downgrade evidence mode to `mixed` or `reasoning-only`.
 
 Use labels when useful:
 

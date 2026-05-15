@@ -173,7 +173,7 @@ def validate_example_counts() -> None:
 
     expected_readme = (
         f"six examples use `reasoning-only`, one uses `illustrative source packet`, "
-        f"six are `live-source-backed`, and one is `user-provided sources`"
+        f"six are `live-source-backed`, and two are `user-provided sources`"
     )
     if expected_readme not in readme:
         fail("README.md: evidence-mode count summary is missing or stale")

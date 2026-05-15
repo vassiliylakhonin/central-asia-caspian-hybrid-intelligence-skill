@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-14 (Wave 6: live-source-backed customs/statistics-anomaly example added; source-anchored ratio now 7 of 14 = 50%; B2.1 met).
+**Last updated:** 2026-05-15 (Wave 7: user-provided-sources Russia–Iran–China junction example added; source-anchored ratio now 8 of 15 flagship examples are source-anchored = 53%; B2.1 met with a margin).
 
 ## Bar 1 — Early but credible
 
@@ -21,7 +21,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 | Criterion | Status | What is missing |
 |---|---|---|
-| B2.1 Source-anchored majority (≥50% of flagship examples) | ✅ met | 7 of 14 flagship examples are source-anchored (6 `live-source-backed`, 1 `user-provided sources`) — 50%. Wave 6 added a `live-source-backed` customs/statistics-anomaly example, meeting the 50% threshold. |
+| B2.1 Source-anchored majority (≥50% of flagship examples) | ✅ met | 8 of 15 flagship examples are source-anchored (6 `live-source-backed`, 2 `user-provided sources`) — 53%. Wave 7 added a `user-provided sources` skeleton-packet memo on the Russia–Iran–China junction, raising the margin above the threshold. |
 | B2.2 At least one external reviewer of an example and a rubric application, with findings incorporated or addressed | ❌ not met | All current scorecards are reviewer judgments by the author. No external reviewer recorded. |
 | B2.3 At least three validated cases by domain practitioners, stored under `validated-cases/` | ❌ not met | Directory does not exist. No practitioner-attributed reviews. |
 | B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | Differentiation chosen. Claude variant adds `Claude Tool-Use Awareness` (retrieval → evidence mode shifting, prompt injection protection). Codex variant adds `Codex Agentic-Loop Awareness` (multi-step workflow, file output labeling, validation chaining). OpenClaw is the explicit canonical baseline with a section documenting the design choice. All three gained Profile Assumptions and Optional User Calibration. |

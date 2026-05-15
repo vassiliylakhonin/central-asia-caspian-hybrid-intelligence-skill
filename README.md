@@ -166,8 +166,9 @@ For a guided route through the examples, start with [examples/README.md](example
 - [examples/user-provided-sources-middle-corridor.md](examples/user-provided-sources-middle-corridor.md) — `user-provided sources` memo for an EU shipper, scoped strictly to a four-item public packet on Middle Corridor capacity.
 - [examples/live-source-backed-vasp-travel-rule.md](examples/live-source-backed-vasp-travel-rule.md) — `live-source-backed` memo on VASP / Travel Rule enforcement gap in Kazakhstan and Uzbekistan for European fintech compliance leadership assessing EU TFR 2023/1113 alignment and de-risking exposure.
 - [examples/live-source-backed-customs-statistics-anomaly.md](examples/live-source-backed-customs-statistics-anomaly.md) — `live-source-backed` memo on customs / mirror-statistic anomaly as a sanctions-circumvention indicator for a European trade finance bank reviewing KZ counterparty exposure; grounded in UN Comtrade, KSE/CREA, OFAC/BIS, World Bank and Kazstat primary sources.
+- [examples/user-provided-sources-russia-iran-china-junction.md](examples/user-provided-sources-russia-iran-china-junction.md) — `user-provided sources` skeleton-packet memo on the Russia–Iran–China commercial junction for a European trade-finance bank's sanctions, compliance and risk leadership; structural framing of junction-pattern tiering vs named-entity screening, composed with the Gulf + Middle East skill, with canonical Axis A / Axis B tags throughout. The user supplies the binding evidence by retrieving from OFAC, EU, UK OFSI, BIS, FATF, EAG and MENAFATF mandate pages.
 
-Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, six are `live-source-backed`, and one is `user-provided sources`.
+Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, one uses `illustrative source packet`, six are `live-source-backed`, and two are `user-provided sources`.
 
 ## 11. Skill files
 

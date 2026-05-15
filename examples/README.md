@@ -14,6 +14,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 6. Read [`user-provided-sources-middle-corridor.md`](user-provided-sources-middle-corridor.md) to see the mode where the user's source packet is the evidence base.
 7. Read [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) to see source-backed crypto/VASP rails and EU Travel Rule enforcement gap analysis for fintech compliance leadership (#13 archetype).
 8. Read [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) to see source-backed customs / mirror-statistic anomaly analysis as a sanctions-circumvention indicator for a European trade finance bank with KZ counterparty exposure (#7 archetype).
+9. Read [`user-provided-sources-russia-iran-china-junction.md`](user-provided-sources-russia-iran-china-junction.md) to see a `user-provided sources` skeleton-packet memo on the Russia–Iran–China commercial junction for a European trade-finance bank — junction-pattern tiering vs named-entity screening, with canonical Axis A / Axis B tags throughout, and a packet of OFAC, EU, UK OFSI, BIS, FATF, EAG and MENAFATF mandate pages that the user retrieves to supply the binding evidence. Demonstrates how the skill composes with the Gulf + Middle East skill without duplicating Iran-actor taxonomy.
 
 ## Evidence modes
 
@@ -35,6 +36,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 | Beneficial ownership / adjacency | [`beneficial-ownership-opacity.md`](beneficial-ownership-opacity.md), [`live-source-backed-bo-opacity.md`](live-source-backed-bo-opacity.md) |
 | Trade finance / dual-use routing | [`trade-finance-dual-use-routing.md`](trade-finance-dual-use-routing.md) |
 | Trade finance / sanctions circumvention detection | [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) |
+| Trade finance / cross-region junction (CA–Iran–China) | [`user-provided-sources-russia-iran-china-junction.md`](user-provided-sources-russia-iran-china-junction.md) |
 | Crypto / VASP rails | [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) |
 
 ## Labeling styles

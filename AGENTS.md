@@ -266,7 +266,7 @@ The repo aims to clear two bars in sequence. Bar 1 is the threshold for being a 
 
 A senior AI or agent engineering reviewer should understand that this repo is not a generic regional prompt. It should read as an early but credible vertical specialist skill for Central Asia + Caspian strategic-risk agents, with evidence discipline, mechanism-first reasoning, examples, source guidance and clear limitations. Specifically:
 
-- **B1.1** README follows the 14-section structure in "README priorities".
+- **B1.1** README follows the 15-section structure in "README priorities".
 - **B1.2** All four canonical evidence modes are demonstrated by at least one example each.
 - **B1.3** All preferred examples in "Examples" exist or are explicitly deferred with a reason.
 - **B1.4** `evals/` has a review checklist, a starter rubric and a failure-modes file with honest labels (no benchmark claim).

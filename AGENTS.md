@@ -40,6 +40,18 @@ Source Ingest skill (Agenda Intelligence MD):
 - for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy and freshness horizons for Central Asia / Caspian analysis
 - do not duplicate source-guide content inside the source record; reference it
 
+## Preflight: cold-start interview and practice profile
+
+Before producing memos in a workflow that expects user-specific calibration, run the cold-start interview defined in [`docs/cold-start-interview.md`](docs/cold-start-interview.md). It captures role, geography, decision context, risk appetite, and source access into [`templates/practice-profile.md`](templates/practice-profile.md), which downstream memos use as the default `Decision / Audience / Geography / Time horizon` block.
+
+**STOP rule:** if `templates/practice-profile.md` is missing or contains `[PLACEHOLDER]` markers when a memo is requested in a profile-expecting workflow, stop and run the interview before producing output. Generic memos with unstated audience are worse than no memo.
+
+Skip the preflight when the user supplies the four anchors inline, when a populated profile already covers the current question, or for explicit one-off `reasoning-only` runs with stated scope.
+
+## Currency watch
+
+Fast-moving regional topics that any source-backed memo should re-verify against current primary sources are listed in [`docs/currency-watch.md`](docs/currency-watch.md). The file is not a database of current facts — it is a list of *what to re-check now*, with a 90-day staleness rule. Update the `Last reviewed` date at the top and per-topic when adding or refreshing entries.
+
 Do not duplicate Agenda Intelligence MD inside this repo.
 Do not turn this repo into a CLI, MCP server, screening engine, or validation platform unless explicitly requested.
 

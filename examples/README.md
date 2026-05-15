@@ -37,6 +37,17 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 | Trade finance / sanctions circumvention detection | [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) |
 | Crypto / VASP rails | [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) |
 
+## Labeling styles
+
+Examples use one of two compatible per-claim labeling styles:
+
+- **Inline label + source reference** (e.g. `Verified [S1, S3]:`, `Plausible [S5]:`, `Judgment:`, `Unknown`) — used in the source-anchored examples such as [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md). The bracketed `[Sx]` keys point to a source table at the foot of the memo.
+- **Canonical Axis A / Axis B tags** as defined in [`AGENTS.md`](../AGENTS.md): `[primary]` / `[secondary]` / `[user-provided]` / `[inference]` / `[analyst-judgment]` on Axis A, with optional `[verify]` / `[stale-risk: YYYY-MM]` on Axis B.
+
+Crosswalk: `Verified` ↔ `[primary]` or `[secondary]` (depending on the source tier); `Plausible` ↔ `[secondary][verify]`; `Judgment` ↔ `[analyst-judgment]`; `Unknown` ↔ does not produce a claim — surfaces a `Stop and request` or `Flag-but-don't-use` outcome per the three-value response logic.
+
+New live-source-backed examples should use the canonical Axis A / Axis B tags. Existing examples may retain the inline style.
+
 ## How to judge an example
 
 A strong example should:

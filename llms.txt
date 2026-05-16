@@ -15,11 +15,11 @@ What this repository is not:
 - not an MCP server, CLI tool, validator, schema layer, or eval framework;
 - not a replacement for primary OFAC/EU/UK list checks or qualified legal review.
 
-Relationship to the portfolio (three layers, separately maintained):
+Relationship to the portfolio (four layers, separately maintained):
 - Vertical specialist — Central Asia + Caspian (this repo): regional sanctions, AML, banking, corridor, and energy risk reasoning.
 - Horizontal domain skill: https://github.com/vassiliylakhonin/global-think-tank-analyst — broad strategic-risk memo workflow, memo modes, general policy-risk analysis.
 - Vertical specialist — Gulf + Middle East: https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill — reference when a flow crosses both regions (Iran-Caspian, Russia-Iran-China junction).
-- Infrastructure / validation: https://github.com/vassiliylakhonin/Agenda-Intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
+- Infrastructure / validation: https://github.com/vassiliylakhonin/agenda-intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
 
 Evidence modes (declare for every output):
 - live-source-backed: primary sources retrieved and cited with retrieval date.
@@ -33,6 +33,7 @@ Per-claim provenance (two axes):
 
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, retrieved-content trust, currency triggers, provenance tags, three-value response logic.
+- STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria. Bar 1 cleared; Bar 2 not yet met (external review pending).
 - STATUS.md — honest current status against the Definition-of-Done bars.
 - skills/ — platform variants (Claude, Codex) where present.
 - README.md — public documentation.

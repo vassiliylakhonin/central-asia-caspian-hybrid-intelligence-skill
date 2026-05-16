@@ -101,7 +101,7 @@ This skill is one of four repos in a wider portfolio. Each has a distinct role; 
 - **Central Asia + Caspian Hybrid Intelligence Skill** *(this repo)* — specialist regional/corridor-risk reasoning, domain-specific risk-transmission logic, sanctions / AML / banking / logistics / energy / corridor analysis patterns.
 - **Gulf + Middle East Hybrid Intelligence Skill** — sibling vertical specialist; reference it when a flow crosses both regions (Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs). See [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
 - **Global Think Tank Analyst** — broader strategic-risk memo workflow, general policy-risk analysis, scenario and red-team memo modes: https://github.com/vassiliylakhonin/global-think-tank-analyst
-- **Agenda Intelligence MD** — schemas, validation, evidence audit, scoring, CLI / MCP / CI tooling where implemented: https://github.com/vassiliylakhonin/Agenda-Intelligence-md
+- **Agenda Intelligence MD** — schemas, validation, evidence audit, scoring, CLI / MCP / CI tooling where implemented: https://github.com/vassiliylakhonin/agenda-intelligence-md
 
 > Use this repo for specialist Central Asia + Caspian reasoning. Use Global Think Tank Analyst for broader strategic-risk memo workflows. Use Agenda Intelligence MD to validate, score or audit outputs where that functionality is implemented.
 

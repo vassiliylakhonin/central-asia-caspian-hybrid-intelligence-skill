@@ -299,6 +299,6 @@ The criteria below close the weaknesses that Bar 1 alone cannot close (single-au
 At the time of writing this Definition of Done:
 
 - **Bar 1 — cleared.** All B1.1–B1.6 criteria observable in the current tree.
-- **Bar 2 — not cleared.** B2.1 met (Wave 6: 7 of 14 flagship examples are source-anchored — 50%, meets threshold; Wave 6 added a live-source-backed customs/statistics-anomaly example). B2.2, B2.3, B2.5 and B2.7 are entirely open (single-author state). B2.4 met (Wave 4: each variant has platform-specific behavior — Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw canonical baseline). B2.6 met (retrieval dates on live-source-backed examples; re-verification horizons in docs/source-guide.md).
+- **Bar 2 — not cleared.** B2.1 met (Wave 7: 8 of 15 flagship examples are source-anchored — 53%; Wave 7 added a user-provided sources Russia–Iran–China junction example). B2.2, B2.3 and B2.7 are entirely open (single-author state). B2.5 partial (honest disclosure in place; no positive real-use record yet). B2.4 met (Wave 4: each variant has platform-specific behavior — Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw canonical baseline). B2.6 met (retrieval dates on live-source-backed examples; re-verification horizons in docs/source-guide.md).
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.

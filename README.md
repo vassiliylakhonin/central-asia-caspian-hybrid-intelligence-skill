@@ -252,6 +252,16 @@ Every example and every memo produced with this skill should state one of four c
 - No production-usage, adoption or benchmark numbers are claimed.
 - See [STATUS.md](STATUS.md) for an honest status against the Definition of Done in `AGENTS.md`. The repo currently clears the "early but credible" bar; it does **not** clear the "externally validated specialist resource" bar.
 
+### What this skill has not been tested on
+
+Stated honestly so readers can calibrate. These are gaps in observed evidence, not claims of weakness:
+
+- **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
+- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long autonomous research loops have not been measured.
+- **No cross-model regression tracking.** Behavior has been observed primarily on Claude. Codex and OpenClaw variants exist but have not been systematically compared head-to-head against the same prompts.
+- **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
+- **Limited non-English source coverage.** Russian-, Kazakh-, Uzbek-, and Azerbaijani-language regulatory and registry sources have not been systematically tested as inputs.
+
 ## 16. Roadmap
 
 Indicative direction, not a commitment:

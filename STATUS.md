@@ -8,7 +8,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 | Criterion | Status | Notes |
 |---|---|---|
-| B1.1 README follows the 14-section structure | ✅ met | See `README.md`. |
+| B1.1 README follows the 15-section structure | ✅ met | See `README.md`. |
 | B1.2 All four evidence modes demonstrated | ✅ met | `reasoning-only`, `illustrative source packet`, `live-source-backed`, `user-provided sources` each have at least one example. |
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six AGENTS.md preferred examples exist. |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |

@@ -23,11 +23,11 @@ For an SME-facing cross-border fintech in KZ / UZ with Middle Corridor exposure,
 
 ## Risk transmission mechanism
 
-1. Western regulators (OFAC, OFSI, EU) update designations and guidance on circumvention through third countries.
-2. Tier-1 correspondent banks tighten KYC / EDD on respondents in KZ / UZ and on flows touching specific HS codes and high-risk routes.
-3. Tier-2 / regional banks pre-emptively de-risk SME exposures and tighten payment screening, including string-match and beneficial-ownership checks.
-4. The fintech experiences slower settlement, higher rejection rates, narrower BIN/IBAN acceptance, and pressure to exit certain corridors or merchant categories.
-5. AML/STR obligations rise in parallel under local regulators (e.g. KZ AFM-equivalent, UZ central bank guidance) — `Plausible`, requires verification.
+1. Western regulators (OFAC, OFSI, EU) update designations and guidance on circumvention through third countries (current pattern, ongoing).
+2. Tier-1 correspondent banks would tighten KYC / EDD on respondents in KZ / UZ and on flows touching specific HS codes and high-risk routes.
+3. Tier-2 / regional banks would pre-emptively de-risk SME exposures and tighten payment screening, including string-match and beneficial-ownership checks.
+4. The fintech would experience slower settlement, higher rejection rates, narrower BIN/IBAN acceptance, and pressure to exit certain corridors or merchant categories.
+5. AML/STR obligations would rise in parallel under local regulators (e.g. KZ AFM-equivalent, UZ central bank guidance) — `Plausible`, requires verification.
 
 ## Exposure map
 

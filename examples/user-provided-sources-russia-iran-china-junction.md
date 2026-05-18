@@ -88,29 +88,29 @@ For a European trade-finance bank, exposure transmits through:
 
 ## Exposure map
 
-| Exposure concentration | Type | Control point |
-|---|---|---|
-| Junction-pattern flow concentration not visible in name-based screening | Sanctions / secondary-sanctions risk | Pattern-aware EDD trigger framework (independent of named-entity screening) |
-| Loss of USD- and EUR-clearing rails after correspondent tiering | Operational / commercial risk | Diversified clearing relationships; defensive disclosure to correspondents on pattern controls |
-| Dual-use export-control exposure on machinery / electronics / advanced inputs | Export-control regime | HS-code-based pre-clearance discipline; supplier UBO + end-use chain documentation |
-| Counterparty UBO opacity in Chinese-intermediation legs | AML / financial-crime risk | UBO disclosure thresholds; refuse-or-Stop-and-request policy on opacity beyond threshold |
-| Iran-conduit detection in settlement chain | Sanctions / OFAC SDN risk | Conduit-mapping in payment instructions; refuse on Iran-state and IRGC-affiliated nexus; case-by-case on Iran-private commercial |
-| Reputation cascade from a single enforcement action | Reputation / governance risk | Board-level limits on junction-pattern concentration; explicit disclosure to risk committee |
+| Exposure concentration | Type | Control point | Provenance |
+|---|---|---|---|
+| Junction-pattern flow concentration not visible in name-based screening | Sanctions / secondary-sanctions risk | Pattern-aware EDD trigger framework (independent of named-entity screening) | `[analyst-judgment]` |
+| Loss of USD- and EUR-clearing rails after correspondent tiering | Operational / commercial risk | Diversified clearing relationships; defensive disclosure to correspondents on pattern controls | `[analyst-judgment]` |
+| Dual-use export-control exposure on machinery / electronics / advanced inputs | Export-control regime | HS-code-based pre-clearance discipline; supplier UBO + end-use chain documentation | `[analyst-judgment]` |
+| Counterparty UBO opacity in Chinese-intermediation legs | AML / financial-crime risk | UBO disclosure thresholds; refuse-or-Stop-and-request policy on opacity beyond threshold | `[analyst-judgment]` |
+| Iran-conduit detection in settlement chain | Sanctions / OFAC SDN risk | Conduit-mapping in payment instructions; refuse on Iran-state and IRGC-affiliated nexus; case-by-case on Iran-private commercial | `[analyst-judgment]` |
+| Reputation cascade from a single enforcement action | Reputation / governance risk | Board-level limits on junction-pattern concentration; explicit disclosure to risk committee | `[analyst-judgment]` |
 
 `[analyst-judgment]` Concentrated exposures for a typical European trade-finance bank: (1) limits frameworks priced on named-entity screening rather than pattern density; (2) under-investment in pattern-detection EDD relative to investment in list-screening tooling; (3) reputational concentration when 3–5 named transactions across multiple sectors share one junction pattern.
 
 ## Actor incentives
 
-| Actor | Incentive | Leverage point |
-|---|---|---|
-| Russian commercial buyer | Maintain access to inputs (electronics, machinery, dual-use) under sanctions environment | Re-routing through Caspian / Iran / China conduits; supplier and paying-agent substitution |
-| Central Asian commercial intermediary | Capture commercial margin on re-routing flow | Documentation flexibility; jurisdictional arbitrage on customs reporting |
-| Iran commercial entity (state / IRGC / private) | Capture conduit margin; build conduit infrastructure | Settlement-rail provision; correspondent-bank access in third jurisdictions |
-| Chinese intermediary | Capture margin on intermediation; preserve broader trade relationship with all parties | UBO opacity; commercial-narrative framing of intermediation; yuan settlement option |
-| Central Asian state | Balance commercial benefit against secondary-sanctions risk to its domestic banking sector | Selective enforcement; jurisdiction-level signaling; FATF/EAG posture |
-| US / EU / UK enforcement | Deter conduit construction; impose cost on willful blindness in respondent banks | Designations; enforcement actions; respondent-bank guidance |
-| European trade-finance bank | Maintain commercial book; avoid enforcement and rail loss; preserve correspondent relationships | Limits framework; EDD policy; clearing-bank communication |
-| European correspondent / clearing bank | Avoid downstream exposure to respondent's junction-pattern flow | Respondent tiering; selective de-risking; pattern-based termination |
+| Actor | Incentive | Leverage point | Provenance |
+|---|---|---|---|
+| Russian commercial buyer | Maintain access to inputs (electronics, machinery, dual-use) under sanctions environment | Re-routing through Caspian / Iran / China conduits; supplier and paying-agent substitution | `[analyst-judgment]` |
+| Central Asian commercial intermediary | Capture commercial margin on re-routing flow | Documentation flexibility; jurisdictional arbitrage on customs reporting | `[analyst-judgment]` |
+| Iran commercial entity (state / IRGC / private) | Capture conduit margin; build conduit infrastructure | Settlement-rail provision; correspondent-bank access in third jurisdictions | `[analyst-judgment]` |
+| Chinese intermediary | Capture margin on intermediation; preserve broader trade relationship with all parties | UBO opacity; commercial-narrative framing of intermediation; yuan settlement option | `[analyst-judgment]` |
+| Central Asian state | Balance commercial benefit against secondary-sanctions risk to its domestic banking sector | Selective enforcement; jurisdiction-level signaling; FATF/EAG posture | `[analyst-judgment]` |
+| US / EU / UK enforcement | Deter conduit construction; impose cost on willful blindness in respondent banks | Designations; enforcement actions; respondent-bank guidance | `[analyst-judgment]` |
+| European trade-finance bank | Maintain commercial book; avoid enforcement and rail loss; preserve correspondent relationships | Limits framework; EDD policy; clearing-bank communication | `[analyst-judgment]` |
+| European correspondent / clearing bank | Avoid downstream exposure to respondent's junction-pattern flow | Respondent tiering; selective de-risking; pattern-based termination | `[analyst-judgment]` |
 
 ## Role-based implications
 
@@ -145,13 +145,13 @@ For a European trade-finance bank, exposure transmits through:
 
 ## Unknowns
 
-| Unknown | Impact |
-|---|---|
-| Current named designations applicable to typical junction-pattern counterparties | Time-sensitive; requires live OFAC SDN, EU consolidated list, UK consolidated list retrieval before any operational application |
-| Current correspondent-bank tiering posture toward respondent banks with junction-pattern flow | Bank-by-bank; not publicly stated; needs direct correspondent engagement |
-| Current enforcement-narrative tilt (active sectors, geographies) | Drives where the next named action lands; structural reasoning cannot price the specific landing point |
-| Trajectory of US-Iran negotiation file and direct effect on Iran-conduit pattern | Structural uncertainty with high pattern-weight implication |
-| Trajectory of Chinese yuan-clearing arrangements with sanctioned-nexus economies | Structural uncertainty; if yuan settlement becomes the default rail, the pattern risk shifts from financial-rail to enforcement-narrative |
+| Unknown | Impact | Provenance |
+|---|---|---|
+| Current named designations applicable to typical junction-pattern counterparties | Time-sensitive; requires live OFAC SDN, EU consolidated list, UK consolidated list retrieval before any operational application | `[analyst-judgment]` |
+| Current correspondent-bank tiering posture toward respondent banks with junction-pattern flow | Bank-by-bank; not publicly stated; needs direct correspondent engagement | `[analyst-judgment]` |
+| Current enforcement-narrative tilt (active sectors, geographies) | Drives where the next named action lands; structural reasoning cannot price the specific landing point | `[analyst-judgment]` |
+| Trajectory of US-Iran negotiation file and direct effect on Iran-conduit pattern | Structural uncertainty with high pattern-weight implication | `[analyst-judgment]` |
+| Trajectory of Chinese yuan-clearing arrangements with sanctioned-nexus economies | Structural uncertainty; if yuan settlement becomes the default rail, the pattern risk shifts from financial-rail to enforcement-narrative | `[analyst-judgment]` |
 
 ## Confidence
 
@@ -165,13 +165,13 @@ This memo's confidence ceiling is moderate because no primary sources were retri
 
 ## What would change the judgment
 
-| Evidence update | Direction of change |
-|---|---|
-| Enforcement action against a European trade-finance bank for junction-pattern facilitation | Increases urgency; junction-pattern tiering becomes a **mandatory** control, not a sophistication move |
-| Material relaxation of Iran secondary-sanctions doctrine | Iran-conduit pattern weight decreases; junction risk shape shifts to Russia-China bilateral |
-| FATF / EAG action against a central junction jurisdiction | Respondent-tiering posture across European banks tightens; rail-loss risk increases |
-| Public, verifiable real-time sanctions-evasion-detection tooling adoption by a major correspondent | Pattern detection becomes table-stakes; banks without it face faster respondent tiering |
-| US-China yuan-clearing posture shift | Yuan-settlement risk re-weighting; if Chinese banks tier their own yuan rails, junction risk on Chinese intermediation increases |
+| Evidence update | Direction of change | Provenance |
+|---|---|---|
+| Enforcement action against a European trade-finance bank for junction-pattern facilitation | Increases urgency; junction-pattern tiering becomes a **mandatory** control, not a sophistication move | `[analyst-judgment]` |
+| Material relaxation of Iran secondary-sanctions doctrine | Iran-conduit pattern weight decreases; junction risk shape shifts to Russia-China bilateral | `[analyst-judgment]` |
+| FATF / EAG action against a central junction jurisdiction | Respondent-tiering posture across European banks tightens; rail-loss risk increases | `[analyst-judgment]` |
+| Public, verifiable real-time sanctions-evasion-detection tooling adoption by a major correspondent | Pattern detection becomes table-stakes; banks without it face faster respondent tiering | `[analyst-judgment]` |
+| US-China yuan-clearing posture shift | Yuan-settlement risk re-weighting; if Chinese banks tier their own yuan rails, junction risk on Chinese intermediation increases | `[analyst-judgment]` |
 
 ## Three-value response logic — application to this memo
 

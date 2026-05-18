@@ -109,6 +109,6 @@ This memo demonstrates the **source-conflict-surfacing rule** from `AGENTS.md` a
 
 This complements the GREY case in [`live-source-backed-circumvention-and-corridor.md`](live-source-backed-circumvention-and-corridor.md) — where two EBRD investment figures (€3.5 bn immediate vs €18.5 bn 2022–2027 roadmap) are correctly flagged as "different framings, not conflicting" — by showing the contrasting case where the disagreement is a genuine load-bearing conflict requiring active surfacing and a preferred-position decision, not a framing-difference reconciliation.
 
-## Limitations
+## Limitation note
 
 Illustrative. Figures are representative, not retrieved. Not sanctions, compliance, legal, AML, trade-finance, or investment advice. A real KZ→RU circumvention-volume EDD calibration requires current KSE Institute / Bruegel / EU Commission publications, qualified sanctions counsel, and integration with the bank's specific KZ counterparty book and HS-code exposure profile.

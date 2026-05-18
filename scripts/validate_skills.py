@@ -172,7 +172,7 @@ def validate_example_counts() -> None:
     status = (ROOT / "STATUS.md").read_text(encoding="utf-8").lower()
 
     expected_readme = (
-        f"six examples use `reasoning-only`, one uses `illustrative source packet`, "
+        f"six examples use `reasoning-only`, two use `illustrative source packet`, "
         f"six are `live-source-backed`, and two are `user-provided sources`"
     )
     if expected_readme not in readme:

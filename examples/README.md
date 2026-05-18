@@ -15,6 +15,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 7. Read [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) to see source-backed crypto/VASP rails and EU Travel Rule enforcement gap analysis for fintech compliance leadership (#13 archetype).
 8. Read [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) to see source-backed customs / mirror-statistic anomaly analysis as a sanctions-circumvention indicator for a European trade finance bank with KZ counterparty exposure (#7 archetype).
 9. Read [`user-provided-sources-russia-iran-china-junction.md`](user-provided-sources-russia-iran-china-junction.md) to see a `user-provided sources` skeleton-packet memo on the Russia–Iran–China commercial junction for a European trade-finance bank — junction-pattern tiering vs named-entity screening, with canonical Axis A / Axis B tags throughout, and a packet of OFAC, EU, UK OFSI, BIS, FATF, EAG and MENAFATF mandate pages that the user retrieves to supply the binding evidence. Demonstrates how the skill composes with the Gulf + Middle East skill without duplicating Iran-actor taxonomy.
+10. Read [`source-conflict-kz-ru-circumvention-volume-estimates.md`](source-conflict-kz-ru-circumvention-volume-estimates.md) to see the **source-conflict-surfacing rule** applied to a sanctions-circumvention estimation problem: four credible sources (EU Commission, KSE Institute, Bruegel, industry advisories) disagree on KZ→RU CHPL-circumvention volume by 3× or more; the memo names all four with provenance, rigorously assesses source independence (research institutes share Comtrade / KZ Stat data; EU partially independent via member-state customs; industry advisories often anchor to KSE), states a preferred position with regret-asymmetry reasoning for EDD calibration, and carries the conflict through to a dual-calibration policy instead of silently averaging.
 
 ## Evidence modes
 
@@ -35,7 +36,7 @@ Use them as demonstrations of the skill contract, not as operational advice. Exa
 | Energy / infrastructure | [`energy-infrastructure-corridor-risk.md`](energy-infrastructure-corridor-risk.md), [`live-source-backed-energy-corridor.md`](live-source-backed-energy-corridor.md) |
 | Beneficial ownership / adjacency | [`beneficial-ownership-opacity.md`](beneficial-ownership-opacity.md), [`live-source-backed-bo-opacity.md`](live-source-backed-bo-opacity.md) |
 | Trade finance / dual-use routing | [`trade-finance-dual-use-routing.md`](trade-finance-dual-use-routing.md) |
-| Trade finance / sanctions circumvention detection | [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md) |
+| Trade finance / sanctions circumvention detection | [`live-source-backed-customs-statistics-anomaly.md`](live-source-backed-customs-statistics-anomaly.md), [`source-conflict-kz-ru-circumvention-volume-estimates.md`](source-conflict-kz-ru-circumvention-volume-estimates.md) |
 | Trade finance / cross-region junction (CA–Iran–China) | [`user-provided-sources-russia-iran-china-junction.md`](user-provided-sources-russia-iran-china-junction.md) |
 | Crypto / VASP rails | [`live-source-backed-vasp-travel-rule.md`](live-source-backed-vasp-travel-rule.md) |
 

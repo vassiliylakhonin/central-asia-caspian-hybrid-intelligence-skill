@@ -6,6 +6,15 @@ This repository is Central Asia Caspian Hybrid Intelligence Skill.
 
 It should remain a focused AI-agent skill and intelligence-analysis repository for Central Asia, the Caspian region, hybrid risks, infrastructure, geopolitics, and strategic monitoring.
 
+## See also
+
+The canonical contract for this repo is [AGENTS.md](AGENTS.md) (imported above for Claude Code; read it directly when reviewing as a human). Before editing, also consult:
+
+- [README.md](README.md) — public positioning, structure invariants and the 15-section template.
+- [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 honesty status. Update truthfully; do not advance without verifiable evidence.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — local validator workflow and CI invariants enforced on `main`.
+- [scripts/validate_skills.py](scripts/validate_skills.py) — authoritative list of structural and honesty checks. Run before finalizing changes.
+
 ## How to work in this repo
 
 Before editing, inspect relevant project files when present:

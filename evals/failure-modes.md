@@ -20,6 +20,7 @@ These are recurring failure modes for Central Asia / Caspian outputs. Treat each
 - **Unsupported legal/compliance conclusions.** Treating analytical reasoning as a legal or compliance determination.
 - **Unsupported numerical precision.** Specific percentages, prices or volumes presented without sourcing.
 - **Outdated assumptions.** Asserting current status of laws, designations, leadership, prices or enforcement without verifying against current sources.
+- **Table-cell provenance tag drift.** Axis A tags applied in prose paragraphs but dropped, mutated, or bulk-attributed inside markdown table cells — typically in risk register, exposure map, options, indicators or scenario tables. Tables are where the operational claims live; stripping their provenance hides exactly the claims a reviewer most needs to audit. Reproduced 2/2 in fresh-context Hybrid-mode runs against this canon (2026-05-18). Fix per the table-cell discipline rule in [`../AGENTS.md`](../AGENTS.md): every factual cell carries its own Axis A tag; a dedicated Provenance column is acceptable; bulk-attribution footnotes are not a substitute.
 
 ## Scope failures
 

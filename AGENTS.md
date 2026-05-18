@@ -142,6 +142,8 @@ Examples:
 - "Russia-China trade volumes increased substantially [secondary][verify]."
 - "This routing pattern likely reflects evasion design [analyst-judgment]."
 
+**Table-cell discipline:** the rule applies inside markdown tables the same way it applies in body prose. For each table that includes claims (risk register, exposure map, options, indicators, actors, scenarios), every factual cell carries an Axis A tag matching the tag the same claim would carry in body prose. If a cell drops or mutates a tag under layout pressure, restore it. A dedicated "Provenance" column is acceptable when it would otherwise crowd the cell. A bulk-attribution footnote ("all cells: [analyst-judgment]") is not a substitute for per-cell tags. Failure mode reproduced 2/2 in fresh-context tests of this canon; see [`evals/failure-modes.md`](evals/failure-modes.md) item on table-cell tag drift.
+
 ## Linguistic faithfulness
 
 The decisiveness of the language must match the stated confidence and the provenance tag.

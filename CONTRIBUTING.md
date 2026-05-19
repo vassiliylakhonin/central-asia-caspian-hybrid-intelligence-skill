@@ -65,6 +65,14 @@ This repo is a domain skill, not an infrastructure product. Do not add or imply:
 
 Validation, schemas, scoring and audit tooling belong in the [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) repo. Cross-region maritime and Gulf-specific content belongs in [Gulf + Middle East Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
 
+## PR checklist
+
+- [ ] `python3 scripts/validate_skills.py` passes locally
+- [ ] If an example was added or renamed: README.md examples list, `examples/README.md`, and the README mode-count summary line are all updated in the same PR
+- [ ] Behavior or positioning change noted in commit message or PR description
+- [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo
+- [ ] No exaggerated language ("revolutionary", "production-grade", "guarantees correctness", "fully autonomous")
+
 ## Contact
 
 Author: Vassiliy Lakhonin · [vassiliylakhonin.github.io](https://vassiliylakhonin.github.io/)

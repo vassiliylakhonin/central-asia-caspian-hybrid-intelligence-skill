@@ -2,63 +2,46 @@
 
 # Claude Code working rules
 
-This repository is Central Asia Caspian Hybrid Intelligence Skill.
+AGENTS.md is the canonical project contract: identity, scope, evidence rules, retrieved-content trust, per-claim provenance tags (Axis A/B + table-cell discipline), currency triggers, linguistic faithfulness, three-value response logic, README priorities, examples, and the Bar 1 / Bar 2 Definition of Done with honest current status. Follow it. Do not re-derive or restate those rules — apply them.
 
-It should remain a focused AI-agent skill and intelligence-analysis repository for Central Asia, the Caspian region, hybrid risks, infrastructure, geopolitics, and strategic monitoring.
+This file (CLAUDE.md) contains only Claude-Code-specific working rules for this repo, on top of the global `~/.claude/CLAUDE.md`.
 
-## See also
+## See also (project-specific anchors)
 
-The canonical contract for this repo is [AGENTS.md](AGENTS.md) (imported above for Claude Code; read it directly when reviewing as a human). Before editing, also consult:
-
-- [README.md](README.md) — public positioning, structure invariants and the 15-section template.
-- [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 honesty status. Update truthfully; do not advance without verifiable evidence.
+- [README.md](README.md) — public positioning, 15-section structure.
+- [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 status. Update truthfully; do not advance without verifiable evidence.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — local validator workflow and CI invariants enforced on `main`.
-- [scripts/validate_skills.py](scripts/validate_skills.py) — authoritative list of structural and honesty checks. Run before finalizing changes.
+- [scripts/validate_skills.py](scripts/validate_skills.py) — authoritative structural and honesty checks.
+- [docs/cold-start-interview.md](docs/cold-start-interview.md) + [templates/practice-profile.md](templates/practice-profile.md) — preflight for profile-expecting workflows.
+- [docs/currency-watch.md](docs/currency-watch.md) — fast-moving topics that need re-verification.
+- [evals/failure-modes.md](evals/failure-modes.md) — known canon-failure modes (incl. table-cell tag drift).
 
-## How to work in this repo
+## Project-specific paths to inspect
 
-Before editing, inspect relevant project files when present:
-- README.md
-- AGENTS.md
-- SKILL.md
-- llms.txt
-- examples/
-- docs/
-- signals/
+In addition to the global pre-edit checklist:
+- SKILL.md and `skills/{claude,codex,openclaw}/SKILL.md`
+- examples/ (15-section flagship structure)
+- docs/ (especially `source-guide.md`, `cold-start-interview.md`, `currency-watch.md`)
 - evals/
+- signals/ if present
+- scripts/validate_skills.py
+- templates/
+- .github/workflows/validate.yml
 
-Prefer small, safe, reviewable changes.
+## Validator before push
 
-Do not rewrite the project unless explicitly asked.
+CI (`.github/workflows/validate.yml`) runs file-presence checks and the skill validator. Mirror locally:
 
-## Preserve project boundaries
+```
+python3 scripts/validate_skills.py
+```
 
-Do not add or imply:
-- MCP server functionality;
-- CLI tooling;
-- schemas or validators;
-- runtime infrastructure;
-- live intelligence collection;
-- factuality verification guarantees;
-- legal, sanctions, investment, or security advice;
-- production-grade monitoring guarantees.
+The validator enforces hardcoded structural and honesty invariants (section counts, headings, safety gates). If it fails locally, CI on `main` will fail too. Run it after any change to README, AGENTS, SKILL files, examples, evals, or docs.
 
-If any of these are discussed, present them as possible future work only when explicitly requested.
+## Working style in this repo
 
-## Content rules
+Small, reviewable changes. Do not rewrite the project unless I explicitly ask.
 
-When editing docs, examples, or skill instructions:
-- separate facts, assessments, assumptions, scenarios, and unknowns;
-- preserve evidence-mode labels and uncertainty language;
-- do not fabricate citations, dates, policy changes, sanctions details, incidents, or metrics;
-- do not add hype or unsupported claims;
-- keep the project credible, conservative, and decision-useful.
+Do not add new infrastructure (MCP server, CLI, schemas, validators beyond the existing one) — that belongs in Agenda Intelligence MD. See AGENTS.md "Relationship to the broader stack".
 
-## Definition of done
-
-Before finishing, report:
-1. what changed;
-2. why it matters;
-3. what was not changed;
-4. how I can verify it;
-5. risks or follow-ups.
+When updating STATUS.md or Bar 2 criteria in AGENTS.md, the rule from AGENTS.md "Definition of done" applies: do not pretend a bar is cleared if it is not, and do not advance status without verifiable evidence.

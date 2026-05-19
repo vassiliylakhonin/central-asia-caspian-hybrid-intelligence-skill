@@ -109,7 +109,7 @@ This skill is one of four repos in a wider portfolio. Each has a distinct role; 
 
 This repo does **not** itself perform Agenda Intelligence MD validation, schema enforcement on outputs, or live source retrieval.
 
-[docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside Agenda Intelligence MD (validation / evidence audit / scoring) and Global Think Tank Analyst (broader strategic-risk memo workflow). The patterns are illustrative; for current interfaces, schemas and tooling, consult those repos directly.
+For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/PORTFOLIO.md). [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside Agenda Intelligence MD and Global Think Tank Analyst; for current interfaces, schemas and tooling, consult those repos directly.
 
 ## 8. Quick usage
 

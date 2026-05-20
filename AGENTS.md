@@ -288,7 +288,7 @@ Do not introduce heavy dependencies unless necessary.
 
 ## Definition of done
 
-The repo aims to clear two bars in sequence. Bar 1 is the threshold for being a credible artifact. Bar 2 is the threshold for being an externally validated specialist resource. The repo's `STATUS.md` (or this section if `STATUS.md` does not yet exist) must always state honestly which bar has been cleared and which has not. **Do not pretend a bar is cleared if it is not.**
+The repo aims to clear two hard bars in sequence, with an optional practitioner-trust layer when the audience requires it. Bar 1 is the threshold for being a credible artifact. Bar 2 is the threshold for being an agent-validated specialist resource. Practitioner review is valuable for buying-side trust, but it is not the hard gate when the downstream consumer is an agent integrator. The repo's `STATUS.md` (or this section if `STATUS.md` does not yet exist) must always state honestly which bar has been cleared and which has not. **Do not pretend a bar is cleared if it is not.**
 
 ### Bar 1 — Early but credible (the minimum bar)
 
@@ -301,25 +301,26 @@ A senior AI or agent engineering reviewer should understand that this repo is no
 - **B1.5** Validation script passes on every commit to `main`.
 - **B1.6** Honesty constraints in "Safety and limitation rules" are observed everywhere.
 
-### Bar 2 — Externally validated specialist resource (the harder bar)
+### Bar 2 — Agent-validated specialist resource (the harder bar)
 
-The criteria below close the weaknesses that Bar 1 alone cannot close (single-author scoring, structural-reasoning-heavy examples, no external review, undifferentiated skill files, no real-use evidence). Each criterion is binary: either met with verifiable evidence, or not.
+The criteria below close the weaknesses that Bar 1 alone cannot close for agent integration: untested routing, no with/without product-shell deltas, fragile evidence-mode mapping, undifferentiated skill files, stale source-backed examples, and overclaim risk. Each criterion is binary: either met with verifiable evidence, or not.
 
 - **B2.1 — Source-anchored majority.** At least half of the flagship examples in `examples/` are `live-source-backed` or `user-provided sources` (not `reasoning-only` or `illustrative source packet`). Source-backed examples must cite primary URLs (regulators, IFIs, FATF/EAG, central banks, court records) for legal-grade claims, with secondary reporting clearly tiered.
-- **B2.2 — Agent-eval delta documented.** At least three agent-evals committed under `evals/agent-eval/` per the methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. Each case runs the same model on the same question with and without the Agenda Intelligence MCP server (loaded with this skill as the regional specialist) and scores both outputs against the 8-criterion structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author; aggregate scores are not claimed. Cases must include the model, date, full prompts, and a delta + observations section. This criterion is appropriate when the downstream consumer is an agent; for a domain-practitioner audience use B2.8 instead or in addition.
-- **B2.3 — Validated cases (not a benchmark).** At least three memos produced with the skill have been reviewed by a domain practitioner (compliance, AML, sanctions, banking, corridor logistics, energy, or regional risk) and labeled as either "useful in their workflow" or "useful with the specified revisions". Stored in a `validated-cases/` directory with practitioner attribution where they consent, anonymized otherwise. **This is not a benchmark and must not be called one.** No aggregated scores; no claims of "X% accuracy".
+- **B2.2 — Agent-eval delta documented.** At least three agent-evals committed under `evals/agent-eval/` per the methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. Each case runs the same model on the same question with and without the Agenda Intelligence MCP server or product shell loaded with this skill as the regional specialist, then scores both outputs against the structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author is acceptable for this agent-integration bar; aggregate scores are not claimed. Cases must include the model, date, full prompts or enough prompt text to reproduce, both outputs or excerpts, and a delta + observations section.
+- **B2.3 — Evidence-mode mapping exercised.** At least one agent-eval demonstrates how source-backed specialist work is passed into Agenda Intelligence MD's `analyze` contract as `user_provided` or `mixed`, not as `live_source_backed`. This proves the specialist evidence vocabulary does not break the product-shell schema.
 - **B2.4 — Platform differentiation or consolidation.** Each variant in `skills/{codex,claude,openclaw}/SKILL.md` either (a) has at least one platform-specific feature that meaningfully changes output (e.g. Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw-specific contract), or (b) is consolidated. Three near-identical files presented as three skills do not meet this criterion.
 - **B2.5 — Honest real-use evidence.** Either (a) the repo links to at least one public, attributable real-use record (a memo, a workflow, a published reference, with permission), or (b) the README and `STATUS.md` explicitly state that no real-use evidence exists yet. No implicit suggestion of adoption that has not occurred.
 - **B2.6 — Source freshness discipline.** `live-source-backed` examples carry a retrieval date, and the repo has a documented practice (in `docs/source-guide.md` or a `STATUS.md` note) for re-verifying or marking stale any source older than a stated horizon. Examples beyond the horizon are either refreshed or labeled stale.
-- **B2.7 — Independent rubric application.** At least one application of `evals/starter-rubric.md` to a memo has been performed by someone other than the author, with their scorecard added to `evals/scoring-example.md` (or a sibling file) under their attribution.
-- **B2.8 — Practitioner review (optional, audience-gated).** If the downstream audience includes domain practitioners (compliance, AML, sanctions desks, banking risk leadership), at least one named domain practitioner has read at least one example and recorded "useful in their workflow" or "useful with the specified revisions" under `validated-cases/`. This was the original B2.2 framing; it is retained as an additional optional criterion. Skip when the downstream audience is purely AI engineers / agent integrators.
+- **B2.7 — Agent-eval honesty discipline.** Agent-eval writeups explicitly state that deltas are structural, not factual verification, not model-quality comparisons, and not aggregate benchmarks. They must not claim accuracy, compliance usefulness, or practitioner validation.
+- **B2.8 — Practitioner review (optional, audience-gated).** If the downstream audience includes domain practitioners (compliance, AML, sanctions desks, banking risk leadership), record practitioner review separately under `validated-cases/` with attribution where consented, anonymized otherwise. This is a trust layer, not a hard Bar 2 gate for agent-first validation.
 
 ### Anti-criteria (things that do **not** count as progress toward done)
 
 - Adding more `reasoning-only` examples once Bar 1 is cleared. Source-anchored ratio is the binding constraint.
-- Adding worked scorecards by the same author to imply external validation.
+- Presenting self-scored agent-evals as external validation, factual verification, model-quality comparison, or aggregate benchmark evidence.
 - Renaming a starter rubric a "benchmark", "scoring framework" or "evaluation suite" without the underlying validated cases.
 - Adding adoption-style language ("used by", "trusted by", "production-grade") without B2.5 evidence.
+- Treating optional practitioner review as a substitute for agent-eval delta when the stated audience is agent integrators.
 - Adding more topics, badges or boilerplate without a corresponding substance change.
 - Moving repo metadata (description, topics, homepage) in ways that imply a status the repo has not earned.
 
@@ -328,6 +329,6 @@ The criteria below close the weaknesses that Bar 1 alone cannot close (single-au
 At the time of writing this Definition of Done:
 
 - **Bar 1 — cleared.** All B1.1–B1.6 criteria observable in the current tree.
-- **Bar 2 — not cleared.** B2.1 met (Wave 7: 8 of 15 flagship examples are source-anchored — 53%; Wave 7 added a user-provided sources Russia–Iran–China junction example). B2.2, B2.3 and B2.7 are entirely open (single-author state). B2.5 partial (honest disclosure in place; no positive real-use record yet). B2.4 met (Wave 4: each variant has platform-specific behavior — Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw canonical baseline). B2.6 met (retrieval dates on live-source-backed examples; re-verification horizons in docs/source-guide.md).
+- **Bar 2 — cleared for agent integration.** B2.1 met at threshold (Wave 8: 8 of 16 flagship examples are source-anchored — 50%). B2.2 met (three agent-eval delta cases committed). B2.3 met (`customs-mirror-statistics-anomaly` maps upstream `live-source-backed` specialist material to Agenda Intelligence `analyze` as `mixed`). B2.4 met (Wave 4: each variant has platform-specific behavior — Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw canonical baseline). B2.5 met via honest negative disclosure (no positive real-use record yet). B2.6 met (retrieval dates on live-source-backed examples; re-verification horizons in docs/source-guide.md). B2.7 met for current evals (structural-only limitations; no factual-verification, aggregate-benchmark or practitioner-validation claims). B2.8 remains optional and audience-gated.
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.

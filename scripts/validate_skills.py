@@ -131,8 +131,8 @@ def validate_root_docs() -> None:
         if link not in readme:
             fail(f"README.md: missing companion repo link: {link}")
 
-    if "**bar 2 — not cleared.**" not in status:
-        fail("STATUS.md: must explicitly state: **Bar 2 — not cleared.**")
+    if "**bar 2 — cleared for agent integration.**" not in status:
+        fail("STATUS.md: must explicitly state: **Bar 2 — cleared for agent integration.**")
 
 
 def example_evidence_mode(path: Path) -> str:

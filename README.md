@@ -9,6 +9,8 @@
 
 > **CENTRAL ASIA + CASPIAN RISK REASONING SKILL** — a reasoning method for AI agents working on regional sanctions, AML, banking, corridor, logistics and energy risk. Open-source. No live data. No legal or compliance advice.
 
+> **Regional specialist module for [Agenda Intelligence](https://github.com/vassiliylakhonin/agenda-intelligence-md).** Activated automatically when the `analyze` tool sees a Central Asia / Caspian geography (Kazakhstan, Uzbekistan, Azerbaijan, Turkmenistan, Kyrgyzstan, Tajikistan, Caspian, Middle Corridor). Also usable standalone via paste/attach into any agent.
+
 ## 1. Vertical specialist: Central Asia + Caspian risk reasoning
 
 This is the **vertical specialist skill** in the Agenda Intelligence portfolio for Central Asia and the Caspian — a reasoning method that runs inside an AI agent (Claude, ChatGPT, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on regional sanctions, AML, banking, corridor, logistics and energy questions, instead of the generic regional essays that default LLM output usually returns.

@@ -33,8 +33,7 @@ Per-claim provenance (two axes):
 
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, retrieved-content trust, currency triggers, provenance tags, three-value response logic.
-- STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria. Bar 1 cleared; Bar 2 not yet met (external review pending).
-- STATUS.md — honest current status against the Definition-of-Done bars.
+- STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria.
 - skills/ — platform variants (Claude, Codex) where present.
 - README.md — public documentation.
 - docs/ — source guide, regional logic, risk archetypes.

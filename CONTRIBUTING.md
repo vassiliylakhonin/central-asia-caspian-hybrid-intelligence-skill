@@ -2,6 +2,35 @@
 
 This repo is a vertical specialist skill in the Agenda Intelligence portfolio (see [AGENTS.md](AGENTS.md) for positioning and the relationship to Global Think Tank Analyst, the Gulf + Middle East sibling vertical, and Agenda Intelligence MD).
 
+## First 15 minutes
+
+If you've just landed in this repo and want to understand it before editing, do these in order. Each step is real-time-boxed at ~5 minutes.
+
+**1. Read these three files, in order:**
+
+1. [`README.md`](README.md) — what this is (Central Asia + Caspian vertical specialist), the four-repo stack, and where you draw the line versus the sibling Gulf + Middle East skill (no Iran sanctions, no GCC banking, no maritime chokepoint content here).
+2. [`AGENTS.md`](AGENTS.md) — canonical project rules: scope, evidence rules, per-claim provenance tags (Axis A/B + table-cell discipline), currency triggers, three-value response logic, README priorities, and the Bar 1 / Bar 2 Definition of Done.
+3. [`STATUS.md`](STATUS.md) — honest current state per Bar 1 / Bar 2 criterion. This is where you find out what's actually shipped vs what's claimed.
+
+**2. Get the validator running locally:**
+
+```bash
+git clone https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
+cd central-asia-caspian-hybrid-intelligence-skill
+python3 scripts/validate.py
+```
+
+Requirements: Python 3.8+. No additional packages — the validator uses the standard library. Expected success output: `ok: skill files validated`. CI runs this on every push; run it locally before pushing or `main` will go red.
+
+**3. Read one concrete artifact end-to-end:**
+
+- A `live-source-backed` flagship example, e.g. [`examples/live-source-backed-bank-correspondent.md`](examples/live-source-backed-bank-correspondent.md). Look for: evidence mode declaration at top, per-claim provenance tags inside the body and in tables (table-cell discipline), retrieval date, mechanism-first structure, what the limitation note actually limits.
+- For the agent-eval validation pattern that closes Bar 2: skim [`evals/agent-eval/README.md`](evals/agent-eval/README.md) and one case file.
+
+**When something is unclear**, the lookup order is: this repo's [`AGENTS.md`](AGENTS.md) → portfolio canon ([agenda-intelligence-md/AGENTS.md](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/AGENTS.md), [global-think-tank-analyst/AGENTS.md](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/AGENTS.md)) → open an issue using the template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
+
+---
+
 ## Before opening a PR
 
 1. **Open an issue first** with context, the change you intend, and the evidence behind it.

@@ -8,7 +8,7 @@ This file (CLAUDE.md) contains only Claude-Code-specific working rules for this 
 
 ## See also (project-specific anchors)
 
-- [README.md](README.md) — public positioning, 15-section structure.
+- [README.md](README.md) — public positioning per AGENTS.md "README priorities".
 - [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 status. Update truthfully; do not advance without verifiable evidence.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — local validator workflow and CI invariants enforced on `main`.
 - [scripts/validate.py](scripts/validate.py) — authoritative structural and honesty checks.

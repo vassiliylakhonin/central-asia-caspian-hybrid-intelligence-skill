@@ -6,7 +6,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 
 This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`](AGENTS.md) under "Definition of done"; the short version:
 
-- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: 15-section README, all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation script passing on every commit to `main`, no exaggerated claims.
+- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: README follows the section structure in AGENTS.md "README priorities", all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation script passing on every commit to `main`, no exaggerated claims.
 - **Bar 2 — Agent-validated specialist resource.** The harder bar for agent-integration use: source-anchored majority of flagship examples, at least three agent-eval delta cases under `evals/agent-eval/`, evidence-mode mapping exercised through Agenda Intelligence MD's `analyze` tool, platform differentiation (or honest consolidation) across `skills/{claude,codex,openclaw}/SKILL.md`, source freshness discipline, and explicit structural-only honesty on every agent-eval. B2.8 (practitioner review) is optional and audience-gated, not a hard gate.
 
 Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
@@ -17,7 +17,7 @@ Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in
 
 | Criterion | Status | Notes |
 |---|---|---|
-| B1.1 README follows the 15-section structure | ✅ met | See `README.md`. |
+| B1.1 README follows the "README priorities" structure | ✅ met | See `README.md`. |
 | B1.2 All four evidence modes demonstrated | ✅ met | `reasoning-only`, `illustrative source packet`, `live-source-backed`, `user-provided sources` each have at least one example. |
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six AGENTS.md preferred examples exist. |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |

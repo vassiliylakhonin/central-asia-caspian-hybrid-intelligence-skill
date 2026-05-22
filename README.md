@@ -127,7 +127,7 @@ Use the skill variant matching your environment as the operating instruction in 
 Validation:
 
 ```bash
-python3 scripts/validate_skills.py
+python3 scripts/validate.py
 ```
 
 The validator checks structure, required phrases, forbidden determinative claims and code-fence balance. It does **not** validate factuality of any output produced by the skill.
@@ -183,9 +183,32 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 - `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
-- `scripts/validate_skills.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
+- `scripts/validate.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
 
 All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline.
+
+## Repository layout
+
+```text
+.
+├── README.md            # Public positioning (this file)
+├── AGENTS.md            # Canonical project contract (identity, scope, evidence rules)
+├── CLAUDE.md            # Claude Code working rules (inherits AGENTS.md)
+├── SKILL.md             # Runtime skill contract
+├── STATUS.md            # Honest Bar 1 / Bar 2 status against the Definition of Done
+├── CONTEXT.md           # Working context for cross-session continuity
+├── CONTRIBUTING.md      # Local validator workflow and CI invariants
+├── llms.txt             # Orientation for LLMs and agent indexers
+├── skills/              # Runtime skill files per platform (claude/, codex/, openclaw/)
+├── examples/            # Flagship memo examples (state evidence mode)
+├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
+├── docs/                # Source guide, currency watch, cold-start interview, regional logic, risk archetypes
+├── templates/           # Practice-profile template populated by the cold-start interview
+├── scripts/             # Validator (validate.py)
+└── .github/             # CI workflows
+```
+
+For new contributors: read `AGENTS.md` for project rules, then `CONTRIBUTING.md` for the local validator workflow before touching any file.
 
 ## 12. Source guide
 

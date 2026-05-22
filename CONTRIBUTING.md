@@ -10,12 +10,42 @@ This repo is a vertical specialist skill in the Agenda Intelligence portfolio (s
 4. **Run the validator locally** — see below. PRs that break CI on `main` will be rejected.
 5. **Open a PR** with concise rationale and risk notes.
 
+## Required artifacts for a vertical specialist skill
+
+This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill) follow the same minimum file set. Keep the topology aligned.
+
+**Root files (required, file-presence checked by `.github/workflows/validate.yml`):**
+- `README.md` — public positioning per AGENTS.md "README priorities" (15-section structure)
+- `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
+- `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
+- `SKILL.md` — runtime skill contract
+- `STATUS.md` — honest Bar 1 / Bar 2 status
+- `CONTRIBUTING.md` — this file
+- `LICENSE`
+- `SECURITY.md`
+- `llms.txt` — orientation for LLMs and agent indexers
+- `.gitignore`
+
+**Directories (required):**
+- `skills/{claude,codex,openclaw}/SKILL.md` — runtime variants per platform
+- `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
+- `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
+- `docs/` — including `source-guide.md`, `currency-watch.md`, `cold-start-interview.md`, `regional-logic.md`, `risk-archetypes.md`
+- `templates/` — at minimum `practice-profile.md`
+- `scripts/` — at minimum `validate.py`
+- `.github/workflows/validate.yml`
+
+**Sibling-repo deltas (intentional):**
+- The Gulf + Middle East skill carries `signals/` and `taxonomy.json` (with a `render-readme.py` helper) for its archetype taxonomy and signal feed. CA-Caspian does not currently publish signals; if added, mirror the four-file consistency pattern.
+
+`scripts/validate.py` is the authoritative list. Run it after any structural change.
+
 ## Local validation
 
-CI runs `scripts/validate_skills.py` on every push. Run it locally before opening a PR:
+CI runs `scripts/validate.py` on every push. Run it locally before opening a PR:
 
 ```bash
-python3 scripts/validate_skills.py
+python3 scripts/validate.py
 ```
 
 Expected success output: `ok: skill files validated`.
@@ -36,7 +66,7 @@ The validator enforces structural and honesty invariants. Common reasons it fail
   - avoid determinative or unsafe phrases (`fully compliant`, `no sanctions risk`, `guaranteed compliant`, `this is a legal determination`, `constitutes legal advice`);
   - have balanced fenced code blocks.
 
-Read [`scripts/validate_skills.py`](scripts/validate_skills.py) directly for the authoritative list of constraints — the validator is the source of truth.
+Read [`scripts/validate.py`](scripts/validate.py) directly for the authoritative list of constraints — the validator is the source of truth.
 
 ## Content rules
 
@@ -56,7 +86,7 @@ This repo is a domain skill, not an infrastructure product. Do not add or imply:
 
 - MCP server functionality
 - CLI tooling
-- schemas or validators beyond `scripts/validate_skills.py`
+- schemas or validators beyond `scripts/validate.py`
 - runtime infrastructure
 - live intelligence collection
 - factuality verification guarantees
@@ -67,7 +97,7 @@ Validation, schemas, scoring and audit tooling belong in the [Agenda Intelligenc
 
 ## PR checklist
 
-- [ ] `python3 scripts/validate_skills.py` passes locally
+- [ ] `python3 scripts/validate.py` passes locally
 - [ ] If an example was added or renamed: README.md examples list, `examples/README.md`, and the README mode-count summary line are all updated in the same PR
 - [ ] Behavior or positioning change noted in commit message or PR description
 - [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo

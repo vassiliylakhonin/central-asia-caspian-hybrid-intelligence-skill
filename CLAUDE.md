@@ -11,7 +11,7 @@ This file (CLAUDE.md) contains only Claude-Code-specific working rules for this 
 - [README.md](README.md) — public positioning, 15-section structure.
 - [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 status. Update truthfully; do not advance without verifiable evidence.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — local validator workflow and CI invariants enforced on `main`.
-- [scripts/validate_skills.py](scripts/validate_skills.py) — authoritative structural and honesty checks.
+- [scripts/validate.py](scripts/validate.py) — authoritative structural and honesty checks.
 - [docs/cold-start-interview.md](docs/cold-start-interview.md) + [templates/practice-profile.md](templates/practice-profile.md) — preflight for profile-expecting workflows.
 - [docs/currency-watch.md](docs/currency-watch.md) — fast-moving topics that need re-verification.
 - [evals/failure-modes.md](evals/failure-modes.md) — known canon-failure modes (incl. table-cell tag drift).
@@ -24,7 +24,7 @@ In addition to the global pre-edit checklist:
 - docs/ (especially `source-guide.md`, `cold-start-interview.md`, `currency-watch.md`)
 - evals/
 - signals/ if present
-- scripts/validate_skills.py
+- scripts/validate.py
 - templates/
 - .github/workflows/validate.yml
 
@@ -33,7 +33,7 @@ In addition to the global pre-edit checklist:
 CI (`.github/workflows/validate.yml`) runs file-presence checks and the skill validator. Mirror locally:
 
 ```
-python3 scripts/validate_skills.py
+python3 scripts/validate.py
 ```
 
 The validator enforces hardcoded structural and honesty invariants (section counts, headings, safety gates). If it fails locally, CI on `main` will fail too. Run it after any change to README, AGENTS, SKILL files, examples, evals, or docs.

@@ -2,6 +2,15 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
+## What Bar 1 and Bar 2 mean
+
+This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`](AGENTS.md) under "Definition of done"; the short version:
+
+- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: 15-section README, all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation script passing on every commit to `main`, no exaggerated claims.
+- **Bar 2 — Agent-validated specialist resource.** The harder bar for agent-integration use: source-anchored majority of flagship examples, at least three agent-eval delta cases under `evals/agent-eval/`, evidence-mode mapping exercised through Agenda Intelligence MD's `analyze` tool, platform differentiation (or honest consolidation) across `skills/{claude,codex,openclaw}/SKILL.md`, source freshness discipline, and explicit structural-only honesty on every agent-eval. B2.8 (practitioner review) is optional and audience-gated, not a hard gate.
+
+Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
+
 **Last updated:** 2026-05-20 (Bar 2 agent-validation path completed: three agent-eval delta cases are recorded, including one `mixed` evidence-mode mapping case through Agenda Intelligence `analyze`.)
 
 ## Bar 1 — Early but credible
@@ -12,7 +21,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 | B1.2 All four evidence modes demonstrated | ✅ met | `reasoning-only`, `illustrative source packet`, `live-source-backed`, `user-provided sources` each have at least one example. |
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six AGENTS.md preferred examples exist. |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |
-| B1.5 Validation passes on every commit to `main` | ✅ met | `python3 scripts/validate_skills.py` runs in CI and pre-commit. |
+| B1.5 Validation passes on every commit to `main` | ✅ met | `python3 scripts/validate.py` runs in CI and pre-commit. |
 | B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no legal/compliance/investment advice posture, no production-grade or screening claims. |
 
 **Bar 1 — cleared.**

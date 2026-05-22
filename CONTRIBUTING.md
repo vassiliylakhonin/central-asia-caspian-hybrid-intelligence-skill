@@ -15,7 +15,7 @@ This repo is a vertical specialist skill in the Agenda Intelligence portfolio (s
 This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill) follow the same minimum file set. Keep the topology aligned.
 
 **Root files (required, file-presence checked by `.github/workflows/validate.yml`):**
-- `README.md` — public positioning per AGENTS.md "README priorities" (15-section structure)
+- `README.md` — public positioning per AGENTS.md "README priorities"
 - `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
 - `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
 - `SKILL.md` — runtime skill contract
@@ -34,6 +34,9 @@ This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhon
 - `templates/` — at minimum `practice-profile.md`
 - `scripts/` — at minimum `validate.py`
 - `.github/workflows/validate.yml`
+
+**Optional artifacts (present in this repo, not currently required by validator):**
+- `CONTEXT.md` — keeps the regional / portfolio vocabulary distinct across the four-repo stack (vertical specialist vs Agenda Intelligence MD vs Global Think Tank Analyst vs regional lens). Update if a term is reused or repositioned.
 
 **Sibling-repo deltas (intentional):**
 - The Gulf + Middle East skill carries `signals/` and `taxonomy.json` (with a `render-readme.py` helper) for its archetype taxonomy and signal feed. CA-Caspian does not currently publish signals; if added, mirror the four-file consistency pattern.

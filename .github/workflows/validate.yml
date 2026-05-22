@@ -22,6 +22,6 @@ jobs:
           test -f skills/openclaw/SKILL.md
           test -f skills/codex/SKILL.md
           test -f skills/claude/SKILL.md
-          test -f scripts/validate_skills.py
+          test -f scripts/validate.py
       - name: Validate skill metadata and safety gates
-        run: python3 scripts/validate_skills.py
+        run: python3 scripts/validate.py

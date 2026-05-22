@@ -217,7 +217,11 @@ All variants share the same analytical contract: mechanism-first reasoning, evid
 └── .github/             # CI workflows
 ```
 
-For new contributors: read `AGENTS.md` for project rules, then `CONTRIBUTING.md` for the local validator workflow before touching any file.
+## Contributing
+
+New contributors: [`CONTRIBUTING.md`](CONTRIBUTING.md) opens with a "First 15 minutes" onboarding path — read the three load-bearing files (`README.md`, `AGENTS.md`, `STATUS.md`), run `python3 scripts/validate.py` locally, and walk one concrete `live-source-backed` flagship example end-to-end. CI runs the validator on every push; run it locally before opening a PR.
+
+Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown labels, Axis A/B provenance tags (incl. table-cell discipline), three-value response logic, and the deliberate maturity-framework asymmetry across the four-repo stack (this repo and the Gulf+ME sibling use Bar 1/2; `global-think-tank-analyst` uses `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets) — is consolidated in the portfolio glossary at [`agenda-intelligence-md/docs/glossary.md`](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md).
 
 ## 12. Source guide
 

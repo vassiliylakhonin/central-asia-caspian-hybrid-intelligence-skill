@@ -55,6 +55,10 @@ Fast-moving regional topics that any source-backed memo should re-verify against
 Do not duplicate Agenda Intelligence MD inside this repo.
 Do not turn this repo into a CLI, MCP server, screening engine, or validation platform unless explicitly requested.
 
+## Skill packaging convention (portfolio-wide)
+
+The portfolio convention is: canonical `SKILL.md` at repo root, with optional runtime-specific overlays under `skills/<runtime>/SKILL.md` (`claude`, `codex`, `openclaw`). Overlays are additive; the root file is the runtime-agnostic contract. The full convention is documented in [agenda-intelligence-md/AGENTS.md](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/AGENTS.md) under "Skill packaging convention". This repo follows that layout: `SKILL.md` at root plus `skills/{claude,codex,openclaw}/SKILL.md` for runtime overlays.
+
 ## Scope
 
 Core scope:

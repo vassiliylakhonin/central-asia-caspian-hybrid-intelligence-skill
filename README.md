@@ -102,6 +102,15 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
+| Layer | Repo | Role |
+|---|---|---|
+| Product shell | [agenda-intelligence-md](https://github.com/vassiliylakhonin/agenda-intelligence-md) | MCP server, request/memo schemas, geography routing, evidence audit, scoring |
+| Reasoning method | [global-think-tank-analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst) | Strategic-risk reasoning contract; loaded by `analyze` as the default method |
+| **Vertical specialist** (this repo) | **central-asia-caspian-hybrid-intelligence-skill** | Central Asia / Caspian / Middle Corridor domain depth; routed by geography |
+| Vertical specialist | [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill) | Iran / GCC / maritime chokepoint domain depth; routed by geography |
+
+> **Project maturity.** This repo uses a two-bar Definition of Done (Bar 1 — early but credible; Bar 2 — agent-validated specialist resource). Current honest status, per criterion, lives in [STATUS.md](STATUS.md). Criteria are defined in [AGENTS.md](AGENTS.md) under "Definition of done".
+
 - **Central Asia + Caspian Hybrid Intelligence Skill** *(this repo)* — specialist regional/corridor-risk reasoning, domain-specific risk-transmission logic, sanctions / AML / banking / logistics / energy / corridor analysis patterns.
 - **Gulf + Middle East Hybrid Intelligence Skill** — sibling vertical specialist; reference it when a flow crosses both regions (Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs). See [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
 - **Global Think Tank Analyst** — broader strategic-risk memo workflow, general policy-risk analysis, scenario and red-team memo modes: https://github.com/vassiliylakhonin/global-think-tank-analyst

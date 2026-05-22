@@ -102,12 +102,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
-| Layer | Repo | Role |
-|---|---|---|
-| Product shell | [agenda-intelligence-md](https://github.com/vassiliylakhonin/agenda-intelligence-md) | MCP server, request/memo schemas, geography routing, evidence audit, scoring |
-| Reasoning method | [global-think-tank-analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst) | Strategic-risk reasoning contract; loaded by `analyze` as the default method |
-| **Vertical specialist** (this repo) | **central-asia-caspian-hybrid-intelligence-skill** | Central Asia / Caspian / Middle Corridor domain depth; routed by geography |
-| Vertical specialist | [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill) | Iran / GCC / maritime chokepoint domain depth; routed by geography |
+This repo is the **Central Asia / Caspian vertical specialist** — activated by the `analyze` tool when geography matches, or used standalone via paste/attach. The canonical 4-layer map (product shell, reasoning method, two vertical specialists) lives in the product-shell repo: [Where this fits in the Agenda Intelligence stack](https://github.com/vassiliylakhonin/agenda-intelligence-md#where-this-fits-in-the-agenda-intelligence-stack). Maintained in one place to avoid drift across repos.
 
 > **Project maturity.** This repo uses a two-bar Definition of Done (Bar 1 — early but credible; Bar 2 — agent-validated specialist resource). Current honest status, per criterion, lives in [STATUS.md](STATUS.md). Criteria are defined in [AGENTS.md](AGENTS.md) under "Definition of done".
 

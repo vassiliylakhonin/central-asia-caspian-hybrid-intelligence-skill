@@ -20,7 +20,7 @@ Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in
 | B1.1 README follows the "README priorities" structure | ✅ met | See `README.md`. |
 | B1.2 All four evidence modes demonstrated | ✅ met | `reasoning-only`, `illustrative source packet`, `live-source-backed`, `user-provided sources` each have at least one example. |
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six AGENTS.md preferred examples exist. |
-| B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |
+| B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. `evals/skill-improvement/` adds validation-gated skill-edit cases, also explicitly non-benchmark. |
 | B1.5 Validation passes on every commit to `main` | ✅ met | `python3 scripts/validate.py` runs in CI and pre-commit. |
 | B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no legal/compliance/investment advice posture, no production-grade or screening claims. |
 

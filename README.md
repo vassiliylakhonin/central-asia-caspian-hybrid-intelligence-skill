@@ -70,6 +70,8 @@ Expected shape of a good answer:
 - gives role-based actions and trigger points, not vague "monitor closely" advice;
 - includes a clear limitation note and avoids legal or compliance determinations.
 
+Deployed workers built on this regional frame are live — try them in the browser: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). Evidence triage only, not advice.
+
 ## 5. What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis. It:

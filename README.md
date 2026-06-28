@@ -19,6 +19,12 @@ It pairs with a horizontal reasoning skill ([Global Think Tank Analyst](https://
 
 It does not replace sanctions screening, AML monitoring, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
 
+## Commercial role
+
+This repo is a **regional specialist reasoning layer**, not the active commercial wedge. The current Agenda Intelligence MD product focus is evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge.
+
+Central Asia / Caspian and Middle Corridor material should support routing, demos, and regional reasoning depth. Do not treat Kazakhstan/local-forwarder or Middle Corridor demand as validated product-market fit. Do not expand buyer-facing positioning, pilot pages, outreach copy, or new workers from this repo unless fresh discovery evidence proves buyer urgency.
+
 ## 2. Who it is for
 
 - compliance and risk leadership at banks, fintechs and payment providers with SME, correspondent or routing exposure to Kazakhstan, Uzbekistan, Azerbaijan, Turkmenistan, Kyrgyzstan or Tajikistan
@@ -70,7 +76,7 @@ Expected shape of a good answer:
 - gives role-based actions and trigger points, not vague "monitor closely" advice;
 - includes a clear limitation note and avoids legal or compliance determinations.
 
-Deployed workers built on this regional frame are live — try them in the browser: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). Evidence triage only, not advice.
+Deployed Agenda Intelligence MD profiles built on this regional frame are live as portfolio demos — try them in the browser: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). Evidence triage only, not advice, and not a claim of product-market fit.
 
 ## 5. What it does
 

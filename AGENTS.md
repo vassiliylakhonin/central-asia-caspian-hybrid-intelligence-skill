@@ -10,6 +10,14 @@ Use this positioning:
 
 This repo is a domain skill, not an infrastructure product.
 
+## Commercial role
+
+This repo is a regional specialist reasoning layer in the Agenda Intelligence stack. It is not the active commercial product surface and should not be used to revive Kazakhstan/local-forwarder or Middle Corridor positioning without fresh buyer evidence.
+
+Current product focus lives in Agenda Intelligence MD: evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge. Central Asia / Caspian content should support routing, demos, and regional reasoning depth.
+
+Do not add buyer-facing copy, pilot pages, new deployed surfaces, outreach sequences, or monetization claims here. If a request is commercially oriented, run the market gate in Agenda Intelligence MD and keep this repo focused on domain reasoning.
+
 ## Relationship to the broader stack
 
 Agenda Intelligence MD:

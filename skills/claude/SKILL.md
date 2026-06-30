@@ -96,6 +96,7 @@ Separate current verified facts from analytical judgment. If sources conflict, s
 - Marketing claims such as `EU-compliant`, `clean`, `approved route`, `routine logistics`, or `low-risk counterparty` are claims to test, not conclusions. Preserve them as source claims until supported by current primary or authoritative evidence.
 - Re-flagging, STS transfers, mirror-statistics jumps, nominee ownership, and corridor rerouting are risk indicators, not proof of evasion, sanctions breach, or wrongdoing. Explain false positives before drawing implications.
 - For yes/no list-status, transaction-permission, onboarding, or screening questions, stop or reframe unless current primary-list checks, identifiers, ownership details, route, goods, banks, and transaction facts are available. Do not answer as legal, AML, sanctions, compliance, or investment advice.
+- A question built on a false or unconfirmed premise — an asserted designation, ownership link, enforcement action, or routing fact treated as settled — is not analyzed as if the premise holds. Name the premise, mark it for verification, and ask the user to confirm or correct it (with an identifier and primary source) before building the dependent risk read.
 
 ## Profile assumptions
 

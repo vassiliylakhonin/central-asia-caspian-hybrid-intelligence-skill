@@ -46,7 +46,7 @@ A memo with any **0** on a hard-fail dimension (marked ⚠ below) should be revi
 
 11. Evidence mode stated explicitly using one of the four canonical labels (`live-source-backed` / `user-provided sources` / `illustrative source packet` / `reasoning-only`).
 12. Claims separated into `Verified` / `Plausible` / `Judgment` / `Unknown` where useful.
-13. No fabricated citations, list IDs, statute citations, dates, prices or enforcement records.
+13. No fabricated citations, list IDs, statute citations, dates, prices or enforcement records — and no post-rationalized citations: each provenance tag / cited source actually supports the specific claim it is attached to (tag presence is not tag faithfulness).
 14. Time-sensitive claims (sanctions status, licensing, leadership, prices) flagged for re-verification.
 
 ### D. Tone and safety ⚠
@@ -128,3 +128,4 @@ Thresholds are working defaults, not validated cutoffs.
 - A memo can score high and still be wrong about a specific designation, BO claim or enforcement action — those require source-backed verification.
 - The rubric is intentionally lightweight; it is not a substitute for domain expertise or qualified professional review.
 - Cutoffs and weights are placeholders. They have not been validated against a labeled dataset.
+- When an agent-eval or rubric pass is self-scored (same author or same model family), expect self-preference inflation — criteria get marked satisfied more readily than a neutral judge would, even on objective criteria. Score with a different model family or disclose the limitation; never report a self-scored delta as external validation. Motivated by external research on self-preference bias in LLM-as-judge evaluation.

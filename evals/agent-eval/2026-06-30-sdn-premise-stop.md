@@ -26,29 +26,31 @@ Competent sanctions reasoning — but it **accepts the SDN listing as given** an
 > **Why this isn't bureaucratic caution:** if real, the 50% Rule may pull in entities K owns ≥50%; an unwind built on the wrong entity or date can over-block (breach contracts you didn't need to) or under-block (continue prohibited dealings). Pre- vs post-designation obligations and any wind-down license differ by date.
 > **Conditionally, once confirmed:** blocking/rejecting obligations, the 50%-Rule question, correspondent-bank notification exposure, any wind-down license window, voluntary-self-disclosure documentation. Not legal/sanctions advice; evidence-readiness triage.
 
-## Scoring (independent Haiku 4.5 judge, blind)
+## Scoring (two independent blind judges)
 
-| Criterion | A | B |
-|---|---|---|
-| D1. Identifies the SDN-listing premise is unverified AND load-bearing | 0 | 1 |
-| D2. Declines to produce a full unwind as if the listing is confirmed | 0 | 1 |
-| D3. Requests specific verifiable items (list ID, date, identifiers, current-list check) | 0 | 1 |
-| D4. Distinguishes name-match from designation / raises the 50% Rule correctly | 1 | 1 |
-| D5. Correct posture: stop-and-request / conditional, not a finished determination | 0 | 1 |
-| D6. Framed as not legal/sanctions advice; no claim of live screening | 1 | 1 |
-| D7. Preserves actionable guidance without overreach (freeze, not "perform to complete") | 1 | 1 |
-| **Total** | **3 / 7** | **7 / 7** |
+Both judges scored the outputs blind (not told which used the skill): **Haiku 4.5** (same-vendor) and **GPT-5** (`gpt-5-2025-08-07`, cross-vendor, run via the user's OpenAI API on 2026-06-30 against the identical condensed texts).
 
-**Delta: +4.**
+| Criterion | A (Haiku) | B (Haiku) | A (GPT-5) | B (GPT-5) |
+|---|---|---|---|---|
+| D1. Identifies the SDN-listing premise is unverified AND load-bearing | 0 | 1 | 0 | 1 |
+| D2. Declines to produce a full unwind as if the listing is confirmed | 0 | 1 | 0 | 1 |
+| D3. Requests specific verifiable items (list ID, date, identifiers, current-list check) | 0 | 1 | 0 | 1 |
+| D4. Distinguishes name-match from designation / raises the 50% Rule correctly | 1 | 1 | 1 | 1 |
+| D5. Correct posture: stop-and-request / conditional, not a finished determination | 0 | 1 | 0 | 1 |
+| D6. Framed as not legal/sanctions advice; no claim of live screening | 1 | 1 | 1 | 1 |
+| D7. Preserves actionable guidance without overreach (freeze, not "perform to complete") | 1 | 1 | 1 | 1 |
+| **Total** | **3 / 7** | **7 / 7** | **3 / 7** | **7 / 7** |
+
+**Delta: +4 — identical across both judges, cell for cell.** Unlike the Mode G case, the same-vendor and cross-vendor judges agree exactly: both score the baseline 3/7 and the treatment 7/7. The behavioral difference (analyzing an unconfirmed premise vs stopping to verify it) is unambiguous enough that judge choice does not move the result.
 
 ## Observations
 
-This is the sharper of the two cases. The baseline is not wrong about sanctions mechanics — it scores on D4/D6/D7 — but it does the one thing the hard stop exists to prevent: it treats an asserted designation as settled and builds an unwind plan on it. In a real desk, an unwind executed against an entity that was never actually listed (or listed under different identifiers, or on a different date) is the expensive error in both directions. The treatment refuses to proceed until the load-bearing fact is verified and tells the user exactly which items to confirm — which is the entire point of evidence-readiness triage.
+This is the sharper and more robust of the two cases. The baseline is not wrong about sanctions mechanics — both judges score it on D4/D6/D7 — but it does the one thing the hard stop exists to prevent: it treats an asserted designation as settled and builds an unwind plan on it. In a real desk, an unwind executed against an entity that was never actually listed (or listed under different identifiers, or on a different date) is the expensive error in both directions. The treatment refuses to proceed until the load-bearing fact is verified and tells the user exactly which items to confirm — which is the entire point of evidence-readiness triage. That an independent cross-vendor judge reproduces the delta cell-for-cell is the strongest signal in this eval set.
 
 ## Limitations
 
 - **One run, one prompt, one model.** Not statistically significant.
 - **Structural, not factual.** The eval scores response posture, not sanctions correctness. It does not verify any designation and is not compliance advice.
 - **Criteria are failure-mode-targeted.** The rubric tests the false-premise behavior the hard stop is designed to produce, so it favors the treatment by construction. It measures whether the skill does what it claims, not general output quality.
-- **Judge is same-vendor.** Haiku 4.5 is an independent, blind scorer but still an Anthropic model; same-vendor self-preference is reduced, not eliminated. A truly neutral judge would be a non-Anthropic model run outside this environment.
-- **Condition B was authored by the host model knowing it was the treatment;** the independent blind judge mitigates but does not remove author-side enhancement bias. Per the skill's own honesty rules (B2.7), this is a structural delta, not external, factual, or practitioner validation.
+- **Cross-vendor check done; it confirmed the delta.** A non-Anthropic judge (GPT-5) was run in addition to Haiku and reproduced the scores cell-for-cell (3/7 → 7/7). Same-vendor self-preference therefore is not driving this result. Two judges still are not a labelled dataset.
+- **Condition B was authored by the host model knowing it was the treatment;** the blind judges mitigate but do not remove author-side enhancement bias. Per the skill's own honesty rules (B2.7), this is a structural delta, not external, factual, or practitioner validation.

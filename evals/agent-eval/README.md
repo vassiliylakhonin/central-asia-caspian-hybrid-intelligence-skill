@@ -9,6 +9,7 @@ Agent-eval delta is not factual verification, not a model-quality comparison, no
 - [`2026-05-20-correspondent-exposure.md`](2026-05-20-correspondent-exposure.md) — regional banking / correspondent exposure / sanctions-sector routing in `reasoning_only` mode.
 - [`2026-05-20-customs-mirror-statistics-anomaly.md`](2026-05-20-customs-mirror-statistics-anomaly.md) — source-backed customs / mirror-statistics anomaly case exercising `mixed` evidence-mode mapping through Agenda Intelligence `analyze`.
 - [`2026-05-20-caspian-corridor-chokepoint.md`](2026-05-20-caspian-corridor-chokepoint.md) — corridor / logistics / energy chokepoint case testing regional mechanics beyond sanctions analysis.
+- [`2026-06-30-sdn-premise-stop.md`](2026-06-30-sdn-premise-stop.md) — false-premise hard stop: an asserted-but-unverified OFAC SDN listing; tests stop-and-request vs analyzing an unconfirmed designation. Scored by an independent blind Haiku 4.5 judge (3/7 → 7/7).
 
 ## Planned Cases
 

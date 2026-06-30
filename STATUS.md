@@ -11,7 +11,7 @@ This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`]
 
 Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
 
-**Last updated:** 2026-05-20 (Bar 2 agent-validation path completed: three agent-eval delta cases are recorded, including one `mixed` evidence-mode mapping case through Agenda Intelligence `analyze`.)
+**Last updated:** 2026-06-30 (Bar 2 agent-validation path completed: four agent-eval delta cases are recorded, including one `mixed` evidence-mode mapping case through Agenda Intelligence `analyze` and one false-premise hard-stop case scored by an independent blind Haiku 4.5 judge.)
 
 ## Bar 1 — Early but credible
 
@@ -31,12 +31,12 @@ Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in
 | Criterion | Status | What is missing |
 |---|---|---|
 | B2.1 Source-anchored majority (≥50% of flagship examples) | ✅ met (at threshold, no margin) | 8 of 16 flagship examples are source-anchored (6 `live-source-backed`, 2 `user-provided sources`) — 50%. Wave 8 added an `illustrative source packet` source-conflict-surfacing demonstrator (KZ→RU CHPL-circumvention volume estimates), which is not source-anchored; the ratio dropped from 53% to exactly the 50% threshold. To restore margin, the next added example should be `live-source-backed` or `user-provided sources`. |
-| B2.2 Agent-eval delta documented (≥3 cases) | ✅ met | Three completed cases exist: `2026-05-20-correspondent-exposure.md`, `2026-05-20-customs-mirror-statistics-anomaly.md`, and `2026-05-20-caspian-corridor-chokepoint.md`. |
+| B2.2 Agent-eval delta documented (≥3 cases) | ✅ met | Four completed cases exist: `2026-05-20-correspondent-exposure.md`, `2026-05-20-customs-mirror-statistics-anomaly.md`, `2026-05-20-caspian-corridor-chokepoint.md`, and `2026-06-30-sdn-premise-stop.md` (false-premise hard stop, independent blind Haiku 4.5 judge, 3/7 → 7/7). |
 | B2.3 Evidence-mode mapping exercised through `analyze` | ✅ met | `2026-05-20-customs-mirror-statistics-anomaly.md` maps upstream `live-source-backed` specialist material to Agenda Intelligence `analyze` as `mixed`, not `live_source_backed`. |
 | B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | Differentiation chosen. Claude variant adds `Claude Tool-Use Awareness` (retrieval → evidence mode shifting, prompt injection protection). Codex variant adds `Codex Agentic-Loop Awareness` (multi-step workflow, file output labeling, validation chaining). OpenClaw is the explicit canonical baseline with a section documenting the design choice. All three gained Profile Assumptions and Optional User Calibration. |
 | B2.5 Honest real-use evidence or explicit "no real-use evidence" disclosure | ✅ met via negative disclosure | README states no production-usage, adoption or benchmark numbers are claimed; this STATUS file states no positive real-use record exists yet. |
 | B2.6 Source freshness discipline | ✅ met | Retrieval dates stated on `live-source-backed` examples; documented re-verification horizons per claim type in [docs/source-guide.md](docs/source-guide.md), including stale-source handling rules. Same-day re-verification required for sanctions / AML / export-controls operational decisions regardless of horizon. |
-| B2.7 Agent-eval honesty discipline | ✅ met | All three completed agent-evals state structural-only limitations and avoid factual-verification, model-quality, aggregate-benchmark and practitioner-validation claims. |
+| B2.7 Agent-eval honesty discipline | ✅ met | All four completed agent-evals state structural-only limitations and avoid factual-verification, model-quality, aggregate-benchmark and practitioner-validation claims. The 2026-06-30 case additionally discloses that its blind judge (Haiku 4.5) is same-vendor and that Condition B was author-written, per the self-preference-bias rule in `AGENTS.md` B2.7. |
 | B2.8 Practitioner review (optional, audience-gated) | optional / not required for Bar 2 | No `validated-cases/` directory yet. Add only if the downstream audience includes practitioner buying-side trust, not as the hard agent-integration gate. |
 
 **Bar 2 — cleared for agent integration.**

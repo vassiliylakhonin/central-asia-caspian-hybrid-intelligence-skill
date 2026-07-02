@@ -19,7 +19,7 @@ This file (CLAUDE.md) contains only Claude-Code-specific working rules for this 
 ## Project-specific paths to inspect
 
 In addition to the global pre-edit checklist:
-- SKILL.md and `skills/{claude,codex,openclaw}/SKILL.md`
+- SKILL.md and `runtimes/{claude,codex,openclaw}/SKILL.md`
 - examples/ (15-section flagship structure)
 - docs/ (especially `source-guide.md`, `cold-start-interview.md`, `currency-watch.md`)
 - evals/

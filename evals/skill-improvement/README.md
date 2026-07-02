@@ -7,7 +7,7 @@ It is separate from the existing eval layers:
 - `evals/agent-eval/` records with/without structural deltas for Agenda Intelligence routing.
 - `evals/adversarial/` contains domain traps for response-mode behavior.
 - `evals/starter-rubric.md` scores finished memos.
-- `evals/skill-improvement/` scores proposed edits to `skills/{codex,claude,openclaw}/SKILL.md` before accepting them.
+- `evals/skill-improvement/` scores proposed edits to `runtimes/{codex,claude,openclaw}/SKILL.md` before accepting them.
 
 This is not a factual benchmark, model-quality comparison, practitioner review, or Bar 2 evidence. It is a change-control surface for the skill instructions.
 

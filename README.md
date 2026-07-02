@@ -131,9 +131,9 @@ Use the skill variant matching your environment as the operating instruction in 
 
 | Environment | File | Notes |
 |---|---|---|
-| Codex | `skills/codex/SKILL.md` | See also `AGENTS.md` |
-| Claude | `skills/claude/SKILL.md` | YAML frontmatter |
-| OpenClaw | `skills/openclaw/SKILL.md` | |
+| Codex | `runtimes/codex/SKILL.md` | See also `AGENTS.md` |
+| Claude | `runtimes/claude/SKILL.md` | YAML frontmatter |
+| OpenClaw | `runtimes/openclaw/SKILL.md` | |
 | ChatGPT / other LLMs | any of the above | Paste or attach as system / project instruction |
 
 Validation:
@@ -189,9 +189,9 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 ## 11. Skill files
 
-- `skills/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
-- `skills/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
-- `skills/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
+- `runtimes/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
+- `runtimes/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
+- `runtimes/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
 - `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
@@ -211,7 +211,8 @@ All variants share the same analytical contract: mechanism-first reasoning, evid
 ├── CONTEXT.md           # Working context for cross-session continuity
 ├── CONTRIBUTING.md      # Local validator workflow and CI invariants
 ├── llms.txt             # Orientation for LLMs and agent indexers
-├── skills/              # Runtime skill files per platform (claude/, codex/, openclaw/)
+├── runtimes/            # Runtime overlay skill files per platform (claude/, codex/, openclaw/)
+├── skills/              # Claude Code plugin packaging (symlink to root SKILL.md)
 ├── examples/            # Flagship memo examples (state evidence mode)
 ├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
 ├── docs/                # Source guide, currency watch, cold-start interview, regional logic, risk archetypes

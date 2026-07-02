@@ -58,7 +58,7 @@ This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhon
 - `.gitignore`
 
 **Directories (required):**
-- `skills/{claude,codex,openclaw}/SKILL.md` — runtime variants per platform
+- `runtimes/{claude,codex,openclaw}/SKILL.md` — runtime variants per platform
 - `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
 - `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
 - `docs/` — including `source-guide.md`, `currency-watch.md`, `cold-start-interview.md`, `regional-logic.md`, `risk-archetypes.md`
@@ -93,7 +93,7 @@ The validator enforces structural and honesty invariants. Common reasons it fail
 - **STATUS.md must state Bar 2 status honestly.** The exact phrase `**Bar 2 — not cleared.**` must appear (until Bar 2 is genuinely cleared with verifiable evidence).
 - **Example evidence-mode count is stale.** Every file in `examples/*.md` (except `README.md`) must declare an `Evidence mode:` of `reasoning-only`, `illustrative source packet`, `live-source-backed`, or `user-provided sources`. The README's mode-count summary line and STATUS.md's source-anchored ratio must match the actual count. If you add or change an example, update both.
 - **Live-source-backed and user-provided sources examples** must include a `Retrieval date: YYYY-MM-DD`.
-- **Skill files** under `skills/{openclaw,codex,claude}/SKILL.md` must:
+- **Skill files** under `runtimes/{openclaw,codex,claude}/SKILL.md` must:
   - have YAML frontmatter with a lowercase-slug `name` and a `description` of at least 120 characters;
   - contain every required `##` section (see `REQUIRED_SECTIONS` in the validator);
   - contain required body phrases (`Primary driver is:`, `Compliance note`, `Disclaimer`, `Author: Vassiliy Lakhonin`, `official sanctions lists`, `Do not use for formal legal/compliance determinations`);

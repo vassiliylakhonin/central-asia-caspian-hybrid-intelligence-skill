@@ -1,6 +1,6 @@
 # Central Asia + Caspian Skill-Improvement Rubric
 
-Use this rubric to manually score responses produced under the runtime skill variants in `skills/{codex,claude,openclaw}/SKILL.md`.
+Use this rubric to manually score responses produced under the runtime skill variants in `runtimes/{codex,claude,openclaw}/SKILL.md`.
 
 This rubric evaluates whether a skill edit improves runtime behavior. It does not measure factual truth, sanctions-screening correctness, legal correctness, practitioner approval, or model quality.
 

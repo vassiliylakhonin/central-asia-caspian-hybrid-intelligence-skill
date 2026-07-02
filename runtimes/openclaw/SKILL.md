@@ -199,9 +199,9 @@ Calibration is optional. If not provided, the skill proceeds with the profile as
 
 This is the canonical baseline variant. It carries the full analytical contract without platform-specific extensions.
 
-The Claude variant (`skills/claude/SKILL.md`) adds tool-use awareness: guidance on using Claude's search, retrieval, and document-reading capabilities to shift evidence modes from `reasoning-only` to `live-source-backed`, and prompt-injection handling for retrieved content.
+The Claude variant (`runtimes/claude/SKILL.md`) adds tool-use awareness: guidance on using Claude's search, retrieval, and document-reading capabilities to shift evidence modes from `reasoning-only` to `live-source-backed`, and prompt-injection handling for retrieved content.
 
-The Codex variant (`skills/codex/SKILL.md`) adds agentic-loop awareness: multi-step workflow structure, file-output labeling requirements, and downstream validation chaining guidance.
+The Codex variant (`runtimes/codex/SKILL.md`) adds agentic-loop awareness: multi-step workflow structure, file-output labeling requirements, and downstream validation chaining guidance.
 
 This variant intentionally does not include those extensions. Use it as the reference contract when platform-specific behavior is not applicable or when installing into an environment that is not Claude or Codex.
 

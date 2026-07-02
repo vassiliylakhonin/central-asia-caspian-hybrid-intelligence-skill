@@ -1,0 +1,12 @@
+{
+  "name": "central-asia-caspian",
+  "description": "Regional specialist layer: decision-grade analysis for Central Asia and the Caspian across cross-border risk, sanctions exposure, corridors, energy, political economy, and regional system dynamics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vassiliy Lakhonin",
+    "url": "https://github.com/vassiliylakhonin"
+  },
+  "homepage": "https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill",
+  "license": "MIT",
+  "keywords": ["central-asia", "caspian", "strategic-risk", "sanctions-exposure", "corridors"]
+}

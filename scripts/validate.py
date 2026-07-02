@@ -6,9 +6,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
-    ROOT / "skills/openclaw/SKILL.md",
-    ROOT / "skills/codex/SKILL.md",
-    ROOT / "skills/claude/SKILL.md",
+    ROOT / "runtimes/openclaw/SKILL.md",
+    ROOT / "runtimes/codex/SKILL.md",
+    ROOT / "runtimes/claude/SKILL.md",
 ]
 
 REQUIRED_ROOT_FILES = [

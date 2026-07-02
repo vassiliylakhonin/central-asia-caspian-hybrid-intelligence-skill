@@ -4,9 +4,9 @@ Date: 2026-05-27
 
 Skill under evaluation:
 
-- `skills/codex/SKILL.md`
-- `skills/claude/SKILL.md`
-- `skills/openclaw/SKILL.md`
+- `runtimes/codex/SKILL.md`
+- `runtimes/claude/SKILL.md`
+- `runtimes/openclaw/SKILL.md`
 
 Cases: `evals/skill-improvement/cases/central-asia-caspian.jsonl`
 
@@ -54,4 +54,4 @@ Do not apply these blindly. Use them as candidates for the next validation-gated
 
 ## Decision
 
-The baseline supports one compact edit across `skills/{codex,claude,openclaw}/SKILL.md`, focused on response-mode hard stops and data-integrity/source-conflict discipline. Do not change examples or claim new benchmark status.
+The baseline supports one compact edit across `runtimes/{codex,claude,openclaw}/SKILL.md`, focused on response-mode hard stops and data-integrity/source-conflict discipline. Do not change examples or claim new benchmark status.

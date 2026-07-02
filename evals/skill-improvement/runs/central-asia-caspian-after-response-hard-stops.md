@@ -4,9 +4,9 @@ Date: 2026-05-27
 
 Skill variants under evaluation:
 
-- `skills/codex/SKILL.md`
-- `skills/claude/SKILL.md`
-- `skills/openclaw/SKILL.md`
+- `runtimes/codex/SKILL.md`
+- `runtimes/claude/SKILL.md`
+- `runtimes/openclaw/SKILL.md`
 
 Skill SHA-256 after edit:
 

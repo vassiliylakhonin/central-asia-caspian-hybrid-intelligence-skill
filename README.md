@@ -15,6 +15,8 @@
 
 This is the **vertical specialist skill** in the Agenda Intelligence portfolio for Central Asia and the Caspian — a reasoning method that runs inside an AI agent (Claude, ChatGPT, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on regional sanctions, AML, banking, corridor, logistics and energy questions, instead of the generic regional essays that default LLM output usually returns.
 
+That default weakness is measured, not anecdotal: LLM factual accuracy is systematically lower for regions underrepresented in training data, and generic retrieval agents have been shown to widen that gap rather than close it (arXiv:2503.22877). This is why the skill leans on primary regional sources, currency triggers and per-claim provenance tags instead of the model's prior.
+
 It pairs with a horizontal reasoning skill ([Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst)), a sibling vertical for Iran / GCC / maritime ([Gulf + Middle East Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill)), and a validation / audit layer ([Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md)). See section 3 for how they fit together.
 
 It does not replace sanctions screening, AML monitoring, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.

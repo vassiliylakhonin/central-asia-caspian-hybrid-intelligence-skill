@@ -19,9 +19,9 @@ jobs:
           test -f CONTRIBUTING.md
           test -f SECURITY.md
           test -f examples/README.md
-          test -f skills/openclaw/SKILL.md
-          test -f skills/codex/SKILL.md
-          test -f skills/claude/SKILL.md
+          test -f runtimes/openclaw/SKILL.md
+          test -f runtimes/codex/SKILL.md
+          test -f runtimes/claude/SKILL.md
           test -f scripts/validate.py
       - name: Validate skill metadata and safety gates
         run: python3 scripts/validate.py

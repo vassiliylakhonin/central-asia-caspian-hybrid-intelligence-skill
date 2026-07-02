@@ -11,9 +11,9 @@ Three platform-specific variants are available — choose the one matching your 
 
 | Environment | File |
 |---|---|
-| Claude | [`skills/claude/SKILL.md`](skills/claude/SKILL.md) |
-| Codex | [`skills/codex/SKILL.md`](skills/codex/SKILL.md) |
-| OpenClaw / other | [`skills/openclaw/SKILL.md`](skills/openclaw/SKILL.md) |
+| Claude | [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) |
+| Codex | [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) |
+| OpenClaw / other | [`runtimes/openclaw/SKILL.md`](runtimes/openclaw/SKILL.md) |
 
 All three variants share the same analytical contract: mechanism-first reasoning, evidence labels (`Verified` / `Plausible` / `Judgment` / `Unknown`), role-based implications, trigger points, confidence footer, and explicit limitation notes. Platform additions are documented inside each file.
 

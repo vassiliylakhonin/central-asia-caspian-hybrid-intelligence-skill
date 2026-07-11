@@ -11,6 +11,12 @@ Agent-eval delta is not factual verification, not a model-quality comparison, no
 - [`2026-05-20-caspian-corridor-chokepoint.md`](2026-05-20-caspian-corridor-chokepoint.md) — corridor / logistics / energy chokepoint case testing regional mechanics beyond sanctions analysis.
 - [`2026-06-30-sdn-premise-stop.md`](2026-06-30-sdn-premise-stop.md) — false-premise hard stop: an asserted-but-unverified OFAC SDN listing; tests stop-and-request vs analyzing an unconfirmed designation. Scored blind by two independent judges — Haiku 4.5 and cross-vendor GPT-5 — with identical results (3/7 → 7/7).
 
+## Rule-level canon evals
+
+These test a single AGENTS.md rule (both conditions carry the canon; only the rule under test differs). They do **not** count toward B2.2.
+
+- [`2026-07-10-input-claim-accounting-kz-routing.md`](2026-07-10-input-claim-accounting-kz-routing.md) — input-claim accounting rule, KZ routing packet: delta 0 on a labeled 8-claim illustrative packet; baseline canon already accounts for every claim; blind same-vendor judge.
+
 ## Planned Cases
 
 Planned files do not count toward B2.2 until both conditions, scoring, observations, and limitations are completed.

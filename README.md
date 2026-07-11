@@ -231,6 +231,8 @@ Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown l
 
 ## 12. Source guide
 
+Latest source-maintenance pass: [`docs/source-refresh-2026-07-11.md`](docs/source-refresh-2026-07-11.md).
+
 A source-backed workflow uses external retrieval, user-provided source packets, or companion tooling. The skill itself does not retrieve sources.
 
 [docs/source-guide.md](docs/source-guide.md) lists recommended source classes:

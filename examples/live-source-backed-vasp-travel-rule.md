@@ -119,7 +119,7 @@ This memo is `live-source-backed` as of the retrieval date stated above. Sources
 
 - **[S1]** EU Regulation 2023/1113 of the European Parliament and of the Council on information accompanying transfers of funds and certain crypto-assets (Transfer of Funds Regulation / Travel Rule for crypto), effective 30 December 2024. Full text: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1113
 - **[S2]** FATF Updated Guidance for a Risk-Based Approach to Virtual Assets and Virtual Asset Service Providers (2023), including Recommendation 15 (New Technologies) application to VASPs. https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2023.html
-- **[S3]** FATF/EAG, *Mutual Evaluation Report of the Republic of Kazakhstan* (2023) — VASP supervision section (Recommendation 15); also available via EAG index: https://eurasiangroup.org/files/mer/Kazakhstan_MER_2023_ENG.pdf
+- **[S3]** FATF/EAG, *Mutual Evaluation Report of the Republic of Kazakhstan* (2023) — VASP supervision section (Recommendation 15); official EAG PDF: https://eurasiangroup.org/files/uploads/files/ME_%282023%29_1_eng_rev1_1.pdf
 - **[S4]** OFAC Virtual Currency / VASP guidance and FAQ, including SDN designations of virtual currency addresses. OFAC FAQ topic page: https://ofac.treasury.gov/faqs/topic/1521
 - **[S5]** AIFC Financial Services Authority (AFSA) VASP licensing framework and published rules. https://afsa.kz/en/
 

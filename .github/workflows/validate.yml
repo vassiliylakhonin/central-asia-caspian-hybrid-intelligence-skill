@@ -25,3 +25,5 @@ jobs:
           test -f scripts/validate.py
       - name: Validate skill metadata and safety gates
         run: python3 scripts/validate.py
+      - name: Validate local Markdown links
+        run: python3 scripts/check_markdown_links.py

@@ -120,7 +120,7 @@ This memo is `live-source-backed` as of the retrieval date stated above. Sources
 ### Tier 1 — primary
 
 - **[S1]** UN Comtrade Database — bilateral trade statistics including KZ–RU flows, mirror-statistic comparison tool. https://comtradeplus.un.org/
-- **[S2]** OFAC Russia-related sanctions programs and advisories: https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions; BIS Russia/Belarus export-administration and Entity List: https://www.bis.gov/export-administration/russia-belarus
+- **[S2]** OFAC Russia-related sanctions programs and advisories: https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions; BIS Russia/Belarus country guidance and export-control resources: https://www.bis.gov/licensing/country-guidance/russia-belarus
 - **[S3]** Kyiv School of Economics (KSE) Institute — research on Russian import divergence and sanctions circumvention via Central Asian transit routes. Publicly retrievable at: https://kse.ua/kse-institute/
 - **[S4]** World Bank — Kazakhstan country page and corridor/trade-flow analysis reports: https://www.worldbank.org/en/country/kazakhstan; Kazakhstan Statistics Agency (Kazstat) national trade data: https://stat.gov.kz/en/
 - **[S5]** Centre for Research on Energy and Clean Air (CREA) — tracking of Russian import flows and divergence statistics via transit jurisdictions including Kazakhstan. https://energyandcleanair.org/

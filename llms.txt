@@ -19,7 +19,7 @@ Relationship to the portfolio (four layers, separately maintained):
 - Vertical specialist — Central Asia + Caspian (this repo): regional sanctions, AML, banking, corridor, and energy risk reasoning.
 - Horizontal domain skill: https://github.com/vassiliylakhonin/global-think-tank-analyst — broad strategic-risk memo workflow, memo modes, general policy-risk analysis.
 - Vertical specialist — Gulf + Middle East: https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill — reference when a flow crosses both regions (Iran-Caspian, Russia-Iran-China junction).
-- Infrastructure / validation: https://github.com/vassiliylakhonin/agenda-intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
+- Evidence-packet checker: https://github.com/vassiliylakhonin/agenda-intelligence-md — deterministic checks for source references, declared quotes, lexical support, and unmatched numbers. Reports packet completeness, not factual truth; older runtime surfaces remain compatible.
 
 Evidence modes (declare for every output):
 - live-source-backed: primary sources retrieved and cited with retrieval date.
@@ -38,6 +38,7 @@ Core files:
 - README.md — public documentation.
 - docs/ — source guide, regional logic, risk archetypes.
 - examples/ — worked memo examples in all four evidence modes.
+- docs/evidence-packet-handoff.md + examples/evidence-packet-handoff.json — primary claim/source handoff to Agenda Intelligence MD.
 - evals/ — checklist, failure modes, starter rubric.
 - templates/ — practice-profile and other reusable templates.
 - scripts/validate_skills.py — structural validator.

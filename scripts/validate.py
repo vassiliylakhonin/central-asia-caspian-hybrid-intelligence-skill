@@ -25,6 +25,7 @@ REQUIRED_SECTIONS = [
     "Mode Selection",
     "Evidence Discipline",
     "Source Handling",
+    "Evidence-Packet Handoff",
     "Risk / Compliance Mode",
     "Strategic Mode",
     "Hybrid Mode",

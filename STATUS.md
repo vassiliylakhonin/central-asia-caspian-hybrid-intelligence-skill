@@ -11,7 +11,9 @@ This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`]
 
 Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
 
-**Last updated:** 2026-06-30 (Bar 2 agent-validation path completed: four agent-eval delta cases are recorded, including one `mixed` evidence-mode mapping case through Agenda Intelligence `analyze` and one false-premise hard-stop case scored by an independent blind Haiku 4.5 judge.)
+**Last updated:** 2026-07-15 (primary composition now uses the v1.3 evidence-packet handoff; the four existing `analyze` agent-eval delta cases remain compatibility evidence for the older strategic-intelligence runtime.)
+
+Current Agenda composition: this repo produces regional reasoning and an optional claim/source packet; Agenda Intelligence MD lints packet completeness before human review. The linter does not assess factual truth. Existing `analyze` / MCP evals remain valid for their recorded compatibility workflow, but they do not validate the current evidence-packet linter.
 
 ## Bar 1 — Early but credible
 

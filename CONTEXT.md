@@ -9,8 +9,12 @@ A regional reasoning skill that adds Central Asia and Caspian domain depth to a 
 _Avoid_: Platform, MCP server, validation engine, screening tool
 
 **Agenda Intelligence MD**:
-The evidence and evaluation infrastructure layer that validates, audits, scores, and routes strategic-risk agent outputs.
-_Avoid_: Parent skill, source retriever, factual verifier, compliance product
+The deterministic evidence-packet linter that checks caller-supplied claim/source packets before human review. Older routing, memo validation, scoring, MCP, HTTP, and A2A behavior remains available for compatibility.
+_Avoid_: Parent skill, source retriever, factual verifier, compliance product, commercial umbrella for this repo
+
+**Evidence-Packet Handoff**:
+The JSON seam from a **Specialist Memo** to Agenda Intelligence MD: externally checkable `claims[]`, declared `source_ids`, optional verbatim `quotes`, and caller-supplied `sources[]` text.
+_Avoid_: Full memo serialization, factuality result, source-discovery step, analyst-judgment ledger
 
 **Global Think Tank Analyst**:
 The general strategic-risk reasoning method for policy-risk memos, scenarios, red-team framing, and broad analytical workflow.
@@ -29,7 +33,7 @@ A reusable regional transmission pattern that explains how a class of risk typic
 _Avoid_: Topic, sector label, generic risk category
 
 **Agent-Validated Specialist Resource**:
-A specialist repo whose usefulness is evidenced by with/without agent-eval deltas against the Agenda Intelligence product shell.
+A specialist repo whose historical usefulness evidence includes with/without agent-eval deltas against Agenda Intelligence MD's older `analyze` compatibility runtime.
 _Avoid_: Externally validated resource, factual benchmark, practitioner-approved product
 
 **Practitioner Trust Layer**:
@@ -52,8 +56,8 @@ _Avoid_: Mirror policy, automatic copy, fork maintenance
 The label that states what kind of evidence was available during a memo workflow.
 _Avoid_: Retrieval capability, factual truth status, source guarantee
 
-**Product-Shell Evidence Mode**:
-The evidence-mode vocabulary accepted by Agenda Intelligence MD's `analyze` request and memo contract.
+**Compatibility Analyze Evidence Mode**:
+The evidence-mode vocabulary accepted by Agenda Intelligence MD's older `analyze` request and memo contract.
 _Avoid_: Specialist example label, live retrieval mode, factual verification claim
 
 **Specialist Memo**:
@@ -62,14 +66,14 @@ _Avoid_: Screening result, compliance determination, factual verification report
 
 ## Relationships
 
-- **Agenda Intelligence MD** may route a request to one or more **Regional Lenses**.
+- Agenda Intelligence MD may route a request to one or more **Regional Lenses** through its older compatibility runtime.
 - A **Regional Lens** is a **Runtime Projection** derived from a **Vertical Specialist**.
 - The Central Asia + Caspian **Vertical Specialist** repo is the **Authoring Source** for full regional logic, including archetypes, source guidance, examples, and evidence discipline.
 - A **Runtime Projection** should preserve the boundaries of its **Authoring Source** without trying to duplicate the full specialist repo.
 - A **Sync Boundary** requires Agenda Intelligence MD updates only when the **Authoring Source** changes routing criteria, default regional checks, output skeleton, evidence-mode boundary, or anti-patterns.
-- Changes to full archetypes, source-guide depth, examples, validation status, or practitioner-review evidence remain in the **Authoring Source** unless they affect product-shell routing or prompt assembly.
-- The **Vertical Specialist** may use human-readable **Evidence Modes** in examples, but product-shell integration must map them to **Product-Shell Evidence Modes** accepted by Agenda Intelligence MD.
-- `live-source-backed` examples in the **Vertical Specialist** map to `user_provided` or `mixed` when routed through Agenda Intelligence MD's `analyze` product shell because live retrieval happens upstream of that contract.
+- Changes to full archetypes, source-guide depth, examples, validation status, or practitioner-review evidence remain in the **Authoring Source** unless they affect compatibility routing or prompt assembly.
+- The primary **Evidence-Packet Handoff** does not carry a memo-level evidence mode. It carries explicit claims, full source text, and optional verbatim quotes.
+- When the older `analyze` compatibility runtime is used, `live-source-backed` examples map to `user_provided` or `mixed` because live retrieval happens upstream of that contract.
 - **Global Think Tank Analyst** owns the generic memo method; the Central Asia + Caspian **Vertical Specialist** owns **Regional Mechanism Logic**.
 - A concept belongs in this **Vertical Specialist** only when it changes the Central Asia or Caspian transmission channel, exposure, leverage, or decision.
 - The **Risk Archetype** catalogue is extensible, but a new archetype must describe a regional transmission pattern, not merely name a sector or topic.
@@ -77,7 +81,7 @@ _Avoid_: Screening result, compliance determination, factual verification report
 - An **Agent-Validated Specialist Resource** is validated through agent-output structure deltas, not through claims of factual accuracy or practitioner approval.
 - A **Practitioner Trust Layer** may be added for compliance, AML, sanctions, banking, logistics, energy, or regional-risk practitioner audiences, but it is optional for agent-first validation.
 - A **Vertical Specialist** produces the reasoning pattern behind a **Specialist Memo**.
-- **Agenda Intelligence MD** validates and audits the structure of a **Specialist Memo**, but does not make the **Vertical Specialist** a validation engine.
+- The primary **Evidence-Packet Handoff** lets Agenda Intelligence MD lint claim/source packet completeness without making the **Vertical Specialist** a validation engine or asserting factual truth.
 
 ## Example dialogue
 
@@ -91,7 +95,7 @@ _Avoid_: Screening result, compliance determination, factual verification report
 > **Domain expert:** "No. The **Sync Boundary** says examples stay in the **Authoring Source** unless they change routing behavior, the output skeleton, evidence-mode boundaries, or anti-patterns."
 >
 > **Dev:** "Can this specialist add `live_source_backed` to Agenda Intelligence MD's `analyze` request?"
-> **Domain expert:** "No. Keep `live-source-backed` as a specialist example label, then map it to a **Product-Shell Evidence Mode** such as `user_provided` or `mixed` when using `analyze`."
+> **Domain expert:** "No. Keep `live-source-backed` as a specialist example label. If the older `analyze` compatibility runtime is used, map it to a **Compatibility Analyze Evidence Mode** such as `user_provided` or `mixed`."
 >
 > **Dev:** "Should scenario framing rules live here?"
 > **Domain expert:** "Only if the rule is about Central Asia or Caspian **Regional Mechanism Logic**. Generic scenario or red-team method belongs in **Global Think Tank Analyst**."
@@ -105,9 +109,9 @@ _Avoid_: Screening result, compliance determination, factual verification report
 ## Flagged ambiguities
 
 - "part of Agenda Intelligence MD" was ambiguous. Resolved: Central Asia + Caspian is a **Vertical Specialist** in the broader Agenda Intelligence stack; Agenda Intelligence MD may package or route a **Regional Lens** derived from it, but the specialist repo remains the regional reasoning source rather than a validation or MCP product.
-- "Regional Lens" and "Vertical Specialist" were easy to conflate. Resolved: the **Vertical Specialist** repo is the **Authoring Source**; the **Regional Lens** in Agenda Intelligence MD is a **Runtime Projection** for product-shell routing and prompt assembly.
+- "Regional Lens" and "Vertical Specialist" were easy to conflate. Resolved: the **Vertical Specialist** repo is the **Authoring Source**; the **Regional Lens** in Agenda Intelligence MD is a **Runtime Projection** for compatibility routing and prompt assembly.
 - "sync" could mean byte-equal mirroring or selective projection. Resolved: synchronization follows the **Sync Boundary**; Agenda Intelligence MD is updated only for routing and prompt-assembly relevant changes.
-- "evidence mode" spans multiple surfaces. Resolved: the specialist repo may keep example-facing **Evidence Modes**, while Agenda Intelligence MD's `analyze` integration uses the narrower **Product-Shell Evidence Mode** vocabulary.
+- "evidence mode" spans multiple surfaces. Resolved: the specialist repo may keep example-facing **Evidence Modes**; the primary **Evidence-Packet Handoff** uses claim/source references, while the older `analyze` runtime uses the narrower **Compatibility Analyze Evidence Mode** vocabulary.
 - "specialist reasoning" could mean either generic memo method or regional mechanism depth. Resolved: **Global Think Tank Analyst** owns generic method; this repo owns **Regional Mechanism Logic**.
 - "risk archetype" could mean a sector/topic list. Resolved: a **Risk Archetype** is a regional transmission pattern with evidence and false-positive discipline.
 - "validated specialist resource" could mean practitioner-reviewed or agent-tested. Resolved: hard Bar 2 means **Agent-Validated Specialist Resource**; practitioner review is a separate **Practitioner Trust Layer**.

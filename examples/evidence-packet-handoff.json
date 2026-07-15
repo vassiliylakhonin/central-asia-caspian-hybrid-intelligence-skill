@@ -1,0 +1,29 @@
+{
+  "packet_id": "ca-caspian-synthetic-corridor-001",
+  "topic": "Synthetic Central Asia corridor handoff",
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "Gate A will close for maintenance from 2026-08-03 to 2026-08-07.",
+      "source_ids": ["synthetic-corridor-bulletin"],
+      "quotes": [
+        {
+          "source_id": "synthetic-corridor-bulletin",
+          "text": "Gate A will close for maintenance from 2026-08-03 to 2026-08-07"
+        }
+      ]
+    },
+    {
+      "claim_id": "c2",
+      "text": "Cargo above 20 tonnes requires prior slot confirmation during the closure window.",
+      "source_ids": ["synthetic-corridor-bulletin"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "synthetic-corridor-bulletin",
+      "title": "Synthetic corridor bulletin",
+      "text": "Synthetic example. Gate A will close for maintenance from 2026-08-03 to 2026-08-07. Cargo above 20 tonnes requires prior slot confirmation during the closure window. This source does not describe a real corridor, operator, or event."
+    }
+  ]
+}

@@ -18,6 +18,7 @@ If you've just landed in this repo and want to understand it before editing, do 
 git clone https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
 cd central-asia-caspian-hybrid-intelligence-skill
 python3 scripts/validate.py
+python3 scripts/validate_evidence_packet_handoff.py
 ```
 
 Requirements: Python 3.8+. No additional packages — the validator uses the standard library. Expected success output: `ok: skill files validated`. CI runs this on every push; run it locally before pushing or `main` will go red.
@@ -125,9 +126,9 @@ This repo is a domain skill, not an infrastructure product. Do not add or imply:
 - live intelligence collection
 - factuality verification guarantees
 - legal, sanctions, investment, or security advice
-- production-grade monitoring guarantees
+- claims of operational monitoring maturity
 
-Validation, schemas, scoring and audit tooling belong in the [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) repo. Cross-region maritime and Gulf-specific content belongs in [Gulf + Middle East Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
+Product linting, schemas, and runtime tooling belong in the [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) repo. This repo may keep dependency-free CI validators for its own documentation and handoff examples. Cross-region maritime and Gulf-specific content belongs in [Gulf + Middle East Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).
 
 ## PR checklist
 

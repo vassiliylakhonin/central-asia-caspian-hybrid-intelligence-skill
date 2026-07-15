@@ -4,6 +4,8 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added an Agenda Intelligence v1.3 evidence-packet handoff, a runnable synthetic regional packet, a dependency-free CI validator, and ADR 0003. Reclassified the older `analyze` / memo-validation composition as compatibility behavior.
+
 - Renamed the runtime-overlay directory `skills/{claude,codex,openclaw}/` to `runtimes/{claude,codex,openclaw}/` and updated every path reference (README, AGENTS, CLAUDE, CONTRIBUTING, STATUS, evals, validator, CI workflow). `skills/` is now reserved for Claude Code plugin packaging, because plugin installs auto-discover every `skills/*/SKILL.md` as a separate skill and the overlay layout produced junk-named skills (`claude`, `codex`, `openclaw`).
 - Packaged the repo as an installable Claude Code plugin: added `.claude-plugin/plugin.json` and `skills/central-asia-caspian/SKILL.md` (a symlink to the canonical root `SKILL.md`). Installable via `/plugin marketplace add vassiliylakhonin/agenda-intelligence-md`, then `/plugin install central-asia-caspian@agenda-intelligence`.
 

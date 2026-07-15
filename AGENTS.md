@@ -14,18 +14,17 @@ This repo is a domain skill, not an infrastructure product.
 
 This repo is a regional specialist reasoning layer in the Agenda Intelligence stack. It is not the active commercial product surface and should not be used to revive Kazakhstan/local-forwarder or Middle Corridor positioning without fresh buyer evidence.
 
-Current product focus lives in Agenda Intelligence MD: evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge. Central Asia / Caspian content should support routing, demos, and regional reasoning depth.
+Agenda Intelligence MD is now primarily a deterministic evidence-packet linter for claim-backed AI output. Central Asia / Caspian content supplies regional reasoning depth; externally checkable memo claims can be handed to the linter through [`docs/evidence-packet-handoff.md`](docs/evidence-packet-handoff.md). This is portfolio-proof composition, not buyer validation.
 
 Do not add buyer-facing copy, pilot pages, new deployed surfaces, outreach sequences, or monetization claims here. If a request is commercially oriented, run the market gate in Agenda Intelligence MD and keep this repo focused on domain reasoning.
 
 ## Relationship to the broader stack
 
 Agenda Intelligence MD:
-- validation
-- schemas
-- evidence audit
-- scoring
-- CLI / MCP / CI tooling where implemented
+- deterministic checks for claim/source references, declared quotes, lexical support, and unmatched numbers
+- packet-completeness statuses and reviewer actions
+- no factuality, sanctions, ownership, or legal determination
+- older routing, memo validation, scoring, CLI, MCP, HTTP, and A2A behavior as compatibility surfaces
 
 Global Think Tank Analyst:
 - broad strategic-risk memo workflows
@@ -62,6 +61,8 @@ Fast-moving regional topics that any source-backed memo should re-verify against
 
 Do not duplicate Agenda Intelligence MD inside this repo.
 Do not turn this repo into a CLI, MCP server, screening engine, or validation platform unless explicitly requested.
+
+The primary composition seam is the evidence packet, not the older `analyze` memo contract. Historical `analyze` agent-evals remain compatibility evidence and do not validate the current linter.
 
 ## Skill packaging convention (portfolio-wide)
 
@@ -333,11 +334,11 @@ A senior AI or agent engineering reviewer should understand that this repo is no
 
 ### Bar 2 — Agent-validated specialist resource (the harder bar)
 
-The criteria below close the weaknesses that Bar 1 alone cannot close for agent integration: untested routing, no with/without product-shell deltas, fragile evidence-mode mapping, undifferentiated skill files, stale source-backed examples, and overclaim risk. Each criterion is binary: either met with verifiable evidence, or not.
+The criteria below record the historical agent-integration bar built against Agenda Intelligence MD's older `analyze` compatibility runtime. They are not tests of the current evidence-packet linter. Each criterion is binary: either met with verifiable evidence, or not.
 
 - **B2.1 — Source-anchored majority.** At least half of the flagship examples in `examples/` are `live-source-backed` or `user-provided sources` (not `reasoning-only` or `illustrative source packet`). Source-backed examples must cite primary URLs (regulators, IFIs, FATF/EAG, central banks, court records) for legal-grade claims, with secondary reporting clearly tiered.
-- **B2.2 — Agent-eval delta documented.** At least three agent-evals committed under `evals/agent-eval/` per the methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. Each case runs the same model on the same question with and without the Agenda Intelligence MCP server or product shell loaded with this skill as the regional specialist, then scores both outputs against the structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author is acceptable for this agent-integration bar; aggregate scores are not claimed. Cases must include the model, date, full prompts or enough prompt text to reproduce, both outputs or excerpts, and a delta + observations section.
-- **B2.3 — Evidence-mode mapping exercised.** At least one agent-eval demonstrates how source-backed specialist work is passed into Agenda Intelligence MD's `analyze` contract as `user_provided` or `mixed`, not as `live_source_backed`. This proves the specialist evidence vocabulary does not break the product-shell schema.
+- **B2.2 — Compatibility agent-eval delta documented.** At least three agent-evals committed under `evals/agent-eval/` per the historical methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. Each case runs the same model on the same question with and without the older Agenda Intelligence MCP or `analyze` compatibility runtime loaded with this skill as the regional specialist, then scores both outputs against the structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author is acceptable for this historical agent-integration bar; aggregate scores are not claimed. Cases must include the model, date, full prompts or enough prompt text to reproduce, both outputs or excerpts, and a delta + observations section.
+- **B2.3 — Compatibility evidence-mode mapping exercised.** At least one historical agent-eval demonstrates how source-backed specialist work is passed into Agenda Intelligence MD's older `analyze` contract as `user_provided` or `mixed`, not as `live_source_backed`. This confirms that the specialist evidence vocabulary did not break that compatibility schema; it is separate from the primary evidence-packet handoff.
 - **B2.4 — Platform differentiation or consolidation.** Each variant in `runtimes/{codex,claude,openclaw}/SKILL.md` either (a) has at least one platform-specific feature that meaningfully changes output (e.g. Claude tool-use awareness, Codex agentic-loop awareness, OpenClaw-specific contract), or (b) is consolidated. Three near-identical files presented as three skills do not meet this criterion.
 - **B2.5 — Honest real-use evidence.** Either (a) the repo links to at least one public, attributable real-use record (a memo, a workflow, a published reference, with permission), or (b) the README and `STATUS.md` explicitly state that no real-use evidence exists yet. No implicit suggestion of adoption that has not occurred.
 - **B2.6 — Source freshness discipline.** `live-source-backed` examples carry a retrieval date, and the repo has a documented practice (in `docs/source-guide.md` or a `STATUS.md` note) for re-verifying or marking stale any source older than a stated horizon. Examples beyond the horizon are either refreshed or labeled stale.

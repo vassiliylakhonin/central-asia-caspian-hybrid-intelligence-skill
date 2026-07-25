@@ -2,46 +2,29 @@
 
 # Claude Code working rules
 
-AGENTS.md is the canonical project contract: identity, scope, evidence rules, retrieved-content trust, per-claim provenance tags (Axis A/B + table-cell discipline), currency triggers, linguistic faithfulness, three-value response logic, README priorities, examples, and the Bar 1 / Bar 2 Definition of Done with honest current status. Follow it. Do not re-derive or restate those rules — apply them.
+`AGENTS.md` is the canonical project contract — apply it, do not restate it. It points to three detail files, loaded when the task needs them:
 
-This file (CLAUDE.md) contains only Claude-Code-specific working rules for this repo, on top of the global `~/.claude/CLAUDE.md`.
+- [docs/analysis-contract.md](docs/analysis-contract.md) — provenance tags, calibration, response modes, input-claim accounting. Read before producing or reviewing a memo.
+- [docs/definition-of-done.md](docs/definition-of-done.md) — Bar 1 / Bar 2 criteria and anti-criteria.
+- [docs/repo-conventions.md](docs/repo-conventions.md) — README structure, example requirements, eval labelling.
 
-## See also (project-specific anchors)
+## Repo-specific anchors
 
-- [README.md](README.md) — public positioning per AGENTS.md "README priorities".
-- [STATUS.md](STATUS.md) — current Bar 1 / Bar 2 status. Update truthfully; do not advance without verifiable evidence.
-- [CONTRIBUTING.md](CONTRIBUTING.md) — local validator workflow and CI invariants enforced on `main`.
-- [scripts/validate.py](scripts/validate.py) — authoritative structural and honesty checks.
-- [docs/cold-start-interview.md](docs/cold-start-interview.md) + [templates/practice-profile.md](templates/practice-profile.md) — preflight for profile-expecting workflows.
-- [docs/currency-watch.md](docs/currency-watch.md) — fast-moving topics that need re-verification.
-- [evals/failure-modes.md](evals/failure-modes.md) — known canon-failure modes (incl. table-cell tag drift).
-
-## Project-specific paths to inspect
-
-In addition to the global pre-edit checklist:
-- SKILL.md and `runtimes/{claude,codex,openclaw}/SKILL.md`
-- examples/ (15-section flagship structure)
-- docs/ (especially `source-guide.md`, `cold-start-interview.md`, `currency-watch.md`)
-- evals/
-- signals/ if present
-- scripts/validate.py
-- templates/
-- .github/workflows/validate.yml
+- [STATUS.md](STATUS.md) — the only place bar status lives. Update truthfully; never advance without verifiable evidence.
+- [scripts/validate.py](scripts/validate.py) — authoritative structural and honesty checks; it enforces hardcoded section counts, headings, and safety gates.
+- [docs/cold-start-interview.md](docs/cold-start-interview.md) + [templates/practice-profile.md](templates/practice-profile.md) — preflight for profile-expecting workflows; the STOP rule in AGENTS.md applies.
+- [docs/currency-watch.md](docs/currency-watch.md) — topics needing re-verification, 90-day staleness rule.
+- [evals/failure-modes.md](evals/failure-modes.md) — known canon-failure modes, including table-cell tag drift.
+- [docs/source-guide.md](docs/source-guide.md) — regional source tiers and freshness horizons.
 
 ## Validator before push
-
-CI (`.github/workflows/validate.yml`) runs file-presence checks and the skill validator. Mirror locally:
 
 ```
 python3 scripts/validate.py
 ```
 
-The validator enforces hardcoded structural and honesty invariants (section counts, headings, safety gates). If it fails locally, CI on `main` will fail too. Run it after any change to README, AGENTS, SKILL files, examples, evals, or docs.
+CI (`.github/workflows/validate.yml`) runs file-presence checks plus this validator. If it fails locally, `main` fails too. Run it after any change to README, AGENTS, SKILL files, examples, evals, or docs.
 
-## Working style in this repo
+## Boundary
 
-Small, reviewable changes. Do not rewrite the project unless I explicitly ask.
-
-Do not add new infrastructure (MCP server, CLI, schemas, validators beyond the existing one) — that belongs in Agenda Intelligence MD. See AGENTS.md "Relationship to the broader stack".
-
-When updating STATUS.md or Bar 2 criteria in AGENTS.md, the rule from AGENTS.md "Definition of done" applies: do not pretend a bar is cleared if it is not, and do not advance status without verifiable evidence.
+Do not add infrastructure here — MCP server, CLI, schemas, or validators beyond the existing one belong in Agenda Intelligence MD. See AGENTS.md "Relationship to the broader stack".

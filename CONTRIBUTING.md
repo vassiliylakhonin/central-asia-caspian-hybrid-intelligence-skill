@@ -115,6 +115,8 @@ When editing docs, examples, or skill instructions:
 
 The full content contract for this repo lives in [AGENTS.md](AGENTS.md). [CLAUDE.md](CLAUDE.md) inherits from it for Claude Code sessions.
 
+**Where a new rule goes.** `AGENTS.md` is the contract and stays short; task-specific detail lives in `docs/` and is reached from it by a pointer — see AGENTS.md "Where a new rule goes". Adding a section to `AGENTS.md` when it belongs in `docs/analysis-contract.md`, `docs/definition-of-done.md`, or `docs/repo-conventions.md` is the drift this layout exists to prevent. Bar status belongs in `STATUS.md` only; a second copy goes stale and then contradicts the first.
+
 ## Project boundaries
 
 This repo is a domain skill, not an infrastructure product. Do not add or imply:

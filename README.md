@@ -116,7 +116,7 @@ This skill is one of four repos in a wider portfolio. Each has a distinct role; 
 
 This repo is the **Central Asia / Caspian vertical specialist**. Use it standalone or inside the older `analyze` compatibility workflow. The current primary composition is: horizontal method → regional specialist → claim/source packet → Agenda Intelligence MD linter → human review.
 
-> **Project maturity.** This repo uses a two-bar Definition of Done (Bar 1 — early but credible; Bar 2 — agent-validated specialist resource). Current honest status, per criterion, lives in [STATUS.md](STATUS.md). Criteria are defined in [AGENTS.md](AGENTS.md) under "Definition of done".
+> **Project maturity.** This repo uses a two-bar Definition of Done (Bar 1 — early but credible; Bar 2 — agent-validated specialist resource). Current honest status, per criterion, lives in [STATUS.md](STATUS.md). Criteria are defined in [docs/definition-of-done.md](docs/definition-of-done.md).
 
 - **Central Asia + Caspian Hybrid Intelligence Skill** *(this repo)* — specialist regional/corridor-risk reasoning, domain-specific risk-transmission logic, sanctions / AML / banking / logistics / energy / corridor analysis patterns.
 - **Gulf + Middle East Hybrid Intelligence Skill** — sibling vertical specialist; reference it when a flow crosses both regions (Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs). See [gulf-middle-east-hybrid-intelligence-skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill).

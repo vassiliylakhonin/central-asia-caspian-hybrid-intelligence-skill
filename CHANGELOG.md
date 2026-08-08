@@ -4,6 +4,8 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Conformed the repo to the Agent Plugins 1.0.0 layout: added a root `plugin.json` with the `$schema` identifier from <https://agent-plugins.org>. `.claude-plugin/plugin.json` is unchanged and still serves the Claude Code install path; the specification ignores that directory. `skills/central-asia-caspian/SKILL.md` already matched the spec's discovery rule. The manifest validates against the published Draft 2020-12 schema.
+
 - Added an Agenda Intelligence v1.3 evidence-packet handoff, a runnable synthetic regional packet, a dependency-free CI validator, and ADR 0003. Reclassified the older `analyze` / memo-validation composition as compatibility behavior.
 
 - Renamed the runtime-overlay directory `skills/{claude,codex,openclaw}/` to `runtimes/{claude,codex,openclaw}/` and updated every path reference (README, AGENTS, CLAUDE, CONTRIBUTING, STATUS, evals, validator, CI workflow). `skills/` is now reserved for Claude Code plugin packaging, because plugin installs auto-discover every `skills/*/SKILL.md` as a separate skill and the overlay layout produced junk-named skills (`claude`, `codex`, `openclaw`).

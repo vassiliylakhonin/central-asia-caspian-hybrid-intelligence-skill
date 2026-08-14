@@ -1,5 +1,15 @@
 # Central Asia + Caspian Hybrid Intelligence Skill
 
+**Risk reasoning for AI agents working on Central Asia and the Caspian.**
+
+Use this skill when an agent must explain how sanctions, banking, ownership, logistics, energy, or corridor risk moves through the region. The output starts with the driver, traces the transmission channel and exposure, labels uncertainty, and ends with role-specific actions and triggers.
+
+It is for bank and fintech risk teams, logistics and energy operators, regional analysts, and AI builders.
+
+[Try one prompt](#try-it) · [Open the skill file](SKILL.md) · [See worked examples](#flagship-examples)
+
+> No live data. Not sanctions screening, AML monitoring, legal advice, or compliance advice. Human review and current-source verification are required before operational use.
+
 <p align="left">
   <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill"><img src="https://img.shields.io/github/stars/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="GitHub stars"></a>
   <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/network/members"><img src="https://img.shields.io/github/forks/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="GitHub forks"></a>
@@ -7,27 +17,11 @@
   <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/validate.yml?branch=main&style=for-the-badge" alt="Validate"></a>
 </p>
 
-> **CENTRAL ASIA + CASPIAN RISK REASONING SKILL** — a reasoning method for AI agents working on regional sanctions, AML, banking, corridor, logistics and energy risk. Open-source. No live data. No legal or compliance advice.
+## Problem it handles
 
-> **Regional specialist module for [Agenda Intelligence](https://github.com/vassiliylakhonin/agenda-intelligence-md).** Activated automatically when the `analyze` tool sees a Central Asia / Caspian geography (Kazakhstan, Uzbekistan, Azerbaijan, Turkmenistan, Kyrgyzstan, Tajikistan, Caspian, Middle Corridor). Also usable standalone via paste/attach into any agent.
+General-purpose agents often return a regional summary when the user needs a risk mechanism. This skill makes the agent name what changed, how the effect travels through payments, ownership, counterparties, or routes, who is exposed, and what evidence still needs checking.
 
-## 1. Vertical specialist: Central Asia + Caspian risk reasoning
-
-This is the **vertical specialist skill** in the Agenda Intelligence portfolio for Central Asia and the Caspian — a reasoning method that runs inside an AI agent (Claude, ChatGPT, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on regional sanctions, AML, banking, corridor, logistics and energy questions, instead of the generic regional essays that default LLM output usually returns.
-
-That default weakness is measured, not anecdotal: LLM factual accuracy is systematically lower for regions underrepresented in training data, and generic retrieval agents have been shown to widen that gap rather than close it (arXiv:2503.22877). This is why the skill leans on primary regional sources, currency triggers and per-claim provenance tags instead of the model's prior.
-
-It pairs with a horizontal reasoning skill ([Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst)), a sibling vertical for Iran / GCC / maritime ([Gulf + Middle East Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill)), and the [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) evidence-packet linter. See section 3 for how they fit together.
-
-It does not replace sanctions screening, AML monitoring, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
-
-## Commercial role
-
-This repo is a **regional specialist reasoning layer**, not an active commercial wedge. Agenda Intelligence MD is now primarily a deterministic evidence-packet linter; this repo can hand it externally checkable claims and supplied source text without inheriting a buyer claim.
-
-Central Asia / Caspian and Middle Corridor material should support routing, demos, and regional reasoning depth. Do not treat Kazakhstan/local-forwarder or Middle Corridor demand as validated product-market fit. Do not expand buyer-facing positioning, pilot pages, outreach copy, or new workers from this repo unless fresh discovery evidence proves buyer urgency.
-
-## 2. Who it is for
+## Who it is for
 
 - compliance and risk leadership at banks, fintechs and payment providers with SME, correspondent or routing exposure to Kazakhstan, Uzbekistan, Azerbaijan, Turkmenistan, Kyrgyzstan or Tajikistan
 - sanctions desks tracking transshipment, beneficial-ownership opacity and re-export risk across the region
@@ -35,7 +29,7 @@ Central Asia / Caspian and Middle Corridor material should support routing, demo
 - analysts and researchers covering the region for institutional clients
 - AI builders embedding regional risk reasoning into agents or assistants
 
-## 3. What you get
+## What you get
 
 - mechanism-first reasoning: primary driver → transmission channel → exposure
 - explicit uncertainty labels: `Verified` / `Plausible` / `Judgment` / `Unknown`
@@ -57,7 +51,7 @@ The skills define how agents *reason*. Agenda Intelligence MD reports whether th
 
 Primary handoff: [`docs/evidence-packet-handoff.md`](docs/evidence-packet-handoff.md) with runnable synthetic [`examples/evidence-packet-handoff.json`](examples/evidence-packet-handoff.json).
 
-## 4. Try it
+## Try it
 
 Paste this into an AI agent using the Codex, Claude or OpenClaw skill file:
 
@@ -80,9 +74,9 @@ Expected shape of a good answer:
 - gives role-based actions and trigger points, not vague "monitor closely" advice;
 - includes a clear limitation note and avoids legal or compliance determinations.
 
-Deployed Agenda Intelligence MD profiles built on this regional frame are live as portfolio demos — try them in the browser: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). Evidence triage only, not advice, and not a claim of product-market fit.
+Two browser demos use this regional frame: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). They show the output format; they are not live risk or compliance tools.
 
-## 5. What it does
+## What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis. It:
 
@@ -97,7 +91,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - runs a cold-start interview ([`docs/cold-start-interview.md`](docs/cold-start-interview.md)) to capture role, geography, decision context, risk appetite and source access into a populated practice profile ([`templates/practice-profile.md`](templates/practice-profile.md)) before substantive memos
 - carries an active currency watch ([`docs/currency-watch.md`](docs/currency-watch.md)) listing fast-moving regional topics that source-backed memos should re-verify against current primary sources, with a 90-day staleness rule
 
-## 6. What it is not
+## What it is not
 
 - not legal advice
 - not compliance advice
@@ -110,7 +104,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - not a CLI, MCP server, or validation platform
 - not a replacement for human analyst or counsel review
 
-## 7. Relationship to Agenda Intelligence MD and Global Think Tank Analyst
+## Relationship to Agenda Intelligence MD and Global Think Tank Analyst
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
@@ -129,7 +123,7 @@ This repo does **not** itself perform Agenda Intelligence MD validation, schema 
 
 For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/PORTFOLIO.md). [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside Agenda Intelligence MD and Global Think Tank Analyst; for current interfaces, schemas and tooling, consult those repos directly.
 
-## 8. Quick usage
+## Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
 
@@ -148,7 +142,7 @@ python3 scripts/validate.py
 
 The validator checks structure, required phrases, forbidden determinative claims and code-fence balance. It does **not** validate factuality of any output produced by the skill.
 
-## 9. Before / after
+## Before / after
 
 **Before — generic LLM answer:**
 - broad regional commentary
@@ -168,7 +162,7 @@ The validator checks structure, required phrases, forbidden determinative claims
 - role-based implications (bank, fintech, investor, operator)
 - evidence mode stated explicitly
 
-## 10. Flagship examples
+## Flagship examples
 
 For a guided route through the examples, start with [examples/README.md](examples/README.md).
 
@@ -191,7 +185,7 @@ For a guided route through the examples, start with [examples/README.md](example
 
 Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, two use `illustrative source packet`, six are `live-source-backed`, and two are `user-provided sources`.
 
-## 11. Skill files
+## Skill files
 
 - `runtimes/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
 - `runtimes/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
@@ -231,7 +225,7 @@ New contributors: [`CONTRIBUTING.md`](CONTRIBUTING.md) opens with a "First 15 mi
 
 Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown labels, Axis A/B provenance tags (incl. table-cell discipline), three-value response logic, and the deliberate maturity-framework asymmetry across the four-repo stack (this repo and the Gulf+ME sibling use Bar 1/2; `global-think-tank-analyst` uses `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets) — is consolidated in the portfolio glossary at [`agenda-intelligence-md/docs/glossary.md`](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md).
 
-## 12. Source guide
+## Source guide
 
 Latest source-maintenance pass: [`docs/source-refresh-2026-07-11.md`](docs/source-refresh-2026-07-11.md).
 
@@ -252,7 +246,7 @@ A source-backed workflow uses external retrieval, user-provided source packets, 
 
 Listing a source class is not an endorsement and does not guarantee accuracy or timeliness for any specific question.
 
-## 13. Risk archetypes
+## Risk archetypes
 
 [docs/risk-archetypes.md](docs/risk-archetypes.md) catalogues recurring archetypes for the region. For each: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based mitigation questions. Current archetypes:
 
@@ -273,7 +267,7 @@ Use them as patterns to structure reasoning, not as factual claims about any spe
 
 [docs/regional-logic.md](docs/regional-logic.md) explains when to include which geography. Core rule: do not expand geography for decoration; expand only when it changes the mechanism, risk exposure, leverage or decision.
 
-## 14. Review checklist
+## Review checklist
 
 [evals/checklist.md](evals/checklist.md) — review checklist (not a benchmark) covering scope, reasoning quality, evidence discipline, tone/safety and decision usefulness.
 
@@ -292,7 +286,7 @@ Every example and every memo produced with this skill should state one of four c
 - **`illustrative source packet`** — facts grounded in a constructed, illustrative source packet for demonstration purposes.
 - **`reasoning-only`** — no sources retrieved; structural reasoning only. No factual claims about specific entities, designations or enforcement actions.
 
-## 15. Limitations
+## Limitations
 
 - This skill helps **structure analysis**; it does not verify facts on its own.
 - It does not perform sanctions screening, AML transaction monitoring, or live source retrieval.
@@ -314,7 +308,7 @@ Stated honestly so readers can calibrate. These are gaps in observed evidence, n
 - **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
 - **Limited non-English source coverage.** Russian-, Kazakh-, Uzbek-, and Azerbaijani-language regulatory and registry sources have not been systematically tested as inputs.
 
-## 16. Roadmap
+## Roadmap
 
 Indicative direction, not a commitment:
 

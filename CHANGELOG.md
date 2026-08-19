@@ -4,6 +4,9 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Fixed a dead link to the author's site: `deal-risk-gate.html` has returned 404 since the site was restructured, and the README described two browser demos that are no longer published. The sentence now points at `examples/`.
+- Extended `scripts/check_markdown_links.py` to fail on 404/410 for links to the author's own site, which previously went unchecked because every `http(s)://` target was skipped. Network errors and other statuses are reported without failing; `SKIP_SITE_LINK_CHECK=1` skips the network step.
+
 - Conformed the repo to the Agent Plugins 1.0.0 layout: added a root `plugin.json` with the `$schema` identifier from <https://agent-plugins.org>. `.claude-plugin/plugin.json` is unchanged and still serves the Claude Code install path; the specification ignores that directory. `skills/central-asia-caspian/SKILL.md` already matched the spec's discovery rule. The manifest validates against the published Draft 2020-12 schema.
 
 - Added an Agenda Intelligence v1.3 evidence-packet handoff, a runnable synthetic regional packet, a dependency-free CI validator, and ADR 0003. Reclassified the older `analyze` / memo-validation composition as compatibility behavior.

@@ -20,32 +20,10 @@ Do not add buyer-facing copy, pilot pages, new deployed surfaces, outreach seque
 
 ## Relationship to the broader stack
 
-Agenda Intelligence MD:
-- deterministic checks for claim/source references, declared quotes, lexical support, and unmatched numbers
-- packet-completeness statuses and reviewer actions
-- no factuality, sanctions, ownership, or legal determination
-- older routing, memo validation, scoring, CLI, MCP, HTTP, and A2A behavior as compatibility surfaces
+Two rules that bind before any output. The full inventory of what each companion repo owns is in [`docs/companion-patterns.md`](docs/companion-patterns.md).
 
-Global Think Tank Analyst:
-- broad strategic-risk memo workflows
-- general policy-risk analysis
-- scenario and red-team memo modes
-
-Gulf + Middle East Hybrid Intelligence Skill:
-- sibling vertical specialist
-- reference when a flow crosses both regions: Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs
-- do not duplicate its Iran sanctions, GCC banking, or maritime-chokepoint content here
-
-Central Asia + Caspian Hybrid Intelligence Skill:
-- specialist regional/corridor-risk reasoning
-- domain-specific risk transmission logic
-- sanctions / AML / banking / logistics / energy / corridor analysis patterns
-
-Source Ingest skill (Agenda Intelligence MD):
-- use before analysis when a user provides a PDF, DOCX, XLSX, URL, article, or transcript
-- normalizes the document into a structured source record: metadata, Axis A/B provenance tags, key claims table, excerpts, limitations
-- for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy and freshness horizons for Central Asia / Caspian analysis
-- do not duplicate source-guide content inside the source record; reference it
+- When the user supplies a PDF, DOCX, XLSX, URL, article, or transcript, run the Source Ingest skill (Agenda Intelligence MD) before analysis. Route with [`docs/source-guide.md`](docs/source-guide.md); do not copy its tiers into the source record.
+- Where a flow crosses into the Gulf — Iran-Caspian routes, the Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy through Gulf hubs — reference the Gulf + Middle East sibling skill. Do not duplicate its Iran sanctions, GCC banking, or maritime-chokepoint content here.
 
 ## Preflight: cold-start interview and practice profile
 
@@ -177,29 +155,7 @@ Use careful language:
 
 This skill makes the agent better at Central Asia & Caspian domain work, not narrower. If the analytical checklist does not cover a relevant dimension of the user's question, answer anyway and note the gap. A skill that produces worse output than bare Claude in its own domain has failed.
 
-Prefer mechanism-first reasoning.
-
-Good output should include:
-- bottom line
-- scope and evidence mode
-- primary driver
-- risk transmission mechanism
-- exposure map
-- actor incentives and leverage
-- role-based implications
-- trigger points
-- unknowns
-- confidence
-- what would change the judgment
-- limitation note
-
-Avoid:
-- generic geopolitical essays
-- alarmism without transmission channel
-- fake precision
-- overconfident forecasting
-- unsupported legal/compliance conclusions
-- vague “monitor closely” recommendations
+Prefer mechanism-first reasoning. The shape a good answer takes, and the failure modes to avoid, are in [`docs/analysis-contract.md`](docs/analysis-contract.md).
 
 ## Where a new rule goes
 

@@ -83,3 +83,34 @@ This pattern keeps each repo doing what it is good at and avoids duplicate logic
 - The interfaces (CLI, MCP, schemas, scoring rubrics) of Agenda Intelligence MD and Global Think Tank Analyst are owned by those repos; consult them directly.
 - These patterns describe **how to think about the integration**, not a turnkey wiring.
 - This document does not assert that any specific integration is currently implemented end-to-end.
+
+## Portfolio boundaries — who owns what
+
+Moved here from `AGENTS.md` on 2026-08-19 under that file's own "Where a new rule goes" rule: this is an inventory, not a rule that binds before output. `AGENTS.md` keeps only the two behavioural lines it needs.
+
+Agenda Intelligence MD:
+- deterministic checks for claim/source references, declared quotes, lexical support, and unmatched numbers
+- packet-completeness statuses and reviewer actions
+- no factuality, sanctions, ownership, or legal determination
+- older routing, memo validation, scoring, CLI, MCP, HTTP, and A2A behavior as compatibility surfaces
+
+Global Think Tank Analyst:
+- broad strategic-risk memo workflows
+- general policy-risk analysis
+- scenario and red-team memo modes
+
+Gulf + Middle East Hybrid Intelligence Skill:
+- sibling vertical specialist
+- reference when a flow crosses both regions: Iran-Caspian routes, Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy routed through Gulf hubs
+- do not duplicate its Iran sanctions, GCC banking, or maritime-chokepoint content here
+
+Central Asia + Caspian Hybrid Intelligence Skill:
+- specialist regional/corridor-risk reasoning
+- domain-specific risk transmission logic
+- sanctions / AML / banking / logistics / energy / corridor analysis patterns
+
+Source Ingest skill (Agenda Intelligence MD):
+- use before analysis when a user provides a PDF, DOCX, XLSX, URL, article, or transcript
+- normalizes the document into a structured source record: metadata, Axis A/B provenance tags, key claims table, excerpts, limitations
+- for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy and freshness horizons for Central Asia / Caspian analysis
+- do not duplicate source-guide content inside the source record; reference it

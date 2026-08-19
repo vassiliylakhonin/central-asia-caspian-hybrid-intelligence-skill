@@ -75,3 +75,29 @@ When the analysis is built on user-provided sources or a source record with an e
 - **out-of-scope** — explicitly excluded, with a one-line reason.
 
 An input claim in none of these states was silently dropped. Silent omission of an input claim is treated the same way as silence about known doubt: an honesty-rule violation, not a style choice. The rule governs accounting, not length — the analysis stays selective, and the accounting is what makes the selection visible. A short "Input claims not used" line near the limitation note satisfies it when several claims share one state.
+
+## Output shape
+
+Moved here from `AGENTS.md` on 2026-08-19: a per-answer checklist is task detail, not contract. `AGENTS.md` keeps the mechanism-first rule and points here.
+
+Good output should include:
+- bottom line
+- scope and evidence mode
+- primary driver
+- risk transmission mechanism
+- exposure map
+- actor incentives and leverage
+- role-based implications
+- trigger points
+- unknowns
+- confidence
+- what would change the judgment
+- limitation note
+
+Avoid:
+- generic geopolitical essays
+- alarmism without transmission channel
+- fake precision
+- overconfident forecasting
+- unsupported legal/compliance conclusions
+- vague “monitor closely” recommendations

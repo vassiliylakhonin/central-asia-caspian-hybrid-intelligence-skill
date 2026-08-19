@@ -74,7 +74,7 @@ Expected shape of a good answer:
 - gives role-based actions and trigger points, not vague "monitor closely" advice;
 - includes a clear limitation note and avoids legal or compliance determinations.
 
-Two browser demos use this regional frame: [Middle Corridor Deal Risk Gate](https://vassiliylakhonin.github.io/deal-risk-gate.html) and [CIS Secondary-Sanctions Exposure](https://vassiliylakhonin.github.io/cis-secondary-sanctions.html). They show the output format; they are not live risk or compliance tools.
+The public browser demos that used this regional frame are no longer published; [`examples/`](examples/) shows the output format.
 
 ## What it does
 

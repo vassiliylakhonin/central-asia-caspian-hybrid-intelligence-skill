@@ -58,6 +58,7 @@ This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhon
 - `.gitignore`
 
 **Directories (required):**
+- `skills/central-asia-caspian/SKILL.md` — regular Claude Code composition adapter that attaches the root contract first and the Claude overlay second
 - `runtimes/{claude,codex,openclaw}/SKILL.md` — additive runtime overlays loaded after the root contract
 - `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
 - `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
@@ -91,7 +92,7 @@ The validator enforces packaging, structural, link, and honesty invariants. Comm
 - **README disclosure missing.** README must contain the line: `no production-usage, adoption or benchmark numbers are claimed`.
 - **Companion repo links missing.** README must link to [Gulf + Middle East](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill), [Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst), and [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md).
 - **STATUS.md must state Bar 2 status honestly.** The current evidence requires the exact phrase `**Bar 2 — cleared for agent integration.**`; do not change it without updating the evidence in `STATUS.md`.
-- **Packaged skill identity drift.** The `name` in `skills/central-asia-caspian/SKILL.md` must match its parent directory, and both plugin manifests must stay synchronized.
+- **Packaged skill composition drift.** `skills/central-asia-caspian/SKILL.md` must be a regular file whose `name` matches its directory and whose description matches the root contract. It must attach `${CLAUDE_PLUGIN_ROOT}/SKILL.md` once, then `${CLAUDE_PLUGIN_ROOT}/runtimes/claude/SKILL.md` once, without copying their sections. Both plugin manifests must stay synchronized.
 - **Example evidence-mode count is stale.** Every file in `examples/*.md` (except `README.md`) must declare an `Evidence mode:` of `reasoning-only`, `illustrative source packet`, `live-source-backed`, or `user-provided sources`. The README's mode-count summary line and STATUS.md's source-anchored ratio must match the actual count. If you add or change an example, update both.
 - **Live-source-backed and user-provided sources examples** must include a `Retrieval date: YYYY-MM-DD`.
 - **The root `SKILL.md`** must contain every common analytical section and required safety phrase defined in `REQUIRED_CANONICAL_SECTIONS` and `REQUIRED_CANONICAL_BODY_PHRASES`.

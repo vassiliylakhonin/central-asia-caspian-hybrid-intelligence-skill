@@ -27,4 +27,4 @@ Claude may have access to search tools, web browsing, document readers, or MCP-c
 
 ## Claude Setup
 
-The packaged Claude Code plugin discovers the complete root contract through `skills/central-asia-caspian/SKILL.md`. Load this overlay after the root contract only when the Claude-specific retrieval and document-use guidance applies.
+The packaged Claude Code composition at `skills/central-asia-caspian/SKILL.md` attaches the complete root contract first and this overlay second. Apply the conditional retrieval and document-use guidance above only when the matching tools or inputs are available.

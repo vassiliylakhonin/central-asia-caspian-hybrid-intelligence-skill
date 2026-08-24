@@ -88,7 +88,7 @@ OVERLAY_RULES = {
         "sections": {"OpenClaw Installation"},
         "phrases": {
             "without additional analytical rules",
-            "clawhub install central-asia-caspian-hybrid-intelligence-v3-1",
+            "openclaw skills install git:https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill.git --as central-asia-caspian",
         },
     },
 }
@@ -241,21 +241,13 @@ def validate_runtime_overlays() -> None:
 
 
 def validate_skill_package() -> None:
-    if not PACKAGED_SKILL.is_symlink():
+    if PACKAGED_SKILL.is_symlink() or not PACKAGED_SKILL.is_file():
         fail(
-            f"{PACKAGED_SKILL.relative_to(ROOT)} must remain a symlink to "
-            "canonical SKILL.md"
+            f"{PACKAGED_SKILL.relative_to(ROOT)} must be a regular Claude Code "
+            "composition file"
         )
 
-    try:
-        resolved_skill = PACKAGED_SKILL.resolve(strict=True)
-    except OSError as exc:
-        fail(f"cannot resolve {PACKAGED_SKILL.relative_to(ROOT)}: {exc}")
-
-    if resolved_skill != CANONICAL_SKILL.resolve(strict=True):
-        fail(f"{PACKAGED_SKILL.relative_to(ROOT)} must resolve to canonical SKILL.md")
-
-    frontmatter, _ = split_frontmatter(PACKAGED_SKILL)
+    frontmatter, body = split_frontmatter(PACKAGED_SKILL)
     name = frontmatter.get("name", "")
     description = frontmatter.get("description", "")
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name) or len(name) > 64:
@@ -264,6 +256,22 @@ def validate_skill_package() -> None:
         fail(f"packaged skill name {name!r} must match directory {PACKAGED_SKILL_DIR.name!r}")
     if not 1 <= len(description) <= 1024:
         fail("packaged skill description must contain between 1 and 1024 characters")
+
+    canonical_frontmatter, _ = split_frontmatter(CANONICAL_SKILL)
+    if description != canonical_frontmatter.get("description"):
+        fail("packaged skill description must match canonical SKILL.md")
+
+    composition_refs = (
+        "@${CLAUDE_PLUGIN_ROOT}/SKILL.md",
+        "@${CLAUDE_PLUGIN_ROOT}/runtimes/claude/SKILL.md",
+    )
+    for reference in composition_refs:
+        if body.count(reference) != 1:
+            fail(f"packaged skill must attach exactly once: {reference}")
+    if body.index(composition_refs[0]) > body.index(composition_refs[1]):
+        fail("packaged skill must attach root SKILL.md before the Claude overlay")
+    if section_titles(body):
+        fail("packaged skill composition must not duplicate root or overlay sections")
 
     manifests = []
     for path in PLUGIN_MANIFESTS:

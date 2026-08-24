@@ -4,6 +4,9 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added a structural runtime-loading smoke record for Claude, Codex, and OpenClaw. The check covers instruction loading, safety behavior, installation, and discovery only; it is not a model-quality benchmark.
+- Replaced the packaged Claude skill symlink with a composition adapter that attaches the root contract and Claude overlay in order. The validator now enforces both references, their order, and description parity with the root skill.
+- Replaced the unavailable ClawHub package command with a verified direct GitHub installation command for OpenClaw. OpenClaw model behavior remains untested.
 - Moved the complete runtime-neutral analytical contract into the root `SKILL.md`, which is also the packaged plugin target.
 - Reduced Claude, Codex, and OpenClaw runtime files to additive overlays and added ADR 0004. The validator now rejects duplicated common sections, missing root references, and non-allowlisted overlay sections.
 

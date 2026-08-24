@@ -4,10 +4,14 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Fixed the packaged skill identifier so `skills/central-asia-caspian/SKILL.md` matches its discovery directory and the `central-asia-caspian` plugin name.
+- Extended `scripts/validate.py` into the single local/CI interface for required files, package metadata, runtime overlays, examples, the evidence-packet handoff, links, and safety gates.
+- Corrected stale contributor and agent-index documentation, removed unsupported "production stack" wording, and documented the existing Claude Code marketplace install path.
+
 - Fixed a dead link to the author's site: `deal-risk-gate.html` has returned 404 since the site was restructured, and the README described two browser demos that are no longer published. The sentence now points at `examples/`.
 - Extended `scripts/check_markdown_links.py` to fail on 404/410 for links to the author's own site, which previously went unchecked because every `http(s)://` target was skipped. Network errors and other statuses are reported without failing; `SKIP_SITE_LINK_CHECK=1` skips the network step.
 
-- Conformed the repo to the Agent Plugins 1.0.0 layout: added a root `plugin.json` with the `$schema` identifier from <https://agent-plugins.org>. `.claude-plugin/plugin.json` is unchanged and still serves the Claude Code install path; the specification ignores that directory. `skills/central-asia-caspian/SKILL.md` already matched the spec's discovery rule. The manifest validates against the published Draft 2020-12 schema.
+- Conformed the repo to the Agent Plugins 1.0.0 layout: added a root `plugin.json` with the `$schema` identifier from <https://agent-plugins.org>. `.claude-plugin/plugin.json` is unchanged and still serves the Claude Code install path; the specification ignores that directory. `skills/central-asia-caspian/SKILL.md` is the single plugin discovery path, with its name/path invariant now enforced by `scripts/validate.py`. The manifest validates against the published Draft 2020-12 schema.
 
 - Added an Agenda Intelligence v1.3 evidence-packet handoff, a runnable synthetic regional packet, a dependency-free CI validator, and ADR 0003. Reclassified the older `analyze` / memo-validation composition as compatibility behavior.
 

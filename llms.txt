@@ -7,12 +7,12 @@ Use this repository when an AI agent needs:
 - to map correspondent banking, payment-rail, or SME-onboarding exposure for fintechs and respondent banks;
 - to analyse Caspian, trans-Caspian, and Middle Corridor logistics or energy routing risk;
 - to produce mechanism-first, role-based, trigger-specific regional risk memos;
-- examples, signals, review checklists, and failure-mode guides for Central Asia / Caspian risk analysis.
+- examples, review checklists, and failure-mode guides for Central Asia / Caspian risk analysis.
 
 What this repository is not:
 - not a factuality verifier, source retriever, or RAG pipeline;
 - not legal, compliance, sanctions screening, AML monitoring, or investment advice;
-- not an MCP server, CLI tool, validator, schema layer, or eval framework;
+- not an MCP server, memo-validation CLI, factuality validator, schema layer, or eval framework;
 - not a replacement for primary OFAC/EU/UK list checks or qualified legal review.
 
 Relationship to the portfolio (four layers, separately maintained):
@@ -34,14 +34,16 @@ Per-claim provenance (two axes):
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, retrieved-content trust, currency triggers, provenance tags, three-value response logic.
 - STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria.
-- skills/ — platform variants (Claude, Codex) where present.
+- SKILL.md — canonical runtime-neutral entry point.
+- runtimes/ — platform overlays for Claude, Codex, and OpenClaw.
+- skills/central-asia-caspian/SKILL.md — plugin discovery path linked to the canonical skill.
 - README.md — public documentation.
 - docs/ — source guide, regional logic, risk archetypes.
 - examples/ — worked memo examples in all four evidence modes.
 - docs/evidence-packet-handoff.md + examples/evidence-packet-handoff.json — primary claim/source handoff to Agenda Intelligence MD.
 - evals/ — checklist, failure modes, starter rubric.
 - templates/ — practice-profile and other reusable templates.
-- scripts/validate_skills.py — structural validator.
+- scripts/validate.py — single interface for repository and packaging checks.
 
 Agent guidance:
 - Always state evidence mode and retrieval date (if live-source-backed) before analysis.

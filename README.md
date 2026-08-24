@@ -37,7 +37,7 @@ General-purpose agents often return a regional summary when the user needs a ris
 - an explicit evidence mode and a limitation note on every output
 - no fabricated citations, sanctions designations, or dates
 
-**Where this sits in the production AI stack**
+**Where this sits in the Agenda Intelligence stack**
 
 Reasoning skills (markdown-first reasoning contracts for agents):
 - [Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst) — horizontal: policy, sanctions, regulatory, geopolitical, trade memos
@@ -134,13 +134,20 @@ Use the skill variant matching your environment as the operating instruction in 
 | OpenClaw | `runtimes/openclaw/SKILL.md` | |
 | ChatGPT / other LLMs | any of the above | Paste or attach as system / project instruction |
 
+Install the packaged skill in Claude Code through the existing Agenda Intelligence marketplace:
+
+```text
+/plugin marketplace add vassiliylakhonin/agenda-intelligence-md
+/plugin install central-asia-caspian@agenda-intelligence
+```
+
 Validation:
 
 ```bash
 python3 scripts/validate.py
 ```
 
-The validator checks structure, required phrases, forbidden determinative claims and code-fence balance. It does **not** validate factuality of any output produced by the skill.
+The validator checks packaged-skill discovery, plugin-manifest consistency, required files, runtime overlays, evidence-mode counts, evidence-packet structure, local links, and safety gates. It does **not** validate factuality of any output produced by the skill.
 
 ## Before / after
 
@@ -187,13 +194,14 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 ## Skill files
 
+- `skills/central-asia-caspian/SKILL.md` — plugin discovery path; a symlink to the canonical root `SKILL.md`.
 - `runtimes/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
 - `runtimes/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
 - `runtimes/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
 - `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
-- `scripts/validate.py` — dependency-free validator for skill metadata, required sections, source-handling discipline, safety disclaimers, unsafe determinative language and fenced-code balance.
+- `scripts/validate.py` — single dependency-free interface for all repository and packaging checks.
 
 All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline.
 
@@ -215,13 +223,13 @@ All variants share the same analytical contract: mechanism-first reasoning, evid
 ├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
 ├── docs/                # Source guide, currency watch, cold-start interview, regional logic, risk archetypes
 ├── templates/           # Practice-profile template populated by the cold-start interview
-├── scripts/             # Validator (validate.py)
+├── scripts/             # Repository and packaging checks
 └── .github/             # CI workflows
 ```
 
 ## Contributing
 
-New contributors: [`CONTRIBUTING.md`](CONTRIBUTING.md) opens with a "First 15 minutes" onboarding path — read the three load-bearing files (`README.md`, `AGENTS.md`, `STATUS.md`), run `python3 scripts/validate.py` locally, and walk one concrete `live-source-backed` flagship example end-to-end. CI runs the validator on every push; run it locally before opening a PR.
+New contributors: [`CONTRIBUTING.md`](CONTRIBUTING.md) opens with a "First 15 minutes" onboarding path — read the three load-bearing files (`README.md`, `AGENTS.md`, `STATUS.md`), run `python3 scripts/validate.py` locally, and walk one concrete `live-source-backed` flagship example end-to-end. CI runs the same command on every push.
 
 Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown labels, Axis A/B provenance tags (incl. table-cell discipline), three-value response logic, and the deliberate maturity-framework asymmetry across the four-repo stack (this repo and the Gulf+ME sibling use Bar 1/2; `global-think-tank-analyst` uses `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets) — is consolidated in the portfolio glossary at [`agenda-intelligence-md/docs/glossary.md`](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md).
 

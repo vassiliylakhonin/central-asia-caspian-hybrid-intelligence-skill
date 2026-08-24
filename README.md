@@ -132,7 +132,7 @@ Use the root contract in every environment. Load the matching runtime overlay af
 | All runtimes | `SKILL.md` | Required baseline contract |
 | Codex | `runtimes/codex/SKILL.md` | Optional agent-loop and file-output rules |
 | Claude | `runtimes/claude/SKILL.md` | Optional retrieval and document-use rules |
-| OpenClaw | `runtimes/openclaw/SKILL.md` | Optional ClawHub install metadata |
+| OpenClaw | `runtimes/openclaw/SKILL.md` | Optional direct GitHub installation guidance |
 | ChatGPT / other LLMs | `SKILL.md` | No overlay required |
 
 Install the packaged skill in Claude Code through the existing Agenda Intelligence marketplace:
@@ -142,13 +142,19 @@ Install the packaged skill in Claude Code through the existing Agenda Intelligen
 /plugin install central-asia-caspian@agenda-intelligence
 ```
 
+Install in OpenClaw directly from GitHub:
+
+```bash
+openclaw skills install git:https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill.git --as central-asia-caspian
+```
+
 Validation:
 
 ```bash
 python3 scripts/validate.py
 ```
 
-The validator checks packaged-skill discovery, plugin-manifest consistency, the complete root contract, allowlisted runtime overlays, evidence-mode counts, evidence-packet structure, local links, and safety gates. It rejects overlays that duplicate common contract sections. It does **not** validate factuality of any output produced by the skill.
+The validator checks the Claude composition adapter and its load order, plugin-manifest consistency, the complete root contract, allowlisted runtime overlays, evidence-mode counts, evidence-packet structure, local links, and safety gates. It rejects overlays that duplicate common contract sections. It does **not** validate factuality of any output produced by the skill.
 
 ## Before / after
 
@@ -195,17 +201,17 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 
 ## Skill files
 
-- `skills/central-asia-caspian/SKILL.md` — plugin discovery path; a symlink to the canonical root `SKILL.md`.
+- `skills/central-asia-caspian/SKILL.md` — Claude Code plugin discovery and composition adapter; attaches the root contract, then the Claude overlay.
 - `SKILL.md` — complete runtime-neutral analytical contract and the only copy of common behavior.
 - `runtimes/claude/SKILL.md` — additive Claude retrieval and document-use rules.
 - `runtimes/codex/SKILL.md` — additive Codex agent-loop, file-output, and validation-chaining rules.
-- `runtimes/openclaw/SKILL.md` — additive OpenClaw package identifier and ClawHub install command.
+- `runtimes/openclaw/SKILL.md` — additive OpenClaw direct GitHub installation guidance.
 - `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - `scripts/validate.py` — single dependency-free interface for all repository and packaging checks.
 
-The root owns mechanism-first reasoning, evidence labels, role-based implications, trigger points, the confidence footer, and limitation notes. Runtime overlays contain only their platform additions. The structure and its CI guard are recorded in [`docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md`](docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md).
+The root owns mechanism-first reasoning, evidence labels, role-based implications, trigger points, the confidence footer, and limitation notes. Runtime overlays contain only their platform additions. The root/overlay split is recorded in [`docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md`](docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md); the verified Claude composition and OpenClaw installation paths are recorded in [`docs/adr/0005-compose-claude-plugin-and-install-openclaw-from-git.md`](docs/adr/0005-compose-claude-plugin-and-install-openclaw-from-git.md).
 
 ## Repository layout
 
@@ -220,7 +226,7 @@ The root owns mechanism-first reasoning, evidence labels, role-based implication
 ├── CONTRIBUTING.md      # Local validator workflow and CI invariants
 ├── llms.txt             # Orientation for LLMs and agent indexers
 ├── runtimes/            # Runtime overlay skill files per platform (claude/, codex/, openclaw/)
-├── skills/              # Claude Code plugin packaging (symlink to root SKILL.md)
+├── skills/              # Claude Code plugin composition adapter
 ├── examples/            # Flagship memo examples (state evidence mode)
 ├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
 ├── docs/                # Source guide, currency watch, cold-start interview, regional logic, risk archetypes
@@ -314,7 +320,7 @@ Stated honestly so readers can calibrate. These are gaps in observed evidence, n
 
 - **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
 - **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long autonomous research loops have not been measured.
-- **No cross-model regression tracking.** Behavior has been observed primarily on Claude. Codex and OpenClaw variants exist but have not been systematically compared head-to-head against the same prompts.
+- **No systematic cross-model regression tracking.** One [structural runtime-loading smoke test](evals/2026-08-24-runtime-loading-smoke.md) exercised the same safety prompt in Claude and Codex and verified OpenClaw installation and discovery. It is not a model-quality comparison; OpenClaw model behavior was not tested.
 - **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
 - **Limited non-English source coverage.** Russian-, Kazakh-, Uzbek-, and Azerbaijani-language regulatory and registry sources have not been systematically tested as inputs.
 

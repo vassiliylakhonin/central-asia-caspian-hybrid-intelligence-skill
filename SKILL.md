@@ -207,13 +207,13 @@ This root file is the complete runtime-neutral analytical contract. Platform fil
 
 - After this file, load [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) for Claude retrieval and document-use guidance.
 - After this file, load [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) for Codex multi-step and file-output guidance.
-- After this file, load [`runtimes/openclaw/SKILL.md`](runtimes/openclaw/SKILL.md) for OpenClaw packaging and installation guidance.
+- After this file, load [`runtimes/openclaw/SKILL.md`](runtimes/openclaw/SKILL.md) for OpenClaw installation guidance.
 
 If no matching overlay is available, use this root contract alone.
 
 ## Installation
 
-Use this root file as the operating instruction in any supported agent. The packaged Claude Code plugin discovers the same file through `skills/central-asia-caspian/SKILL.md`.
+Use this root file as the operating instruction in any supported agent. The packaged Claude Code composition file attaches this root contract first and the Claude overlay second through `skills/central-asia-caspian/SKILL.md`.
 
 ```text
 /plugin marketplace add vassiliylakhonin/agenda-intelligence-md

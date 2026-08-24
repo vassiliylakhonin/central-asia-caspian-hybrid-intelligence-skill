@@ -2,6 +2,8 @@
 
 Status: accepted, 2026-08-24
 
+The package-loading and OpenClaw-installation parts of this decision are superseded by [ADR 0005](0005-compose-claude-plugin-and-install-openclaw-from-git.md). The root/overlay ownership decision remains current.
+
 ## Context
 
 The repository convention already named the root `SKILL.md` as the canonical runtime-neutral contract and `runtimes/{claude,codex,openclaw}/SKILL.md` as additive overlays. The files did not follow that convention. The root was a 22-line selector, while each runtime file copied the full analytical contract.

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Fail when a tracked Markdown file points at a missing local path.
 
+Resolve symlinked Markdown files before checking relative links. Packaged skills
+link to the canonical root SKILL.md and inherit its root-relative references.
+
 Also fails when a link to the author's own site returns 404/410, because those
 URLs move when the site is restructured and nothing else catches them. Network
 errors and other statuses are reported but never fail the run, so CI stays
@@ -88,6 +91,7 @@ def main() -> int:
     site_links: dict[str, list[str]] = {}
     for markdown in tracked_markdown_files():
         text = markdown.read_text(encoding="utf-8")
+        link_base = markdown.resolve(strict=True).parent
         for line_number, line in enumerate(text.splitlines(), 1):
             for raw_target in LINK_RE.findall(line):
                 site_url = own_site_target(raw_target)
@@ -98,7 +102,11 @@ def main() -> int:
                 target = local_target(raw_target)
                 if target is None:
                     continue
-                resolved = (ROOT / target.lstrip("/")) if target.startswith("/") else (markdown.parent / target)
+                resolved = (
+                    (ROOT / target.lstrip("/"))
+                    if target.startswith("/")
+                    else (link_base / target)
+                )
                 if not resolved.exists():
                     missing.append(f"{markdown.relative_to(ROOT)}:{line_number}: {raw_target}")
 

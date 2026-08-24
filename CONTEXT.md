@@ -48,6 +48,10 @@ _Avoid_: Runtime copy, packaged mirror, derived lens
 A condensed copy or reference used by Agenda Intelligence MD at runtime for routing and prompt assembly.
 _Avoid_: Authoring source, complete regional doctrine, independent fork
 
+**Runtime Overlay**:
+Platform-specific instructions loaded after the complete root `SKILL.md` contract.
+_Avoid_: Runtime Projection, complete skill, replacement contract, independent fork
+
 **Sync Boundary**:
 The rule for deciding which Authoring Source changes should be reflected in an Agenda Intelligence MD Runtime Projection.
 _Avoid_: Mirror policy, automatic copy, fork maintenance
@@ -70,6 +74,7 @@ _Avoid_: Screening result, compliance determination, factual verification report
 - A **Regional Lens** is a **Runtime Projection** derived from a **Vertical Specialist**.
 - The Central Asia + Caspian **Vertical Specialist** repo is the **Authoring Source** for full regional logic, including archetypes, source guidance, examples, and evidence discipline.
 - A **Runtime Projection** should preserve the boundaries of its **Authoring Source** without trying to duplicate the full specialist repo.
+- A **Runtime Overlay** adds platform behavior after the root skill contract; it does not copy common analytical sections or replace the root.
 - A **Sync Boundary** requires Agenda Intelligence MD updates only when the **Authoring Source** changes routing criteria, default regional checks, output skeleton, evidence-mode boundary, or anti-patterns.
 - Changes to full archetypes, source-guide depth, examples, validation status, or practitioner-review evidence remain in the **Authoring Source** unless they affect compatibility routing or prompt assembly.
 - The primary **Evidence-Packet Handoff** does not carry a memo-level evidence mode. It carries explicit claims, full source text, and optional verbatim quotes.

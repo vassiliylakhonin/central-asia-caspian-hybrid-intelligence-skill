@@ -49,7 +49,7 @@ This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhon
 - `README.md` — public positioning per [`docs/repo-conventions.md`](docs/repo-conventions.md) "README priorities"
 - `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
 - `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
-- `SKILL.md` — runtime skill contract
+- `SKILL.md` — complete canonical runtime-neutral skill contract
 - `STATUS.md` — honest Bar 1 / Bar 2 status
 - `CONTRIBUTING.md` — this file
 - `LICENSE`
@@ -58,7 +58,7 @@ This repo and its sibling [Gulf + Middle East](https://github.com/vassiliylakhon
 - `.gitignore`
 
 **Directories (required):**
-- `runtimes/{claude,codex,openclaw}/SKILL.md` — runtime variants per platform
+- `runtimes/{claude,codex,openclaw}/SKILL.md` — additive runtime overlays loaded after the root contract
 - `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
 - `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
 - `docs/` — including `source-guide.md`, `currency-watch.md`, `cold-start-interview.md`, `regional-logic.md`, `risk-archetypes.md`
@@ -94,12 +94,8 @@ The validator enforces packaging, structural, link, and honesty invariants. Comm
 - **Packaged skill identity drift.** The `name` in `skills/central-asia-caspian/SKILL.md` must match its parent directory, and both plugin manifests must stay synchronized.
 - **Example evidence-mode count is stale.** Every file in `examples/*.md` (except `README.md`) must declare an `Evidence mode:` of `reasoning-only`, `illustrative source packet`, `live-source-backed`, or `user-provided sources`. The README's mode-count summary line and STATUS.md's source-anchored ratio must match the actual count. If you add or change an example, update both.
 - **Live-source-backed and user-provided sources examples** must include a `Retrieval date: YYYY-MM-DD`.
-- **Skill files** under `runtimes/{openclaw,codex,claude}/SKILL.md` must:
-  - have YAML frontmatter with a lowercase-slug `name` and a `description` of at least 120 characters;
-  - contain every required `##` section (see `REQUIRED_SECTIONS` in the validator);
-  - contain required body phrases (`Primary driver is:`, `Compliance note`, `Disclaimer`, `Author: Vassiliy Lakhonin`, `official sanctions lists`, `Do not use for formal legal/compliance determinations`);
-  - avoid determinative or unsafe phrases (`fully compliant`, `no sanctions risk`, `guaranteed compliant`, `this is a legal determination`, `constitutes legal advice`);
-  - have balanced fenced code blocks.
+- **The root `SKILL.md`** must contain every common analytical section and required safety phrase defined in `REQUIRED_CANONICAL_SECTIONS` and `REQUIRED_CANONICAL_BODY_PHRASES`.
+- **Runtime overlays** must load `../../SKILL.md` first, contain only their allowlisted platform sections, keep a description of at least 120 characters, avoid determinative language, and have balanced fenced code blocks. Copying a common root section into an overlay fails validation.
 
 Read [`scripts/validate.py`](scripts/validate.py) directly for the authoritative list of constraints — the validator is the source of truth.
 

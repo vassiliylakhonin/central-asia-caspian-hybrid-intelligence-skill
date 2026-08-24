@@ -4,6 +4,9 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Moved the complete runtime-neutral analytical contract into the root `SKILL.md`, which is also the packaged plugin target.
+- Reduced Claude, Codex, and OpenClaw runtime files to additive overlays and added ADR 0004. The validator now rejects duplicated common sections, missing root references, and non-allowlisted overlay sections.
+
 - Fixed the packaged skill identifier so `skills/central-asia-caspian/SKILL.md` matches its discovery directory and the `central-asia-caspian` plugin name.
 - Extended `scripts/validate.py` into the single local/CI interface for required files, package metadata, runtime overlays, examples, the evidence-packet handoff, links, and safety gates.
 - Corrected stale contributor and agent-index documentation, removed unsupported "production stack" wording, and documented the existing Claude Code marketplace install path.

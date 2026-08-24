@@ -125,14 +125,15 @@ For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Anal
 
 ## Quick usage
 
-Use the skill variant matching your environment as the operating instruction in your agent setup:
+Use the root contract in every environment. Load the matching runtime overlay after it only when the platform-specific behavior applies.
 
 | Environment | File | Notes |
 |---|---|---|
-| Codex | `runtimes/codex/SKILL.md` | See also `AGENTS.md` |
-| Claude | `runtimes/claude/SKILL.md` | YAML frontmatter |
-| OpenClaw | `runtimes/openclaw/SKILL.md` | |
-| ChatGPT / other LLMs | any of the above | Paste or attach as system / project instruction |
+| All runtimes | `SKILL.md` | Required baseline contract |
+| Codex | `runtimes/codex/SKILL.md` | Optional agent-loop and file-output rules |
+| Claude | `runtimes/claude/SKILL.md` | Optional retrieval and document-use rules |
+| OpenClaw | `runtimes/openclaw/SKILL.md` | Optional ClawHub install metadata |
+| ChatGPT / other LLMs | `SKILL.md` | No overlay required |
 
 Install the packaged skill in Claude Code through the existing Agenda Intelligence marketplace:
 
@@ -147,7 +148,7 @@ Validation:
 python3 scripts/validate.py
 ```
 
-The validator checks packaged-skill discovery, plugin-manifest consistency, required files, runtime overlays, evidence-mode counts, evidence-packet structure, local links, and safety gates. It does **not** validate factuality of any output produced by the skill.
+The validator checks packaged-skill discovery, plugin-manifest consistency, the complete root contract, allowlisted runtime overlays, evidence-mode counts, evidence-packet structure, local links, and safety gates. It rejects overlays that duplicate common contract sections. It does **not** validate factuality of any output produced by the skill.
 
 ## Before / after
 
@@ -195,15 +196,16 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 ## Skill files
 
 - `skills/central-asia-caspian/SKILL.md` — plugin discovery path; a symlink to the canonical root `SKILL.md`.
-- `runtimes/claude/SKILL.md` — Claude-compatible variant with YAML frontmatter and Claude-oriented installation wording.
-- `runtimes/codex/SKILL.md` — Codex-compatible variant with Codex-oriented slug and installation wording.
-- `runtimes/openclaw/SKILL.md` — OpenClaw-compatible variant with underscore-convention name for ClawHub and install command.
+- `SKILL.md` — complete runtime-neutral analytical contract and the only copy of common behavior.
+- `runtimes/claude/SKILL.md` — additive Claude retrieval and document-use rules.
+- `runtimes/codex/SKILL.md` — additive Codex agent-loop, file-output, and validation-chaining rules.
+- `runtimes/openclaw/SKILL.md` — additive OpenClaw package identifier and ClawHub install command.
 - `docs/cold-start-interview.md` — preflight procedure that captures role, geography, decision context, risk appetite, and source access before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - `templates/practice-profile.md` — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - `scripts/validate.py` — single dependency-free interface for all repository and packaging checks.
 
-All variants share the same analytical contract: mechanism-first reasoning, evidence labels, role-based implications, trigger points, confidence footer, and explicit limitation notes. Each variant adds platform-specific behavior: Claude variant adds tool-use awareness and evidence-mode shifting; Codex variant adds agentic-loop output discipline and pipeline compression; OpenClaw is the explicit canonical baseline.
+The root owns mechanism-first reasoning, evidence labels, role-based implications, trigger points, the confidence footer, and limitation notes. Runtime overlays contain only their platform additions. The structure and its CI guard are recorded in [`docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md`](docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md).
 
 ## Repository layout
 
@@ -212,7 +214,7 @@ All variants share the same analytical contract: mechanism-first reasoning, evid
 ├── README.md            # Public positioning (this file)
 ├── AGENTS.md            # Canonical project contract (identity, scope, evidence rules)
 ├── CLAUDE.md            # Claude Code working rules (inherits AGENTS.md)
-├── SKILL.md             # Runtime skill contract
+├── SKILL.md             # Complete runtime-neutral skill contract
 ├── STATUS.md            # Honest Bar 1 / Bar 2 status against the Definition of Done
 ├── CONTEXT.md           # Working context for cross-session continuity
 ├── CONTRIBUTING.md      # Local validator workflow and CI invariants

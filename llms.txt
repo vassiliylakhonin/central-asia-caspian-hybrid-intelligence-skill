@@ -34,8 +34,8 @@ Per-claim provenance (two axes):
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, retrieved-content trust, currency triggers, provenance tags, three-value response logic.
 - STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria.
-- SKILL.md — canonical runtime-neutral entry point.
-- runtimes/ — platform overlays for Claude, Codex, and OpenClaw.
+- SKILL.md — complete canonical runtime-neutral contract.
+- runtimes/ — additive platform overlays for Claude, Codex, and OpenClaw; load after SKILL.md.
 - skills/central-asia-caspian/SKILL.md — plugin discovery path linked to the canonical skill.
 - README.md — public documentation.
 - docs/ — source guide, regional logic, risk archetypes.

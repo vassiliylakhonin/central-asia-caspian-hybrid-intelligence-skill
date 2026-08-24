@@ -51,7 +51,7 @@ What would need to happen, in honest order:
 2. ~~Add more source-anchored memos to push the ratio over half (closes B2.1).~~ Done — Wave 6 raised ratio to 54% (7 of 13); B2.1 met.
 3. ~~Add two more agent-eval delta cases under `evals/agent-eval/` using the Agenda Intelligence methodology (closes B2.2).~~ Done — `customs-mirror-statistics-anomaly` and `caspian-corridor-chokepoint`.
 4. ~~Make the customs / mirror-statistics agent-eval source-backed through the product shell, mapping specialist source-backed material to `user_provided` or `mixed` (closes B2.3).~~ Done — mapped to `mixed`.
-5. ~~Keep each agent-eval explicitly structural-only: no factual verification, no model-quality comparison, no aggregate benchmark claim (closes B2.7 as the set grows).~~ Done for the three current cases.
+5. ~~Keep each agent-eval explicitly structural-only: no factual verification, no model-quality comparison, no aggregate benchmark claim (closes B2.7 as the set grows).~~ Done for the four current compatibility cases.
 6. If real agent-integrator use happens, record it publicly with permission (strengthens B2.5 positively); if not, leave the negative disclosure as it stands.
 7. If the audience expands to practitioner buying-side trust, add practitioner reviews under `validated-cases/`; do not treat them as required for agent-first Bar 2.
 

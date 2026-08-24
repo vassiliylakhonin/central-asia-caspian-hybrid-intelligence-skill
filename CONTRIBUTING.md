@@ -18,10 +18,9 @@ If you've just landed in this repo and want to understand it before editing, do 
 git clone https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
 cd central-asia-caspian-hybrid-intelligence-skill
 python3 scripts/validate.py
-python3 scripts/validate_evidence_packet_handoff.py
 ```
 
-Requirements: Python 3.8+. No additional packages — the validator uses the standard library. Expected success output: `ok: skill files validated`. CI runs this on every push; run it locally before pushing or `main` will go red.
+Requirements: Python 3.8+. No additional packages — the validator uses the standard library. Expected final output: `PASS: repository validation complete`. CI runs the same command on every push.
 
 **3. Read one concrete artifact end-to-end:**
 
@@ -83,15 +82,16 @@ CI runs `scripts/validate.py` on every push. Run it locally before opening a PR:
 python3 scripts/validate.py
 ```
 
-Expected success output: `ok: skill files validated`.
+Expected final output: `PASS: repository validation complete`.
 
-The validator enforces structural and honesty invariants. Common reasons it fails:
+The validator enforces packaging, structural, link, and honesty invariants. Common reasons it fails:
 
 - **Required root files missing.** `AGENTS.md`, `README.md`, `STATUS.md` must all be present.
 - **README forbidden claims.** Phrases like `guarantees compliance`, `guarantees accuracy`, `detects sanctions evasion`, `fully autonomous`, `trusted by`, `used by` are blocked.
 - **README disclosure missing.** README must contain the line: `no production-usage, adoption or benchmark numbers are claimed`.
 - **Companion repo links missing.** README must link to [Gulf + Middle East](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill), [Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst), and [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md).
-- **STATUS.md must state Bar 2 status honestly.** The exact phrase `**Bar 2 — not cleared.**` must appear (until Bar 2 is genuinely cleared with verifiable evidence).
+- **STATUS.md must state Bar 2 status honestly.** The current evidence requires the exact phrase `**Bar 2 — cleared for agent integration.**`; do not change it without updating the evidence in `STATUS.md`.
+- **Packaged skill identity drift.** The `name` in `skills/central-asia-caspian/SKILL.md` must match its parent directory, and both plugin manifests must stay synchronized.
 - **Example evidence-mode count is stale.** Every file in `examples/*.md` (except `README.md`) must declare an `Evidence mode:` of `reasoning-only`, `illustrative source packet`, `live-source-backed`, or `user-provided sources`. The README's mode-count summary line and STATUS.md's source-anchored ratio must match the actual count. If you add or change an example, update both.
 - **Live-source-backed and user-provided sources examples** must include a `Retrieval date: YYYY-MM-DD`.
 - **Skill files** under `runtimes/{openclaw,codex,claude}/SKILL.md` must:
@@ -134,7 +134,7 @@ Product linting, schemas, and runtime tooling belong in the [Agenda Intelligence
 
 ## PR checklist
 
-- [ ] `python3 scripts/validate.py` passes locally
+- [ ] `python3 scripts/validate.py` passes locally, including package, handoff, and link checks
 - [ ] If an example was added or renamed: README.md examples list, `examples/README.md`, and the README mode-count summary line are all updated in the same PR
 - [ ] Behavior or positioning change noted in commit message or PR description
 - [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo

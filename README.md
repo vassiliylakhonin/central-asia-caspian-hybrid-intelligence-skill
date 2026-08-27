@@ -256,7 +256,7 @@ Listing a source class is not an endorsement and does not guarantee accuracy or 
 
 ## Risk archetypes
 
-[docs/risk-archetypes.md](docs/risk-archetypes.md) catalogues recurring archetypes for the region. For each: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based mitigation questions. Current archetypes:
+[docs/risk-archetypes.md](docs/risk-archetypes.md) catalogues recurring archetypes for the region. For each: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based enforcement actions. Current archetypes:
 
 1. Re-export / transshipment exposure
 2. Dual-use goods routing

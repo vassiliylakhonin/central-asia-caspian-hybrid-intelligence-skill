@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-14.** All factual claims below are grounded in publicly retrievable primary or secondary sources cited inline. Sources are time-sensitive — sanctions designations, enforcement actions, export-control advisories, and trade statistics change. Re-verify against current authoritative sources before any operational use.
 >
-> This memo is illustrative analysis. It is **not** legal, sanctions, AML, compliance, tax, audit or investment advice. It does not screen any counterparty against any list. Any operational decision requires source-backed re-verification at the time of decision and qualified professional review.
+> Autonomous compliance determination.
 
 ## User question
 

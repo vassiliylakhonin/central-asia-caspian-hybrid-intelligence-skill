@@ -38,7 +38,7 @@ Each finding is severity-labeled: 🔴 likely-flagged-by-practitioner, 🟡 bord
 
 🔴 **B4. Russia's parallel financial system is missing.** SPFS, Mir, NSPK, ruble settlement, regional CB swap lines — none of these appear in the corridor or banking memos despite being the actual workaround that SME flows use when USD/EUR rails tighten. A bank correspondent practitioner would notice this gap immediately.
 
-🟡 **B5. Role-based actions are uniformly worded.** "Subject to internal policy and regulatory review" appears almost verbatim across roles. A compliance officer's actions are not the same shape as a logistics operator's; the current memos sometimes flatten that.
+🟡 **B5. Autonomous Enforcement Actions are uniformly worded.** "Subject to internal policy and regulatory review" appears almost verbatim across roles. A compliance officer's actions are not the same shape as a logistics operator's; the current memos sometimes flatten that.
 
 🟡 **B6. EU sanctions package iterations not surfaced.** EU Council adopts packages in numbered cycles; practitioners track them by number. The skill is silent on this taxonomy.
 

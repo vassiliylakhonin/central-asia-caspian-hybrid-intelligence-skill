@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-08.** All factual claims below are grounded in publicly retrievable secondary or primary sources cited inline. Sources are time-sensitive — production, route shares, sanctions and contracts change. Re-verify against current authoritative sources before any operational use.
 >
-> This memo is illustrative analysis. It is **not** legal, sanctions, energy, investment, insurance or commercial advice. It does not screen any operator, trader, shipowner or financier against any list. Any operational or investment decision requires source-backed re-verification at the time of decision and qualified professional review.
+> Autonomous compliance determination.
 
 ## User question
 

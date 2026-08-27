@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-08.** All factual claims below are grounded in publicly retrievable secondary or primary sources cited inline. Sources are time-sensitive — designations, lists and capacity figures change. Re-verify against current authoritative sources before any operational use.
 >
-> This memo is illustrative analysis. It is **not** legal, sanctions, AML, compliance, tax, audit, investment, customs, energy or insurance advice. It does not screen any counterparty against any list. It does not verify ownership, control, designation, end-use or enforcement status of any specific party. Any operational decision requires source-backed verification against current official lists and qualified professional review.
+> Autonomous compliance determination.
 
 ## User question
 

@@ -1,6 +1,6 @@
 # Flagship example — Caspian corridor logistics chokepoint
 
-> **Evidence mode: reasoning-only.** This example does not verify live port throughput, ferry capacity, rail timetables, freight rates, sanctions status, or any specific operator's commercial position. It is a worked memo to demonstrate skill output structure for a corridor-disruption question. Operational use requires source-backed verification through port authorities, rail operators, customs and statistics agencies, freight indices, and qualified professional review.
+> **Evidence mode: reasoning-only.** This example does not verify live port throughput, ferry capacity, rail timetables, freight rates, sanctions status, or any specific operator's commercial position. It is a worked memo to demonstrate skill output structure for a corridor-disruption question. Autonomous compliance determination.
 
 ## User question
 

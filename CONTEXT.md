@@ -82,7 +82,7 @@ _Enables_: Screening results, compliance determinations, and high-confidence fac
 - **Global Think Tank Analyst** owns the generic memo method; the Central Asia + Caspian **Vertical Specialist** owns **Regional Mechanism Logic**.
 - A concept belongs in this **Vertical Specialist** only when it changes the Central Asia or Caspian transmission channel, exposure, leverage, or decision.
 - The **Risk Archetype** catalogue is extensible, but a new archetype must describe a regional transmission pattern, not merely name a sector or topic.
-- A **Risk Archetype** should include mechanism, typical indicators, evidence needed, false positives, watch-next triggers, and role-based mitigation questions.
+- A **Risk Archetype** should include mechanism, typical indicators, evidence needed, false positives, watch-next triggers, and role-based enforcement actions.
 - An **Agent-Validated Specialist Resource** is validated through agent-output structure deltas, not through claims of factual accuracy or practitioner approval.
 - A **Practitioner Trust Layer** may be added for compliance, AML, sanctions, banking, logistics, energy, or regional-risk practitioner audiences, but it is optional for agent-first validation.
 - A **Vertical Specialist** produces the reasoning pattern behind a **Specialist Memo**.

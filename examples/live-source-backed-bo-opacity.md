@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-08.** All factual claims below are grounded in publicly retrievable secondary or primary sources cited inline. Sources are time-sensitive — supervisory regimes, register reforms and designations change. Re-verify against current authoritative sources before any operational use.
 >
-> This memo is illustrative analysis. It is **not** legal, sanctions, AML, compliance or investigative advice. It does not screen any person or entity against any list. It does not verify any factual claim about ownership, control or designation. Any onboarding, EDD or commercial decision requires source-backed re-verification at the time of decision and qualified professional review.
+> Autonomous compliance determination.
 
 ## User question
 

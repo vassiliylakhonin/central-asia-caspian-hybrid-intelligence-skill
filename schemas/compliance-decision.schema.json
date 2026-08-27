@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "BLOCK",
+        "ESCALATE",
+        "REQUEST_EVIDENCE"
+      ],
+      "description": "The autonomous compliance decision."
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence in the decision based on available graph and memory data."
+    },
+    "autonomous_enforcement_action": {
+      "type": "string",
+      "description": "Machine-readable action code to trigger in the upstream system (e.g., 'TRIGGER_EDD', 'FREEZE_FUNDS')."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Concise reasoning for the decision."
+    },
+    "graph_entities_implicated": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of node IDs from the GraphRAG ontology implicated in the risk."
+    }
+  },
+  "required": [
+    "decision",
+    "confidence_score",
+    "autonomous_enforcement_action",
+    "rationale"
+  ]
+}

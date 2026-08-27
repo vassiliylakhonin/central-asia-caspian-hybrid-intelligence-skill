@@ -160,3 +160,11 @@ Prefer additive improvements. Do not introduce heavy dependencies unless necessa
 Two hard bars in sequence — Bar 1 (early but credible) then Bar 2 (agent-validated specialist resource) — with an optional, audience-gated practitioner-trust layer. The binary criteria and anti-criteria are in [`docs/definition-of-done.md`](docs/definition-of-done.md).
 
 **Do not pretend a bar is cleared if it is not.** Current per-criterion status lives in [`STATUS.md`](STATUS.md) and nowhere else; it must never be advanced without verifiable evidence.
+
+## Autonomous & Swarm Orchestration (Phase 4)
+
+This repository is an active MCP Server capable of Agent-to-Agent (A2A) swarm orchestration.
+- **MCP Integration:** Run `src/mcp_server.py` to expose tools to the agent.
+- **Swarm Handoffs:** If a transaction spans across multiple regions (e.g., Central Asia and the Gulf), automatically delegate sub-tasks to the corresponding regional sibling agent.
+- **GraphRAG & Memory:** Utilize `docs/graph-ontology.md` and `docs/memory-protocol.md` to persist state and traverse complex ownership graphs.
+- **Structured Outputs:** The skill now mandates machine-readable JSON compliance decisions per `docs/analysis-contract.md`.

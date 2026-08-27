@@ -1,3 +1,5 @@
+> **DEPRECATED**: Use `memory-protocol.md` for Agentic Memory.
+
 # Cold-start interview
 
 A short preflight conversation that turns a generic Central Asia + Caspian memo run into one anchored to **this user's** role, geography, decision context, and source access. Run before substantive analysis when the user is new to the skill or when prior context is missing.

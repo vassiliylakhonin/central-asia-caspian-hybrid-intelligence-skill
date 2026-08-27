@@ -163,6 +163,17 @@ Two hard bars in sequence — Bar 1 (early but credible) then Bar 2 (agent-valid
 
 ## Autonomous & Swarm Orchestration (Phase 4)
 
+## Paradigm: Dark Factories (Stage 4)
+
+This skill operates in the **Stage 4 (Dark Factories)** paradigm:
+- **Lingua Franca:** Guardrails (see `docs/guardrails.md`). We do not use English specs or prompt chains.
+- **UI:** No human review. Zero-trust, headless execution.
+- **Agent to Human Ratio:** ∞ (Infinity).
+- **Role:** Mastery.
+
+Do not output human-readable summaries, reviewer checklists, or conversational responses. All outputs must be autonomous API payloads for immediate machine enforcement.
+
+
 This repository is an active MCP Server capable of Agent-to-Agent (A2A) swarm orchestration.
 - **MCP Integration:** Run `src/mcp_server.py` to expose tools to the agent.
 - **Swarm Handoffs:** If a transaction spans across multiple regions (e.g., Central Asia and the Gulf), automatically delegate sub-tasks to the corresponding regional sibling agent.

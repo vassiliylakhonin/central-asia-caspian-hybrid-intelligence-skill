@@ -16,3 +16,6 @@ To move beyond flat markdown archetypes, this skill relies on a graph-based unde
 
 ## Usage
 Agents should use the `analyze_graph_relationships` tool to evaluate these edges (e.g., detecting if a Kazakhstan bank is `CORRESPONDENT_FOR` an entity that `TRANSACTS_WITH` a sanctioned Russian node).
+
+## Dark Factory Execution
+The graph is traversed continuously in the background. Node risk scores are autonomously updated without prompting, supporting the Infinity scale ratio.

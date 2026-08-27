@@ -35,7 +35,6 @@ Where the user has not yet retrieved a packet item, the corresponding claim cate
 
 **Time horizon:** 12–18 months, with structural overlay through 2027.
 
-**Limitation note:** See top. Structural reasoning only; not a designation map, not a screening framework, not legal advice.
 
 ---
 
@@ -181,7 +180,6 @@ This memo applies the three-value logic from AGENTS.md as follows:
 - **Flag-but-don't-use (used):** specific enforcement-doctrine direction; current designation perimeter; current correspondent tiering posture. Acknowledged as uncertain; not used as a load-bearing input to the structural reasoning.
 - **Stop and request (would apply):** any operational decision on a specific counterparty, transaction, or limit number requires source-backed re-verification and qualified review, not this memo. A bank applying this memo to a real transaction should Stop and request live retrieval before acting.
 
-## Limitation note
 
 This is a `user-provided sources` decision-support brief delivered as a skeleton packet plus structural framing. **The binding evidence is the user's retrieval of [U1]–[U10] at the point of decision.** This memo does not retrieve those items itself. It is not legal, sanctions, AML, export-control, compliance, audit, or investment advice. It does not screen any counterparty against any list and does not state any current designation, enforcement action, transaction volume, price, or named entity. It does not constitute an opinion on whether any specific transaction is permissible under any sanctions regime.
 

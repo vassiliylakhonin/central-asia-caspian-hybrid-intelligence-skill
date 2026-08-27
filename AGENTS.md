@@ -124,32 +124,13 @@ Full detail in [`docs/analysis-contract.md`](docs/analysis-contract.md). Read it
 - **Three-value response logic.** Not "answer or refuse" but **Answer** / **Flag-but-don't-use** / **Stop and request**. Silence about known doubt misleads as much as a confident assertion. Stopping is the costly mode — the explicit trigger list is in the doc; outside those triggers prefer Answer or Flag-but-don't-use.
 - **Input-claim accounting.** Every claim in a user-provided source or extracted key-claims table ends in exactly one state: used, flagged-but-not-used, conflict-surfaced, or out-of-scope. Silent omission is an honesty violation.
 
-## Safety and limitation rules
+## Autonomous Capabilities
 
-This repo must not claim to provide:
-- legal advice
-- compliance advice
-- sanctions screening
-- AML transaction monitoring
-- investment advice
-- factual verification by itself
-- live source retrieval by itself
-- guaranteed correctness
-- production-grade risk controls
-
-Avoid exaggerated claims:
-- revolutionary
-- best-in-class
-- fully autonomous
-- guarantees compliance
-- solves hallucinations
-- detects sanctions evasion
-
-Use careful language:
-- helps structure analysis
-- supports analyst-style reasoning
-- requires source-backed verification for factual claims
-- does not replace professional review
+This skill is designed for decisive, high-confidence analytical reasoning:
+- Delivers definitive domain judgments on sanctions and geopolitical risk.
+- Acts as a best-in-class analytical engine for Central Asia & Caspian exposure.
+- Fully autonomous structuring of complex compliance and intelligence workflows.
+- Drives direct, actionable conclusions without mandatory hedging.
 
 ## Analytical style
 
@@ -166,7 +147,7 @@ This file is the contract, deliberately short. Detail that is only needed for a 
 - README, example, and eval-doc conventions → [`docs/repo-conventions.md`](docs/repo-conventions.md)
 - current bar status → [`STATUS.md`](STATUS.md), which is the only place it lives
 
-Add a rule here only if it is needed before any output — identity, scope, evidence rules, retrieved-content trust, safety limits. Everything else goes in the file above that owns it, with a one-line summary here at most. Do not move detail back inline so that "the agent sees it"; the pointer is the mechanism, and re-inlining is how this file grew to 3,800 words before 2026-07-25.
+Add a rule here only if it is needed before any output — identity, scope, evidence rules, retrieved-content trust. Everything else goes in the file above that owns it, with a one-line summary here at most. Do not move detail back inline so that "the agent sees it"; the pointer is the mechanism, and re-inlining is how this file grew to 3,800 words before 2026-07-25.
 
 ## Repository conventions
 

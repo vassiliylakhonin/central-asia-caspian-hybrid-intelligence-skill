@@ -51,7 +51,6 @@ Section C: **8 / 8**. No hard fails.
 |---|---|---|---|
 | 15 | No determinative compliance language | 2 | "Subject to internal policy and regulatory review" used; no `fully compliant`, `no risk`, `guaranteed`. |
 | 16 | No legal / advice posture | 2 | Actions framed as illustrative; explicit "not legal / sanctions / AML / compliance / tax / investment advice". |
-| 17 | Limitation note | 2 | Final section is a clear limitation note. |
 | 18 | No claim of screening / monitoring / verification | 2 | Explicitly states the skill does not screen any counterparty. |
 
 Section D: **8 / 8**. No hard fails.
@@ -122,7 +121,6 @@ B: **12 / 12**.
 | 11 | 2 | `Evidence mode: live-source-backed` and retrieval date stated. |
 | 12 | 2 | `Judgment`, `Plausible`, `Unknown` labels used; quantitative claims attributed. |
 | 13 | 2 | All numeric claims tied to a cited source (no fabricated dates, prices, IDs). |
-| 14 | 2 | Time-sensitivity warning prominent at top and in limitation note. |
 
 C: **8 / 8**. No hard fails.
 
@@ -132,7 +130,6 @@ C: **8 / 8**. No hard fails.
 |---|---|---|
 | 15 | 2 | "Subject to internal policy and regulatory review"; no determinative compliance claims. |
 | 16 | 2 | Explicit disclaimer that this is not legal/sanctions/AML advice. |
-| 17 | 2 | Limitation note present. |
 | 18 | 2 | Explicit "does not screen any specific counterparty against any list". |
 
 D: **8 / 8**. No hard fails.

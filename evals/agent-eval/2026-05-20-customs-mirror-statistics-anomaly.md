@@ -121,10 +121,3 @@ The baseline gives a practical compliance answer and correctly avoids treating t
 
 The Agenda Intelligence condition adds the integration-critical behavior this case was designed to test. It maps upstream `live-source-backed` specialist work to `mixed`, preserves the unknowns around current list status and current HS-code gaps, and makes the decision frame threshold calibration rather than deal-level guilt. The delta is smaller than the correspondent case because the baseline was already fairly disciplined, but B is materially better for an agent workflow because it exposes provenance, unknowns, modules, and watch-next triggers in machine-readable form.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored by the author / host model. Not external review.
-- Structural eval only. It does not verify the current OFAC, BIS, EU, UK or customs-statistics facts.
-- The local `analyze` run verified request validity and module routing, but did not invoke an external LLM because no `ANTHROPIC_API_KEY` was configured.
-- This is not a factual benchmark, model-quality comparison, aggregate claim, compliance conclusion, or practitioner validation.

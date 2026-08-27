@@ -95,7 +95,6 @@ All actions are illustrative. Real implementation requires qualified operational
 - A regulatory regime shift (BO transparency, customs harmonization) that visibly reduces compliance friction along the corridor.
 - A targeted designation that names corridor-specific operators or forwarders (would sharply raise risk, not lower it).
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, AML, compliance, tax, investment, insurance or operational advice. It does not screen any operator, port, ferry, rail entity, forwarder or financier against any sanctions list. It does not verify any factual claim about capacity, throughput, dwell time, freight rates, ownership or enforcement. Any operational decision requires source-backed verification through port authorities, rail operators, customs and statistics agencies, freight indices and qualified professional review.
 

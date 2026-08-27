@@ -39,9 +39,3 @@ This is a **rule-level canon eval**, not a skill-vs-no-skill delta case: both co
 
 **No measurable delta on a labeled 8-claim packet.** The rule's one observable effect — the compact explicit ledger — is exactly the artifact the rule asks for, and it cost nothing (C6 held), but the underlying accounting behavior was already present in the baseline. The rule stays in the canon on its logic (silent drops become a named, checkable violation), not on eval-backed evidence.
 
-## Limitations
-
-- One run per condition; single-run variance unmeasured.
-- The packet is labeled (K1–K8), which itself cues accounting; the silent-drop failure mode the rule targets is most likely with unlabeled prose sources, larger claim sets (20+), or multi-document packets. A harder eval would use those.
-- Same-vendor blind judge (Haiku 4.5); per the canon's self-scoring honesty rule this is a structural sanity check, not validation.
-- Author-constructed case; the rubric tests exactly what the rule mandates, so it favors the treatment by construction — which makes the zero delta the informative outcome.

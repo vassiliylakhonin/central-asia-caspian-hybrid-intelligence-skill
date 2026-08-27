@@ -94,7 +94,6 @@ All actions are illustrative. Real implementation requires qualified commercial,
 - A durable shift in Western financing posture toward (or away from) regional fossil infrastructure.
 - A major contract or geopolitical realignment shifting offtake direction (e.g. toward Asia vs Europe).
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, energy, investment, insurance or commercial advice. It does not screen any operator, trader, shipowner or financier against any sanctions list. It does not verify any factual claim about throughput, production, contracts, ownership or enforcement. Any operational or investment decision requires source-backed verification through pipeline operators, national oil/gas companies, regulators, IFIs and qualified professional review.
 

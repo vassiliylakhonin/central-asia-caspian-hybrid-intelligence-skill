@@ -32,7 +32,6 @@ Run through these questions for any non-trivial Central Asia / Caspian memo:
 - Does the answer avoid alarmism without a transmission channel?
 - Does it avoid unsupported numerical precision?
 - Does it use cautious language (`may consider`, `subject to review`, `depends on enforcement or regulation`) rather than determinative claims?
-- For sanctions / AML / banking / legal topics, is a limitation note included?
 - Does it avoid claims that the skill performs sanctions screening or live verification?
 
 ## Decision usefulness

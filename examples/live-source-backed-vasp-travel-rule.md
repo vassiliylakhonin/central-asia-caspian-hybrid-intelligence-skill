@@ -107,7 +107,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - FATF grey-listing of KZ or UZ (would sharply raise risk).
 - EU correspondent bank de-risking KZ VASP category at scale (would sharply raise risk).
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: FATF grey-list status, supervisory ratings, regulatory guidance and sanctions designations change. This memo does not screen any specific VASP, wallet address, beneficial owner or financial institution against any sanctions, export-control or watchlist. It does not verify any factual claim about ownership, control, end-use or enforcement of any specific party. Any operational decision — including VASP onboarding — requires source-backed re-verification at the time of decision and qualified professional review.
 

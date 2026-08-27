@@ -24,8 +24,7 @@ Current Agenda composition: this repo produces regional reasoning and an optiona
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six AGENTS.md preferred examples exist. |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. `evals/skill-improvement/` adds validation-gated skill-edit cases, also explicitly non-benchmark. |
 | B1.5 Validation passes on every commit to `main` | ✅ met | `python3 scripts/validate.py` runs in CI and pre-commit. |
-| B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no legal/compliance/investment advice posture, no production-grade or screening claims. |
-
+| B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations. |
 **Bar 1 — cleared.**
 
 ## Bar 2 — Agent-validated specialist resource

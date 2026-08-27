@@ -13,9 +13,6 @@ Every example and every memo produced with this skill must state one of four can
 
 State the evidence mode at the top of any memo. Mixing modes within a memo is allowed only if each section is labeled.
 
-## Disclaimer
-
-The skill does not verify facts by itself. These sources are recommended for source-backed workflows using external retrieval, user-provided source packets, or companion tooling. Listing a source class here is not an endorsement and is not a guarantee of accuracy, completeness or timeliness for any specific question.
 
 ## Tier 1 — official and primary
 

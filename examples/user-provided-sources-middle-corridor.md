@@ -97,7 +97,6 @@ All actions are illustrative against the user-supplied packet. Real implementati
 - A durable shift in Northern-corridor pricing that re-rates Middle-Corridor demand at a scale closer to the 11-million-tonne 2030 target [U1].
 - Sustained customs / information-system harmonization that meaningfully reduces the fragmentation flagged in [U1].
 
-## Limitation note
 
 This memo is bounded by the user-supplied packet [U1–U4]. It is not a comprehensive Middle Corridor assessment. It is not legal, sanctions, AML, compliance, customs, commercial or insurance advice. It does not verify any factual claim beyond what the packet itself supports. The packet is time-sensitive: re-verify capacity, throughput and policy figures before any operational or contractual decision.
 

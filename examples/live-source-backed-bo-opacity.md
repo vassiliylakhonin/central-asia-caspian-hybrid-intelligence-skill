@@ -92,7 +92,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - KZ / UZ / KG BO register reforms that materially raise baseline counterparty transparency.
 - Designations or enforcement against layered structures that create direct adjacency risk for the bank's book.
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: EU regulations have phased effective dates and Member State transposition varies; FATF guidance is revised periodically; EAG mutual-evaluation cycles continue. This memo does not screen any specific person or entity against any sanctions, PEP or watchlist. It does not verify any factual claim about ownership, control, designation or enforcement. Any onboarding, EDD or commercial decision requires source-backed re-verification at the time of decision and qualified professional review.
 

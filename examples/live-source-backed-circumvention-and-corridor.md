@@ -107,7 +107,6 @@ All actions are illustrative against the cited public sources. Real implementati
 - Northern-corridor capacity re-pricing that durably shifts demand at scale onto the Middle Corridor [S6].
 - New designations that name specific counterparties of the institution under review (would sharply raise risk, not lower it).
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: designations, list status, capacity figures, port metrics and FATF/EAG evaluation cycles change. This memo does not screen any specific counterparty, item, vessel, port, ferry, rail entity or financier against any sanctions, export-control or watchlist. It does not verify any factual claim about ownership, control, end-use or enforcement of any specific party. Any operational decision requires source-backed re-verification at the time of decision and qualified professional review.
 

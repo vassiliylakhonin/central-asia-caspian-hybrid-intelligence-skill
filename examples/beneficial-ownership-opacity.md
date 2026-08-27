@@ -87,7 +87,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - A major designation that names entities with the relevant structural pattern (would sharply raise risk).
 - Resolution of structural opacity through restructuring or disclosure by the counterparty.
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, AML, compliance or investigative advice. It does not screen any person or entity against any sanctions, PEP or watchlist. It does not verify any factual claim about ownership, control, enforcement or designation. Any onboarding, EDD or commercial decision requires source-backed verification against current registers and official lists, and qualified professional review.
 

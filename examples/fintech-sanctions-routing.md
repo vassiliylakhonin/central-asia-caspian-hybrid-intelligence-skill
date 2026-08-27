@@ -86,7 +86,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - A regional regulatory regime that imposes binding BO transparency and visibly enforces it.
 - A major designation that directly names the fintech's counterparties or banking partners (would sharply raise risk, not lower it).
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, AML, compliance, tax or investment advice. It does not screen any counterparty against any sanctions list. It does not verify any factual claim. Any operational decision requires source-backed verification against current official lists and qualified professional review.
 

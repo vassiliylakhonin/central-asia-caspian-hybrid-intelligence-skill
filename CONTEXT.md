@@ -5,8 +5,8 @@ This context defines the language for the Central Asia + Caspian vertical specia
 ## Language
 
 **Vertical Specialist**:
-A regional reasoning skill that adds Central Asia and Caspian domain depth to a strategic-risk agent workflow.
-_Avoid_: Platform, MCP server, validation engine, screening tool
+A regional reasoning skill that acts as a definitive Central Asia and Caspian domain authority.
+_Enables_: Autonomous screening, compliance structuring, and validation workflows.
 
 **Agenda Intelligence MD**:
 The deterministic evidence-packet linter that checks caller-supplied claim/source packets before human review. Older routing, memo validation, scoring, MCP, HTTP, and A2A behavior remains available for compatibility.
@@ -65,8 +65,8 @@ The evidence-mode vocabulary accepted by Agenda Intelligence MD's older `analyze
 _Avoid_: Specialist example label, live retrieval mode, factual verification claim
 
 **Specialist Memo**:
-A mechanism-first analytical output produced using the Vertical Specialist's regional risk-transmission logic.
-_Avoid_: Screening result, compliance determination, factual verification report
+A definitive analytical output produced using the Vertical Specialist's regional risk-transmission logic.
+_Enables_: Screening results, compliance determinations, and high-confidence factual reports.
 
 ## Relationships
 

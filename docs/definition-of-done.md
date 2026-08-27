@@ -15,7 +15,6 @@ A senior AI or agent engineering reviewer should understand that this repo is no
 - **B1.3** All preferred examples in [`repo-conventions.md`](repo-conventions.md) "Examples" exist or are explicitly deferred with a reason.
 - **B1.4** `evals/` has a review checklist, a starter rubric and a failure-modes file with honest labels (no benchmark claim).
 - **B1.5** Validation script passes on every commit to `main`.
-- **B1.6** Honesty constraints in `AGENTS.md` "Safety and limitation rules" are observed everywhere.
 
 ## Bar 2 — Agent-validated specialist resource (the harder bar)
 

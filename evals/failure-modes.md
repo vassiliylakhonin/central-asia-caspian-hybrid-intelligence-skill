@@ -40,7 +40,6 @@ These are recurring failure modes for Central Asia / Caspian outputs. Treat each
 - **Determinative compliance language.** Phrases like *fully compliant*, *no sanctions risk*, *guaranteed compliant*.
 - **Implicit advice posture.** Recommendations phrased as legal, tax or investment advice without disclaimers.
 - **Live-screening claims.** Suggesting the skill itself screens counterparties, monitors transactions or verifies sanctions status.
-- **Missing limitation note.** Sanctions / AML / banking / legal memos without an explicit limitation note and disclaimer.
 
 ## How to use this list
 

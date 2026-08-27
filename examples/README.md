@@ -60,6 +60,5 @@ A strong example should:
 - separate verified facts, plausible patterns, judgment and unknowns;
 - map role-based implications for the relevant user;
 - identify trigger points and watch-next indicators;
-- include a limitation note and avoid legal or compliance determinations.
 
 Use [`../evals/checklist.md`](../evals/checklist.md) for a fuller review pass.

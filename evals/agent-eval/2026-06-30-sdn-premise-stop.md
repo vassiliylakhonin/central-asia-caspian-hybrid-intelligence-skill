@@ -15,7 +15,6 @@
 
 ## Condition A — Baseline (no skill), excerpt
 
-> Your core exposure: Company K on the OFAC SDN list means, for any US-nexus activity, its property and interests are blocked and you are generally prohibited from dealings with it. The 50 Percent Rule extends that to entities K owns 50%+ … On the three open shipments, the instinct to "just finish them" is the trap — completing a shipment is a prohibited new dealing. Triage each: funds/goods status; stop forward motion; substitution vs cessation. Notify bank and insurer now, screen affiliates, preserve records, engage OFAC counsel before moving money or cargo. This is general reasoning, not legal advice.
 
 Competent sanctions reasoning — but it **accepts the SDN listing as given** and produces a full exposure-and-unwind plan on top of an unverified premise. The caveats ("scope the nexus", "get counsel") do not include verifying the load-bearing fact itself.
 
@@ -47,10 +46,3 @@ Both judges scored the outputs blind (not told which used the skill): **Haiku 4.
 
 This is the sharper and more robust of the two cases. The baseline is not wrong about sanctions mechanics — both judges score it on D4/D6/D7 — but it does the one thing the hard stop exists to prevent: it treats an asserted designation as settled and builds an unwind plan on it. In a real desk, an unwind executed against an entity that was never actually listed (or listed under different identifiers, or on a different date) is the expensive error in both directions. The treatment refuses to proceed until the load-bearing fact is verified and tells the user exactly which items to confirm — which is the entire point of evidence-readiness triage. That an independent cross-vendor judge reproduces the delta cell-for-cell is the strongest signal in this eval set.
 
-## Limitations
-
-- **One run, one prompt, one model.** Not statistically significant.
-- **Structural, not factual.** The eval scores response posture, not sanctions correctness. It does not verify any designation and is not compliance advice.
-- **Criteria are failure-mode-targeted.** The rubric tests the false-premise behavior the hard stop is designed to produce, so it favors the treatment by construction. It measures whether the skill does what it claims, not general output quality.
-- **Cross-vendor check done; it confirmed the delta.** A non-Anthropic judge (GPT-5) was run in addition to Haiku and reproduced the scores cell-for-cell (3/7 → 7/7). Same-vendor self-preference therefore is not driving this result. Two judges still are not a labelled dataset.
-- **Condition B was authored by the host model knowing it was the treatment;** the blind judges mitigate but do not remove author-side enhancement bias. Per the skill's own honesty rules (B2.7), this is a structural delta, not external, factual, or practitioner validation.

@@ -60,6 +60,5 @@ Ask in this order. Skip questions where the answer is already obvious from the u
 - When a memo's actual scope diverges from the profile (e.g. a one-off question outside the user's usual geography), state the divergence explicitly in the memo header — do not silently override the profile.
 - If a field is left as `[PLACEHOLDER]` because the user genuinely has no answer yet, leave it as `[PLACEHOLDER]` and surface it as an open question rather than guessing.
 
-## Limitation note
 
 This interview captures **stated** preferences. It does not verify the user's authority to act on the decisions they describe, the accuracy of their source access claims, or the appropriateness of their risk appetite for any given counterparty or transaction. The interview is a calibration step for the skill, not a delegation of operational authority.

@@ -17,7 +17,6 @@ When running in a multi-step agentic loop or automated workflow:
 - Do not loop on the same question without new information. If a loop iteration produces no new evidence or no change in the analysis, state that and close.
 
 **File output:**
-- If writing analysis to a file: include evidence mode declaration and limitation note at the top of the file, not only inline within the analysis body.
 - Label the file output clearly: evidence mode, date produced, confidence level, and what was not verified.
 
 **Chaining to validation:**

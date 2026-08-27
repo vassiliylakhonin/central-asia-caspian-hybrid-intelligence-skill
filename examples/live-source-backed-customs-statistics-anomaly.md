@@ -109,7 +109,6 @@ All actions are illustrative. Real implementation requires qualified trade compl
 - New EU sanctions package with explicit KZ re-export restrictions (would sharply raise risk and convert secondary exposure to primary compliance obligation).
 - BIS removal of KZ trading entities from Entity List following successful compliance remediation (would reduce risk for those specific entities).
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: OFAC SDN designations, BIS Entity List additions, EU sanctions measures, and export-control advisories change without notice. Trade statistics (Kazstat, Russian FCS, UN Comtrade) are published with reporting lags and are revised. This memo does not screen any specific counterparty, entity, wallet or shipment against any sanctions, export-control or watchlist. It does not verify any factual claim about ownership, control, end-use or enforcement status of any specific party. Any operational decision — including trade finance origination, EDD, or deal rejection — requires source-backed re-verification at the time of decision and qualified professional review by legal, compliance and export-control counsel.
 

@@ -95,7 +95,6 @@ All actions are illustrative against an illustrative packet.
 - Reversal of [S1] / [S3] (regulatory or correspondent loosening).
 - Sustained recovery of [S2]'s mirror divergence and [S4]'s dwell time.
 
-## Limitation note
 
 This memo is bounded by an illustrative source packet that is **not real data**. It is not legal, sanctions, AML, compliance, banking, customs or investment advice. It does not screen any counterparty against any list. It does not verify any factual claim. The pattern shown — grounding claims in a labeled packet, marking each claim with `Verified` against a packet item or `Plausible` / `Judgment` / `Unknown` — is the part to reuse with real `user-provided sources` or `live-source-backed` retrieval.
 

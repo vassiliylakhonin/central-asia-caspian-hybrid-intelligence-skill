@@ -88,7 +88,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - A major designation that names the bank's counterparties or correspondents (would sharply raise risk, not lower it).
 - A durable shift to alternative rails that re-prices the cost of USD / EUR-rail loss.
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, AML, compliance, tax, audit or investment advice. It does not screen any counterparty, bank or correspondent against any sanctions list. It does not verify any factual claim. Any operational decision requires source-backed verification against current official lists and qualified professional review.
 

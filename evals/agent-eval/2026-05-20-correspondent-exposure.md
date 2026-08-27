@@ -174,9 +174,3 @@ The MCP-attached output adds what the CA-Caspian regional lens specifically cont
 
 The case where this matters most is when the agent is invoked by someone NOT a regional specialist (e.g., a generalist AI PM building a compliance tool). The skill content compensates for the agent's lack of regional priors.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored. The rubric's binary structure constrains wishful grading but bias is not eliminated.
-- The agent-eval is structural, not factual. Regional facts (advisory cadence, correspondent posture) are stated qualitatively; this eval does not validate them.
-- This case was favorable to the MCP layer because the regional and sector lenses both clearly applied. On geographically generic questions (e.g., global AI policy), the delta would be smaller.

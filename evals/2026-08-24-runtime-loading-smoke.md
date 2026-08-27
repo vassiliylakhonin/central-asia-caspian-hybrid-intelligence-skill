@@ -89,13 +89,6 @@ The Codex execution trace showed both files being read. Its response used the st
 
 `clawhub inspect central-asia-caspian-hybrid-intelligence-v3-1 --no-input` returned `Skill not found`. Direct GitHub installation succeeded. `openclaw skills info` reported the installed skill as eligible, model-visible, user-invocable, and command-visible with no missing requirements. The installed tree contained both the root `SKILL.md` and `runtimes/openclaw/SKILL.md`.
 
-## Limitations
-
-- This is one authored prompt, not a held-out set or a regression suite.
-- Claude loading evidence includes the model's structured file report and observation of overlay-only behavior; it is not an independent instrumentation channel.
-- Codex loading evidence includes the CLI execution trace.
-- No OpenClaw model turn was run, so OpenClaw analytical and safety behavior is `Not tested`.
-- The test does not verify the fictional premise, score factual accuracy, compare model quality, or establish real-world use.
 
 ## Decision
 

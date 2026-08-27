@@ -91,7 +91,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - A binding and visibly enforced regional BO regime that materially raises baseline counterparty transparency.
 - Further widening of EU transaction bans on Central Asian banks beyond the 2025 cycle [S3, S4].
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: designations, list status, supervisory guidance and EU packages change. This memo does not screen any specific counterparty, item, vessel, port, financial institution, fintech, forwarder or financier against any sanctions, export-control or watchlist. It does not verify any factual claim about ownership, control, end-use or enforcement of any specific party. Any operational decision requires source-backed re-verification at the time of decision and qualified professional review.
 

@@ -89,7 +89,6 @@ All actions are illustrative. Real implementation requires qualified compliance,
 - A major enforcement action against a regional trade-finance provider for circumvention.
 - A durable shift in routing patterns (e.g. away from Caspian-corridor onward routes for sensitive HS codes).
 
-## Limitation note
 
 This memo is illustrative reasoning only. It is not legal, sanctions, export-control, customs, AML, compliance or trade-finance advice. It does not screen any item, party or transaction against any sanctions, export-control or watchlist. It does not verify any factual claim about classification, designation, end-use or enforcement. Any underwriting, document-checking or commercial decision requires source-backed verification against current official lists and qualified professional review.
 

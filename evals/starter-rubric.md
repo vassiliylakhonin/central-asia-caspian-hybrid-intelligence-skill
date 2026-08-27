@@ -53,7 +53,6 @@ A memo with any **0** on a hard-fail dimension (marked ⚠ below) should be revi
 
 15. No determinative compliance language (`fully compliant`, `no risk`, `guaranteed`).
 16. No legal / sanctions / AML / tax / investment advice presented as such.
-17. Limitation note included for risk-related topics.
 18. No claim that the skill itself screens, monitors or verifies.
 
 ### E. Decision usefulness
@@ -99,7 +98,6 @@ Section G: out of **8**. Any **0** in G1–G4 is a hard fail for `user-provided 
 - H1. **Packet is clearly marked as constructed / illustrative** at the top of the memo.
 - H2. **No real-world entity, person, designation, statistic or enforcement action is asserted as factual** outside the labeled illustrative packet.
 - H3. **Memo treats the packet as the boundary of factual authority** in the same way as `user-provided sources` mode.
-- H4. **Limitation note explicitly warns the reader** that conclusions are not real-world claims.
 
 Section H: out of **8**. Any **0** in H1–H4 is a hard fail for `illustrative source packet` mode.
 

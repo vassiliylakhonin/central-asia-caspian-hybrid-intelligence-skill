@@ -50,7 +50,6 @@ Use Global Think Tank Analyst for broad strategic-risk memo workflows; delegate 
    - sector
    - objective and depth
    - evidence mode (reuse the parent workflow's evidence mode where possible)
-4. **Receive a specialist memo** with mechanism-first reasoning, exposure map, trigger points, role-based implications, confidence footer and limitation note.
 5. **Re-integrate the specialist memo** back into the Global Think Tank Analyst workflow as one input among others; do not replace the broader memo with the specialist memo.
 
 ### Boundary

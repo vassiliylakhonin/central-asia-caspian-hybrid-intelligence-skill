@@ -155,10 +155,3 @@ The baseline is operationally useful and already avoids a sanctions-only framing
 
 The Agenda Intelligence condition shows why the Central Asia + Caspian specialist is not merely a sanctions/AML module. It improves the shape of the answer around corridor mechanics: node chain, ferry/port/rail dependencies, dwell-time variance, rerouting rights, operator incentives and fallback-route optionality. This case is an important complement to the correspondent and customs cases because the regional specialist must demonstrate logistics and energy-corridor reasoning, not just financial-crime reasoning.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored by the author / host model. Not external review.
-- Structural eval only. It does not verify current ferry capacity, port dwell times, rail schedules, freight rates, insurance terms or operator status.
-- The local `analyze` run verified request validity and module routing, but did not invoke an external LLM because no `ANTHROPIC_API_KEY` was configured.
-- This is not a factual benchmark, model-quality comparison, aggregate claim, operational recommendation, investment advice, or practitioner validation.

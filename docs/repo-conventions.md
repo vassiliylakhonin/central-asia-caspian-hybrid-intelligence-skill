@@ -37,7 +37,6 @@ Preferred examples:
 - beneficial ownership opacity
 - trade finance or dual-use goods routing
 
-Every example must include evidence mode and limitation note.
 
 Examples should be navigable as a learning path, not only as a flat file list. Keep `examples/README.md` aligned with the flagship examples section in `README.md`.
 

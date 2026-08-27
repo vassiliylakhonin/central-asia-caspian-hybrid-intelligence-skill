@@ -96,7 +96,6 @@ All actions are illustrative. Real implementation requires qualified commercial,
 - Methane-regulation or CBAM-style measure that durably re-prices Caspian fossil offtake.
 - A targeted designation that names specific operators, traders or financiers with corridor exposure (would sharply raise risk, not lower it).
 
-## Limitation note
 
 This memo is `live-source-backed` as of the retrieval date stated above. Sources are time-sensitive: production, route shares, contracts, designations, sanctions and capacity figures change. This memo does not screen any operator, trader, shipowner or financier against any sanctions list. It does not verify any factual claim about throughput, production, contracts, ownership or enforcement of any specific party. Any operational or investment decision requires source-backed re-verification through pipeline operators, national oil/gas companies, regulators, IFIs and qualified professional review.
 

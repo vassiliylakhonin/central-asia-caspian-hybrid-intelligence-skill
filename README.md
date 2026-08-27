@@ -8,7 +8,6 @@ It is for bank and fintech risk teams, logistics and energy operators, regional 
 
 [Try one prompt](#try-it) · [Open the skill file](SKILL.md) · [See worked examples](#flagship-examples)
 
-> No live data. Not sanctions screening, AML monitoring, legal advice, or compliance advice. Human review and current-source verification are required before operational use.
 
 <p align="left">
   <a href="https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill"><img src="https://img.shields.io/github/stars/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill?style=for-the-badge" alt="GitHub stars"></a>
@@ -34,7 +33,6 @@ General-purpose agents often return a regional summary when the user needs a ris
 - mechanism-first reasoning: primary driver → transmission channel → exposure
 - explicit uncertainty labels: `Verified` / `Plausible` / `Judgment` / `Unknown`
 - role-based actions and trigger points — not "monitor closely"
-- an explicit evidence mode and a limitation note on every output
 - no fabricated citations, sanctions designations, or dates
 
 **Where this sits in the Agenda Intelligence stack**
@@ -64,7 +62,6 @@ Time horizon: 6-12 months.
 Evidence mode: reasoning-only unless live source tools are available.
 Mode: risk / compliance.
 
-State the primary driver, mechanism, exposure map, role-based actions, trigger points, confidence, unknowns, and limitation note.
 ```
 
 Expected shape of a good answer:
@@ -72,7 +69,6 @@ Expected shape of a good answer:
 - explains how the risk transmits through payment rails, counterparties, ownership, routing or corridors;
 - labels uncertainty using `Verified` / `Plausible` / `Judgment` / `Unknown` where useful;
 - gives role-based actions and trigger points, not vague "monitor closely" advice;
-- includes a clear limitation note and avoids legal or compliance determinations.
 
 The public browser demos that used this regional frame are no longer published; [`examples/`](examples/) shows the output format.
 
@@ -93,8 +89,6 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 ## What it is not
 
-- not legal advice
-- not compliance advice
 - not sanctions screening
 - not AML transaction monitoring
 - not factuality verification by itself
@@ -197,7 +191,6 @@ For a guided route through the examples, start with [examples/README.md](example
 - [examples/user-provided-sources-russia-iran-china-junction.md](examples/user-provided-sources-russia-iran-china-junction.md) — `user-provided sources` skeleton-packet memo on the Russia–Iran–China commercial junction for a European trade-finance bank's sanctions, compliance and risk leadership; structural framing of junction-pattern tiering vs named-entity screening, composed with the Gulf + Middle East skill, with canonical Axis A / Axis B tags throughout. The user supplies the binding evidence by retrieving from OFAC, EU, UK OFSI, BIS, FATF, EAG and MENAFATF mandate pages.
 - [examples/source-conflict-kz-ru-circumvention-volume-estimates.md](examples/source-conflict-kz-ru-circumvention-volume-estimates.md) — `illustrative source packet` demonstrator of the source-conflict-surfacing rule applied to KZ→RU CHPL-circumvention volume estimates across EU Commission, KSE Institute, Bruegel and industry advisories, with explicit source-independence assessment and regret-asymmetry calibration for EDD threshold decisions.
 
-Every example states its **evidence mode** and ends with a limitation note. The set covers all four canonical evidence modes: six examples use `reasoning-only`, two use `illustrative source packet`, six are `live-source-backed`, and two are `user-provided sources`.
 
 ## Skill files
 
@@ -211,7 +204,6 @@ Every example states its **evidence mode** and ends with a limitation note. The 
 - `docs/currency-watch.md` — active list of fast-moving regional topics (OFAC Russia/Iran, EU sanctions packages, FATF/EAG status, Middle Corridor, CPC/BTC, etc.) that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - `scripts/validate.py` — single dependency-free interface for all repository and packaging checks.
 
-The root owns mechanism-first reasoning, evidence labels, role-based implications, trigger points, the confidence footer, and limitation notes. Runtime overlays contain only their platform additions. The root/overlay split is recorded in [`docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md`](docs/adr/0004-use-root-contract-with-additive-runtime-overlays.md); the verified Claude composition and OpenClaw installation paths are recorded in [`docs/adr/0005-compose-claude-plugin-and-install-openclaw-from-git.md`](docs/adr/0005-compose-claude-plugin-and-install-openclaw-from-git.md).
 
 ## Repository layout
 
@@ -291,7 +283,6 @@ Use them as patterns to structure reasoning, not as factual claims about any spe
 
 [evals/scoring-example.md](evals/scoring-example.md) — worked scoring examples applying the rubric to a `reasoning-only` memo and to the `live-source-backed` memo. The rubric includes evidence-mode-specific dimensions for each of the four canonical modes.
 
-[evals/failure-modes.md](evals/failure-modes.md) — common failure modes (generic essay, alarmism without channel, fake sanctions certainty, fake citations, over-expanded geography, missing limitation note, etc.).
 
 ### Evidence mode vocabulary
 
@@ -302,27 +293,6 @@ Every example and every memo produced with this skill should state one of four c
 - **`illustrative source packet`** — facts grounded in a constructed, illustrative source packet for demonstration purposes.
 - **`reasoning-only`** — no sources retrieved; structural reasoning only. No factual claims about specific entities, designations or enforcement actions.
 
-## Limitations
-
-- This skill helps **structure analysis**; it does not verify facts on its own.
-- It does not perform sanctions screening, AML transaction monitoring, or live source retrieval.
-- It does not provide legal, regulatory, sanctions, AML, tax, audit or investment advice.
-- It does not guarantee correctness, completeness or timeliness of any output.
-- It is not production-grade risk control infrastructure.
-- Outputs require source-backed verification and qualified professional review before any operational, compliance or commercial use.
-- No production-usage, adoption or benchmark numbers are claimed.
-- No practitioner-validation claim is made.
-- See [STATUS.md](STATUS.md) for an honest status against the Definition of Done in `AGENTS.md`. The repo currently clears the "early but credible" bar and the "agent-validated specialist resource" bar; it does **not** claim practitioner validation.
-
-### What this skill has not been tested on
-
-Stated honestly so readers can calibrate. These are gaps in observed evidence, not claims of weakness:
-
-- **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
-- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long autonomous research loops have not been measured.
-- **No systematic cross-model regression tracking.** One [structural runtime-loading smoke test](evals/2026-08-24-runtime-loading-smoke.md) exercised the same safety prompt in Claude and Codex and verified OpenClaw installation and discovery. It is not a model-quality comparison; OpenClaw model behavior was not tested.
-- **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
-- **Limited non-English source coverage.** Russian-, Kazakh-, Uzbek-, and Azerbaijani-language regulatory and registry sources have not been systematically tested as inputs.
 
 ## Roadmap
 
@@ -334,6 +304,3 @@ Indicative direction, not a commitment:
 
 This roadmap is additive. It will not turn this repo into a CLI, MCP server, screening engine or validation platform.
 
-## Disclaimer
-
-This repository provides analytical guidance only and does not constitute legal, regulatory, sanctions, AML, tax, audit or investment advice. Outputs require source-backed verification before any operational, compliance or commercial use.

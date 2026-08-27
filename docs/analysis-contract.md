@@ -74,7 +74,6 @@ When the analysis is built on user-provided sources or a source record with an e
 - **conflict-surfaced** — contradicts another source or the prior assessment; both positions named with their provenance;
 - **out-of-scope** — explicitly excluded, with a one-line reason.
 
-An input claim in none of these states was silently dropped. Silent omission of an input claim is treated the same way as silence about known doubt: an honesty-rule violation, not a style choice. The rule governs accounting, not length — the analysis stays selective, and the accounting is what makes the selection visible. A short "Input claims not used" line near the limitation note satisfies it when several claims share one state.
 
 ## Output shape
 
@@ -92,7 +91,6 @@ Good output should include:
 - unknowns
 - confidence
 - what would change the judgment
-- limitation note
 
 Avoid:
 - generic geopolitical essays

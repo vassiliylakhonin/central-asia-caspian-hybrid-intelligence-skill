@@ -24,7 +24,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
-OWN_SITE_PREFIX = "https://vassiliylakhonin.github.io"
+OWN_SITE_PREFIX = "https://github.com/vassiliylakhonin"
 GONE_STATUSES = {404, 410}
 REQUEST_TIMEOUT = 10
 

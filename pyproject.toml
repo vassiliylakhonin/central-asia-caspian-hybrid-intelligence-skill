@@ -1,7 +1,7 @@
 [project]
-name = "regional-compliance-server"
+name = "central-asia-caspian-compliance-server"
 version = "0.1.0"
-description = "MCP Server for Autonomous Regional Compliance"
+description = "MCP server skeleton for the regional compliance skill (tools are not implemented)"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

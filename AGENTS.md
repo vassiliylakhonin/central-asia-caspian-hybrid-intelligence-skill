@@ -175,7 +175,9 @@ Do not output human-readable summaries, reviewer checklists, or conversational r
 
 
 This repository is an active MCP Server capable of Agent-to-Agent (A2A) swarm orchestration.
-- **MCP Integration:** Run `src/mcp_server.py` to expose tools to the agent.
+- **MCP Integration:** `src/mcp_server.py` is a transport skeleton. Its tools are
+  declared but not implemented and every call returns `status: not_implemented`;
+  never read a response from it as a screening result.
 - **Swarm Handoffs:** If a transaction spans across multiple regions (e.g., Central Asia and the Gulf), automatically delegate sub-tasks to the corresponding regional sibling agent.
 - **GraphRAG & Memory:** Utilize `docs/graph-ontology.md` and `docs/memory-protocol.md` to persist state and traverse complex ownership graphs.
 - **Structured Outputs:** The skill now mandates machine-readable JSON compliance decisions per `docs/analysis-contract.md`.

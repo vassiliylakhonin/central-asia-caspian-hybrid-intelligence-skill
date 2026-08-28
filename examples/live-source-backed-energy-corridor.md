@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-08.** All factual claims below are grounded in publicly retrievable secondary or primary sources cited inline. Sources are time-sensitive — production, route shares, sanctions and contracts change. Re-verify against current authoritative sources before any operational use.
 >
-> Autonomous compliance determination.
+> Human review required; this example is not a compliance determination.
 
 ## User question
 

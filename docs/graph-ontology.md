@@ -1,6 +1,8 @@
-# GraphRAG Ontology
+# Proposed Graph Ontology
 
-To move beyond flat markdown archetypes, this skill relies on a graph-based understanding of risk.
+This document proposes a vocabulary that a future, separately implemented graph
+store could use. The repository does not currently contain a graph database,
+continuous traversal process, or verified ownership dataset.
 
 ## Node Types
 - `Entity` (Company, Individual)
@@ -14,8 +16,9 @@ To move beyond flat markdown archetypes, this skill relies on a graph-based unde
 - `DOCKED_AT` (Vessel -> Port)
 - `CORRESPONDENT_FOR` (Bank -> Bank)
 
-## Usage
-Agents should use the `analyze_graph_relationships` tool to evaluate these edges (e.g., detecting if a Kazakhstan bank is `CORRESPONDENT_FOR` an entity that `TRANSACTS_WITH` a sanctioned Russian node).
+## Current status
 
-## Dark Factory Execution
-The graph is traversed continuously in the background. Node risk scores are autonomously updated without prompting, supporting the Infinity scale ratio.
+`analyze_graph_relationships` returns `status: not_implemented`. An empty response
+is not evidence that an entity has no connections. A future implementation must
+identify its data sources, retrieval date, entity-resolution method, uncertainty,
+and human-review boundary before this ontology can support a finding.

@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-08.** All factual claims below are grounded in publicly retrievable secondary or primary sources cited inline. Sources are time-sensitive — designations, lists and capacity figures change. Re-verify against current authoritative sources before any operational use.
 >
-> Autonomous compliance determination.
+> Human review required; this example is not a compliance determination.
 
 ## User question
 
@@ -135,4 +135,3 @@ This memo is `live-source-backed` as of the retrieval date stated above. Sources
 ### Source-tier note
 
 Compliance-side claims are anchored to primary OFAC and Treasury URLs ([S1a], [S7]) and the EAG / FATF mutual-evaluation index and Kazakhstan MER PDF ([S4], [S4a]). Capacity-side claims are anchored to the World Bank report PDF ([S2-PDF]) and the EBRD / European Commission report PDF ([S3-PDF]). Tier 2 reporting ([S1b], [S2a], [S3], [S5], [S6], [S8]) is used for accessible numeric framing and should be treated as interpretive, not as the basis for legal-grade claims. The EBRD figures from primary [S3-PDF] (~€3.5 bn immediate, 130,000 TEU 2040 BAU) and from secondary [S3] (~€18.5 bn 2022–2027) are different framings — immediate baseline vs broader modernization roadmap — not a single contested number. For any operational decision, re-verify against current OFAC SDN, BIS Entity List, EU consolidated, OFSI consolidated and UN lists at the point of use.
-

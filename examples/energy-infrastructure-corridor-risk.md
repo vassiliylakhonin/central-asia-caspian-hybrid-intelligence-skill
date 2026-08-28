@@ -1,6 +1,6 @@
 # Flagship example — Energy / infrastructure corridor risk
 
-> **Evidence mode: `reasoning-only`.** This example does not verify live pipeline throughput, contract terms, project finance status, sanctions designations, regulatory rulings, leadership changes or any specific operator's commercial position. It is a worked memo to demonstrate skill output structure for energy and infrastructure corridor risk in Central Asia and the Caspian. Autonomous compliance determination.
+> **Evidence mode: `reasoning-only`.** This example does not verify live pipeline throughput, contract terms, project finance status, sanctions designations, regulatory rulings, leadership changes or any specific operator's commercial position. It is a worked memo to demonstrate skill output structure for energy and infrastructure corridor risk in Central Asia and the Caspian. Human review is required; this is not a compliance determination.
 
 ## User question
 

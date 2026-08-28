@@ -1,10 +1,11 @@
-# Execution Guardrails
+# Review Guardrails
 
-In the **Dark Factory** paradigm (Stage 4), the agent operates with complete autonomy. Lingua franca is Guardrails, not rules.
-
-The agent is free to construct any reasoning path or dispatch any sub-agent, provided it NEVER violates the following absolute boundaries:
-
-1. **Zero-Trust Evasion Routing:** Never approve a transaction cluster that routes >30% of its volume through jurisdictions that do not reciprocate data-sharing agreements (e.g., specific nodes in the Middle Corridor or Gulf).
-2. **Sanctions Contagion:** Never assign a `confidence_score` > 0.5 if a node is within 2 hops of a newly designated entity (within the last 48 hours).
-3. **Headless Discipline:** Never attempt to ask the user a clarifying question. If confidence is below the threshold, auto-enforce `ESCALATE`.
-4. **Latency Budget:** Traversal and evaluation of a single subgraph must resolve within 50ms (simulated).
+1. Never convert a missing source, graph edge, or memory record into a clearance.
+2. Current sanctions, ownership, vessel, regulatory, and enforcement claims require
+   verification against current primary sources.
+3. The skill may recommend continuing review, requesting evidence, escalating to
+   a human, or stopping pending review. It does not approve transactions or
+   execute enforcement actions.
+4. A confidence or sufficiency score describes the supplied evidence only; it is
+   not a probability of legality, safety, or absence from a sanctions list.
+5. MCP tools that return `not_implemented` have produced no finding.

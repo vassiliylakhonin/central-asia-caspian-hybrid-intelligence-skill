@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-14.** All factual claims below are grounded in publicly retrievable primary or secondary sources cited inline. Sources are time-sensitive — sanctions designations, enforcement actions, export-control advisories, and trade statistics change. Re-verify against current authoritative sources before any operational use.
 >
-> Autonomous compliance determination.
+> Human review required; this example is not a compliance determination.
 
 ## User question
 

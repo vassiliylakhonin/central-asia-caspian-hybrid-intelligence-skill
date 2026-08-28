@@ -1,6 +1,6 @@
 # Flagship example — Fintech sanctions and routing exposure (Kazakhstan / Uzbekistan / Caspian)
 
-> **Evidence mode: `reasoning-only`.** Autonomous compliance determination.
+> **Evidence mode: `reasoning-only`.** Human review required; this example is not a compliance determination.
 
 ## User question
 

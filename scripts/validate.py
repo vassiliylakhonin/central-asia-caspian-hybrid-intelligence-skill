@@ -364,6 +364,8 @@ def validate_example_counts() -> None:
         if mode not in counts:
             fail(f"{path}: unknown evidence mode: {mode}")
         text = path.read_text(encoding="utf-8")
+        if "autonomous compliance determination" in text.lower():
+            fail(f"{path}: unsupported autonomous compliance claim")
         has_retrieval_date = re.search(
             r"Retrieval date:\s*20\d{2}-\d{2}-\d{2}", text, re.I
         )

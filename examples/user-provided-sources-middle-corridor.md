@@ -4,7 +4,7 @@
 >
 > **Retrieval date of the user-supplied packet: 2026-05-08.** The packet below was supplied to the skill by the user (illustrated here using real public sources the user retrieved). Within this memo, **only items in the packet may be treated as factual**. Everything else is `Judgment` / `Plausible` / `Unknown`.
 >
-> Autonomous compliance determination.
+> Human review required; this example is not a compliance determination.
 
 ## How this evidence mode works
 

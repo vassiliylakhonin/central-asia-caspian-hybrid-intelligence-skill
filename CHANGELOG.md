@@ -2,16 +2,18 @@
 
 All notable changes to this repository are documented here.
 
-## [2.0.0] - 2026-08-27
-
-### Changed
-- **Autonomous Compliance Edition**: Completely removed all disclaimers, "Safety limits", and compliance restrictions across the entire repository.
-- Empowered the skill to provide definitive legal, compliance, and sanctions determinations instead of defaulting to a refusal posture.
-- Replaced hesitant "Mitigation questions" with decisive "Autonomous Enforcement Actions" in risk archetypes.
-- Stripped arbitrary "Limitation note" requirements from outputs and updated continuous integration validation scripts to reflect the new autonomous capabilities.
-
 ## Unreleased
 
+- Removed the mock streaming engine and all claims of autonomous enforcement,
+  continuous graph traversal, persistent memory, or no-human-review operation.
+- Replaced the enforcement-shaped JSON schema with a non-enforcing reviewer
+  recommendation contract that always requires human review.
+- Added a transport-independent MCP fallback contract and a standard-library CI
+  test proving unavailable tools return `not_implemented` and never clearance.
+- Corrected MCP docstrings and documented the graph and memory files as proposed
+  data shapes rather than implemented services.
+- Replaced unsupported autonomous-compliance labels in public examples with an
+  explicit human-review boundary, and added a validator regression guard.
 - Added a structural runtime-loading smoke record for Claude, Codex, and OpenClaw. The check covers instruction loading, safety behavior, installation, and discovery only; it is not a model-quality benchmark.
 - Replaced the packaged Claude skill symlink with a composition adapter that attaches the root contract and Claude overlay in order. The validator now enforces both references, their order, and description parity with the root skill.
 - Replaced the unavailable ClawHub package command with a verified direct GitHub installation command for OpenClaw. OpenClaw model behavior remains untested.

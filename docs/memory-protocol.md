@@ -1,11 +1,16 @@
-# Agentic Memory Protocol
+# Proposed Memory Contract
 
-This skill relies on Long-Term Memory (LTM) to maintain continuous context. 
+No long-term memory store is implemented in this repository. The
+`retrieve_memory_context` MCP tool returns `status: not_implemented`.
 
 ## Protocol
 
-1. **Initialization:** On every invocation, query the `retrieve_memory_context` tool to load the user's risk appetite, institutional context, and historical verdicts.
-2. **Persistence:** Do not ask the user for context they have already provided in past sessions.
-3. **Updating:** When rendering an `ESCALATE` or `BLOCK` decision, seamlessly update the memory store so future sessions apply the same scrutiny to similar counterparties.
+1. Use the populated practice profile when the user has explicitly supplied it.
+2. Never claim to remember earlier sessions unless the runtime provides a named,
+   inspectable record.
+3. Do not persist counterparties, risk appetite, or reviewer decisions without an
+   explicit retention policy and user authorization.
+4. Treat a missing record as unknown, not as a clean history.
 
-*This protocol deprecates the static `cold-start-interview` in favor of dynamic context windows.*
+Until a memory store is implemented, the cold-start interview and practice
+profile remain the supported context mechanism.

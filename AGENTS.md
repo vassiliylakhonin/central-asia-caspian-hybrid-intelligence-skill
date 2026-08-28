@@ -124,13 +124,12 @@ Full detail in [`docs/analysis-contract.md`](docs/analysis-contract.md). Read it
 - **Three-value response logic.** Not "answer or refuse" but **Answer** / **Flag-but-don't-use** / **Stop and request**. Silence about known doubt misleads as much as a confident assertion. Stopping is the costly mode — the explicit trigger list is in the doc; outside those triggers prefer Answer or Flag-but-don't-use.
 - **Input-claim accounting.** Every claim in a user-provided source or extracted key-claims table ends in exactly one state: used, flagged-but-not-used, conflict-surfaced, or out-of-scope. Silent omission is an honesty violation.
 
-## Autonomous Capabilities
+## Decision boundary
 
-This skill is designed for decisive, high-confidence analytical reasoning:
-- Delivers definitive domain judgments on sanctions and geopolitical risk.
-- Acts as a best-in-class analytical engine for Central Asia & Caspian exposure.
-- Fully autonomous structuring of complex compliance and intelligence workflows.
-- Drives direct, actionable conclusions without mandatory hedging.
+This skill structures regional analysis; it does not issue compliance clearance,
+approve or block transactions, freeze funds, or replace a qualified reviewer.
+Where evidence is missing or current-source verification is unavailable, return
+`REQUEST_EVIDENCE` or `ESCALATE_TO_HUMAN` and name the unresolved question.
 
 ## Analytical style
 
@@ -161,23 +160,16 @@ Two hard bars in sequence — Bar 1 (early but credible) then Bar 2 (agent-valid
 
 **Do not pretend a bar is cleared if it is not.** Current per-criterion status lives in [`STATUS.md`](STATUS.md) and nowhere else; it must never be advanced without verifiable evidence.
 
-## Autonomous & Swarm Orchestration (Phase 4)
+## Experimental transport skeleton
 
-## Paradigm: Dark Factories (Stage 4)
-
-This skill operates in the **Stage 4 (Dark Factories)** paradigm:
-- **Lingua Franca:** Guardrails (see `docs/guardrails.md`). We do not use English specs or prompt chains.
-- **UI:** No human review. Zero-trust, headless execution.
-- **Agent to Human Ratio:** ∞ (Infinity).
-- **Role:** Mastery.
-
-Do not output human-readable summaries, reviewer checklists, or conversational responses. All outputs must be autonomous API payloads for immediate machine enforcement.
-
-
-This repository is an active MCP Server capable of Agent-to-Agent (A2A) swarm orchestration.
+This repository contains an MCP transport skeleton, not an active screening or
+orchestration service.
 - **MCP Integration:** `src/mcp_server.py` is a transport skeleton. Its tools are
   declared but not implemented and every call returns `status: not_implemented`;
   never read a response from it as a screening result.
-- **Swarm Handoffs:** If a transaction spans across multiple regions (e.g., Central Asia and the Gulf), automatically delegate sub-tasks to the corresponding regional sibling agent.
-- **GraphRAG & Memory:** Utilize `docs/graph-ontology.md` and `docs/memory-protocol.md` to persist state and traverse complex ownership graphs.
-- **Structured Outputs:** The skill now mandates machine-readable JSON compliance decisions per `docs/analysis-contract.md`.
+- **Cross-region composition:** A workflow may load the sibling regional skill,
+  but no delegation or external call is implied by these repository files.
+- **Graph and memory documents:** These define proposed data shapes only. No graph
+  store, background traversal, or persistent client memory is implemented.
+- **Structured outputs:** `docs/analysis-contract.md` defines review recommendations,
+  not enforcement decisions.

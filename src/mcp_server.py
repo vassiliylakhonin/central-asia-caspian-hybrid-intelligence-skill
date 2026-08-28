@@ -10,32 +10,20 @@ agent has no way to tell it apart from a real screening result. Until a tool is
 backed by an actual source, it must say so.
 """
 
-import json
-
 from mcp.server.fastmcp import FastMCP
+from mcp_contract import unimplemented_response
 
 mcp = FastMCP("central-asia-caspian-compliance-server")
 
-NOT_IMPLEMENTED = "not_implemented"
-
-
 def _unimplemented(tool: str, needs: str, **echo: object) -> str:
-    return json.dumps(
-        {
-            "status": NOT_IMPLEMENTED,
-            "tool": tool,
-            "detail": f"{tool} has no data source wired up. It requires {needs}.",
-            "result_is_not_a_finding": True,
-            **echo,
-        }
-    )
+    return unimplemented_response(tool, needs, **echo)
 
 
 @mcp.tool()
 def query_regional_sanctions(entity_name: str) -> str:
     """Screen an entity against regional sanctions lists. Not yet implemented.
 
-    Returns status "". Do not read the response as a clearance.
+    Returns status ``not_implemented``. Do not read the response as a clearance.
     """
     return _unimplemented(
         "query_regional_sanctions",
@@ -48,7 +36,7 @@ def query_regional_sanctions(entity_name: str) -> str:
 def analyze_graph_relationships(node_id: str, depth: int = 2) -> str:
     """Traverse the regional knowledge graph. Not yet implemented.
 
-    Returns status "". An empty edge list is not evidence of
+    Returns status ``not_implemented``. An empty edge list is not evidence of
     an absence of connections.
     """
     return _unimplemented(
@@ -63,7 +51,7 @@ def analyze_graph_relationships(node_id: str, depth: int = 2) -> str:
 def retrieve_memory_context(client_id: str) -> str:
     """Retrieve a client's recorded risk appetite and past verdicts. Not yet implemented.
 
-    Returns status "". Absence of escalations here does not mean
+    Returns status ``not_implemented``. Absence of escalations here does not mean
     a client has none.
     """
     return _unimplemented(

@@ -2,25 +2,25 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "decision": {
+    "recommendation": {
       "type": "string",
       "enum": [
-        "APPROVE",
-        "BLOCK",
-        "ESCALATE",
-        "REQUEST_EVIDENCE"
+        "CONTINUE_REVIEW",
+        "REQUEST_EVIDENCE",
+        "ESCALATE_TO_HUMAN",
+        "STOP_PENDING_REVIEW"
       ],
-      "description": "The autonomous compliance decision."
+      "description": "A non-enforcing recommendation for the human review workflow."
     },
-    "confidence_score": {
+    "evidence_sufficiency_score": {
       "type": "number",
       "minimum": 0,
       "maximum": 1,
-      "description": "Confidence in the decision based on available graph and memory data."
+      "description": "Completeness of the supplied evidence, not probability of legality or safety."
     },
-    "autonomous_enforcement_action": {
+    "suggested_reviewer_action": {
       "type": "string",
-      "description": "Machine-readable action code to trigger in the upstream system (e.g., 'TRIGGER_EDD', 'FREEZE_FUNDS')."
+      "description": "A proposed next review step; this value grants no authority to execute it."
     },
     "rationale": {
       "type": "string",
@@ -32,12 +32,18 @@
         "type": "string"
       },
       "description": "List of node IDs from the GraphRAG ontology implicated in the risk."
+    },
+    "human_review_required": {
+      "const": true,
+      "description": "Always true for this regional skill."
     }
   },
   "required": [
-    "decision",
-    "confidence_score",
-    "autonomous_enforcement_action",
-    "rationale"
-  ]
+    "recommendation",
+    "evidence_sufficiency_score",
+    "suggested_reviewer_action",
+    "rationale",
+    "human_review_required"
+  ],
+  "additionalProperties": false
 }

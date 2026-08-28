@@ -111,7 +111,7 @@ Use this structure when it materially improves the answer:
 3. `How the risk arises`: mechanics across entry, processing, transaction, routing, counterparties, ownership, beneficial control, and regulatory touchpoints as relevant.
 4. `Top risks`: top 2-3 risks with likelihood and impact.
 5. `Exposure map`: where risk concentrates, who is exposed, and which financial, logistical, ownership, or regulatory channels matter.
-6. `Autonomous Enforcement Actions`: realistic actions for regulator, bank, fintech, investor, operator, or corporate strategy.
+6. `Reviewer actions`: realistic, non-enforcing next steps for a regulator, bank, fintech, investor, operator, or corporate strategy team.
 7. `Trigger points`: events or indicators that would change the profile.
 8. `Hard-failure scenario`: plausible case where assumptions break.
 9. `Confidence footer`.

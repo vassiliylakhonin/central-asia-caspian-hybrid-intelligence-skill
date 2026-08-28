@@ -4,7 +4,7 @@
 >
 > **Retrieval date: 2026-05-14.** All factual claims below are grounded in publicly retrievable primary or secondary sources cited inline. Sources are time-sensitive — FATF grey-list status, designations, and supervisory guidance change. Re-verify against current authoritative sources before any operational use.
 >
-> Autonomous compliance determination.
+> Human review required; this example is not a compliance determination.
 
 ## User question
 

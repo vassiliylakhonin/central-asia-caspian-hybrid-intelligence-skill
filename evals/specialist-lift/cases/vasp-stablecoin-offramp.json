@@ -1,0 +1,7 @@
+{
+  "id": "vasp-stablecoin-offramp",
+  "archetype": "Crypto / VASP rails exposure",
+  "negative_control": false,
+  "question": "A payments company we are onboarding settles a large share of its cross-border volume in USDT through OTC desks in Central Asia, and describes its counterparties as licensed and low-risk. Its declared business is SME import financing. Can we onboard it, and what would have to be true?",
+  "decision_context": "A fintech's financial-crime committee, deciding an onboarding case. Horizon: immediate decision, 12-month monitoring plan."
+}

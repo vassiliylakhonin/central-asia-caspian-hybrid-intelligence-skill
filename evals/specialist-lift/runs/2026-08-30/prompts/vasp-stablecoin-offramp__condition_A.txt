@@ -1,0 +1,7 @@
+# Question
+
+A payments company we are onboarding settles a large share of its cross-border volume in USDT through OTC desks in Central Asia, and describes its counterparties as licensed and low-risk. Its declared business is SME import financing. Can we onboard it, and what would have to be true?
+
+# Decision context
+
+A fintech's financial-crime committee, deciding an onboarding case. Horizon: immediate decision, 12-month monitoring plan.

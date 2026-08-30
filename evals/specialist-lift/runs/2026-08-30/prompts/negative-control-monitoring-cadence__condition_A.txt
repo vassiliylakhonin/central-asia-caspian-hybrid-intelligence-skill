@@ -1,0 +1,7 @@
+# Question
+
+Our fintech subsidiary in Uzbekistan currently retrains its transaction-monitoring models on a fixed quarterly cycle. The team has proposed moving to continuous retraining as new labelled alerts arrive. Which approach is appropriate, and what are the main trade-offs?
+
+# Decision context
+
+A fintech's model-risk owner, choosing a retraining cadence. Horizon: next model governance cycle.

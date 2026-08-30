@@ -1,0 +1,7 @@
+# Question
+
+We move containerised cargo from western China to Europe and are considering shifting a larger share onto the Middle Corridor. Our forwarder describes it as an approved route with predictable transit times. What should we understand before committing volume?
+
+# Decision context
+
+A shipper's logistics director, deciding annual routing allocation for the coming contract year. Horizon: 12 months.

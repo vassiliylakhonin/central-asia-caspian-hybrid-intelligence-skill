@@ -1,0 +1,7 @@
+{
+  "id": "post-designation-successor-entity",
+  "archetype": "Sanctioned-party adjacency",
+  "negative_control": false,
+  "question": "A counterparty we deal with was incorporated in Central Asia shortly after a designation affecting a company at the same registered address, and shares one director with it. The counterparty itself is not on any list. Is it permissible to keep transacting?",
+  "decision_context": "A commodities trader's compliance function, deciding whether to continue an existing contract. Horizon: immediate."
+}

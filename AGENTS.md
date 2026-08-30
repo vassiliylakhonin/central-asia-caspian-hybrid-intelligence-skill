@@ -156,9 +156,11 @@ Prefer additive improvements. Do not introduce heavy dependencies unless necessa
 
 ## Definition of done
 
-Two hard bars in sequence — Bar 1 (early but credible) then Bar 2 (agent-validated specialist resource) — with an optional, audience-gated practitioner-trust layer. The binary criteria and anti-criteria are in [`docs/definition-of-done.md`](docs/definition-of-done.md).
+Two axes. **Continuous invariants** (C1–C4) must hold at every commit and can regress: declared executables run on a clean install, the package installs namespaced, no tool returns a fabricated finding, documentation references resolve. **Bars** run in sequence — Bar 1 (early but credible), Bar 2 (agent-validated specialist resource), Bar 3 (demonstrated specialist lift) — with an optional, audience-gated practitioner-trust layer. The binary criteria and anti-criteria are in [`docs/definition-of-done.md`](docs/definition-of-done.md).
 
-**Do not pretend a bar is cleared if it is not.** Current per-criterion status lives in [`STATUS.md`](STATUS.md) and nowhere else; it must never be advanced without verifiable evidence.
+Bar 3 tests the claim this repo is named for: that the vertical changes the *substance* of an answer beyond the horizontal method alone. It can be cleared by a null result — if the vertical adds nothing, the honest outcome is to fold its content into the horizontal method and retire the separate repo.
+
+**Do not pretend a bar is cleared if it is not, and do not let a cleared bar mask a failing invariant.** An invariant failure is a defect and ranks ahead of new bar work. Current per-criterion status lives in [`STATUS.md`](STATUS.md) and nowhere else; it must never be advanced without verifiable evidence.
 
 ## Experimental transport skeleton
 

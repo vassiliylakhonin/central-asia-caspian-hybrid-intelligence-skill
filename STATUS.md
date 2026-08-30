@@ -80,7 +80,7 @@ None of these steps should be faked. Bar 2 is now cleared as a hard agent-integr
 
 ## Bar 3 — Demonstrated specialist lift
 
-**Not attempted.** No criterion is met. This is the honest state, not a deferral: Bar 2 was cleared in May–August 2026 and no measurement of substantive lift has been run since.
+**Not attempted.** The harness (B3.7) is in place; no measurement has been run and no other criterion is met. This is the honest state, not a deferral: Bar 2 was cleared in May–August 2026 and no measurement of substantive lift has been run since.
 
 Recorded plainly because it is the load-bearing gap in this repo. The Bar 2 agent-eval deltas are large (3/7 → 7/7 and comparable margins on the other cases), and every one of those writeups states that the rubric is structural. A structural rubric shows a large delta for any well-formed skill file. **There is currently no evidence that the Central Asia + Caspian content adds anything over the horizontal method (`global-think-tank-analyst`) on its own.** That is the claim the repo is named for.
 
@@ -92,7 +92,7 @@ Recorded plainly because it is the load-bearing gap in this repo. The Bar 2 agen
 | B3.4 Blind, different-family judge | ❌ not met | One Bar 2 case (`2026-06-30-sdn-premise-stop.md`) used two blind judges including a cross-vendor one — the right method, applied to a structural rubric. Reusable here. |
 | B3.5 Lift reported per case, including null and negative | ❌ not met | Nothing measured yet. |
 | B3.6 ≥1 negative control (region should not change the substance) | ❌ not met | No negative control exists anywhere in `evals/`. |
-| B3.7 Re-runnable harness | ❌ not met | Bar 2 cases are manual writeups; no script regenerates them. |
+| B3.7 Re-runnable harness | ✅ met | `evals/specialist-lift/tools/lift_eval.py` emits the three-condition prompt bundles, pins the rubric and both skill files by SHA-256, records the blinding key, and turns blind scores into a per-case report. It has no provider dependency, so it runs anywhere. `tools/validate_lift.py` runs in CI and `tests/test_lift_harness.py` proves each refusal fires. Met ahead of the criteria it serves: the harness is the part that does not need regional knowledge. |
 | B3.8 Scope statement on every Bar 3 case | ❌ not met | No cases yet. |
 
 ### Open path to Bar 3
@@ -101,12 +101,13 @@ In honest order. The two blocking defects are cleared.
 
 1. ~~Fix C1 — unify the `mcp` major version across the portfolio and correct the import.~~ Done (2026-08-30).
 2. ~~Fix C2 — add `[build-system]`, ship a namespaced package, and make the test import the installed name.~~ Done (2026-08-30).
-3. Write the substantive rubric from `docs/risk-archetypes.md` and commit it **before** generating anything (B3.1). This is the step that decides whether Bar 3 means anything; it is also the step only the author can do, because it requires the regional knowledge the repo claims to encode.
-4. Build the harness and run five cases plus one negative control under the three-condition protocol (B3.2, B3.3, B3.6, B3.7).
-5. Score blind with a different-family judge and publish every result, including nulls (B3.4, B3.5, B3.8).
-6. Act on the answer. Positive lift: this repo is justified as a separate skill and the rubric becomes the maintenance target. Null lift: fold the regional content into the horizontal method and retire this repo. Both outcomes clear Bar 3.
+3. ~~Build the harness.~~ Done (2026-08-30) — `evals/specialist-lift/`, with the rubric-hash and no-dropped-case refusals enforced by test (B3.7).
+4. Write the substantive rubric from `docs/risk-archetypes.md` and commit it **before** generating anything (B3.1). This is the step that decides whether Bar 3 means anything; it is also the step only the author can do, because it requires the regional knowledge the repo claims to encode. The harness refuses to run against the placeholder rubric.
+5. Define five cases plus one negative control and run them under the three-condition protocol (B3.2, B3.3, B3.6).
+6. Score blind with a different-family judge and publish every result, including nulls (B3.4, B3.5, B3.8).
+7. Act on the answer. Positive lift: this repo is justified as a separate skill and the rubric becomes the maintenance target. Null lift: fold the regional content into the horizontal method and retire this repo. Both outcomes clear Bar 3.
 
-Do not add more examples, archetypes or source-backed memos in place of steps 3-5. Bar 1 and Bar 2 are cleared; more of their currency does not buy Bar 3.
+Do not add more examples, archetypes or source-backed memos in place of steps 4-6. Bar 1 and Bar 2 are cleared; more of their currency does not buy Bar 3.
 
 ## What this status is not
 

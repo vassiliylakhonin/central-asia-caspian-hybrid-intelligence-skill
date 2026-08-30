@@ -10,10 +10,12 @@ agent has no way to tell it apart from a real screening result. Until a tool is
 backed by an actual source, it must say so.
 """
 
-from mcp.server.fastmcp import FastMCP
-from mcp_contract import unimplemented_response
+from mcp.server.mcpserver import MCPServer
 
-mcp = FastMCP("central-asia-caspian-compliance-server")
+from .contract import unimplemented_response
+
+mcp = MCPServer("central-asia-caspian-compliance-server", version="0.2.0")
+
 
 def _unimplemented(tool: str, needs: str, **echo: object) -> str:
     return unimplemented_response(tool, needs, **echo)
@@ -61,5 +63,10 @@ def retrieve_memory_context(client_id: str) -> str:
     )
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Console-script entry point declared in ``pyproject.toml``."""
     mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main()

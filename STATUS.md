@@ -2,18 +2,40 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-## What Bar 1 and Bar 2 mean
+## What the invariants and the bars mean
 
-This repo uses a two-bar Definition of Done. Full criteria live in [`docs/definition-of-done.md`](docs/definition-of-done.md); the short version:
+Maturity is tracked on two axes.
 
-- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: README follows the section structure in [`docs/repo-conventions.md`](docs/repo-conventions.md) "README priorities", all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation script passing on every commit to `main`, no exaggerated claims.
-- **Bar 2 — Agent-validated specialist resource.** The harder bar for agent-integration use: source-anchored majority of flagship examples, at least three agent-eval delta cases under `evals/agent-eval/`, evidence-mode mapping exercised through Agenda Intelligence MD's `analyze` tool, platform differentiation (or honest consolidation) across `runtimes/{claude,codex,openclaw}/SKILL.md`, source freshness discipline, and explicit structural-only honesty on every agent-eval. B2.8 (practitioner review) is optional and audience-gated, not a hard gate.
+**Continuous invariants (C1–C4)** must hold at every commit and *can regress*. They cover whether the repo currently works, not how much work has been done. A cleared bar never entitles the repo to a failing invariant, and an invariant failure takes precedence over new bar work.
 
-Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
+**Bars** are sequential and one-way. Full criteria live in [`docs/definition-of-done.md`](docs/definition-of-done.md); the short version:
+
+- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: README follows the section structure in [`docs/repo-conventions.md`](docs/repo-conventions.md) "README priorities", all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation passing, no exaggerated claims.
+- **Bar 2 — Agent-validated specialist resource.** The agent-integration bar: source-anchored majority of flagship examples, at least three agent-eval delta cases, evidence-mode mapping exercised through Agenda Intelligence MD's `analyze` tool, platform differentiation (or honest consolidation) across runtime variants, source freshness discipline, and explicit structural-only honesty on every agent-eval. B2.8 (practitioner review) is optional and audience-gated.
+- **Bar 3 — Demonstrated specialist lift.** The bar that tests the repo's actual claim: that this vertical changes the *substance* of an answer beyond the horizontal method alone. Bar 2 measured structure, and a structural rubric rewards any well-formed skill file. Bar 3 measures substance under a pre-registered rubric, a three-condition protocol (no skill / horizontal only / horizontal + vertical), and a blind different-family judge. **Bar 3 can be cleared by a null result** — if the vertical demonstrably adds nothing, the honest outcome is to fold its content into the horizontal method and retire the separate repo.
+
+Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` and `docs/definition-of-done.md` list moves that do *not* count as progress.
+
+**Update (2026-08-30, later):** C1 and C2 fixed and verified; both now met. The `mcp` pin is `mcp>=2.0,<3` across the portfolio, the server ships as the namespaced package `central_asia_caspian_compliance_server`, and CI installs the package before running tests so the invariants are checked rather than asserted. Package version bumped 0.1.0 → 0.2.0: the import path changed. Bar 3 remains **not attempted**.
+
+**Update (2026-08-30):** Added the continuous-invariant axis (C1-C4) and Bar 3 (demonstrated specialist lift). No previously recorded bar status was changed — cleared bars stay cleared, and rewriting them retroactively would break the audit trail this file exists to keep. Two invariants are recorded as **not met** on first assessment (C1, C2); both are verified defects in the executable surface, not new criteria applied to old work. Bar 3 is recorded as **not attempted**.
 
 **Last updated:** 2026-08-24 (the root skill carries the complete runtime-neutral contract. A structural smoke test verified root-plus-overlay loading in Claude and Codex and direct GitHub installation and discovery in OpenClaw; OpenClaw model behavior was not tested. The four existing `analyze` agent-eval delta cases remain compatibility evidence for the older strategic-intelligence runtime.)
 
 Current Agenda composition: this repo produces regional reasoning and an optional claim/source packet; Agenda Intelligence MD lints packet completeness before human review. The linter does not assess factual truth. Existing `analyze` / MCP evals remain valid for their recorded compatibility workflow, but they do not validate the current evidence-packet linter.
+
+## Continuous invariants
+
+Checked at every commit. These can regress. All four currently hold; C1 and C2 were recorded as failing on 2026-08-30 and fixed the same day, which is the axis working as intended.
+
+| Invariant | Status | Evidence |
+|---|---|---|
+| C1 Declared executables run on a clean install | ✅ met | Verified end to end on a clean venv built only from the declared dependencies: `pip install -e .` resolves mcp 2.1.1, the console script `central-asia-caspian-compliance-server` starts, completes the MCP `initialize` handshake, and returns all three tools from `tools/list`. `scripts/validate.py` and the `unittest` suite also pass. CI installs the package before running tests, so this is checked on every commit rather than asserted. Previously not met: an unbounded `mcp>=1.2.0` pin against `from mcp.server.fastmcp import FastMCP`, which mcp 2.x renamed to `MCPServer` — the pin is now `mcp>=2.0,<3` and the whole portfolio targets the same major version. |
+| C2 Package installs as a namespaced package | ✅ met | `pyproject.toml` declares a `[build-system]` block and `[tool.setuptools.packages.find]`. The wheel's `top_level.txt` contains exactly `central_asia_caspian_compliance_server`; nothing is installed at the top level of `site-packages`. The intra-package import is relative (`from .contract import ...`) and no longer depends on the working directory. `tests/test_mcp_contract.py` imports through the installed name, and `PackagingInvariantTests` asserts that the server module imports and that all three tools are registered — so the test now exercises the shipped artifact rather than a file path. |
+| C3 No tool returns a fabricated finding | ✅ met | Every declared tool in `src/central_asia_caspian_compliance_server/server.py` returns `not_implemented` with `result_is_not_a_finding` and `human_review_required`. `test_every_declared_tool_refuses_rather_than_answering` now calls each tool through the server and checks the payload, and `test_structured_contract_cannot_approve_or_enforce` asserts that `schemas/compliance-decision.schema.json` cannot express `approve`, `block` or `freeze_funds` and that `human_review_required` is `const: true`. Enforced by test, not by prose. |
+| C4 Documentation references resolve | ✅ met | `scripts/validate.py` checks tracked Markdown links and own-site links on every commit; currently passing. |
+
+Invariant failures are defects, not roadmap items, and rank ahead of any bar work.
 
 ## Bar 1 — Early but credible
 
@@ -55,6 +77,36 @@ What would need to happen, in honest order:
 7. If the audience expands to practitioner buying-side trust, add practitioner reviews under `validated-cases/`; do not treat them as required for agent-first Bar 2.
 
 None of these steps should be faked. Bar 2 is now cleared as a hard agent-integration bar, not as practitioner validation. Most repos in this space conflate a polished prompt with evidence that it improves agent output structure.
+
+## Bar 3 — Demonstrated specialist lift
+
+**Not attempted.** No criterion is met. This is the honest state, not a deferral: Bar 2 was cleared in May–August 2026 and no measurement of substantive lift has been run since.
+
+Recorded plainly because it is the load-bearing gap in this repo. The Bar 2 agent-eval deltas are large (3/7 → 7/7 and comparable margins on the other cases), and every one of those writeups states that the rubric is structural. A structural rubric shows a large delta for any well-formed skill file. **There is currently no evidence that the Central Asia + Caspian content adds anything over the horizontal method (`global-think-tank-analyst`) on its own.** That is the claim the repo is named for.
+
+| Criterion | Status | What is missing |
+|---|---|---|
+| B3.1 Substantive rubric, pre-registered (≥8 checkable substantive items) | ❌ not met | No substantive rubric exists. `evals/starter-rubric.md` and the Bar 2 agent-eval rubric are structural. |
+| B3.2 Three-condition protocol documented (no skill / horizontal only / horizontal + vertical) | ❌ not met | Bar 2 cases are two-condition (with / without the product shell) and do not isolate the vertical from the horizontal method. |
+| B3.3 ≥5 cases under `evals/specialist-lift/`, ≥3 distinct archetypes | ❌ not met | Directory does not exist. |
+| B3.4 Blind, different-family judge | ❌ not met | One Bar 2 case (`2026-06-30-sdn-premise-stop.md`) used two blind judges including a cross-vendor one — the right method, applied to a structural rubric. Reusable here. |
+| B3.5 Lift reported per case, including null and negative | ❌ not met | Nothing measured yet. |
+| B3.6 ≥1 negative control (region should not change the substance) | ❌ not met | No negative control exists anywhere in `evals/`. |
+| B3.7 Re-runnable harness | ❌ not met | Bar 2 cases are manual writeups; no script regenerates them. |
+| B3.8 Scope statement on every Bar 3 case | ❌ not met | No cases yet. |
+
+### Open path to Bar 3
+
+In honest order. The two blocking defects are cleared.
+
+1. ~~Fix C1 — unify the `mcp` major version across the portfolio and correct the import.~~ Done (2026-08-30).
+2. ~~Fix C2 — add `[build-system]`, ship a namespaced package, and make the test import the installed name.~~ Done (2026-08-30).
+3. Write the substantive rubric from `docs/risk-archetypes.md` and commit it **before** generating anything (B3.1). This is the step that decides whether Bar 3 means anything; it is also the step only the author can do, because it requires the regional knowledge the repo claims to encode.
+4. Build the harness and run five cases plus one negative control under the three-condition protocol (B3.2, B3.3, B3.6, B3.7).
+5. Score blind with a different-family judge and publish every result, including nulls (B3.4, B3.5, B3.8).
+6. Act on the answer. Positive lift: this repo is justified as a separate skill and the rubric becomes the maintenance target. Null lift: fold the regional content into the horizontal method and retire this repo. Both outcomes clear Bar 3.
+
+Do not add more examples, archetypes or source-backed memos in place of steps 3-5. Bar 1 and Bar 2 are cleared; more of their currency does not buy Bar 3.
 
 ## What this status is not
 

@@ -66,10 +66,16 @@ def check_cases(archetypes: set[str], suite_ready: bool) -> list[dict]:
         if missing:
             errors.append(f"{path.relative_to(ROOT)}: missing {', '.join(missing)}")
             continue
-        if case["archetype"] not in archetypes:
+        # A negative control is a case where no regional archetype should apply.
+        # Forcing one on it would defeat its purpose, so "none" is allowed there
+        # and only there.
+        if case.get("negative_control") and case["archetype"] == "none":
+            pass
+        elif case["archetype"] not in archetypes:
             errors.append(
                 f"{path.relative_to(ROOT)}: archetype {case['archetype']!r} is not one of the "
                 f"archetypes in docs/risk-archetypes.md"
+                + (" (only a negative control may use \"none\")" if case["archetype"] == "none" else "")
             )
         cases.append(case)
 
@@ -81,7 +87,7 @@ def check_cases(archetypes: set[str], suite_ready: bool) -> list[dict]:
     if suite_ready:
         if len(cases) < MINIMUM_CASES:
             errors.append(f"B3.3: {len(cases)} cases, needs at least {MINIMUM_CASES}")
-        covered = {case["archetype"] for case in cases}
+        covered = {case["archetype"] for case in cases if case["archetype"] != "none"}
         if len(covered) < MINIMUM_ARCHETYPES:
             errors.append(
                 f"B3.3: cases span {len(covered)} archetypes, needs at least {MINIMUM_ARCHETYPES}"

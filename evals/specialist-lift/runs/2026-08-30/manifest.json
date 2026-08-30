@@ -1,0 +1,91 @@
+{
+  "run_id": "2026-08-30",
+  "prepared_on": "2026-08-30",
+  "model": "claude-sonnet-5",
+  "judge_model": "gpt-5",
+  "seed": 0,
+  "rubric_sha256": "6cb77dd8f7233c147e00a2ee17fc343e95e70ca81d7d4a229bd1d5beb66e1d8c",
+  "vertical_skill_sha256": "6f54cdc2b41068d908af1046102be4e2bb7da871ab35a50fef25c8939c605e64",
+  "horizontal_skill_sha256": "acadddecc71444687e85db2aca442a887c6e0606fa08fead1d187923aae167dd",
+  "conditions": {
+    "A": "no skill loaded",
+    "B": "horizontal method only",
+    "C": "horizontal method plus this vertical"
+  },
+  "cases": [
+    {
+      "case_id": "kz-re-export-hs-code-spike",
+      "case_file": "evals/specialist-lift/cases/kz-re-export-hs-code-spike.json",
+      "archetype": "Re-export / transshipment exposure",
+      "negative_control": false,
+      "question_sha256": "3617d5a1b610992a04d96e69dca1d860996771c852440e606d9f7f17b1980753"
+    },
+    {
+      "case_id": "middle-corridor-dwell-time",
+      "case_file": "evals/specialist-lift/cases/middle-corridor-dwell-time.json",
+      "archetype": "Caspian corridor disruption",
+      "negative_control": false,
+      "question_sha256": "4e7988ae05fbfd028a7024ed393a0a22631ed8efc942ed61710a124ffb1a4b35"
+    },
+    {
+      "case_id": "negative-control-monitoring-cadence",
+      "case_file": "evals/specialist-lift/cases/negative-control-monitoring-cadence.json",
+      "archetype": "none",
+      "negative_control": true,
+      "question_sha256": "e73638262cfd3ec54e9448a6f722713fda4408782d4f459a649aca55b81e6f8f"
+    },
+    {
+      "case_id": "post-designation-successor-entity",
+      "case_file": "evals/specialist-lift/cases/post-designation-successor-entity.json",
+      "archetype": "Sanctioned-party adjacency",
+      "negative_control": false,
+      "question_sha256": "b77d9de09b0c717104867f9ac7997e98639eb3c5c6d1050d20990dd235d2863a"
+    },
+    {
+      "case_id": "respondent-bank-derisking-tier1",
+      "case_file": "evals/specialist-lift/cases/respondent-bank-derisking-tier1.json",
+      "archetype": "Correspondent banking de-risking",
+      "negative_control": false,
+      "question_sha256": "13c656d4502c549df562db5c2fcbd74b01718d4c5de1da08d040226102f50bdd"
+    },
+    {
+      "case_id": "vasp-stablecoin-offramp",
+      "case_file": "evals/specialist-lift/cases/vasp-stablecoin-offramp.json",
+      "archetype": "Crypto / VASP rails exposure",
+      "negative_control": false,
+      "question_sha256": "c077fa036ab3dce9e6723e668a28450cddff91a3819db7e5234cf44528b870e5"
+    }
+  ],
+  "blinding_key": {
+    "kz-re-export-hs-code-spike": {
+      "output_1": "A",
+      "output_2": "C",
+      "output_3": "B"
+    },
+    "middle-corridor-dwell-time": {
+      "output_1": "C",
+      "output_2": "B",
+      "output_3": "A"
+    },
+    "negative-control-monitoring-cadence": {
+      "output_1": "A",
+      "output_2": "B",
+      "output_3": "C"
+    },
+    "post-designation-successor-entity": {
+      "output_1": "A",
+      "output_2": "C",
+      "output_3": "B"
+    },
+    "respondent-bank-derisking-tier1": {
+      "output_1": "A",
+      "output_2": "C",
+      "output_3": "B"
+    },
+    "vasp-stablecoin-offramp": {
+      "output_1": "B",
+      "output_2": "A",
+      "output_3": "C"
+    }
+  }
+}

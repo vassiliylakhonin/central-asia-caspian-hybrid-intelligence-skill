@@ -1,0 +1,7 @@
+{
+  "id": "respondent-bank-derisking-tier1",
+  "archetype": "Correspondent banking de-risking",
+  "negative_control": false,
+  "question": "Our USD settlement times through our Kazakh respondent have roughly doubled over two months and three payments were returned with non-specific reasons. The respondent is not designated and says nothing has changed on their side. What is happening and what should we do?",
+  "decision_context": "A mid-size European bank's payments and financial-crime leadership, deciding whether to keep, supplement or exit the respondent relationship. Horizon: 6 months."
+}

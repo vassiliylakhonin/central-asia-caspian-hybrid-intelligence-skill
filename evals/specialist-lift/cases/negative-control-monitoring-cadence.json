@@ -1,0 +1,8 @@
+{
+  "id": "negative-control-monitoring-cadence",
+  "archetype": "none",
+  "negative_control": true,
+  "question": "Our fintech subsidiary in Uzbekistan currently retrains its transaction-monitoring models on a fixed quarterly cycle. The team has proposed moving to continuous retraining as new labelled alerts arrive. Which approach is appropriate, and what are the main trade-offs?",
+  "decision_context": "A fintech's model-risk owner, choosing a retraining cadence. Horizon: next model governance cycle.",
+  "why_negative_control": "The question is model-risk governance with regional set dressing. Retraining cadence trade-offs — label lag, drift, overfitting to recent alerts, auditability of a moving model — are the same in Tashkent as anywhere. If condition C scores materially above condition B here, the rubric is rewarding regional vocabulary rather than regional mechanism, and the measured lift on the other cases cannot be trusted."
+}

@@ -16,6 +16,8 @@ Maturity is tracked on two axes.
 
 Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` and `docs/definition-of-done.md` list moves that do *not* count as progress.
 
+**Update (2026-08-30, later):** C1 and C2 fixed and verified; both now met. The `mcp` pin is `mcp>=2.0,<3` across the portfolio, the server ships as the namespaced package `central_asia_caspian_compliance_server`, and CI installs the package before running tests so the invariants are checked rather than asserted. Package version bumped 0.1.0 → 0.2.0: the import path changed. Bar 3 remains **not attempted**.
+
 **Update (2026-08-30):** Added the continuous-invariant axis (C1-C4) and Bar 3 (demonstrated specialist lift). No previously recorded bar status was changed — cleared bars stay cleared, and rewriting them retroactively would break the audit trail this file exists to keep. Two invariants are recorded as **not met** on first assessment (C1, C2); both are verified defects in the executable surface, not new criteria applied to old work. Bar 3 is recorded as **not attempted**.
 
 **Last updated:** 2026-08-24 (the root skill carries the complete runtime-neutral contract. A structural smoke test verified root-plus-overlay loading in Claude and Codex and direct GitHub installation and discovery in OpenClaw; OpenClaw model behavior was not tested. The four existing `analyze` agent-eval delta cases remain compatibility evidence for the older strategic-intelligence runtime.)
@@ -24,16 +26,16 @@ Current Agenda composition: this repo produces regional reasoning and an optiona
 
 ## Continuous invariants
 
-Checked at every commit. These can regress; two currently do.
+Checked at every commit. These can regress. All four currently hold; C1 and C2 were recorded as failing on 2026-08-30 and fixed the same day, which is the axis working as intended.
 
 | Invariant | Status | Evidence |
 |---|---|---|
-| C1 Declared executables run on a clean install | ❌ **not met** | `scripts/validate.py` and the `unittest` suite pass. The **MCP server does not start on a clean install.** `pyproject.toml` declares `mcp>=1.2.0` with no upper bound; `src/mcp_server.py` imports `from mcp.server.fastmcp import FastMCP`. A fresh environment resolves to mcp 2.x, where `FastMCP` was renamed to `MCPServer`, and the import raises `ModuleNotFoundError`. An older locally-pinned environment still works, which is why this went unnoticed. Fix: choose one `mcp` major version across the whole portfolio and pin it — the horizontal repo currently targets 2.x while both verticals target 1.x, so an environment holding both breaks one of them. |
-| C2 Package installs as a namespaced package | ❌ **not met** | `pyproject.toml` declares no `[build-system]` block and no package configuration. The built wheel installs `mcp_server` and `mcp_contract` as **top-level modules** in `site-packages` — a name adjacent to the official SDK's — and `src/mcp_server.py` does a bare `from mcp_contract import ...` that resolves only when the working directory is `src/`. `tests/test_mcp_contract.py` reaches the module through `importlib.util.spec_from_file_location`, so it proves the contract's logic and proves nothing about whether the shipped artifact can import it. |
-| C3 No tool returns a fabricated finding | ✅ met | Every declared tool in `src/mcp_server.py` returns `not_implemented` with `result_is_not_a_finding` and `human_review_required`. `tests/test_mcp_contract.py::test_structured_contract_cannot_approve_or_enforce` asserts that `schemas/compliance-decision.schema.json` cannot express `approve`, `block` or `freeze_funds`, and that `human_review_required` is `const: true`. Enforced by test, not by prose. |
+| C1 Declared executables run on a clean install | ✅ met | Verified end to end on a clean venv built only from the declared dependencies: `pip install -e .` resolves mcp 2.1.1, the console script `central-asia-caspian-compliance-server` starts, completes the MCP `initialize` handshake, and returns all three tools from `tools/list`. `scripts/validate.py` and the `unittest` suite also pass. CI installs the package before running tests, so this is checked on every commit rather than asserted. Previously not met: an unbounded `mcp>=1.2.0` pin against `from mcp.server.fastmcp import FastMCP`, which mcp 2.x renamed to `MCPServer` — the pin is now `mcp>=2.0,<3` and the whole portfolio targets the same major version. |
+| C2 Package installs as a namespaced package | ✅ met | `pyproject.toml` declares a `[build-system]` block and `[tool.setuptools.packages.find]`. The wheel's `top_level.txt` contains exactly `central_asia_caspian_compliance_server`; nothing is installed at the top level of `site-packages`. The intra-package import is relative (`from .contract import ...`) and no longer depends on the working directory. `tests/test_mcp_contract.py` imports through the installed name, and `PackagingInvariantTests` asserts that the server module imports and that all three tools are registered — so the test now exercises the shipped artifact rather than a file path. |
+| C3 No tool returns a fabricated finding | ✅ met | Every declared tool in `src/central_asia_caspian_compliance_server/server.py` returns `not_implemented` with `result_is_not_a_finding` and `human_review_required`. `test_every_declared_tool_refuses_rather_than_answering` now calls each tool through the server and checks the payload, and `test_structured_contract_cannot_approve_or_enforce` asserts that `schemas/compliance-decision.schema.json` cannot express `approve`, `block` or `freeze_funds` and that `human_review_required` is `const: true`. Enforced by test, not by prose. |
 | C4 Documentation references resolve | ✅ met | `scripts/validate.py` checks tracked Markdown links and own-site links on every commit; currently passing. |
 
-C1 and C2 are defects, not roadmap items. They rank ahead of any Bar 3 work.
+Invariant failures are defects, not roadmap items, and rank ahead of any bar work.
 
 ## Bar 1 — Early but credible
 
@@ -95,10 +97,10 @@ Recorded plainly because it is the load-bearing gap in this repo. The Bar 2 agen
 
 ### Open path to Bar 3
 
-In honest order. Steps 1 and 2 are defects and come first.
+In honest order. The two blocking defects are cleared.
 
-1. Fix C1 — unify the `mcp` major version across the portfolio and correct the import.
-2. Fix C2 — add `[build-system]`, ship a namespaced package, and make the test import the installed name.
+1. ~~Fix C1 — unify the `mcp` major version across the portfolio and correct the import.~~ Done (2026-08-30).
+2. ~~Fix C2 — add `[build-system]`, ship a namespaced package, and make the test import the installed name.~~ Done (2026-08-30).
 3. Write the substantive rubric from `docs/risk-archetypes.md` and commit it **before** generating anything (B3.1). This is the step that decides whether Bar 3 means anything; it is also the step only the author can do, because it requires the regional knowledge the repo claims to encode.
 4. Build the harness and run five cases plus one negative control under the three-condition protocol (B3.2, B3.3, B3.6, B3.7).
 5. Score blind with a different-family judge and publish every result, including nulls (B3.4, B3.5, B3.8).

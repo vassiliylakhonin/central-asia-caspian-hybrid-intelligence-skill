@@ -166,7 +166,7 @@ Bar 3 tests the claim this repo is named for: that the vertical changes the *sub
 
 This repository contains an MCP transport skeleton, not an active screening or
 orchestration service.
-- **MCP Integration:** `src/mcp_server.py` is a transport skeleton. Its tools are
+- **MCP Integration:** `src/central_asia_caspian_compliance_server/server.py` is a transport skeleton. Its tools are
   declared but not implemented and every call returns `status: not_implemented`;
   never read a response from it as a screening result.
 - **Cross-region composition:** A workflow may load the sibling regional skill,

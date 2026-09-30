@@ -17,6 +17,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from integrity import PROTOCOL, build_report, check_prepared
 
 HERE = Path(__file__).resolve().parent
 SUITE = HERE.parent
@@ -111,34 +112,22 @@ def check_runs() -> None:
             continue
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
-        if manifest.get("model") and manifest.get("judge_model") == manifest.get("model"):
-            errors.append(
-                f"{run_dir.relative_to(ROOT)}: B3.4 requires a judge from a different vendor "
-                f"family than the generating model; both are {manifest['model']!r}"
-            )
-
         report_path = run_dir / "report.json"
-        if not report_path.exists():
-            notes.append(f"{run_dir.relative_to(ROOT)}: prepared, not yet scored")
+        if manifest.get("protocol") != PROTOCOL:
+            if report_path.exists():
+                errors.append(f"{run_dir.name}: legacy run lacks required output and score receipts")
+            else:
+                notes.append(f"{run_dir.name}: legacy preparation retained; re-prepare with protocol 2 before scoring")
             continue
-        report = json.loads(report_path.read_text(encoding="utf-8"))
-
-        prepared = {entry["case_id"] for entry in manifest["cases"]}
-        reported = {row["case_id"] for row in report["cases"]}
-        if prepared != reported:
-            errors.append(
-                f"{run_dir.relative_to(ROOT)}: B3.5 — report omits "
-                f"{', '.join(sorted(prepared - reported)) or 'nothing'} and adds "
-                f"{', '.join(sorted(reported - prepared)) or 'nothing'}. Every prepared case "
-                "must be published, including null and negative results."
-            )
-        if report.get("rubric_sha256") != manifest.get("rubric_sha256"):
-            errors.append(
-                f"{run_dir.relative_to(ROOT)}: report was scored against a different rubric "
-                "than the run was prepared with (B3.1)"
-            )
-        if not report.get("scope"):
-            errors.append(f"{run_dir.relative_to(ROOT)}: B3.8 — report carries no scope statement")
+        try:
+            check_prepared(run_dir)
+            if report_path.exists():
+                if json.loads(report_path.read_text()) != build_report(run_dir):
+                    errors.append(f"{run_dir.name}: published report differs from recomputed receipts")
+            else:
+                notes.append(f"{run_dir.name}: prepared, not yet scored")
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            errors.append(f"{run_dir.name}: {exc}")
 
 
 def main() -> int:

@@ -2,6 +2,14 @@
 
 This guide lists **classes of sources** to prefer for source-backed Central Asia / Caspian risk analysis. The skill itself does **not** retrieve these sources. Use them with external retrieval, user-provided source packets, or companion tooling.
 
+## Current UK designation source
+
+Use the [UK Sanctions List](https://www.gov.uk/government/publications/the-uk-sanctions-list)
+for current UK designations. The OFSI Consolidated List closed on 2026-01-28;
+OFSI remains a source of financial-sanctions guidance, not the current designation list.
+See the [official migration notice](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
+(checked 2026-09-30). Historical examples retain their original retrieval dates.
+
 ## Evidence mode vocabulary
 
 Every example and every memo produced with this skill must state one of four canonical evidence modes:
@@ -19,7 +27,7 @@ State the evidence mode at the top of any memo. Mixing modes within a memo is al
 ### Sanctions and export controls
 - US OFAC (SDN, sectoral, and related lists)
 - EU consolidated sanctions list and EU Council legal acts — the EU adopts sanctions in numbered packages (e.g. 14th, 15th package); practitioners track by package number and Council decision date. Retrieve both the current consolidated list and the most recent package legal act; they are separate documents.
-- UK OFSI consolidated list and HM Treasury notices
+- UK Sanctions List and HM Treasury notices
 - UN Security Council consolidated list
 - National sanctions regimes where relevant (e.g. Switzerland, Canada, Japan, Australia)
 - Common high-priority items lists and circumvention guidance

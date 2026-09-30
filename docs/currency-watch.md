@@ -2,17 +2,28 @@
 
 An **active reminder** of fast-moving topics in the region that any source-backed memo should re-verify against current primary sources before relying on. This is **not** a database of current facts. The skill does not retrieve sources. Treat entries below as the list of *what to check now*, not as confirmed status.
 
-**Last reviewed:** 2026-05-15
+**Topic catalogue reviewed:** 2026-09-30
+**Primary-source status:** topic claims remain unverified except the UK list migration documented below.
+**Previous catalogue review:** 2026-05-15
 **Staleness rule:** any entry older than **90 days** must be re-verified before use. A stale watch list is worse than no watch list — it looks current while being wrong.
 
 ---
+
+## UK source migration
+
+The OFSI Consolidated List stopped receiving updates on 2026-01-28. Use the
+[UK Sanctions List](https://www.gov.uk/government/publications/the-uk-sanctions-list)
+for current designations, and OFSI guidance for financial-sanctions interpretation.
+The [official migration notice](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
+was checked on 2026-09-30. This confirms the source migration only; no entity status
+or other topic in this catalogue has been re-verified.
 
 ## How to use this file
 
 1. Before writing a `live-source-backed` or `user-provided sources` memo, scan the topics below to see which ones touch the memo's scope.
 2. For each touched topic, **re-verify against current primary sources** (per `docs/source-guide.md` source classes and freshness horizons).
-3. If verification is not performed in the current session, label every claim derived from that topic with `[verify]` and downgrade the memo's evidence mode to `mixed` or `reasoning-only`.
-4. When you update this file with a new finding, **update the Last reviewed date at the top** and the per-topic `Last reviewed` timestamp.
+3. If verification is not performed in the current session, label every claim derived from that topic with `[verify]` and retain `user-provided sources` or `illustrative source packet` when they describe the input; otherwise use `reasoning-only`. `mixed` is a legacy transport value, not a memo evidence mode.
+4. Update `Topic catalogue reviewed` for catalogue maintenance. Update a topic's `Last reviewed` only after its primary-source checks; do not re-date unverified topics.
 
 ## How to maintain this file
 
@@ -41,7 +52,7 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 ### Topic: UK OFSI and other allied regimes
 - **Why it matters:** UK, CH, JP, CA, AU regimes diverge from US/EU on specific designations. Memos for users with multi-jurisdictional exposure must not assume convergence.
 - **What to re-verify:** Current consolidated list status in each relevant jurisdiction.
-- **Where to verify:** OFSI consolidated list; SECO; Japan METI; relevant national lists.
+- **Where to verify:** UK Sanctions List; SECO; Japan METI; relevant national lists.
 - **Freshness horizon for derived claims:** 30 days.
 - **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 

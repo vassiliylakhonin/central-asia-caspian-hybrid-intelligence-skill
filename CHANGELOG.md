@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Correct current UK source routing and preserve unverified topic status.
+- Align evidence modes, calibration, and regional reference loading.
+- Restore substantive documentation checks and harden specialist evaluation.
+
 All notable changes to this repository are documented here.
 
 ## Unreleased

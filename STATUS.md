@@ -1,5 +1,22 @@
 # STATUS.md
 
+## Maintenance update — 2026-09-30
+
+UK source routing now uses UK Sanctions List. Catalogue maintenance is separated
+from primary-source checks; only the UK migration notice was re-checked in this
+change. Other topic claims remain unverified. The runtime contract loads regional
+references explicitly and uses the four canonical memo evidence modes.
+
+Specialist-lift protocol 2 pins the full regional reference package and case
+context, requires all saved outputs, exports blind judge packets, and calculates
+scores from justified per-item decisions. It rejects numeric totals, missing or
+changed answers, inconsistent applicability, and same-vendor judges with different
+model IDs. Saved-byte hashes are integrity receipts, not proof of model authorship.
+No generator or judge run has been executed and no substantive lift is claimed.
+Older preparations remain unchanged and must be re-prepared before scoring.
+A equal to B does not itself invalidate C minus B; a small null result does not
+establish equivalence. Interpret prior retirement guidance in that limited sense.
+
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
 ## What the invariants and the bars mean

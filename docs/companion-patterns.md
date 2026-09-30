@@ -109,7 +109,7 @@ Central Asia + Caspian Hybrid Intelligence Skill:
 - sanctions / AML / banking / logistics / energy / corridor analysis patterns
 
 Source Ingest skill (Agenda Intelligence MD):
-- use before analysis when a user provides a PDF, DOCX, XLSX, URL, article, or transcript
+- use before analysis when available for a supplied PDF, DOCX, XLSX, URL, article, or transcript; otherwise extract an inspectable source record and disclose the fallback
 - normalizes the document into a structured source record: metadata, Axis A/B provenance tags, key claims table, excerpts, limitations
 - for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy and freshness horizons for Central Asia / Caspian analysis
 - do not duplicate source-guide content inside the source record; reference it

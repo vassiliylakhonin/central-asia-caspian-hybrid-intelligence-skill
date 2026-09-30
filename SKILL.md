@@ -43,6 +43,14 @@ Identify:
 
 ## Regional Logic
 
+Before drafting, load [`docs/regional-logic.md`](docs/regional-logic.md), the relevant
+archetypes in [`docs/risk-archetypes.md`](docs/risk-archetypes.md),
+[`docs/source-guide.md`](docs/source-guide.md), and
+[`docs/analysis-contract.md`](docs/analysis-contract.md). These contain the regional
+mechanisms, false positives, verification artifacts, and claim-accounting rules.
+If files cannot be loaded, disclose that only the root instructions were available;
+do not claim the full specialist reference package was applied.
+
 Always analyze Central Asia. Include the Caspian system only when it materially affects flows, connectivity, chokepoints, risk transmission, value capture, sanctions exposure, or strategic leverage. If the Caspian link is weak, say so briefly and keep it shallow.
 
 Include global context only when it changes the assessment.
@@ -57,9 +65,9 @@ Select one mode and do not mechanically fill irrelevant sections.
 
 Decision rules (apply in order):
 
-1. Use `Risk / Compliance` if the question contains a named counterparty, a transaction type, a sanctions/AML/banking term, an HS code or merchant category, or a horizon shorter than 90 days for an operational decision.
-2. Use `Strategic` if the question has a multi-year horizon, a policy or political-economy frame, no operational decision, or a "why" / "how does this affect the regional balance" framing.
-3. Use `Hybrid` only if both 1 and 2 are true and the answer must integrate them.
+1. Use `Hybrid` when both an operational decision and a strategic explanation are required.
+2. Otherwise use `Risk / Compliance` if the question contains a named counterparty, a transaction type, a sanctions/AML/banking term, an HS code or merchant category, or a horizon shorter than 90 days for an operational decision.
+3. Otherwise use `Strategic` if the question has a multi-year horizon, a policy or political-economy frame, no operational decision, or a "why" / "how does this affect the regional balance" framing.
 4. When in doubt for bank / fintech / importer / exporter / freight forwarder / end-user / HS-code questions, default to `Risk / Compliance`.
 5. When in doubt for government / multilateral / IFI / sectoral-policy questions, default to `Strategic`.
 
@@ -69,9 +77,14 @@ When timing matters, include `Why now` in 1-3 sentences.
 
 ## Evidence Discipline
 
+Use exactly one of `live-source-backed`, `user-provided sources`,
+`illustrative source packet`, or `reasoning-only`. Preserve input provenance when
+verification is unavailable and flag the affected claims individually. `mixed`
+is reserved for explicitly requested legacy transports.
+
 Do not invent facts. Verify current facts before relying on them when they involve laws, sanctions, prices, elections, leadership, company information, enforcement status, or recent events.
 
-Before relying on time-sensitive claims (sanctions designations, enforcement posture, FATF/EAG status, corridor capacity, central-bank rules), scan [`docs/currency-watch.md`](docs/currency-watch.md) for in-scope topics and re-verify against current primary sources. The currency watch is a "what to check now" list, not a database of current facts. If verification is not performed in the current session, label every derived claim with `[verify]` and downgrade evidence mode to `mixed` or `reasoning-only`.
+Before relying on time-sensitive claims (sanctions designations, enforcement posture, FATF/EAG status, corridor capacity, central-bank rules), scan [`docs/currency-watch.md`](docs/currency-watch.md) for in-scope topics and re-verify against current primary sources. The currency watch is a "what to check now" list, not a database of current facts. If verification is not performed in the current session, label every derived claim with `[verify]` and retain `user-provided sources` or `illustrative source packet` when they describe the input; otherwise use `reasoning-only`. `mixed` is a legacy transport value, not a memo evidence mode.
 
 Use labels when useful:
 

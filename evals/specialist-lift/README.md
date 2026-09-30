@@ -1,90 +1,74 @@
-# Specialist-lift suite (Bar 3)
+# Specialist-lift protocol 2
 
-Measures the claim this repository is named for: that the Central Asia + Caspian
-vertical changes the **substance** of an answer beyond the horizontal method
-(`global-think-tank-analyst`) on its own.
+Compare A (no skill), B (GTTA only), and C (GTTA plus the complete regional reference
+package). C includes the root, regional logic, risk archetypes, source guide,
+currency watch, and analysis contract. All arms receive the same question, source
+access (no tools), output budget, temperature, and model. Prompt length is an
+explicit treatment difference; report token usage and truncation, and repeat
+runs before generalizing. A equal to B does not invalidate C minus B: regional
+coverage may be insensitive to the horizontal method.
 
-Bar 2 measured structure. A structural rubric shows a large delta for any
-well-formed skill file, and every Bar 2 writeup says so. This suite is the part
-that was never run.
+The rubric is model-drafted from committed regional references and requires
+author review. Coverage scoring is not factual accuracy or practitioner validation.
+No outputs or results are included with this change. No maturity claim is advanced.
 
-**Status: not attempted.** The harness is here; the rubric is not written. See
-[`../../STATUS.md`](../../STATUS.md).
+## Prepare and freeze
 
-## What this is not
-
-Not factual accuracy. Not compliance, sanctions, AML or screening validation.
-Not practitioner validation. Not a labelled dataset, and never a benchmark. It
-measures substantive coverage against a rubric the author wrote, on a small
-number of cases.
-
-## The protocol
-
-Three conditions per case, identical but for which method files precede the
-question:
-
-| | loaded |
-|---|---|
-| **A** | nothing |
-| **B** | horizontal method only |
-| **C** | horizontal method + this vertical |
-
-**B is the comparison.** A exists only to show the rubric can discriminate at
-all — if A scores near B, the rubric is measuring something every model already
-does, and it needs rewriting before any conclusion is drawn from C.
-
-## Running it
+Choose the actual generator and a judge from a different vendor family before
+preparation. Supply exact identifiers rather than treating example names as runs.
 
 ```bash
-# 1. Write the rubric. This is the step that decides whether the measurement
-#    means anything, and the only one that cannot be automated: it takes the
-#    regional knowledge this repo claims to encode.
-$EDITOR evals/specialist-lift/rubric.md
-
-# 2. Define cases: at least 5, spanning at least 3 archetypes from
-#    docs/risk-archetypes.md, including at least one negative control.
-$EDITOR evals/specialist-lift/cases/
-
-# 3. Emit prompt bundles and pin what is being measured.
-python3 evals/specialist-lift/tools/lift_eval.py prepare 2026-09-01 \
-  --model <generating-model-id> \
-  --judge-model <different-vendor-family-id> \
-  --horizontal-skill ../global-think-tank-analyst/SKILL.md
-
-# 4. Run every prompt through the model. Save outputs as
-#    runs/<run-id>/outputs/<case_id>__condition_<A|B|C>.md
-
-# 5. Score blind. Present outputs to the judge in the randomised order recorded
-#    in manifest.json, with condition labels stripped. Write runs/<run-id>/
-#    scores.json as {"cases": {"<case-id>": {"A": n, "B": n, "C": n}}}.
-
-# 6. Produce the report.
-python3 evals/specialist-lift/tools/lift_eval.py score 2026-09-01
+python evals/specialist-lift/tools/lift_eval.py prepare NEW_RUN_ID \
+  --model GENERATOR_ID --model-family openai \
+  --judge-model JUDGE_ID --judge-family anthropic \
+  --horizontal-skill ../global-think-tank-analyst/SKILL.md \
+  --output-budget 4096 --temperature 0 --seed 20260930
 ```
 
-## What the harness refuses to do
+Commit `manifest.json`, `inputs/`, `prompts/`, and the separate `blinding-key.json`
+before generation. The manifest pins complete source files, cases (including
+context), rubric items and prompts. Use fresh contexts, the declared settings,
+and no browsing in all arms. Save all three outputs per case under
+`runs/NEW_RUN_ID/outputs/CASE_ID__condition_A.md` (and B/C). Retain provider logs,
+settings actually used, token counts, truncation and retry records. The harness
+checks saved bytes, not whether the provider followed those settings.
 
-Two anti-criteria are enforced mechanically rather than trusted, because both
-describe things an author does to themselves under mild pressure:
+## Export blind packets
 
-- **The rubric is hashed at `prepare` time.** `score` refuses to run if it
-  changed since. Editing the rubric after reading outputs is the easiest way to
-  manufacture lift.
-- **Every prepared case must be scored.** `score` refuses and names any case
-  that is missing. Publishing only the cases that came out well is the other
-  easy way, and it is the one a reader cannot detect from the outside.
+```bash
+python evals/specialist-lift/tools/lift_eval.py judge NEW_RUN_ID
+```
 
-`tools/validate_lift.py` additionally rejects a judge from the same vendor
-family as the generating model, a suite with no negative control, an archetype
-that is not in `docs/risk-archetypes.md`, and a report that omits a prepared
-case or carries no scope statement. `tests/test_lift_harness.py` proves each
-refusal actually fires.
+Commit the output receipts before judging. Send **only `judge/`** to the judge;
+keep the manifest, model identities, and blinding key outside its context. Text
+style may reveal an arm despite label removal; disclose that limitation. Export
+refuses missing/empty outputs and freezes their hashes.
 
-## Reading the result
+Write `scores.json` with every case, anonymous output and rubric item:
 
-A **null result clears Bar 3.** If the vertical demonstrably adds nothing, the
-honest outcome is to fold this repo's regional content into the horizontal
-method and retire it as a separate skill. That is a successful outcome.
+```json
+{"cases":{"CASE_ID":{"output_1":{"S1":{"satisfied":true,"rationale":"Criterion matches this mechanism","evidence":"verbatim span from this output"}}}}}
+```
 
-A vertical that cannot demonstrate lift is not a failed repo. An unmeasured one
-is.
+This excerpt is a shape example, not a complete accepted score file. Include
+`output_1`, `output_2`, `output_3` and every S item. Use `false` for unmet criteria;
+use `null` only when the criterion is inapplicable to the question, consistently
+across all three outputs. Every item needs a rationale; positive items need a
+verbatim span. Numeric totals, including out-of-range scores, are rejected.
+
+```bash
+python evals/specialist-lift/tools/lift_eval.py score NEW_RUN_ID
+python evals/specialist-lift/tools/validate_lift.py
+```
+
+The report calculates item totals, applicable denominators, raw and normalized
+C-minus-B differences. Validation recomputes it from scores and output receipts.
+Read controls before measured cases and publish null/negative results. A small
+null result does not establish equivalence or justify retiring a skill; distinguish
+underpowered measurement, loading defects, and substantive redundancy.
+
+## Historical preparations
+
+Protocol-1 preparations are retained unchanged for the audit trail. They cannot
+be scored under protocol 2: prepare a new run with complete references and receipts.
+No historical holdout or published model output is rewritten.

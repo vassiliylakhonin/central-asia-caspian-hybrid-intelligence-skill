@@ -192,6 +192,8 @@ For a guided route through the examples, start with [examples/README.md](example
 - [examples/source-conflict-kz-ru-circumvention-volume-estimates.md](examples/source-conflict-kz-ru-circumvention-volume-estimates.md) — `illustrative source packet` demonstrator of the source-conflict-surfacing rule applied to KZ→RU CHPL-circumvention volume estimates across EU Commission, KSE Institute, Bruegel and industry advisories, with explicit source-independence assessment and regret-asymmetry calibration for EDD threshold decisions.
 
 
+Evidence-mode counts: `reasoning-only`=6; `illustrative source packet`=2; `live-source-backed`=6; `user-provided sources`=2.
+
 ## Skill files
 
 - `skills/central-asia-caspian/SKILL.md` — Claude Code plugin discovery and composition adapter; attaches the root contract, then the Claude overlay.
@@ -274,6 +276,11 @@ Listing a source class is not an endorsement and does not guarantee accuracy or 
 Use them as patterns to structure reasoning, not as factual claims about any specific entity, route or jurisdiction.
 
 [docs/regional-logic.md](docs/regional-logic.md) explains when to include which geography. Core rule: do not expand geography for decoration; expand only when it changes the mechanism, risk exposure, leverage or decision.
+
+No public, attributable real-use record exists yet. No production-usage, adoption,
+or benchmark numbers are claimed.
+
+For substantive three-condition evaluation, see [specialist-lift protocol 2](evals/specialist-lift/README.md). The instrument is prepared; no new model results are claimed.
 
 ## Review checklist
 

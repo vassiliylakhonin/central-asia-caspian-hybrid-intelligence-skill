@@ -22,7 +22,7 @@ Do not add buyer-facing copy, pilot pages, new deployed surfaces, outreach seque
 
 Two rules that bind before any output. The full inventory of what each companion repo owns is in [`docs/companion-patterns.md`](docs/companion-patterns.md).
 
-- When the user supplies a PDF, DOCX, XLSX, URL, article, or transcript, run the Source Ingest skill (Agenda Intelligence MD) before analysis. Route with [`docs/source-guide.md`](docs/source-guide.md); do not copy its tiers into the source record.
+- When the user supplies a PDF, DOCX, XLSX, URL, article, or transcript, use the Source Ingest skill (Agenda Intelligence MD) before analysis when available. If unavailable, extract an inspectable source record with metadata, claims, excerpts and limitations using available document tools; disclose the fallback and never claim the companion ran. Route with [`docs/source-guide.md`](docs/source-guide.md); do not copy its tiers into the source record.
 - Where a flow crosses into the Gulf — Iran-Caspian routes, the Russia-Iran-China junction, Iraq-Kurdistan corridors, Central Asian energy through Gulf hubs — reference the Gulf + Middle East sibling skill. Do not duplicate its Iran sanctions, GCC banking, or maritime-chokepoint content here.
 
 ## Preflight: cold-start interview and practice profile
@@ -35,7 +35,7 @@ Skip the preflight when the user supplies the four anchors inline, when a popula
 
 ## Currency watch
 
-Fast-moving regional topics that any source-backed memo should re-verify against current primary sources are listed in [`docs/currency-watch.md`](docs/currency-watch.md). The file is not a database of current facts — it is a list of *what to re-check now*, with a 90-day staleness rule. Update the `Last reviewed` date at the top and per-topic when adding or refreshing entries.
+Fast-moving regional topics that any source-backed memo should re-verify against current primary sources are listed in [`docs/currency-watch.md`](docs/currency-watch.md). The file is not a database of current facts — it is a list of *what to re-check now*, with a 90-day staleness rule. Update the `Topic catalogue reviewed` date for catalogue maintenance; update a topic's `Last reviewed` only after its primary-source checks. Catalogue maintenance is not factual verification.
 
 Do not duplicate Agenda Intelligence MD inside this repo.
 Do not turn this repo into a CLI, MCP server, screening engine, or validation platform unless explicitly requested.

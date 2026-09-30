@@ -50,6 +50,8 @@ class HarnessTestCase(unittest.TestCase):
 
         (self.tmp / "docs").mkdir()
         (self.tmp / "docs" / "risk-archetypes.md").write_text(ARCHETYPES_STUB, encoding="utf-8")
+        for name in ("regional-logic", "source-guide", "currency-watch", "analysis-contract"):
+            (self.tmp / "docs" / f"{name}.md").write_text(f"# {name} reference stub\n")
         (self.tmp / "SKILL.md").write_text("# vertical method stub\n", encoding="utf-8")
         self.horizontal = self.tmp / "horizontal.md"
         self.horizontal.write_text("# horizontal method stub\n", encoding="utf-8")
@@ -94,12 +96,25 @@ class HarnessTestCase(unittest.TestCase):
             self.harness, "prepare", "r1",
             "--model", options["model"],
             "--judge-model", options["judge-model"],
+            "--model-family", overrides.get("model-family", "openai"),
+            "--judge-family", overrides.get("judge-family", "anthropic"),
             "--horizontal-skill", str(self.horizontal),
             "--force",
         )
 
     def write_scores(self, cases: dict) -> None:
-        (self.run_dir / "scores.json").write_text(json.dumps({"cases": cases}), encoding="utf-8")
+        manifest = json.loads((self.run_dir / "manifest.json").read_text())
+        mapping = json.loads((self.run_dir / "blinding-key.json").read_text())
+        (self.run_dir / "outputs").mkdir(exist_ok=True)
+        for entry in manifest["cases"]:
+            for condition in "ABC":
+                (self.run_dir / "outputs" / f"{entry['case_id']}__condition_{condition}.md").write_text("verbatim evidence\n")
+        self.assertEqual(self.run_tool(self.harness, "judge", "r1").returncode, 0)
+        judged = {case: {anonymous: {f"S{i}": {
+            "satisfied": i <= scores[condition], "rationale": "criterion justification",
+            "evidence": "verbatim evidence" if i <= scores[condition] else ""
+        } for i in range(1, 9)} for anonymous, condition in mapping[case].items()} for case, scores in cases.items()}
+        (self.run_dir / "scores.json").write_text(json.dumps({"cases": judged}), encoding="utf-8")
 
 
 class PrepareTests(HarnessTestCase):
@@ -132,7 +147,7 @@ class PrepareTests(HarnessTestCase):
         self.add_case("case-1")
         self.assertEqual(self.prepare().returncode, 0)
         manifest = json.loads((self.run_dir / "manifest.json").read_text())
-        self.assertEqual(set(manifest["blinding_key"]["case-1"].values()), {"A", "B", "C"})
+        self.assertEqual(set(json.loads((self.run_dir / "blinding-key.json").read_text())["case-1"].values()), {"A", "B", "C"})
 
 
 class RefusalTests(HarnessTestCase):
@@ -156,7 +171,7 @@ class RefusalTests(HarnessTestCase):
 
         result = self.run_tool(self.harness, "score", "r1")
         self.assertNotEqual(result.returncode, 0, "an omitted case must be refused")
-        self.assertIn("case-2", result.stderr)
+        self.assertIn("every prepared case", result.stderr)
 
     def test_report_records_a_null_result_rather_than_hiding_it(self):
         self.add_case("case-1")
@@ -190,8 +205,7 @@ class ValidatorTests(HarnessTestCase):
     def test_rejects_a_same_family_judge(self):
         """B3.4 — a model scoring its own family is not a blind judge."""
         self._cases_for_a_complete_suite()
-        self.assertEqual(self.prepare(**{"judge-model": "model-x"}).returncode, 0)
-        result = self.run_tool(self.validator)
+        result = self.prepare(**{"judge-model": "model-y", "judge-family": "openai"})
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("different vendor family", result.stderr)
 
@@ -221,6 +235,108 @@ class ValidatorTests(HarnessTestCase):
         self._cases_for_a_complete_suite()
         result = self.run_tool(self.validator)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+
+class ReceiptTests(HarnessTestCase):
+    def complete_run(self):
+        self.add_case("case-1")
+        self.assertEqual(self.prepare().returncode, 0)
+        self.write_scores({"case-1": {"A": 1, "B": 3, "C": 5}})
+
+    def test_refuses_scores_without_outputs(self):
+        self.add_case("case-1")
+        self.assertEqual(self.prepare().returncode, 0)
+        (self.run_dir / "scores.json").write_text(json.dumps({"cases": {"case-1": {"A": 0, "B": 0, "C": 999}}}))
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_numeric_totals_including_999(self):
+        self.complete_run()
+        mapping = json.loads((self.run_dir / "blinding-key.json").read_text())
+        (self.run_dir / "scores.json").write_text(json.dumps({"cases": {"case-1": {key: 999 for key in mapping["case-1"]}}}))
+        result = self.run_tool(self.harness, "score", "r1")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("numeric totals", result.stderr)
+
+    def test_refuses_changed_output_after_judge_export(self):
+        self.complete_run()
+        (self.run_dir / "outputs/case-1__condition_C.md").write_text("edited after judging")
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_changed_prompt(self):
+        self.complete_run()
+        (self.run_dir / "prompts/case-1__condition_C.txt").write_text("different question")
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_changed_reference(self):
+        self.complete_run()
+        (self.run_dir / "inputs/vertical/docs/risk-archetypes.md").write_text("edited reference")
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_loads_regional_references_in_C_only(self):
+        self.add_case("case-1")
+        self.assertEqual(self.prepare().returncode, 0)
+        c = (self.run_dir / "prompts/case-1__condition_C.txt").read_text()
+        b = (self.run_dir / "prompts/case-1__condition_B.txt").read_text()
+        self.assertIn("regional-logic reference stub", c)
+        self.assertIn("Payment-rail exposure", c)
+        self.assertNotIn("regional-logic reference stub", b)
+
+    def test_judge_packet_does_not_include_identity_or_mapping(self):
+        self.complete_run()
+        packet = json.loads((self.run_dir / "judge/case-1.json").read_text())
+        self.assertEqual(set(packet["outputs"]), {"output_1", "output_2", "output_3"})
+        self.assertNotIn("model", packet)
+        self.assertNotIn("blinding_key", packet)
+
+    def test_refuses_non_boolean_item_score(self):
+        self.complete_run()
+        path = self.run_dir / "scores.json"
+        data = json.loads(path.read_text())
+        data["cases"]["case-1"]["output_1"]["S1"]["satisfied"] = 999
+        path.write_text(json.dumps(data))
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_untraceable_positive_item(self):
+        self.complete_run()
+        path = self.run_dir / "scores.json"
+        data = json.loads(path.read_text())
+        data["cases"]["case-1"]["output_1"]["S1"].update(satisfied=True, evidence="invented quote")
+        path.write_text(json.dumps(data))
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_inconsistent_applicability(self):
+        self.complete_run()
+        path = self.run_dir / "scores.json"
+        data = json.loads(path.read_text())
+        data["cases"]["case-1"]["output_1"]["S8"]["satisfied"] = None
+        path.write_text(json.dumps(data))
+        self.assertNotEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+
+    def test_refuses_overwriting_executed_run(self):
+        self.complete_run()
+        self.assertNotEqual(self.prepare().returncode, 0)
+
+    def test_refuses_run_path_traversal(self):
+        self.assertNotEqual(self.run_tool(self.harness, "score", "../outside").returncode, 0)
+
+    def test_refuses_two_different_claude_ids(self):
+        self.add_case("case-1")
+        result = self.prepare(model="claude-a", **{"model-family": "anthropic", "judge-model": "claude-b", "judge-family": "anthropic"})
+        self.assertNotEqual(result.returncode, 0)
+
+    def test_refuses_misdeclared_known_family(self):
+        self.add_case("case-1")
+        self.assertNotEqual(self.prepare(model="claude-a").returncode, 0)
+
+    def test_validator_recomputes_report(self):
+        self.complete_run()
+        self.assertEqual(self.run_tool(self.harness, "score", "r1").returncode, 0)
+        path = self.run_dir / "report.json"
+        report = json.loads(path.read_text())
+        report["cases"][0]["C"] = 999
+        path.write_text(json.dumps(report))
+        result = self.run_tool(self.validator)
+        self.assertIn("differs from recomputed", result.stderr)
 
 
 if __name__ == "__main__":

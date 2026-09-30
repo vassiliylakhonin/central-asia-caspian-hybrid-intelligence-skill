@@ -312,7 +312,9 @@ def validate_root_docs() -> None:
         if claim in readme:
             fail(f"README.md: unsupported claim: {claim}")
 
-    if False:
+    if "no public, attributable real-use record" not in readme or not re.search(
+        r"no production-usage, adoption,\s+or benchmark numbers are claimed", readme
+    ):
         fail(
             "README.md: must disclose that no production-usage, adoption or "
             "benchmark numbers are claimed"
@@ -391,11 +393,10 @@ def validate_example_counts() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8").lower()
     status = (ROOT / "STATUS.md").read_text(encoding="utf-8").lower()
 
-    expected_readme = (
-        f"six examples use `reasoning-only`, two use `illustrative source packet`, "
-        f"six are `live-source-backed`, and two are `user-provided sources`"
-    )
-    if False:
+    expected_readme = "Evidence-mode counts: " + "; ".join(
+        f"`{mode}`={count}" for mode, count in counts.items()
+    ) + "."
+    if expected_readme.lower() not in readme:
         fail("README.md: evidence-mode count summary is missing or stale")
 
     expected_status = f"{source_anchored} of {total} flagship examples are source-anchored"
@@ -413,6 +414,7 @@ validate_runtime_overlays()
 print("ok: canonical skill and runtime overlays validated", flush=True)
 
 subchecks = (
+    ("runtime documentation contract", "scripts/validate_runtime_contract.py"),
     ("evidence-packet handoff", "scripts/validate_evidence_packet_handoff.py"),
     ("Markdown links", "scripts/check_markdown_links.py"),
 )

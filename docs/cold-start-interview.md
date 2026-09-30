@@ -1,4 +1,4 @@
-> **DEPRECATED**: Use `memory-protocol.md` for Agentic Memory.
+> **Supported calibration procedure.** The proposed memory contract does not replace this interview or implement persistent memory.
 
 # Cold-start interview
 

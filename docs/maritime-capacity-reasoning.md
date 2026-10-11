@@ -47,9 +47,10 @@ that a vessel did not operate.
 
 ## Optional quantitative handoff
 
-When available, Corridor Bankability Analyst's
-[maritime capacity model and user guide](https://github.com/vassiliylakhonin/corridor-bankability-analyst/blob/main/docs/maritime-capacity-model.md)
-accept a single cargo unit, dedicated vessel groups, directional port/rail
+When a Corridor Bankability Analyst checkout is available, consult its
+`docs/maritime-capacity-model.md`. The companion is access-controlled; no public
+documentation URL or automatic access is assumed. Its model accepts a single
+cargo unit, dedicated vessel groups, directional port/rail
 allocations and explicit scenarios. Supply claim IDs or written assumptions for
 each numeric input. Keep input/output files, command, code revision, scenario
 IDs and unresolved technical gaps with the memo.

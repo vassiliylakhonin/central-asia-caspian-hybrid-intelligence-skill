@@ -51,6 +51,11 @@ The [companion patterns](docs/companion-patterns.md) explain composition. Loadin
 
 ## Examples
 
+For maritime fleet and port/rail questions, the
+[Caspian capacity reference](docs/maritime-capacity-reasoning.md) distinguishes
+payload, cycle-time, interface and demand constraints, with an optional
+inspectable-model handoff. It adds reasoning guidance, not a live data service.
+
 Start with the [example guide](examples/README.md), then inspect a case that matches your evidence mode:
 
 | Example | What to inspect |

@@ -85,6 +85,12 @@ This pattern keeps each repo doing what it is good at and avoids duplicate logic
 
 ## Portfolio boundaries — who owns what
 
+For vessel-capacity and renewal questions, use the
+[maritime mechanism and handoff reference](maritime-capacity-reasoning.md).
+It separates regional interpretation from the optional Corridor Bankability
+calculation and documents the separate MCP environments. This is a documented
+handoff, not an automatically executed integration.
+
 Moved here from `AGENTS.md` on 2026-08-19 under that file's own "Where a new rule goes" rule: this is an inventory, not a rule that binds before output. `AGENTS.md` keeps only the two behavioural lines it needs.
 
 Agenda Intelligence MD:

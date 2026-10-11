@@ -43,6 +43,13 @@ Identify:
 
 ## Regional Logic
 
+For maritime fleet renewal, vessel capacity or port/rail coordination, also read
+[`docs/maritime-capacity-reasoning.md`](docs/maritime-capacity-reasoning.md).
+Distinguish payload, cycle-time, interface and demand constraints; keep cargo
+units and directions consistent. Treat technical payload/operability judgments
+as specialist inputs. Optional external models must have an actual run and
+inspectable inputs before their outputs are cited.
+
 Before drafting, load [`docs/regional-logic.md`](docs/regional-logic.md), the relevant
 archetypes in [`docs/risk-archetypes.md`](docs/risk-archetypes.md),
 [`docs/source-guide.md`](docs/source-guide.md), and

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Add Caspian maritime-capacity reasoning, source requirements and an optional
+  quantitative-model handoff; retain the unimplemented MCP boundary and document
+  separate SDK environments.
+
 - Correct current UK source routing and preserve unverified topic status.
 - Align evidence modes, calibration, and regional reference loading.
 - Restore substantive documentation checks and harden specialist evaluation.

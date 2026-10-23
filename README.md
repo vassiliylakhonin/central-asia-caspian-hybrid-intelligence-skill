@@ -6,6 +6,23 @@ Use it when a general policy memo misses the region's mechanisms: banking and pa
 
 **This is a reasoning skill.** The included experimental MCP server is a skeleton: every tool returns `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearance.
 
+## Choose a starting point
+
+[Load the skill](#start-with-the-skill) · [Source guide](docs/source-guide.md) ·
+[Evidence contract](docs/analysis-contract.md) · [Current status](STATUS.md)
+
+No package installation is needed to read and attach the skill. Start with a
+worked example close to your question, then replace its assumptions and source
+packet with your own. Historical examples require fresh source checks before
+operational reuse.
+
+| Your task | Worked example | Evidence to inspect |
+| --- | --- | --- |
+| Banking or counterparty exposure | [Open example](examples/bank-correspondent-counterparty-exposure.md) | Reasoning-only decision framing |
+| A Middle Corridor source pack | [Open example](examples/user-provided-sources-middle-corridor.md) | Claims tied to supplied sources |
+| Beneficial-ownership uncertainty | [Open example](examples/live-source-backed-bo-opacity.md) | A dated source-backed example |
+
+
 ## What it adds
 
 - Regional mechanisms and [risk archetypes](docs/risk-archetypes.md), instead of a country summary alone.

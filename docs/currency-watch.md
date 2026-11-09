@@ -3,7 +3,7 @@
 An **active reminder** of fast-moving topics in the region that any source-backed memo should re-verify against current primary sources before relying on. This is **not** a database of current facts. The skill does not retrieve sources. Treat entries below as the list of *what to check now*, not as confirmed status.
 
 **Topic catalogue reviewed:** 2026-11-09
-**Primary-source status:** verified at check for the EU sanctions-package, FATF/EAG status, Middle Corridor (TITR), and A7A5 / Kyrgyz VASP-cleanup topics, plus the UK list migration documented below; all other topics remain unverified.
+**Primary-source status:** verified at check for the EU sanctions-package, FATF/EAG status, Middle Corridor (TITR), A7A5 / Kyrgyz VASP-cleanup, and regional cyber / digital-infrastructure (partly, see its entry) topics, plus the UK list migration documented below; all other topics remain unverified.
 **Previous catalogue review:** 2026-09-30
 **Staleness rule:** any entry older than **90 days** must be re-verified before use. A stale watch list is worse than no watch list — it looks current while being wrong.
 
@@ -119,6 +119,13 @@ or other topic in this catalogue has been re-verified.
 - **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ## Geopolitical and security
+
+### Topic: Regional cyber threats, breach claims and digital-infrastructure rules
+- **Why it matters:** Cyber activity is a transmission channel into sanctions, AML, corridor and data-localisation exposure (archetype 17). Threat reporting, breach claims and national rules change faster than most other topics and are often misquoted.
+- **What to re-verify:** Whether any claimed national-database breach has been confirmed or denied by the affected authority; the current campaigns and attribution confidence that vendors state for regional actors; current national incident-response, critical-digital-infrastructure and data-localisation rules and their effective dates (original legal text, not law-firm summaries alone); infrastructure dependencies of the counterparty on out-of-jurisdiction hosting.
+- **Where to verify:** National CERT and cybersecurity-authority publications; ministry and regulator legal texts; vendor threat-intelligence reports (Talos, Kaspersky GReAT, Recorded Future, Positive Technologies, Group-IB and others, cross-checked against each other); on-chain analytics for exchange-theft claims; the counterparty's own disclosures.
+- **Freshness horizon for derived claims:** 90 days for campaign reporting; 6 months for regulatory texts; breach claims remain `Unknown` until confirmed.
+- **Last reviewed:** 2026-11-09 - checked against vendor reports (Cisco Talos 14 Oct 2026; Kaspersky Securelist 30 Jul 2026; TRM Labs 16 Apr 2026), Kazakh and Uzbek news and law-firm reporting on rules and a claimed breach, and the Kazakh incident-response resolution as reported by Kazakhstan Today; original Kazakh legal texts and any Uzbek government statement were not retrieved. See `examples/live-source-backed-cyber-digital-hybrid.md` for dates and limits. Re-verify before deriving claims.
 
 ### Topic: Russia-China-Iran junction dynamics and regional alignment
 - **Why it matters:** Diplomatic statements, joint exercises, summit communiqués, and SCO-level developments affect leverage analysis and risk transmission channels. Snapshot claims age quickly.

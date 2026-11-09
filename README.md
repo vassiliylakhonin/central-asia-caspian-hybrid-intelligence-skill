@@ -104,7 +104,7 @@ Start with the [example guide](examples/README.md), then inspect a case that mat
 | [Ownership opacity](examples/live-source-backed-bo-opacity.md) | Dated primary-source evidence |
 | [Conflicting trade estimates](examples/source-conflict-kz-ru-circumvention-volume-estimates.md) | Unresolved disagreement in an illustrative packet |
 
-Evidence-mode counts: `reasoning-only`=6; `illustrative source packet`=2; `live-source-backed`=7; `user-provided sources`=2.
+Evidence-mode counts: `reasoning-only`=6; `illustrative source packet`=2; `live-source-backed`=8; `user-provided sources`=2.
 
 Source-backed examples are historical snapshots. Recheck current primary sources before reuse. Example counts describe coverage, not validated analytical performance.
 

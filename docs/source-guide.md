@@ -79,6 +79,12 @@ State the evidence mode at the top of any memo. Mixing modes within a memo is al
 - Ministry-of-energy publications
 - IEA and OPEC reports for global context where material
 
+### Cyber and digital-infrastructure sources
+- National CERT and cybersecurity-authority advisories and incident-response rules (e.g. Kazakhstan's national CERT and coordination centre, UzCERT in Uzbekistan)
+- Ministry and regulator publications on data localisation, critical digital infrastructure and incident reporting, with the original legal text
+- Vendor threat-intelligence reports with indicators and stated attribution confidence (Tier 1 for what the vendor observed; Tier 2 for attribution and for anything the vendor did not itself measure)
+- Counterparty hosting, cloud and data-location disclosures
+
 ## Tier 2 — secondary, clearly marked as secondary
 
 - Credible regional and international media with track record on the region
@@ -104,6 +110,7 @@ Sources decay at different rates. Use the horizons below as the default re-verif
 | IFI corridor and country studies (World Bank, EBRD, ADB, IMF) | **24 months** for structural findings, **6 months** for prescriptive figures | Investment-needed and capacity targets re-baselined regularly. |
 | Court records and enforcement actions | **3 months** for active matters, **24 months** for closed ones | Status changes via appeals, settlements and follow-ups. |
 | Company registry / BO data | **3 months** | Filing cycles and ownership changes. |
+| Cyber threat reporting (vendor threat-intelligence, CERT advisories) | **3 months** | Campaigns and infrastructure rotate quickly. Claimed breaches stay `Unknown` until the affected organisation or a competent authority confirms them, whatever their age. |
 | Tier 2 reporting (media, think-tanks) | Take freshness from the underlying primary source it is reporting on | Tier 2 inherits the horizon of the primary it cites. |
 
 **Stale-source handling:**

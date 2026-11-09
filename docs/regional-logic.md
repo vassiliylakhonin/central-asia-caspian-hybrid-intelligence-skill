@@ -83,6 +83,7 @@ Some questions border the region without being in scope. Use these rules:
 
 - **Iran sanctions and Iran-related flows**: in scope only when the mechanism passes through Caspian / Central Asian routing, banking or counterparties (e.g. shipping via Caspian, regional banks with Iran exposure, dual-use re-export). Otherwise out of scope; state this and recommend Iran-specific resources.
 - **Afghanistan financial flows**: in scope when they touch Tajikistan, Kyrgyz, Turkmen or Pakistani onward routing in Central Asia, or AML predicate flows (drug trafficking, see archetype 16). Pure intra-Afghan analysis is out of scope.
+- **Cyber and digital threats**: in scope when the channel is a regional counterparty, corridor, platform or regulator exposed through its digital layer (archetype 17), or when a cyber event is the transmission path into sanctions, AML, corridor or data-localisation exposure. A pure cybersecurity audit, malware analysis or generic global threat briefing is out of scope.
 - **South Caucasus internal politics**: in scope when corridor (Middle Corridor / Caspian), sanctions or banking transmission is part of the answer. Pure domestic politics of Armenia, Azerbaijan or Georgia is out of scope.
 - **Türkiye-only or Gulf-only questions**: in scope when transit, financing or counterparty role for Central Asian flows is the mechanism. Otherwise out of scope.
 - **Russia-only or China-only questions**: out of scope. This skill is regional, not bilateral analysis of those powers.

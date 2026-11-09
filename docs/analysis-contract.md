@@ -33,6 +33,20 @@ settles transaction permission.
 
 Use four memo evidence modes: `live-source-backed`, `user-provided sources`,
 `illustrative source packet`, and `reasoning-only`. `mixed` is a legacy transport
-value only. When composed with GTTA, use its selected memo mode and confidence
-labels (`Low` / `Moderate` / `High`); regional instructions add mechanisms and
-evidence requirements rather than replacing the horizontal output contract.
+value only. When composed with GTTA (`global-think-tank-analyst`), use its
+selected memo mode (A-G) and canonical output labels for the memo structure;
+regional instructions add mechanisms, archetypes, freshness and re-verification
+requirements, false-positive handling and hard stops rather than replacing the
+horizontal output contract. Confidence uses one shared vocabulary:
+
+| Shared label | GTTA | This repo's earlier spelling |
+|---|---|---|
+| Low | `Low` | `low` |
+| Moderate | `Moderate` | `medium` |
+| High | `High` | `high` |
+
+The operational confidence scale in `SKILL.md` and its hard rules (freshness
+drop, `reasoning-only` ceiling, no `High` beyond a 12-month forecast) still
+apply; they narrow the level, never raise it. GTTA's optional ICD 203
+estimative terms (`docs/estimative-language.md` in that repo) describe
+likelihood, not confidence, and stay orthogonal to these labels.

@@ -163,11 +163,22 @@ Use this fixed contract unless another mode is clearly better:
 6. `Trigger points`: indicators that would change the assessment.
 7. `Confidence footer`.
 
+## Composition with the Horizontal Method (GTTA)
+
+When the horizontal strategic-risk skill (`global-think-tank-analyst`, GTTA) is active together with this one:
+
+- **Structure**: GTTA's selected memo mode (A-G) and its canonical output labels govern the memo skeleton. This skill's `Risk / Compliance`, `Strategic`, and `Hybrid` structures become content guidance inside those sections: they decide which mechanisms, archetypes, and risk sections to emphasize; they are not a competing heading set.
+- **Evidence**: this skill's source guide, currency watch, freshness horizons, false-positive rules, and hard stops apply in full.
+- **Confidence**: use the shared labels `Low` / `Moderate` / `High`. This skill's `medium` is GTTA's `Moderate`. The operational scale and hard rules below (freshness drop, `reasoning-only` ceiling, no `High` beyond 12 months) still apply; they narrow the level, never raise it.
+- **Estimative language**: GTTA's optional ICD 203 likelihood terms describe likelihood, not confidence, and stay optional under either skill.
+
+If the two contracts appear to conflict, the horizontal mode structure and the shared confidence labels decide the format; this skill's stricter evidence requirements and confidence ceilings decide the substance.
+
 ## Confidence Footer
 
 End substantive analyses with:
 
-- `Confidence`: low, medium, or high.
+- `Confidence`: Low, Moderate, or High (shared with GTTA; this repo's earlier `medium` spelling is `Moderate`).
 - `Key assumptions`: what must hold.
 - `Main unknowns`: missing information that could change the answer.
 - `Indicators to watch`: concrete signals, decisions, flows, enforcement actions, infrastructure milestones, price moves, political events, or institutional changes.
@@ -175,14 +186,14 @@ End substantive analyses with:
 Operational confidence scale (use, do not freelance):
 
 - `Low`: at least one of: key facts unverified or stale; mechanism inferred without direct evidence; alternative interpretation cannot be ruled out; horizon longer than the source freshness horizon for the claim type.
-- `Medium`: mechanism documented in at least one primary or authoritative secondary source; some quantitative claims unverified; alternative interpretation is weaker but plausible.
+- `Moderate`: mechanism documented in at least one primary or authoritative secondary source; some quantitative claims unverified; alternative interpretation is weaker but plausible.
 - `High`: mechanism documented in primary sources retrieved within freshness horizon; quantitative claims source-anchored; alternative interpretation requires contradicting primary evidence.
 
 Hard rules:
 
-- Do not use `high` for forward-looking forecasts beyond 12 months.
+- Do not use `High` for forward-looking forecasts beyond 12 months.
 - Drop one level if the source is past its freshness horizon (see source guide where available).
-- For `reasoning-only` evidence mode, the ceiling is `medium`.
+- For `reasoning-only` evidence mode, the ceiling is `Moderate`.
 
 
 

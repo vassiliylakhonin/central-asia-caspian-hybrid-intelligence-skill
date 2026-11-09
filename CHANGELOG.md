@@ -1,6 +1,12 @@
 # Changelog
 
+All notable changes to this repository are documented here.
+
 ## Unreleased
+
+- Added a fresh `live-source-backed` example on the 2026 collapse of the A7A5 ruble-stablecoin network and Kyrgyzstan's VASP-sector cleanup (`examples/live-source-backed-a7a5-collapse-kg-cleanup.md`, retrieval date 2026-11-09), using canonical Axis A / Axis B tags with primary sources (US Treasury, Council of the EU, Kyrgyz Finnadzor, FATF) cross-checked against two independent blockchain-analytics firms, and with the issuer-vs-analyst volume dispute surfaced rather than resolved. Per the Bar 3 anti-criteria in `docs/definition-of-done.md`, this example is currency maintenance for the cleared Bar 2 source-anchored ratio, **not** progress toward Bar 3: adding examples does not substitute for running the specialist-lift measurement.
+- Revised `docs/currency-watch.md` in one pass: re-verified the EU sanctions-package, FATF/EAG status, and Middle Corridor (TITR) topics against primary sources dated at check, added an A7A5-network / Kyrgyz VASP-cleanup topic, and left untouched topics explicitly unverified.
+- Merged the two duplicated `## Unreleased` sections in this file into one.
 
 - Add Caspian maritime-capacity reasoning, source requirements and an optional
   quantitative-model handoff; retain the unimplemented MCP boundary and document
@@ -9,10 +15,6 @@
 - Correct current UK source routing and preserve unverified topic status.
 - Align evidence modes, calibration, and regional reference loading.
 - Restore substantive documentation checks and harden specialist evaluation.
-
-All notable changes to this repository are documented here.
-
-## Unreleased
 
 - Removed the mock streaming engine and all claims of autonomous enforcement,
   continuous graph traversal, persistent memory, or no-human-review operation.

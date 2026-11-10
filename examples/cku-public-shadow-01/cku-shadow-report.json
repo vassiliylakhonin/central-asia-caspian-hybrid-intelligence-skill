@@ -1,0 +1,27 @@
+{
+  "caseId": "cku-public-shadow-01",
+  "containsNonPublicSources": false,
+  "deliverableType": "bankability-screen",
+  "evidenceClass": "INTERNAL_TECHNICAL_ONLY",
+  "generatedAt": "2026-11-10T12:04:39Z",
+  "holdoutControl": "HARNESS_ENFORCED",
+  "holdoutCount": 3,
+  "integrityVerified": true,
+  "marketEvidence": "NONE",
+  "metrics": {
+    "auditedMaterialClaims": 28,
+    "calculationMismatches": 0,
+    "claimSupportRatio": 0.7142857142857143,
+    "decisionUsefulnessScore": 78,
+    "fabricatedMaterialClaims": 0,
+    "holdoutChangedConclusion": false,
+    "materialCorrections": 3,
+    "reviewerType": "INTERNAL_AGENT",
+    "supportedMaterialClaims": 20,
+    "unsupportedOrConflictingMaterialClaims": 8
+  },
+  "modelSourceCount": 9,
+  "protocolMode": "PROSPECTIVE_BLIND",
+  "schemaVersion": "1.0",
+  "status": "REVIEWED"
+}

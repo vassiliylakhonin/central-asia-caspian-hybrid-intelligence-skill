@@ -54,6 +54,12 @@ Crosswalk: `Verified` ↔ `[primary]` or `[secondary]` (depending on the source 
 
 New live-source-backed examples should use the canonical Axis A / Axis B tags. Existing examples may retain the inline style.
 
+## Shadow cases
+
+Shadow cases are full claim-ledgered deliverables produced with portfolio tooling under a frozen-source, sealed-holdout protocol. They are internal technical evidence only, not market validation.
+
+- [`cku-public-shadow-01/`](cku-public-shadow-01/) — a DRAFT public-source bankability screen of the China–Kyrgyzstan–Uzbekistan railway JV financing, produced with the corridor-bankability-analyst toolkit: 28-claim source ledger (20 supported, 0 fabricated, 8 conflicting and carried as explicit gaps), internal-agent review and harness report (`INTERNAL_TECHNICAL_ONLY`, `marketEvidence: NONE`). See the case README for the exact labels.
+
 ## How to judge an example
 
 A strong example should:

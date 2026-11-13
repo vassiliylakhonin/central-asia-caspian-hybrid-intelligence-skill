@@ -4,6 +4,12 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added an optional per-group `draft_constraint` to `estimate_caspian_capacity`:
+  caller-supplied available depth, underkeel clearance, design draft and a
+  specialist tonnes-per-metre figure (each with a stated source) reduce the
+  group's payload by the draft shortfall, capped at the full payload. The tool
+  holds no Caspian sea-level or port-depth data; the linear reduction is the
+  caller's approximation, not a specialist payload assessment.
 - Added the first implemented MCP tool, `estimate_caspian_capacity`: deterministic
   Caspian capacity estimation over caller-supplied figures. Each figure enters as
   a low/high range with a required caller-stated source; source-less or inverted

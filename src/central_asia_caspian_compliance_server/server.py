@@ -57,10 +57,12 @@ def estimate_caspian_capacity(scenario: dict) -> str:
     """Estimate Caspian route capacity from caller-supplied figures.
 
     ``scenario`` is a JSON object: ``vessel_groups`` (name, vessels,
-    payload_tonnes_per_departure, cycle_hours, operating_days_per_year) and
-    optional ``interface_constraints`` (name, tonnes_per_year). Every figure
-    is ``{"low": ..., "high": ..., "source": ...}``; a figure without a
-    source is rejected, never defaulted. Returns a low/high capacity range,
+    payload_tonnes_per_departure, cycle_hours, operating_days_per_year, and
+    an optional ``draft_constraint`` of caller-supplied depth/clearance/design
+    draft figures) and optional ``interface_constraints`` (name,
+    tonnes_per_year). Every figure is ``{"low": ..., "high": ..., "source":
+    ...}``; a figure without a source is rejected, never defaulted. The tool
+    holds no sea-level or port-depth data. Returns a low/high capacity range,
     the binding constraint, and the arithmetic assumptions. The result is
     arithmetic on the caller's inputs, not a finding about current operations.
     """

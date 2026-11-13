@@ -113,5 +113,83 @@ class CapacityEstimateTests(unittest.TestCase):
         self.assertEqual(estimate_capacity_json(scenario()), estimate_capacity_json(scenario()))
 
 
+def draft_constraint(depth_low, depth_high, clearance_low=0.5, clearance_high=1.0,
+                     design_low=5.0, design_high=5.5, tpm_low=800, tpm_high=900):
+    return {
+        "available_depth_m": figure(depth_low, depth_high, source="caller depth sounding", unit="m"),
+        "underkeel_clearance_m": figure(clearance_low, clearance_high, source="caller clearance policy", unit="m"),
+        "vessel_design_draft_m": figure(design_low, design_high, source="caller class record", unit="m"),
+        "payload_tonnes_per_metre_draft": figure(tpm_low, tpm_high, source="caller specialist estimate", unit="t/m"),
+    }
+
+
+class DraftConstraintTests(unittest.TestCase):
+    def test_draft_limited_group_uses_reduced_payload(self):
+        s = scenario()
+        # permissible draft: low side 6.0 - 1.0 = 5.0 vs design high 5.5 -> 0.5m shortfall;
+        # reduction low = min(3000, 0.5 * 900) = 450 -> effective payload low 2550.
+        # high side permissible 6.5 - 0.5 = 6.0 vs design low 5.0 -> no shortfall.
+        s["vessel_groups"][0]["draft_constraint"] = draft_constraint(6.0, 6.5)
+        payload = json.loads(estimate_capacity_json(s))
+        draft = payload["vessel_groups"][0]["draft"]
+        self.assertEqual(draft["permissible_draft_m"], {"low": 5.0, "high": 6.0})
+        self.assertEqual(draft["draft_limited"], {"low": True, "high": False})
+        self.assertEqual(draft["payload_reduction_tonnes"], {"low": 450.0, "high": 0.0})
+        self.assertEqual(
+            draft["effective_payload_tonnes_per_departure"], {"low": 2550.0, "high": 4000.0}
+        )
+        # low capacity: 2 * 2550 * 60 = 306_000
+        self.assertEqual(
+            payload["vessel_groups"][0]["capacity_tonnes_per_year"]["low"], 306_000
+        )
+
+    def test_unlimited_draft_leaves_payload_unchanged(self):
+        s = scenario()
+        s["vessel_groups"][0]["draft_constraint"] = draft_constraint(9.0, 10.0)
+        payload = json.loads(estimate_capacity_json(s))
+        draft = payload["vessel_groups"][0]["draft"]
+        self.assertEqual(draft["draft_limited"], {"low": False, "high": False})
+        self.assertEqual(
+            draft["effective_payload_tonnes_per_departure"], {"low": 3000.0, "high": 4000.0}
+        )
+
+    def test_reduction_is_capped_at_full_payload(self):
+        s = scenario()
+        # permissible low 2.0 - 1.0 = 1.0 vs design 5.5 -> 4.5m * 900 = 4050 > 3000 payload.
+        s["vessel_groups"][0]["draft_constraint"] = draft_constraint(2.0, 2.5)
+        payload = json.loads(estimate_capacity_json(s))
+        draft = payload["vessel_groups"][0]["draft"]
+        self.assertEqual(draft["payload_reduction_tonnes"]["low"], 3000.0)
+        self.assertEqual(draft["effective_payload_tonnes_per_departure"]["low"], 0.0)
+
+    def test_draft_figures_echo_their_sources(self):
+        s = scenario()
+        s["vessel_groups"][0]["draft_constraint"] = draft_constraint(6.0, 6.5)
+        payload = json.loads(estimate_capacity_json(s))
+        inputs = payload["vessel_groups"][0]["draft"]["inputs"]
+        self.assertEqual(inputs["available_depth_m"]["source"], "caller depth sounding")
+        self.assertEqual(inputs["underkeel_clearance_m"]["source"], "caller clearance policy")
+
+    def test_draft_source_less_figure_is_rejected(self):
+        s = scenario()
+        bad = draft_constraint(6.0, 6.5)
+        del bad["available_depth_m"]["source"]
+        s["vessel_groups"][0]["draft_constraint"] = bad
+        payload = json.loads(estimate_capacity_json(s))
+        self.assertEqual(payload["status"], "invalid_input")
+
+    def test_draft_assumptions_appear_only_when_draft_is_supplied(self):
+        with_draft = scenario()
+        with_draft["vessel_groups"][0]["draft_constraint"] = draft_constraint(6.0, 6.5)
+        payload = json.loads(estimate_capacity_json(with_draft))
+        self.assertTrue(
+            any("sea-level" in a for a in payload["arithmetic_assumptions"])
+        )
+        payload = json.loads(estimate_capacity_json(scenario()))
+        self.assertFalse(
+            any("sea-level" in a for a in payload["arithmetic_assumptions"])
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

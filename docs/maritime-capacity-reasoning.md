@@ -65,10 +65,15 @@ mechanism analysis and identify the numerical result that remains unknown.
 The regional MCP implements one deterministic tool, `estimate_caspian_capacity`,
 for this reference's payload, cycle and interface constraints: every figure
 enters as a low/high range with a caller-stated source, and the tool returns
-the combined range and the binding constraint. It holds no Caspian data, does
-not infer draft from water levels, does not model demand, and does not check
-whether inputs are current; its output is arithmetic on the caller's
-assumptions, not a finding. The screening tools remain `not_implemented`.
+the combined range and the binding constraint. An optional per-group
+`draft_constraint` applies the payload-constraint mechanism above: the caller
+supplies current water depth, underkeel clearance, design draft and a
+specialist tonnes-per-metre figure, each with its source, and the tool reduces
+payload by the resulting shortfall. The tool holds no Caspian sea-level, gauge
+or port-depth data, does not model demand, and does not check whether inputs
+are current; its output is arithmetic on the caller's assumptions, not a
+finding, and the linear draft reduction is the caller's approximation, not a
+specialist payload assessment. The screening tools remain `not_implemented`.
 Run MCP servers in separate environments when composing: Corridor Bankability
 requires MCP 1.x; this server and GTTA's optional MCP adapter require MCP 2.x.
 No live screening or maritime-data integration is created by this reference.

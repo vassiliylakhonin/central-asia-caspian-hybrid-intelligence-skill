@@ -39,6 +39,19 @@ ARITHMETIC_ASSUMPTIONS = [
     "tool does not convert tonnes, TEU, wagons, or lane-metres.",
 ]
 
+DRAFT_ASSUMPTIONS = [
+    "Permissible draft is available_depth_m minus underkeel_clearance_m; both "
+    "are caller-supplied with their sources. This tool holds no Caspian "
+    "sea-level, gauge, or port-depth data.",
+    "The payload reduction is the draft shortfall times "
+    "payload_tonnes_per_metre_draft, capped at the full payload. A real "
+    "payload allowance is specialist-assessed; this linear estimate is the "
+    "caller's approximation, not a hydrographic or navigation-safety finding.",
+    "The low side pairs the least permissible draft (low depth, high "
+    "clearance) against the highest design draft and the highest "
+    "tonnes-per-metre figure; the high side pairs them in reverse.",
+]
+
 
 class Figure(BaseModel):
     """One caller-supplied quantity as a low/high range with its source."""
@@ -67,6 +80,19 @@ class Figure(BaseModel):
         return {"low": self.low, "high": self.high, "unit": self.unit, "source": self.source}
 
 
+class DraftConstraint(BaseModel):
+    """Caller-supplied water-depth and draft figures for one vessel group.
+
+    The tool stores no level or depth data: the caller supplies the current
+    depth and clearance figures and their sources for each run.
+    """
+
+    available_depth_m: Figure
+    underkeel_clearance_m: Figure
+    vessel_design_draft_m: Figure
+    payload_tonnes_per_metre_draft: Figure
+
+
 class VesselGroup(BaseModel):
     """A dedicated group of vessels with payload and cycle-time figures."""
 
@@ -75,6 +101,7 @@ class VesselGroup(BaseModel):
     payload_tonnes_per_departure: Figure
     cycle_hours: Figure
     operating_days_per_year: Figure
+    draft_constraint: DraftConstraint | None = None
 
     @model_validator(mode="after")
     def _cycle_time_non_zero(self) -> "VesselGroup":
@@ -103,6 +130,30 @@ def _round(value: float) -> float:
     return round(value, 1)
 
 
+def _draft_adjustment(constraint: DraftConstraint, payload: Figure) -> dict[str, Any]:
+    permissible_low = constraint.available_depth_m.low - constraint.underkeel_clearance_m.high
+    permissible_high = constraint.available_depth_m.high - constraint.underkeel_clearance_m.low
+    shortfall_low = max(0.0, constraint.vessel_design_draft_m.high - permissible_low)
+    shortfall_high = max(0.0, constraint.vessel_design_draft_m.low - permissible_high)
+    reduction_low = min(payload.low, shortfall_low * constraint.payload_tonnes_per_metre_draft.high)
+    reduction_high = min(payload.high, shortfall_high * constraint.payload_tonnes_per_metre_draft.low)
+    return {
+        "inputs": {
+            "available_depth_m": constraint.available_depth_m.echo(),
+            "underkeel_clearance_m": constraint.underkeel_clearance_m.echo(),
+            "vessel_design_draft_m": constraint.vessel_design_draft_m.echo(),
+            "payload_tonnes_per_metre_draft": constraint.payload_tonnes_per_metre_draft.echo(),
+        },
+        "permissible_draft_m": {"low": _round(permissible_low), "high": _round(permissible_high)},
+        "draft_limited": {"low": shortfall_low > 0, "high": shortfall_high > 0},
+        "payload_reduction_tonnes": {"low": _round(reduction_low), "high": _round(reduction_high)},
+        "effective_payload_tonnes_per_departure": {
+            "low": _round(payload.low - reduction_low),
+            "high": _round(payload.high - reduction_high),
+        },
+    }
+
+
 def _group_capacity(group: VesselGroup) -> dict[str, Any]:
     departures_low = (
         group.operating_days_per_year.low * HOURS_PER_DAY / group.cycle_hours.high
@@ -110,9 +161,16 @@ def _group_capacity(group: VesselGroup) -> dict[str, Any]:
     departures_high = (
         group.operating_days_per_year.high * HOURS_PER_DAY / group.cycle_hours.low
     )
-    capacity_low = group.vessels.low * group.payload_tonnes_per_departure.low * departures_low
-    capacity_high = group.vessels.high * group.payload_tonnes_per_departure.high * departures_high
-    return {
+    payload_low = group.payload_tonnes_per_departure.low
+    payload_high = group.payload_tonnes_per_departure.high
+    draft = None
+    if group.draft_constraint is not None:
+        draft = _draft_adjustment(group.draft_constraint, group.payload_tonnes_per_departure)
+        payload_low = draft["effective_payload_tonnes_per_departure"]["low"]
+        payload_high = draft["effective_payload_tonnes_per_departure"]["high"]
+    capacity_low = group.vessels.low * payload_low * departures_low
+    capacity_high = group.vessels.high * payload_high * departures_high
+    result = {
         "name": group.name,
         "inputs": {
             "vessels": group.vessels.echo(),
@@ -129,6 +187,9 @@ def _group_capacity(group: VesselGroup) -> dict[str, Any]:
             "high": _round(capacity_high),
         },
     }
+    if draft is not None:
+        result["draft"] = draft
+    return result
 
 
 def estimate_capacity(scenario: CapacityScenario) -> dict[str, Any]:
@@ -164,7 +225,8 @@ def estimate_capacity(scenario: CapacityScenario) -> dict[str, Any]:
             "high": _round(usable_high),
         },
         "binding_constraint": {"low": binding_low, "high": binding_high},
-        "arithmetic_assumptions": ARITHMETIC_ASSUMPTIONS,
+        "arithmetic_assumptions": ARITHMETIC_ASSUMPTIONS
+        + (DRAFT_ASSUMPTIONS if any(g.draft_constraint for g in scenario.vessel_groups) else []),
         "detail": (
             "Deterministic arithmetic over caller-supplied figures only. Every "
             "input number carries the source the caller stated; the tool adds "

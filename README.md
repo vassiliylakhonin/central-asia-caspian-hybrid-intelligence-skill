@@ -93,7 +93,7 @@ The [companion patterns](docs/companion-patterns.md) explain composition. Loadin
 
 ## Examples
 
-For maritime fleet and port/rail questions, the [Caspian capacity reference](docs/maritime-capacity-reasoning.md) distinguishes payload, cycle time, interface constraints, and demand constraints. It adds reasoning guidance, not a live data service. The MCP server's `estimate_caspian_capacity` tool turns caller-supplied figures for those constraints into a low/high range with the binding constraint named; every figure requires a stated source, and the tool adds no data of its own.
+For maritime fleet and port/rail questions, the [Caspian capacity reference](docs/maritime-capacity-reasoning.md) distinguishes payload, cycle time, interface constraints, and demand constraints. It adds reasoning guidance, not a live data service. The MCP server's `estimate_caspian_capacity` tool turns caller-supplied figures for those constraints into a low/high range with the binding constraint named; every figure requires a stated source, and the tool adds no data of its own. An optional draft constraint reduces payload from caller-supplied depth and clearance figures; the repo holds no Caspian water-level data.
 
 Start with the [example guide](examples/README.md), then inspect a case that matches your evidence mode:
 

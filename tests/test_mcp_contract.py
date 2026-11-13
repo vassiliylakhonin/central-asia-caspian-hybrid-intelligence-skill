@@ -41,6 +41,7 @@ class PackagingInvariantTests(unittest.TestCase):
                 "analyze_graph_relationships",
                 "retrieve_memory_context",
                 "estimate_caspian_capacity",
+                "draft_field_dd_checklist",
             },
         )
 

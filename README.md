@@ -11,7 +11,7 @@ A Central Asia & Caspian specialist skill for AI agents preparing evidence-aware
 
 Use it when a general policy memo misses the region's mechanisms: banking and payment routes, beneficial ownership, sanctions and AML exposure, trade corridors, logistics, and energy infrastructure risk.
 
-This is a reasoning skill and decision framework, not a live intelligence feed. The included experimental MCP server implements one deterministic tool, `estimate_caspian_capacity`, which only combines caller-supplied figures (each with a caller-stated source) into a capacity range; its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
+This is a reasoning skill and decision framework, not a live intelligence feed. The included experimental MCP server implements two deterministic, data-free tools: `estimate_caspian_capacity` combines caller-supplied figures (each with a caller-stated source) into a capacity range, and `draft_field_dd_checklist` returns a template of document requests and questions for local counsel. Its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
 
 ## Start with the skill
 
@@ -142,7 +142,7 @@ Run the repository validator before submitting changes:
 python3 scripts/validate.py
 ```
 
-The skill package and examples remain the primary interface. The Python MCP surface is retained for development; its one implemented tool only rearranges caller-supplied figures and does not deliver analytical findings.
+The skill package and examples remain the primary interface. The Python MCP surface is retained for development; its implemented tools only rearrange caller-supplied figures or emit a counsel checklist template and do not deliver analytical findings.
 
 ## License
 

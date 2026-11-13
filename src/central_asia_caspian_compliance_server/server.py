@@ -1,9 +1,11 @@
 """MCP server for the Central Asia and Caspian skill.
 
 The three screening tools are declared so the transport and tool surface can
-be exercised, and each one refuses instead of answering. One tool,
-`estimate_caspian_capacity`, is implemented: deterministic arithmetic over
-caller-supplied figures, each with a caller-stated source. It adds no data.
+be exercised, and each one refuses instead of answering. Two tools are
+implemented, both deterministic and data-free: `estimate_caspian_capacity`
+combines caller-supplied figures, each with a caller-stated source, and
+`draft_field_dd_checklist` returns a template of requests for local counsel.
+Neither adds data or produces a finding.
 
 The first version of this file returned `{"status": "clear", "confidence": 0.95}`
 for any entity name it was given, and AGENTS.md points an agent at this file to
@@ -16,6 +18,7 @@ from mcp.server.mcpserver import MCPServer
 
 from .capacity import estimate_capacity_json
 from .contract import unimplemented_response
+from .dd_checklist import draft_field_dd_checklist_json
 
 mcp = MCPServer("central-asia-caspian-compliance-server", version="0.3.0")
 
@@ -67,6 +70,18 @@ def estimate_caspian_capacity(scenario: dict) -> str:
     arithmetic on the caller's inputs, not a finding about current operations.
     """
     return estimate_capacity_json(scenario)
+
+
+@mcp.tool()
+def draft_field_dd_checklist(country: str, counterparty_type: str = "company") -> str:
+    """List documents to request and questions for local counsel.
+
+    For use when open-source data is insufficient. Returns a generic template
+    marked item-by-item for verification with local counsel; document and
+    registry names vary by jurisdiction. This is not screening and produces
+    no finding about the counterparty.
+    """
+    return draft_field_dd_checklist_json(country, counterparty_type)
 
 
 @mcp.tool()

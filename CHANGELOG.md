@@ -4,6 +4,12 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added a second implemented MCP tool, `draft_field_dd_checklist`: a fixed template
+  of documents to request and questions to ask local counsel in Central Asia /
+  Caspian when open-source data is insufficient. Every item is marked
+  `verify_with_local_counsel`; the tool holds no jurisdiction data, screens
+  nothing, and returns no verdict. A blank country is rejected without a
+  default.
 - Added an optional per-group `draft_constraint` to `estimate_caspian_capacity`:
   caller-supplied available depth, underkeel clearance, design draft and a
   specialist tonnes-per-metre figure (each with a stated source) reduce the

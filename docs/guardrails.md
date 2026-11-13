@@ -12,3 +12,6 @@
 6. An `estimate_caspian_capacity` result is arithmetic on caller-supplied
    figures, each with a caller-stated source; it is not a finding about
    current operations, and the tool holds no regional data.
+7. A `draft_field_dd_checklist` result is a template of requests for local
+   counsel, every item to be verified locally; it is not screening and
+   returns no verdict on a counterparty.

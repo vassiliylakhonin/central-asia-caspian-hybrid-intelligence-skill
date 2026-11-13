@@ -9,3 +9,6 @@
 4. A confidence or sufficiency score describes the supplied evidence only; it is
    not a probability of legality, safety, or absence from a sanctions list.
 5. MCP tools that return `not_implemented` have produced no finding.
+6. An `estimate_caspian_capacity` result is arithmetic on caller-supplied
+   figures, each with a caller-stated source; it is not a finding about
+   current operations, and the tool holds no regional data.

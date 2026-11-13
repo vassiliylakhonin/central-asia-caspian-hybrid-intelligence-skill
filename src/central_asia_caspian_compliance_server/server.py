@@ -1,7 +1,9 @@
-"""MCP server skeleton for the Central Asia and Caspian skill.
+"""MCP server for the Central Asia and Caspian skill.
 
-Nothing here screens anything yet. Each tool is declared so the transport and
-tool surface can be exercised, and each one refuses instead of answering.
+The three screening tools are declared so the transport and tool surface can
+be exercised, and each one refuses instead of answering. One tool,
+`estimate_caspian_capacity`, is implemented: deterministic arithmetic over
+caller-supplied figures, each with a caller-stated source. It adds no data.
 
 The first version of this file returned `{"status": "clear", "confidence": 0.95}`
 for any entity name it was given, and AGENTS.md points an agent at this file to
@@ -12,9 +14,10 @@ backed by an actual source, it must say so.
 
 from mcp.server.mcpserver import MCPServer
 
+from .capacity import estimate_capacity_json
 from .contract import unimplemented_response
 
-mcp = MCPServer("central-asia-caspian-compliance-server", version="0.2.0")
+mcp = MCPServer("central-asia-caspian-compliance-server", version="0.3.0")
 
 
 def _unimplemented(tool: str, needs: str, **echo: object) -> str:
@@ -47,6 +50,21 @@ def analyze_graph_relationships(node_id: str, depth: int = 2) -> str:
         node=node_id,
         depth=depth,
     )
+
+
+@mcp.tool()
+def estimate_caspian_capacity(scenario: dict) -> str:
+    """Estimate Caspian route capacity from caller-supplied figures.
+
+    ``scenario`` is a JSON object: ``vessel_groups`` (name, vessels,
+    payload_tonnes_per_departure, cycle_hours, operating_days_per_year) and
+    optional ``interface_constraints`` (name, tonnes_per_year). Every figure
+    is ``{"low": ..., "high": ..., "source": ...}``; a figure without a
+    source is rejected, never defaulted. Returns a low/high capacity range,
+    the binding constraint, and the arithmetic assumptions. The result is
+    arithmetic on the caller's inputs, not a finding about current operations.
+    """
+    return estimate_capacity_json(scenario)
 
 
 @mcp.tool()

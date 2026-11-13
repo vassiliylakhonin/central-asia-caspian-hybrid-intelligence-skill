@@ -166,9 +166,10 @@ Bar 3 tests the claim this repo is named for: that the vertical changes the *sub
 
 This repository contains an MCP transport skeleton, not an active screening or
 orchestration service.
-- **MCP Integration:** `src/central_asia_caspian_compliance_server/server.py` is a transport skeleton. Its tools are
-  declared but not implemented and every call returns `status: not_implemented`;
-  never read a response from it as a screening result.
+- **MCP Integration:** `src/central_asia_caspian_compliance_server/server.py` is a transport surface with one
+  implemented deterministic tool, `estimate_caspian_capacity`: it combines caller-supplied figures (each with a
+  caller-stated source) into a capacity range and adds no data of its own. The screening tools are declared but
+  not implemented and every call returns `status: not_implemented`; never read a response from it as a screening result.
 - **Cross-region composition:** A workflow may load the sibling regional skill,
   but no delegation or external call is implied by these repository files.
 - **Graph and memory documents:** These define proposed data shapes only. No graph

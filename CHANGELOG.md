@@ -4,6 +4,16 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added the first implemented MCP tool, `estimate_caspian_capacity`: deterministic
+  Caspian capacity estimation over caller-supplied figures. Each figure enters as
+  a low/high range with a required caller-stated source; source-less or inverted
+  figures are rejected, never defaulted. The tool returns per-group and fleet
+  capacity ranges, usable throughput against supplied interface constraints, the
+  binding constraint (which can differ between low and high), and the arithmetic
+  assumptions. It holds no regional data, does not infer draft from water levels,
+  does not model demand, and expresses no likelihood; output is marked
+  `result_is_not_a_finding` with `human_review_required`. The three screening
+  tools remain `not_implemented`. Package version bumped 0.2.0 → 0.3.0.
 - Published shadow case `cku-public-shadow-01` under `examples/cku-public-shadow-01/`: a DRAFT public-source bankability screen of the China–Kyrgyzstan–Uzbekistan railway JV financing, produced with the corridor-bankability-analyst toolkit (separate private repo) under its public shadow test contract v1.0 (`PROSPECTIVE_BLIND`, 9 frozen public model sources, 3 sealed holdouts, internal-agent review). Published verbatim with its claim ledger (28 claims: 20 supported, 0 fabricated, 8 conflicting and carried as explicit gaps), review notes and harness report (`evidenceClass: INTERNAL_TECHNICAL_ONLY`, `marketEvidence: NONE`). This is rehearsal evidence, not market validation; it changes no Bar status, no evidence-mode counts and no flagship-example claims.
 - Added a GTTA composition rule. `SKILL.md` gains a `Composition with the Horizontal Method (GTTA)` section and `docs/analysis-contract.md` expands its composition note into a shared confidence vocabulary (`Low` / `Moderate` / `High`; this repo's earlier `medium` spelling is GTTA's `Moderate`). When both skills are loaded, GTTA's memo mode and canonical output labels govern the memo structure, while this skill's mechanisms, archetypes, evidence requirements and confidence ceilings apply unchanged and narrow, never raise, the confidence level. The Confidence Footer scale is renamed to the shared labels with unchanged criteria and hard rules. Documentation-only alignment; no mode, schema, eval or benchmark change. This is Bar 2 content, not Bar 3 progress.
 - Added archetype 17, **Cyber / digital-hybrid exposure**, to `docs/risk-archetypes.md` (mechanism, indicators, evidence needed, false positives, watch-next triggers, role-based mitigation questions, hard stops and confidence ceilings, anti-criteria, concrete examples, source-class row). Cyber is framed as a transmission channel into sanctions, AML, corridor and data-localisation exposure, linked to archetypes 5 and 12-14, not as a sector label. Added a scope entry in `docs/regional-logic.md`, a cyber source class and a 3-month freshness horizon in `docs/source-guide.md`, and a new `docs/currency-watch.md` topic (partly verified 2026-11-09; original legal texts and national CERT sources were not retrieved).

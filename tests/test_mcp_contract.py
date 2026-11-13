@@ -40,6 +40,7 @@ class PackagingInvariantTests(unittest.TestCase):
                 "query_regional_sanctions",
                 "analyze_graph_relationships",
                 "retrieve_memory_context",
+                "estimate_caspian_capacity",
             },
         )
 
@@ -78,6 +79,55 @@ class McpContractTests(unittest.TestCase):
                 self.assertEqual(payload["status"], "not_implemented")
                 self.assertTrue(payload["result_is_not_a_finding"])
                 self.assertTrue(payload["human_review_required"])
+
+    def test_capacity_tool_estimates_through_the_server(self):
+        import anyio
+
+        from central_asia_caspian_compliance_server import server
+
+        scenario = {
+            "vessel_groups": [
+                {
+                    "name": "train ferries",
+                    "vessels": {"low": 2, "high": 2, "source": "test"},
+                    "payload_tonnes_per_departure": {"low": 3000, "high": 4000, "source": "test"},
+                    "cycle_hours": {"low": 96, "high": 120, "source": "test"},
+                    "operating_days_per_year": {"low": 300, "high": 330, "source": "test"},
+                }
+            ]
+        }
+        result = anyio.run(
+            lambda: server.mcp.call_tool("estimate_caspian_capacity", {"scenario": scenario})
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "estimate")
+        self.assertTrue(payload["result_is_not_a_finding"])
+        self.assertEqual(
+            payload["fleet_capacity_tonnes_per_year"], {"low": 360000, "high": 660000}
+        )
+
+    def test_capacity_tool_rejects_source_less_figures_through_the_server(self):
+        import anyio
+
+        from central_asia_caspian_compliance_server import server
+
+        scenario = {
+            "vessel_groups": [
+                {
+                    "name": "train ferries",
+                    "vessels": {"low": 2, "high": 2},
+                    "payload_tonnes_per_departure": {"low": 3000, "high": 4000, "source": "t"},
+                    "cycle_hours": {"low": 96, "high": 120, "source": "t"},
+                    "operating_days_per_year": {"low": 300, "high": 330, "source": "t"},
+                }
+            ]
+        }
+        result = anyio.run(
+            lambda: server.mcp.call_tool("estimate_caspian_capacity", {"scenario": scenario})
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "invalid_input")
+        self.assertTrue(payload["result_is_not_a_finding"])
 
     def test_structured_contract_cannot_approve_or_enforce(self):
         schema = json.loads((ROOT / "schemas" / "compliance-decision.schema.json").read_text())

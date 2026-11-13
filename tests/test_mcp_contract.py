@@ -42,6 +42,7 @@ class PackagingInvariantTests(unittest.TestCase):
                 "retrieve_memory_context",
                 "estimate_caspian_capacity",
                 "draft_field_dd_checklist",
+                "audit_trade_packet",
             },
         )
 

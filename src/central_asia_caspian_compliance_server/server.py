@@ -1,11 +1,12 @@
 """MCP server for the Central Asia and Caspian skill.
 
 The three screening tools are declared so the transport and tool surface can
-be exercised, and each one refuses instead of answering. Two tools are
-implemented, both deterministic and data-free: `estimate_caspian_capacity`
-combines caller-supplied figures, each with a caller-stated source, and
-`draft_field_dd_checklist` returns a template of requests for local counsel.
-Neither adds data or produces a finding.
+be exercised, and each one refuses instead of answering. Three tools are
+implemented, all deterministic and data-free: `estimate_caspian_capacity`
+combines caller-supplied figures, each with a caller-stated source;
+`draft_field_dd_checklist` returns a template of requests for local counsel;
+and `audit_trade_packet` cross-checks caller-supplied trade-document fields.
+None adds data or produces a finding.
 
 The first version of this file returned `{"status": "clear", "confidence": 0.95}`
 for any entity name it was given, and AGENTS.md points an agent at this file to
@@ -19,6 +20,7 @@ from mcp.server.mcpserver import MCPServer
 from .capacity import estimate_capacity_json
 from .contract import unimplemented_response
 from .dd_checklist import draft_field_dd_checklist_json
+from .trade_packet import audit_trade_packet_json
 
 mcp = MCPServer("central-asia-caspian-compliance-server", version="0.3.0")
 
@@ -82,6 +84,23 @@ def draft_field_dd_checklist(country: str, counterparty_type: str = "company") -
     no finding about the counterparty.
     """
     return draft_field_dd_checklist_json(country, counterparty_type)
+
+
+@mcp.tool()
+def audit_trade_packet(packet: dict) -> str:
+    """Cross-check caller-supplied trade-document fields for consistency.
+
+    ``packet`` is a JSON object: ``documents`` (at least two; each with a
+    ``type`` of contract/invoice/bill_of_lading/certificate_of_origin/
+    insurance/other, optional ``hs_codes`` and a ``date`` in YYYY-MM-DD), an
+    optional ``incoterm`` rule, and optional ``freight_paid_by`` /
+    ``insurance_paid_by`` (seller or buyer). Checks HS-code set agreement
+    across documents, date ordering, and whether the supplied payers match
+    the Incoterm allocation (ICC Incoterms 2020 definitions). Reads no
+    external data, assesses no prices, judges no authenticity. A flag means
+    the supplied fields disagree; a consistent result is not a clearance.
+    """
+    return audit_trade_packet_json(packet)
 
 
 @mcp.tool()

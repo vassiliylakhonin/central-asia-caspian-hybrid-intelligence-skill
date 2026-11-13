@@ -4,6 +4,15 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added a third implemented MCP tool, `audit_trade_packet`: deterministic
+  consistency checks over caller-supplied trade-document fields. Compares
+  normalized HS-code sets across contract/invoice/bill of lading (including
+  same-heading different-subdivision splits), date ordering (contract <=
+  invoice <= bill of lading; certificate of origin <= bill of lading), and
+  freight/insurance payers against the Incoterm allocation per ICC Incoterms
+  2020 definitions. No external data, no price assessment, no authenticity
+  judgment; a flag means the supplied fields disagree, and a consistent
+  result is not a clearance.
 - Added a second implemented MCP tool, `draft_field_dd_checklist`: a fixed template
   of documents to request and questions to ask local counsel in Central Asia /
   Caspian when open-source data is insufficient. Every item is marked

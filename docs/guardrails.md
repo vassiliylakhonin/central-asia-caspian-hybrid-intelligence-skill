@@ -15,3 +15,6 @@
 7. A `draft_field_dd_checklist` result is a template of requests for local
    counsel, every item to be verified locally; it is not screening and
    returns no verdict on a counterparty.
+8. An `audit_trade_packet` flag means caller-supplied fields disagree; it is
+   not evidence of fraud, and a consistent result is not a clearance. The
+   tool reads no external data and judges no authenticity.

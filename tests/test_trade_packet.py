@@ -76,6 +76,26 @@ class TradePacketTests(unittest.TestCase):
         self.assertEqual(results(payload)["date_ordering"], "inconsistent")
         self.assertTrue(any("certificate_of_origin" in f for f in payload["flags"]))
 
+    def test_documents_of_the_same_type_all_count_regardless_of_order(self):
+        p = packet()
+        p["documents"].insert(
+            1,
+            {
+                "type": "invoice",
+                "label": "later invoice",
+                "hs_codes": ["860719"],
+                "date": "2026-02-05",
+            },
+        )
+        first = json.loads(audit_trade_packet_json(p))
+        p["documents"].reverse()
+        second = json.loads(audit_trade_packet_json(p))
+        self.assertEqual(first, second)
+        self.assertEqual(results(first)["hs_code_consistency"], "inconsistent")
+        self.assertEqual(results(first)["date_ordering"], "inconsistent")
+        self.assertIn("invoice (later invoice) lacks: 732690", first["flags"][0])
+        self.assertIn("invoice (later invoice) dated 2026-02-05", first["flags"][1])
+
     def test_incoterms_payer_mismatch_is_flagged(self):
         p = packet(freight_paid_by="seller")  # FOB allocates freight to buyer
         payload = json.loads(audit_trade_packet_json(p))
@@ -104,7 +124,18 @@ class TradePacketTests(unittest.TestCase):
         )
         self.assertEqual(payload["status"], "audit")
         self.assertEqual(results(payload)["hs_code_consistency"], "not_checked")
+        self.assertEqual(results(payload)["date_ordering"], "not_checked")
         self.assertEqual(results(payload)["incoterms_allocation"], "not_checked")
+
+    def test_dates_without_a_supported_pair_are_not_checked(self):
+        p = packet(
+            documents=[
+                {"type": "contract", "date": "2026-01-01"},
+                {"type": "insurance", "date": "2026-01-02"},
+            ]
+        )
+        payload = json.loads(audit_trade_packet_json(p))
+        self.assertEqual(results(payload)["date_ordering"], "not_checked")
 
     def test_single_document_is_rejected(self):
         payload = json.loads(audit_trade_packet_json({"documents": [{"type": "invoice"}]}))
@@ -113,6 +144,12 @@ class TradePacketTests(unittest.TestCase):
     def test_bad_date_format_is_rejected(self):
         p = packet()
         p["documents"][0]["date"] = "10.01.2026"
+        payload = json.loads(audit_trade_packet_json(p))
+        self.assertEqual(payload["status"], "invalid_input")
+
+    def test_invalid_calendar_date_is_rejected(self):
+        p = packet()
+        p["documents"][0]["date"] = "2026-02-31"
         payload = json.loads(audit_trade_packet_json(p))
         self.assertEqual(payload["status"], "invalid_input")
 

@@ -28,7 +28,7 @@ Requirements: Python 3.8+. No additional packages — the validator uses the sta
 
 **Unfamiliar with a term in `AGENTS.md`?** See the [portfolio glossary](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md) — single source of truth across the four repos for evidence modes, uncertainty labels (`Verified`/`Plausible`/`Judgment`/`Unknown`), Axis A/B provenance tags, table-cell discipline, three-value response logic, and the maturity-framework asymmetry (this repo and the Gulf+ME sibling use Bar 1/2; `global-think-tank-analyst` uses the Maturity framework from `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets — do not transplant terminology between them).
 
-**When something is unclear**, the lookup order is: this repo's [`AGENTS.md`](AGENTS.md) → portfolio canon ([agenda-intelligence-md/AGENTS.md](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/AGENTS.md), [global-think-tank-analyst/AGENTS.md](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/AGENTS.md)) → open an issue using the template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
+**When something is unclear**, the lookup order is: this repo's [`AGENTS.md`](AGENTS.md) → portfolio canon ([Agenda Intelligence glossary](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md), [global-think-tank-analyst/AGENTS.md](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/AGENTS.md)) → open an issue using the template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
 
 ---
 

@@ -1,15 +1,42 @@
-# Central Asia & Caspian Intelligence Skill
+# Central Asia + Caspian
 
-**Analyze Central Asia and Caspian exposure through routes, ownership, and regional mechanisms.**
+**Turn regional exposure questions into decision memos about routes, ownership, and how risk spreads.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status: Experimental](https://img.shields.io/badge/Status-Experimental-orange.svg)](STATUS.md)
 
-A Central Asia & Caspian specialist skill for AI agents preparing evidence-aware decision memos. Banking routes, ownership uncertainty, sanctions exposure, and corridor constraints.
+A specialist reasoning skill for AI agents working on Central Asia and the Caspian. Use it for a banking relationship, a trade corridor, or an energy project where the regional details change the decision.
 
 [Try the skill](#start-with-the-skill) · [Worked examples](examples/README.md) · [Source guide](docs/source-guide.md) · [Evaluation status](STATUS.md)
 
-Use it when a general policy memo misses the region's mechanisms: banking and payment routes, beneficial ownership, sanctions and AML exposure, trade corridors, logistics, and energy infrastructure risk.
+## See the questions it adds
+
+A risk committee is considering a limited logistics pilot through Kazakhstan and the Caspian corridor. What evidence would justify proceeding, changing the plan, or waiting?
+
+The skill asks the agent to make the decision concrete:
+
+- **Evidence:** What do the supplied sources support, what is assumed, and what is still unknown?
+- **Mechanism:** Where could port, ferry, rail, or border constraints affect the pilot?
+- **Exposure:** Which counterparties, ownership links, and payment routes need review?
+- **Decision:** What evidence is missing, and which indicators would change the recommendation?
+
+This is a hypothetical brief, not a screening result. The [Middle Corridor worked example](examples/user-provided-sources-middle-corridor.md) shows a memo bounded by a supplied source packet; its dated figures need rechecking before reuse.
+
+These are requested output properties, not guaranteed results. The skill is experimental; substantive regional reasoning lift over the general method has not been demonstrated. Review the memo and its sources. See [validation and limits](#validation-and-limits).
+
+## One regional skill, three runtime overlays
+
+Load this repository's [root SKILL.md](SKILL.md), then the matching [Claude](runtimes/claude/SKILL.md), [Codex](runtimes/codex/SKILL.md), or [OpenClaw](runtimes/openclaw/SKILL.md) overlay. The root is the complete runtime-neutral contract. The Claude Code plugin adapter attaches the root and Claude overlay for you; it is not another analytical variant.
+
+GTTA is optional, not a prerequisite. When both skills are active, [GTTA supplies the memo structure](SKILL.md#composition-with-the-horizontal-method-gtta), while this skill supplies regional mechanisms and stricter evidence rules.
+
+## Where it fits
+
+- **Think:** [GTTA](https://github.com/vassiliylakhonin/global-think-tank-analyst) for general decision memos; this skill for Central Asia and Caspian reasoning, on its own or alongside GTTA.
+- **Check:** [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) checks supplied claim/source packets, not factual truth.
+- **Authorize:** [Vizier](https://github.com/vassiliylakhonin/vizier) checks proposed actions against signed permissions and policies; a separate trusted integration enforces the result.
+
+Loading this skill does not run either companion or authorize an action. AI drafts. Humans decide.
 
 This is a reasoning skill and decision framework, not a live intelligence feed. The included experimental MCP server implements three deterministic, data-free tools: `estimate_caspian_capacity` combines caller-supplied figures (each with a caller-stated source) into a capacity range, `draft_field_dd_checklist` returns a template of document requests and questions for local counsel, and `audit_trade_packet` cross-checks caller-supplied trade-document fields (HS codes, dates, Incoterms allocation) for internal consistency. Its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
 

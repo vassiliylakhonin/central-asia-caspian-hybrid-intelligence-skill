@@ -17,4 +17,7 @@
    returns no verdict on a counterparty.
 8. An `audit_trade_packet` flag means caller-supplied fields disagree; it is
    not evidence of fraud, and a consistent result is not a clearance. The
-   tool reads no external data and judges no authenticity.
+   tool reads no external data and judges no authenticity. Its per-field
+   verdicts are non-compensatory: one failed critical field fails the
+   packet, and a field that could not be compared is marked
+   `needs_human_review`, never passed by default.

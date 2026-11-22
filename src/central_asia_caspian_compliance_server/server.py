@@ -92,13 +92,18 @@ def audit_trade_packet(packet: dict) -> str:
 
     ``packet`` is a JSON object: ``documents`` (at least two; each with a
     ``type`` of contract/invoice/bill_of_lading/certificate_of_origin/
-    insurance/other, optional ``hs_codes`` and a ``date`` in YYYY-MM-DD), an
-    optional ``incoterm`` rule, and optional ``freight_paid_by`` /
-    ``insurance_paid_by`` (seller or buyer). Checks HS-code set agreement
-    across documents, date ordering, and whether the supplied payers match
-    the Incoterm allocation (ICC Incoterms 2020 definitions). Reads no
-    external data, assesses no prices, judges no authenticity. A flag means
-    the supplied fields disagree; a consistent result is not a clearance.
+    insurance/other, optional ``hs_codes``, a ``date`` in YYYY-MM-DD, an
+    ``amount`` as a plain number string, a three-letter ``currency``, and
+    ``seller`` / ``buyer`` names), an optional ``incoterm`` rule, and
+    optional ``freight_paid_by`` / ``insurance_paid_by`` (seller or buyer).
+    Checks HS-code set agreement across documents, amount and currency
+    agreement, date ordering, named-party agreement after normalization, and
+    whether the supplied payers match the Incoterm allocation (ICC Incoterms
+    2020 definitions). Each critical field gets its own verdict and the
+    aggregate is worst-of: one failed field fails the packet, and a field
+    with too little data to compare is marked ``needs_human_review``.
+    Reads no external data, assesses no prices, judges no authenticity.
+    A flag means the supplied fields disagree; a pass is not a clearance.
     """
     return audit_trade_packet_json(packet)
 

@@ -38,7 +38,7 @@ GTTA is optional, not a prerequisite. When both skills are active, [GTTA supplie
 
 Loading this skill does not run either companion or authorize an action. AI drafts. Humans decide.
 
-This is a reasoning skill and decision framework, not a live intelligence feed. The included experimental MCP server implements three deterministic, data-free tools: `estimate_caspian_capacity` combines caller-supplied figures (each with a caller-stated source) into a capacity range, `draft_field_dd_checklist` returns a template of document requests and questions for local counsel, and `audit_trade_packet` cross-checks caller-supplied trade-document fields (HS codes, dates, Incoterms allocation) for internal consistency. Its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
+This is a reasoning skill and decision framework, not a live intelligence feed. The included experimental MCP server implements three deterministic, data-free tools: `estimate_caspian_capacity` combines caller-supplied figures (each with a caller-stated source) into a capacity range, `draft_field_dd_checklist` returns a template of document requests and questions for local counsel, and `audit_trade_packet` cross-checks caller-supplied trade-document fields (HS codes, amounts, currencies, dates, named parties, Incoterms allocation) for internal consistency, with a per-field verdict and a worst-of aggregate that routes unverifiable fields to human review. Its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
 
 ## Start with the skill
 

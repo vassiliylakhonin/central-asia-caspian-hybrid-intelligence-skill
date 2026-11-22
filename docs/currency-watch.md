@@ -104,6 +104,13 @@ or other topic in this catalogue has been re-verified.
 
 ## Energy and infrastructure
 
+### Topic: AIS/GNSS spoofing on the corridor's sea legs
+- **Why it matters:** The first large-scale measurement of maritime GPS spoofing (arXiv:2609.37676; AIS data from over 367,000 vessels, late November 2024 to early February 2025) found persistent spoofing zones whose structure correlates with conflict and sanctions - in the Strait of Hormuz over a year before the 2026 escalation, and in the Red Sea months before the MSC Antonia grounding. If similar interference appears on Caspian or Black Sea legs, it is an early sign of sanctions-evasion shipping or pre-escalation interference, and it degrades every AIS-based traffic or capacity claim a memo makes.
+- **What to re-verify:** Whether measurement studies, maritime-risk providers, or port-state reporting describe spoofing or interference affecting the Caspian Sea or the corridor's Black Sea approaches; whether any AIS-derived traffic or transit figure a memo relies on comes from a period or area with reported interference.
+- **Where to verify:** published measurement studies and their follow-ups; maritime-risk provider advisories; UKMTO / JMIC reporting for adjacent waters; IMO reporting. This skill holds no AIS data and cannot run detection itself.
+- **Freshness horizon for derived claims:** 90 days, and always re-check before relying on AIS-derived figures.
+- **Last reviewed:** Not yet verified - topic added 2026-11-22 from a single preprint (arXiv:2609.37676). The study is a measurement method, not a current-status claim; no Caspian-specific spoofing status has been verified.
+
 ### Topic: CPC, BTC, and Caspian export routes
 - **Why it matters:** Throughput, force-majeure events, capacity expansions, and ownership-structure changes affect both physical flow and counterparty-risk analysis.
 - **What to re-verify:** Operator disclosures on throughput, incidents, and capacity; ministry-of-energy announcements; IEA / OPEC context where material.

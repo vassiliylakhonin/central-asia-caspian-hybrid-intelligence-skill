@@ -4,6 +4,25 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Extended `audit_trade_packet` from a single list of consistency checks to
+  per-field verdicts over the critical fields (HS codes, amount, currency,
+  dates, named parties, Incoterms), with a worst-of aggregate: one failed
+  field fails the packet no matter how the others look, and a field with too
+  little data to compare is marked `needs_human_review` instead of passing.
+  Documents may now carry an optional `amount`, `currency`, `seller` and
+  `buyer`. Existing `checks` and `flags` output is unchanged. This
+  non-compensatory, human-routing shape follows the evaluation argument of
+  arXiv:2611.02775 - a single methodological preprint (the author claims no
+  empirical result) written for financial document recognition, applied here
+  by analogy to trade packets.
+- Added AIS/GNSS-spoofing indicators to the sanctions-evasion-relevant
+  archetypes (re-export / transshipment, energy / logistics chokepoint) and
+  a currency-watch topic on spoofing as a leading indicator. Method basis:
+  arXiv:2609.37676, the first large-scale measurement of maritime GPS
+  spoofing (AIS data, late 2024 to early 2025); a single preprint, and its
+  detection pipeline needs global AIS data this skill does not hold, so the
+  addition is a watch indicator, not a detection capability.
+
 - Added a third implemented MCP tool, `audit_trade_packet`: deterministic
   consistency checks over caller-supplied trade-document fields. Compares
   normalized HS-code sets across contract/invoice/bill of lading (including

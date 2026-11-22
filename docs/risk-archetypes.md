@@ -9,10 +9,10 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 ## 1. Re-export / transshipment exposure
 
 - **Mechanism**: goods enter a third country, are re-papered or re-routed, and reach a sanctioned end-user or jurisdiction.
-- **Typical indicators**: HS-code import spikes inconsistent with domestic demand; mirror-data divergence with origin country; rapid rise in shell trading companies; route concentration on a small number of border crossings.
+- **Typical indicators**: HS-code import spikes inconsistent with domestic demand; mirror-data divergence with origin country; rapid rise in shell trading companies; route concentration on a small number of border crossings; AIS/GNSS anomalies on the sea legs of a corridor (physically implausible motion correlated across a group of vessels), which measured studies associate with sanctions-evasion and conflict-adjacent interference.
 - **Evidence needed**: customs data on both legs, BO of trading entities, transport documents, end-user declarations.
 - **False positives**: legitimate demand growth, regional warehousing, supply-chain diversification.
-- **Watch-next triggers**: new high-priority items lists, trade-statistics anomalies, enforcement actions against forwarders.
+- **Watch-next triggers**: new high-priority items lists, trade-statistics anomalies, enforcement actions against forwarders; published AIS/GNSS-spoofing measurements touching the corridor's sea legs (Caspian and Black Sea approaches).
 - **Mitigation questions (role-based)**: bank — EDD on trading companies and BO; fintech — corridor- and HS-code-level monitoring; investor — concentration of revenue in suspect HS codes; logistics — end-user and routing documentation quality.
 
 ## 2. Dual-use goods routing
@@ -54,7 +54,7 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 ## 6. Energy / logistics chokepoint risk
 
 - **Mechanism**: a small number of pipelines, ports, rail links or border crossings carry a disproportionate share of flows; disruption cascades.
-- **Typical indicators**: high concentration on a single node (e.g. a port, pipeline, border crossing); limited or undeveloped alternatives.
+- **Typical indicators**: high concentration on a single node (e.g. a port, pipeline, border crossing); limited or undeveloped alternatives; regional GPS spoofing visible in vessel AIS data around the node - in the arXiv:2609.37676 measurement, persistent spoofing preceded visible escalation in both the Strait of Hormuz (over a year ahead) and the Red Sea (months ahead), so it can be a leading indicator, not just a symptom.
 - **Evidence needed**: throughput data, pipeline/grid operator disclosures, capacity studies.
 - **False positives**: short-term operational outages with quick recovery.
 - **Watch-next triggers**: capacity announcements, incidents, geopolitical shocks affecting a node.
@@ -173,7 +173,7 @@ The lists below extend each archetype with more specific (but still **generic**)
 
 ### 1. Re-export / transshipment exposure
 
-- *Indicators*: HS-code-level import growth that exceeds plausible domestic absorption; persistent mirror-data divergence with the origin country across consecutive periods; clustering of new trading entities at a small number of registered addresses; concentration of declared trade in a narrow basket of sensitive HS codes; inland-port or free-zone activity inconsistent with local industrial footprint.
+- *Indicators*: HS-code-level import growth that exceeds plausible domestic absorption; persistent mirror-data divergence with the origin country across consecutive periods; clustering of new trading entities at a small number of registered addresses; concentration of declared trade in a narrow basket of sensitive HS codes; inland-port or free-zone activity inconsistent with local industrial footprint; AIS/GNSS anomalies on the corridor's sea legs (physically implausible motion correlated across a group of vessels), per published spoofing measurements.
 - *Watch-next*: updated common high-priority items lists; designations of forwarders; harmonization of customs data between origin and transit jurisdictions; enforcement actions referencing transshipment patterns.
 
 ### 2. Dual-use goods routing
@@ -199,7 +199,7 @@ The lists below extend each archetype with more specific (but still **generic**)
 ### 6. Energy / logistics chokepoint risk
 
 - *Indicators*: traffic concentration at a single port, ferry, pipeline or border crossing; absence of viable redundant route; capacity utilization near design limit; rising dwell times or queue lengths; insurance / freight rate changes localized to one node.
-- *Watch-next*: capacity expansion announcements; incident reports; tariff or transit-rule changes; major project-finance approvals or withdrawals.
+- *Watch-next*: capacity expansion announcements; incident reports; tariff or transit-rule changes; major project-finance approvals or withdrawals; new AIS/GNSS-spoofing measurements or provider advisories covering the Caspian or Black Sea approaches (method basis: arXiv:2609.37676 - a single preprint, AIS data from late 2024 to early 2025; detection needs global AIS data, so treat it as a watch indicator to re-verify, not a capability this skill has).
 
 ### 7. Customs / statistics anomaly
 
